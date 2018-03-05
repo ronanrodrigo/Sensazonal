@@ -22,8 +22,8 @@
 		343A4FD4204D70CE00E33E81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		343A4FDA204D70EF00E33E81 /* Locale.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Locale.swift; sourceTree = "<group>"; };
 		343A4FDC204D710B00E33E81 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
-		343A4FE0204D711C00E33E81 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Locale.strings; sourceTree = "<group>"; };
 		343A4FE2204D711F00E33E81 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Locale.strings"; sourceTree = "<group>"; };
+		3481B84B204DB5DA00E10C76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Locale.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,8 +159,8 @@
 		343A4FE1204D711C00E33E81 /* Locale.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				343A4FE0204D711C00E33E81 /* en */,
 				343A4FE2204D711F00E33E81 /* pt-BR */,
+				3481B84B204DB5DA00E10C76 /* Base */,
 			);
 			name = Locale.strings;
 			sourceTree = "<group>";
