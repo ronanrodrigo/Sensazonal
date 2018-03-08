@@ -7,4 +7,3 @@ struct Locale {
         return NSLocalizedString(key, tableName: fileName, comment: "Shu 2")
     }
 }
-

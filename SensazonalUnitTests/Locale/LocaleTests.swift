@@ -8,5 +8,5 @@ class LocaleTests: XCTestCase {
 
         XCTAssertEqual(avocado, "Abacate")
     }
-    
+
 }
