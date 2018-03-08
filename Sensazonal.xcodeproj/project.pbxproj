@@ -12,7 +12,10 @@
 		343A4FD3204D70CE00E33E81 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 343A4FD1204D70CE00E33E81 /* LaunchScreen.storyboard */; };
 		343A4FDB204D70EF00E33E81 /* Locale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343A4FDA204D70EF00E33E81 /* Locale.swift */; };
 		343A4FDF204D711C00E33E81 /* Locale.strings in Resources */ = {isa = PBXBuildFile; fileRef = 343A4FE1204D711C00E33E81 /* Locale.strings */; };
+		343EE02D205163E100F76965 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343EE02C205163E100F76965 /* Log.swift */; };
+		343EE030205169EA00F76965 /* Sensazonal.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 343EE02E205169EA00F76965 /* Sensazonal.xcdatamodeld */; };
 		34EF9AAF2050B5BB00EB0337 /* LocaleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34EF9AAE2050B5BB00EB0337 /* LocaleTests.swift */; };
+		34EF9ADE2051607C00EB0337 /* NSPersistentContainerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34EF9ADD2051607C00EB0337 /* NSPersistentContainerExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,10 +37,13 @@
 		343A4FDA204D70EF00E33E81 /* Locale.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Locale.swift; sourceTree = "<group>"; };
 		343A4FDC204D710B00E33E81 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		343A4FE2204D711F00E33E81 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Locale.strings"; sourceTree = "<group>"; };
+		343EE02C205163E100F76965 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		343EE02F205169EA00F76965 /* Sensazonal.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Sensazonal.xcdatamodel; sourceTree = "<group>"; };
 		3481B84B204DB5DA00E10C76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Locale.strings; sourceTree = "<group>"; };
 		34EF9AAC2050B5BB00EB0337 /* SensazonalUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SensazonalUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		34EF9AAE2050B5BB00EB0337 /* LocaleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocaleTests.swift; sourceTree = "<group>"; };
 		34EF9AB02050B5BB00EB0337 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		34EF9ADD2051607C00EB0337 /* NSPersistentContainerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSPersistentContainerExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +116,9 @@
 				343A4FCF204D70CE00E33E81 /* Assets.xcassets */,
 				343A4FC8204D70CE00E33E81 /* AppDelegate.swift */,
 				343A4FD4204D70CE00E33E81 /* Info.plist */,
+				34EF9ADD2051607C00EB0337 /* NSPersistentContainerExtension.swift */,
+				343EE02C205163E100F76965 /* Log.swift */,
+				343EE02E205169EA00F76965 /* Sensazonal.xcdatamodeld */,
 			);
 			path = Essentials;
 			sourceTree = "<group>";
@@ -254,6 +263,9 @@
 			files = (
 				343A4FC9204D70CE00E33E81 /* AppDelegate.swift in Sources */,
 				343A4FDB204D70EF00E33E81 /* Locale.swift in Sources */,
+				343EE02D205163E100F76965 /* Log.swift in Sources */,
+				34EF9ADE2051607C00EB0337 /* NSPersistentContainerExtension.swift in Sources */,
+				343EE030205169EA00F76965 /* Sensazonal.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -497,6 +509,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		343EE02E205169EA00F76965 /* Sensazonal.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				343EE02F205169EA00F76965 /* Sensazonal.xcdatamodel */,
+			);
+			currentVersion = 343EE02F205169EA00F76965 /* Sensazonal.xcdatamodel */;
+			path = Sensazonal.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 343A4FBD204D70CE00E33E81 /* Project object */;
 }
