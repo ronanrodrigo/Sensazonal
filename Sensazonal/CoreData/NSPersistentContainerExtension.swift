@@ -10,13 +10,4 @@ extension NSPersistentContainer {
         return container
     }()
 
-    static func saveContext() {
-        guard singleton.viewContext.hasChanges else { return }
-        do {
-            try singleton.viewContext.save()
-        } catch {
-            Log.coreDataError(error)
-        }
-    }
-
 }

@@ -14,6 +14,7 @@
 		343A4FDF204D711C00E33E81 /* Locale.strings in Resources */ = {isa = PBXBuildFile; fileRef = 343A4FE1204D711C00E33E81 /* Locale.strings */; };
 		343EE02D205163E100F76965 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343EE02C205163E100F76965 /* Log.swift */; };
 		343EE030205169EA00F76965 /* Sensazonal.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 343EE02E205169EA00F76965 /* Sensazonal.xcdatamodeld */; };
+		343EE04E20517CAA00F76965 /* NSPersistentContainerExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343EE04D20517CAA00F76965 /* NSPersistentContainerExtensionTests.swift */; };
 		34EF9AAF2050B5BB00EB0337 /* LocaleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34EF9AAE2050B5BB00EB0337 /* LocaleTests.swift */; };
 		34EF9ADE2051607C00EB0337 /* NSPersistentContainerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34EF9ADD2051607C00EB0337 /* NSPersistentContainerExtension.swift */; };
 /* End PBXBuildFile section */
@@ -39,6 +40,7 @@
 		343A4FE2204D711F00E33E81 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Locale.strings"; sourceTree = "<group>"; };
 		343EE02C205163E100F76965 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		343EE02F205169EA00F76965 /* Sensazonal.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Sensazonal.xcdatamodel; sourceTree = "<group>"; };
+		343EE04D20517CAA00F76965 /* NSPersistentContainerExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSPersistentContainerExtensionTests.swift; sourceTree = "<group>"; };
 		3481B84B204DB5DA00E10C76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Locale.strings; sourceTree = "<group>"; };
 		34EF9AAC2050B5BB00EB0337 /* SensazonalUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SensazonalUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		34EF9AAE2050B5BB00EB0337 /* LocaleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocaleTests.swift; sourceTree = "<group>"; };
@@ -101,9 +103,18 @@
 			path = CoreData;
 			sourceTree = "<group>";
 		};
+		343EE04C20517CA000F76965 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				343EE04D20517CAA00F76965 /* NSPersistentContainerExtensionTests.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		34EF9AAD2050B5BB00EB0337 /* SensazonalUnitTests */ = {
 			isa = PBXGroup;
 			children = (
+				343EE04C20517CA000F76965 /* CoreData */,
 				34EF9ABA2050B72B00EB0337 /* Essentials */,
 				34EF9AB92050B71D00EB0337 /* Locale */,
 			);
@@ -282,6 +293,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				34EF9AAF2050B5BB00EB0337 /* LocaleTests.swift in Sources */,
+				343EE04E20517CAA00F76965 /* NSPersistentContainerExtensionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
