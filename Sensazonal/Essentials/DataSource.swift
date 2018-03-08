@@ -97,7 +97,7 @@ struct DataSource {
     private static let pomegranate = Food(keyName: "POMEGRANATE", months: [12])
     private static let podNoodles = Food(keyName: "POD_NOODLES", months: [12])
 
-    static let allFruits = [
+    static let allFoods = [
         pineapple, starFruit, greenCoconut, fig, raspberry, custardApple, orangePear, papaya, passionFruit, watermelon,
         nectarine, grape, lettuce, chive, cabbage, parsley, pumpkin, zucchini, beet, cucumber, pepper, okra, tomato,
         avocado, plum, guava, jaca, apple, pear, peach, seriguela, escarole, mint, ginger, greenCorn, bananaApple,
