@@ -9,4 +9,12 @@ class LocaleTests: XCTestCase {
         XCTAssertEqual(avocado, "Abacate")
     }
 
+    func testLocalizeWordThatDoesntExistThenReturnSameWord() {
+        let string = "!@#$%^"
+
+        let localized = Locale.localize(string)
+
+        XCTAssertEqual(localized, string)
+    }
+
 }
