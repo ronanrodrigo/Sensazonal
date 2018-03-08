@@ -112,12 +112,12 @@
 		34EF9AB82050B6D100EB0337 /* Essentials */ = {
 			isa = PBXGroup;
 			children = (
-				343A4FD1204D70CE00E33E81 /* LaunchScreen.storyboard */,
-				343A4FCF204D70CE00E33E81 /* Assets.xcassets */,
-				343A4FC8204D70CE00E33E81 /* AppDelegate.swift */,
 				343A4FD4204D70CE00E33E81 /* Info.plist */,
-				34EF9ADD2051607C00EB0337 /* NSPersistentContainerExtension.swift */,
+				343A4FC8204D70CE00E33E81 /* AppDelegate.swift */,
 				343EE02C205163E100F76965 /* Log.swift */,
+				34EF9ADD2051607C00EB0337 /* NSPersistentContainerExtension.swift */,
+				343A4FCF204D70CE00E33E81 /* Assets.xcassets */,
+				343A4FD1204D70CE00E33E81 /* LaunchScreen.storyboard */,
 				343EE02E205169EA00F76965 /* Sensazonal.xcdatamodeld */,
 			);
 			path = Essentials;
