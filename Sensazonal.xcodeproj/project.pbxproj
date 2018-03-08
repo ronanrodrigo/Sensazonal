@@ -83,19 +83,19 @@
 		343A4FC7204D70CE00E33E81 /* Sensazonal */ = {
 			isa = PBXGroup;
 			children = (
-				343EE08820519FBA00F76965 /* ListFoodByMonth */,
+				343EE08820519FBA00F76965 /* Food */,
 				34EF9AB82050B6D100EB0337 /* Essentials */,
 				34EF9AB62050B6B500EB0337 /* Locale */,
 			);
 			path = Sensazonal;
 			sourceTree = "<group>";
 		};
-		343EE08820519FBA00F76965 /* ListFoodByMonth */ = {
+		343EE08820519FBA00F76965 /* Food */ = {
 			isa = PBXGroup;
 			children = (
 				343EE08B2051A02600F76965 /* Food.swift */,
 			);
-			path = ListFoodByMonth;
+			path = Food;
 			sourceTree = "<group>";
 		};
 		34EF9AAD2050B5BB00EB0337 /* SensazonalUnitTests */ = {
