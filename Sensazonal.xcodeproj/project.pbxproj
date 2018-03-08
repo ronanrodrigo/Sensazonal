@@ -7,8 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		340D86532051D5270090F1FA /* ListFoodStubPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340D86522051D5270090F1FA /* ListFoodStubPresenter.swift */; };
+		340D86552051D78E0090F1FA /* ListFoodStubGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340D86542051D78E0090F1FA /* ListFoodStubGateway.swift */; };
 		34272CDB2051CD3C00EABE98 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34272CDA2051CD3C00EABE98 /* DataSource.swift */; };
 		34272CDE2051CD6E00EABE98 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34272CDD2051CD6E00EABE98 /* Food.swift */; };
+		34272CE22051CDD800EABE98 /* ListFoodByMonthInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34272CE12051CDD800EABE98 /* ListFoodByMonthInteractor.swift */; };
+		34272CE72051CE0B00EABE98 /* ListFoodByMonthInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34272CE62051CE0B00EABE98 /* ListFoodByMonthInteractorTests.swift */; };
+		34272CE92051CE9200EABE98 /* ListFoodPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34272CE82051CE9200EABE98 /* ListFoodPresentable.swift */; };
+		34272CEB2051CF8200EABE98 /* ListFoodGatewable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34272CEA2051CF8200EABE98 /* ListFoodGatewable.swift */; };
+		34272CED2051D04100EABE98 /* ListFoodMemoryGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34272CEC2051D04100EABE98 /* ListFoodMemoryGateway.swift */; };
+		34272CEF2051D07D00EABE98 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34272CEE2051D07D00EABE98 /* Result.swift */; };
+		34272CF12051D36300EABE98 /* SensazonalError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34272CF02051D36300EABE98 /* SensazonalError.swift */; };
 		343A4FC9204D70CE00E33E81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343A4FC8204D70CE00E33E81 /* AppDelegate.swift */; };
 		343A4FD0204D70CE00E33E81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 343A4FCF204D70CE00E33E81 /* Assets.xcassets */; };
 		343A4FD3204D70CE00E33E81 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 343A4FD1204D70CE00E33E81 /* LaunchScreen.storyboard */; };
@@ -28,8 +37,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		340D86522051D5270090F1FA /* ListFoodStubPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFoodStubPresenter.swift; sourceTree = "<group>"; };
+		340D86542051D78E0090F1FA /* ListFoodStubGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFoodStubGateway.swift; sourceTree = "<group>"; };
 		34272CDA2051CD3C00EABE98 /* DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 		34272CDD2051CD6E00EABE98 /* Food.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
+		34272CE12051CDD800EABE98 /* ListFoodByMonthInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFoodByMonthInteractor.swift; sourceTree = "<group>"; };
+		34272CE62051CE0B00EABE98 /* ListFoodByMonthInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFoodByMonthInteractorTests.swift; sourceTree = "<group>"; };
+		34272CE82051CE9200EABE98 /* ListFoodPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFoodPresentable.swift; sourceTree = "<group>"; };
+		34272CEA2051CF8200EABE98 /* ListFoodGatewable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFoodGatewable.swift; sourceTree = "<group>"; };
+		34272CEC2051D04100EABE98 /* ListFoodMemoryGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFoodMemoryGateway.swift; sourceTree = "<group>"; };
+		34272CEE2051D07D00EABE98 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		34272CF02051D36300EABE98 /* SensazonalError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensazonalError.swift; sourceTree = "<group>"; };
 		343A4FC5204D70CE00E33E81 /* Sensazonal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sensazonal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		343A4FC8204D70CE00E33E81 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		343A4FCF204D70CE00E33E81 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -62,6 +80,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		340D86512051D5130090F1FA /* Doubles */ = {
+			isa = PBXGroup;
+			children = (
+				340D86522051D5270090F1FA /* ListFoodStubPresenter.swift */,
+				340D86542051D78E0090F1FA /* ListFoodStubGateway.swift */,
+			);
+			path = Doubles;
+			sourceTree = "<group>";
+		};
 		34272CD62051CC6B00EABE98 /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -84,9 +111,31 @@
 		34272CDC2051CD4F00EABE98 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				34272CF02051D36300EABE98 /* SensazonalError.swift */,
 				34272CDD2051CD6E00EABE98 /* Food.swift */,
+				34272CEE2051D07D00EABE98 /* Result.swift */,
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		34272CE02051CDBA00EABE98 /* ListFoodByMonth */ = {
+			isa = PBXGroup;
+			children = (
+				34272CE12051CDD800EABE98 /* ListFoodByMonthInteractor.swift */,
+				34272CE82051CE9200EABE98 /* ListFoodPresentable.swift */,
+				34272CEA2051CF8200EABE98 /* ListFoodGatewable.swift */,
+				34272CEC2051D04100EABE98 /* ListFoodMemoryGateway.swift */,
+			);
+			path = ListFoodByMonth;
+			sourceTree = "<group>";
+		};
+		34272CE32051CDF100EABE98 /* ListFoodByMonth */ = {
+			isa = PBXGroup;
+			children = (
+				340D86512051D5130090F1FA /* Doubles */,
+				34272CE62051CE0B00EABE98 /* ListFoodByMonthInteractorTests.swift */,
+			);
+			path = ListFoodByMonth;
 			sourceTree = "<group>";
 		};
 		343A4FBC204D70CE00E33E81 = {
@@ -110,6 +159,7 @@
 		343A4FC7204D70CE00E33E81 /* Sensazonal */ = {
 			isa = PBXGroup;
 			children = (
+				34272CE02051CDBA00EABE98 /* ListFoodByMonth */,
 				34272CD62051CC6B00EABE98 /* Common */,
 			);
 			path = Sensazonal;
@@ -118,6 +168,7 @@
 		34EF9AAD2050B5BB00EB0337 /* SensazonalUnitTests */ = {
 			isa = PBXGroup;
 			children = (
+				34272CE32051CDF100EABE98 /* ListFoodByMonth */,
 				34272CD72051CC7100EABE98 /* Common */,
 			);
 			path = SensazonalUnitTests;
@@ -282,8 +333,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34272CEF2051D07D00EABE98 /* Result.swift in Sources */,
+				34272CE92051CE9200EABE98 /* ListFoodPresentable.swift in Sources */,
+				34272CF12051D36300EABE98 /* SensazonalError.swift in Sources */,
+				34272CE22051CDD800EABE98 /* ListFoodByMonthInteractor.swift in Sources */,
 				34272CDB2051CD3C00EABE98 /* DataSource.swift in Sources */,
 				34272CDE2051CD6E00EABE98 /* Food.swift in Sources */,
+				34272CEB2051CF8200EABE98 /* ListFoodGatewable.swift in Sources */,
+				34272CED2051D04100EABE98 /* ListFoodMemoryGateway.swift in Sources */,
 				343A4FC9204D70CE00E33E81 /* AppDelegate.swift in Sources */,
 				343A4FDB204D70EF00E33E81 /* Locale.swift in Sources */,
 			);
@@ -293,6 +350,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				340D86552051D78E0090F1FA /* ListFoodStubGateway.swift in Sources */,
+				340D86532051D5270090F1FA /* ListFoodStubPresenter.swift in Sources */,
+				34272CE72051CE0B00EABE98 /* ListFoodByMonthInteractorTests.swift in Sources */,
 				34EF9AAF2050B5BB00EB0337 /* LocaleTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
