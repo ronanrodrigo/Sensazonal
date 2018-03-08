@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		34272CDB2051CD3C00EABE98 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34272CDA2051CD3C00EABE98 /* DataSource.swift */; };
+		34272CDE2051CD6E00EABE98 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34272CDD2051CD6E00EABE98 /* Food.swift */; };
 		343A4FC9204D70CE00E33E81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343A4FC8204D70CE00E33E81 /* AppDelegate.swift */; };
 		343A4FD0204D70CE00E33E81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 343A4FCF204D70CE00E33E81 /* Assets.xcassets */; };
 		343A4FD3204D70CE00E33E81 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 343A4FD1204D70CE00E33E81 /* LaunchScreen.storyboard */; };
@@ -26,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		34272CDA2051CD3C00EABE98 /* DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
+		34272CDD2051CD6E00EABE98 /* Food.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 		343A4FC5204D70CE00E33E81 /* Sensazonal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sensazonal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		343A4FC8204D70CE00E33E81 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		343A4FCF204D70CE00E33E81 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -61,6 +65,7 @@
 		34272CD62051CC6B00EABE98 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				34272CDC2051CD4F00EABE98 /* Entities */,
 				34EF9AB82050B6D100EB0337 /* Essentials */,
 				34EF9AB62050B6B500EB0337 /* Locale */,
 			);
@@ -74,6 +79,14 @@
 				34EF9AB92050B71D00EB0337 /* Locale */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		34272CDC2051CD4F00EABE98 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				34272CDD2051CD6E00EABE98 /* Food.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 		343A4FBC204D70CE00E33E81 = {
@@ -122,6 +135,7 @@
 		34EF9AB82050B6D100EB0337 /* Essentials */ = {
 			isa = PBXGroup;
 			children = (
+				34272CDA2051CD3C00EABE98 /* DataSource.swift */,
 				343A4FD4204D70CE00E33E81 /* Info.plist */,
 				343A4FC8204D70CE00E33E81 /* AppDelegate.swift */,
 				343A4FCF204D70CE00E33E81 /* Assets.xcassets */,
@@ -268,6 +282,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34272CDB2051CD3C00EABE98 /* DataSource.swift in Sources */,
+				34272CDE2051CD6E00EABE98 /* Food.swift in Sources */,
 				343A4FC9204D70CE00E33E81 /* AppDelegate.swift in Sources */,
 				343A4FDB204D70EF00E33E81 /* Locale.swift in Sources */,
 			);
@@ -456,7 +472,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SensazonalUnitTests/Common/Essentials/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ronanrodrigo.SensazonalUnitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -472,7 +488,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SensazonalUnitTests/Common/Essentials/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ronanrodrigo.SensazonalUnitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
