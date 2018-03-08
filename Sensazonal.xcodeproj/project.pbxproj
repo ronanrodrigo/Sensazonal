@@ -58,6 +58,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		34272CD62051CC6B00EABE98 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				34EF9AB82050B6D100EB0337 /* Essentials */,
+				34EF9AB62050B6B500EB0337 /* Locale */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		34272CD72051CC7100EABE98 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				34EF9ABA2050B72B00EB0337 /* Essentials */,
+				34EF9AB92050B71D00EB0337 /* Locale */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		343A4FBC204D70CE00E33E81 = {
 			isa = PBXGroup;
 			children = (
@@ -79,8 +97,7 @@
 		343A4FC7204D70CE00E33E81 /* Sensazonal */ = {
 			isa = PBXGroup;
 			children = (
-				34EF9AB82050B6D100EB0337 /* Essentials */,
-				34EF9AB62050B6B500EB0337 /* Locale */,
+				34272CD62051CC6B00EABE98 /* Common */,
 			);
 			path = Sensazonal;
 			sourceTree = "<group>";
@@ -88,8 +105,7 @@
 		34EF9AAD2050B5BB00EB0337 /* SensazonalUnitTests */ = {
 			isa = PBXGroup;
 			children = (
-				34EF9ABA2050B72B00EB0337 /* Essentials */,
-				34EF9AB92050B71D00EB0337 /* Locale */,
+				34272CD72051CC7100EABE98 /* Common */,
 			);
 			path = SensazonalUnitTests;
 			sourceTree = "<group>";
@@ -411,9 +427,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "$(SRCROOT)/Sensazonal/Essentials/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Sensazonal/Common/Essentials/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ronanrodrigo.Sensazonal;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ronanrodrigo.sensazonal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -425,9 +441,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "$(SRCROOT)/Sensazonal/Essentials/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Sensazonal/Common/Essentials/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ronanrodrigo.Sensazonal;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ronanrodrigo.sensazonal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -439,7 +455,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = SensazonalUnitTests/Essentials/Info.plist;
+				INFOPLIST_FILE = SensazonalUnitTests/Common/Essentials/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ronanrodrigo.SensazonalUnitTests;
@@ -455,7 +471,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = SensazonalUnitTests/Essentials/Info.plist;
+				INFOPLIST_FILE = SensazonalUnitTests/Common/Essentials/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ronanrodrigo.SensazonalUnitTests;
