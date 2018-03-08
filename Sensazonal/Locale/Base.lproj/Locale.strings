@@ -26,7 +26,7 @@
 "GUAVA" = "Guava";
 "JACA" = "Jaca";
 "APPLE" = "Apple";
-"WAIT" = "Wait";
+"PEAR" = "Pear";
 "PEACH" = "Peach";
 "SERIGUELA" = "Seriguela";
 "ESCAROLE" = "Escarole";
@@ -45,7 +45,7 @@
 "ENDIVE" = "Endive";
 "ARUGULA" = "Arugula";
 "EGGPLANT" = "Eggplant";
-"FACE" = "Face";
+"CARA" = "Cara";
 "CHUCHU" = "Chuchu";
 "YAM" = "Yam";
 "JELLY" = "Jelly";
@@ -56,7 +56,6 @@
 "KIWI" = "Kiwi";
 "WILL_REACH" = "Will Reach";
 "CATALAN" = "Catalan";
-"ABROBRINHA" = "Abrobrinha";
 "FENNEL" = "Fennel";
 "BAY" = "Bay";
 "SWEET_POTATO" = "Sweet Potato";

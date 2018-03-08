@@ -12,6 +12,8 @@
 		343A4FD3204D70CE00E33E81 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 343A4FD1204D70CE00E33E81 /* LaunchScreen.storyboard */; };
 		343A4FDB204D70EF00E33E81 /* Locale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343A4FDA204D70EF00E33E81 /* Locale.swift */; };
 		343A4FDF204D711C00E33E81 /* Locale.strings in Resources */ = {isa = PBXBuildFile; fileRef = 343A4FE1204D711C00E33E81 /* Locale.strings */; };
+		343EE08A2051A01F00F76965 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343EE0892051A01F00F76965 /* DataSource.swift */; };
+		343EE08C2051A02600F76965 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343EE08B2051A02600F76965 /* Food.swift */; };
 		34EF9AAF2050B5BB00EB0337 /* LocaleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34EF9AAE2050B5BB00EB0337 /* LocaleTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +36,8 @@
 		343A4FDA204D70EF00E33E81 /* Locale.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Locale.swift; sourceTree = "<group>"; };
 		343A4FDC204D710B00E33E81 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		343A4FE2204D711F00E33E81 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Locale.strings"; sourceTree = "<group>"; };
+		343EE0892051A01F00F76965 /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
+		343EE08B2051A02600F76965 /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 		3481B84B204DB5DA00E10C76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Locale.strings; sourceTree = "<group>"; };
 		34EF9AAC2050B5BB00EB0337 /* SensazonalUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SensazonalUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		34EF9AAE2050B5BB00EB0337 /* LocaleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocaleTests.swift; sourceTree = "<group>"; };
@@ -79,10 +83,19 @@
 		343A4FC7204D70CE00E33E81 /* Sensazonal */ = {
 			isa = PBXGroup;
 			children = (
+				343EE08820519FBA00F76965 /* ListFoodByMonth */,
 				34EF9AB82050B6D100EB0337 /* Essentials */,
 				34EF9AB62050B6B500EB0337 /* Locale */,
 			);
 			path = Sensazonal;
+			sourceTree = "<group>";
+		};
+		343EE08820519FBA00F76965 /* ListFoodByMonth */ = {
+			isa = PBXGroup;
+			children = (
+				343EE08B2051A02600F76965 /* Food.swift */,
+			);
+			path = ListFoodByMonth;
 			sourceTree = "<group>";
 		};
 		34EF9AAD2050B5BB00EB0337 /* SensazonalUnitTests */ = {
@@ -106,6 +119,7 @@
 		34EF9AB82050B6D100EB0337 /* Essentials */ = {
 			isa = PBXGroup;
 			children = (
+				343EE0892051A01F00F76965 /* DataSource.swift */,
 				343A4FD4204D70CE00E33E81 /* Info.plist */,
 				343A4FC8204D70CE00E33E81 /* AppDelegate.swift */,
 				343A4FCF204D70CE00E33E81 /* Assets.xcassets */,
@@ -253,7 +267,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				343A4FC9204D70CE00E33E81 /* AppDelegate.swift in Sources */,
+				343EE08C2051A02600F76965 /* Food.swift in Sources */,
 				343A4FDB204D70EF00E33E81 /* Locale.swift in Sources */,
+				343EE08A2051A01F00F76965 /* DataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
