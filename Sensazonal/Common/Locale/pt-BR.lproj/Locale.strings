@@ -26,7 +26,7 @@
 "GUAVA" = "Goiaba";
 "JACA" = "Jaca";
 "APPLE" = "Maçã";
-"WAIT" = "Pera";
+"PEAR" = "Pera";
 "PEACH" = "Pêssego";
 "SERIGUELA" = "Seriguela";
 "ESCAROLE" = "Escarola";
@@ -45,7 +45,7 @@
 "ENDIVE" = "Endívia";
 "ARUGULA" = "Rúcula";
 "EGGPLANT" = "Berinjela";
-"FACE" = "Cará";
+"CARA" = "Cará";
 "CHUCHU" = "Chuchu";
 "YAM" = "Inhame";
 "JELLY" = "Jiló";
@@ -56,7 +56,6 @@
 "KIWI" = "Kiwi";
 "WILL_REACH" = "Almeirão";
 "CATALAN" = "Catalonha";
-"ABROBRINHA" = "Abrobrinha";
 "FENNEL" = "Erva-doce";
 "BAY" = "Louro";
 "SWEET_POTATO" = "Batata-doce";
