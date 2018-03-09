@@ -9,7 +9,8 @@ class ListFoodByMonthInteractor {
     }
 
     func list(byMonth month: Int) {
-        guard (1...12) ~= month else {
+        let isValidMonth = (1...12) ~= month
+        guard isValidMonth else {
             return presenter.present(error: .invalidMonth)
         }
 
