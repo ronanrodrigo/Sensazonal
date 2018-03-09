@@ -6,12 +6,12 @@ class ListFoodStubPresenter: ListFoodPresentable {
     var didPresentFoodsStub = false
     var presentedError: SensazonalError!
 
-    func present(foods: [Food]) {
+    func presentFoods(_ foods: [Food]) {
         listedFoods = foods
         didPresentFoodsStub = true
     }
 
-    func present(error: SensazonalError) {
+    func presentError(_ error: SensazonalError) {
         presentedError = error
     }
 

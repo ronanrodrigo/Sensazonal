@@ -11,19 +11,12 @@ class ListFoodByMonthInteractor {
     func list(byMonth month: Int) {
         let isValidMonth = (1...12) ~= month
         guard isValidMonth else {
-            return presenter.present(error: .invalidMonth)
+            return presenter.presentError(.invalidMonth)
         }
 
-        gateway.filter(byMonth: month, onComplete: handleResult)
-    }
-
-    private func handleResult(result: Result<[Food]>) {
-        switch result {
-        case let .success(foods):
-            presenter.present(foods: foods)
-        case let .failure(error):
-            presenter.present(error: error)
-        }
+        gateway.filter(byMonth: month, onComplete: { result in
+            result.handle(presenter.presentFoods, presenter.presentError)
+        })
     }
 
 }

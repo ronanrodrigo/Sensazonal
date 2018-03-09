@@ -1,4 +1,4 @@
 protocol ListFoodPresentable {
-    func present(foods: [Food])
-    func present(error: SensazonalError)
+    func presentFoods(_ foods: [Food])
+    func presentError(_ error: SensazonalError)
 }
