@@ -1,0 +1,19 @@
+setup_enviroment() {
+    brew_dependencies=(carthage swiftlint)
+    for brew_dependency in "${brew_dependencies[@]}"; do
+        install_brew_dependency_if_needed $brew_dependency
+    done
+
+    carthage bootstrap --platform iOS
+}
+
+install_brew_dependency_if_needed() {
+    brew_dependency=$1
+
+    if ! type "$brew_dependency" &> /dev/null; then
+        echo "Installing $brew_dependency..."
+        brew install $brew_dependency
+    fi
+}
+
+setup_enviroment

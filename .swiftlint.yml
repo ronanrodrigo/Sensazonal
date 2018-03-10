@@ -1,2 +1,3 @@
 excluded:
   - "Sensazonal/CoreData/Models/"
+  - "Carthage/"
