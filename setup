@@ -9,6 +9,7 @@ setup() {
         brew install swiftlint
     fi
 
-    carthage update --platform iOS
+    # carthage update --platform iOS
+    carthage bootstrap
 }
 setup
