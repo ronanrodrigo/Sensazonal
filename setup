@@ -10,6 +10,6 @@ setup() {
     fi
 
     # carthage update --platform iOS
-    carthage bootstrap
+    carthage bootstrap --platform iOS
 }
 setup
