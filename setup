@@ -1,0 +1,14 @@
+setup() {
+    if ! type "carthage" &> /dev/null; then
+        echo "Installing carthage..."
+        brew install carthage
+    fi
+
+    if ! type "swiftlint" &> /dev/null; then
+        echo "Installing swiftlint..."
+        brew install swiftlint
+    fi
+
+    carthage update --platform iOS
+}
+setup
