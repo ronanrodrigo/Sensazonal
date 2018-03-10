@@ -60,6 +60,18 @@
             isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>
+      <EnvironmentVariables>
+         <EnvironmentVariable
+            key = "IMAGE_DIFF_DIR"
+            value = "$(SOURCE_ROOT)/ScreenshotsTests/Diffs"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "FB_REFERENCE_IMAGE_DIR"
+            value = "$(SOURCE_ROOT)/ScreenshotsTests/References"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+      </EnvironmentVariables>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -87,12 +99,12 @@
       <EnvironmentVariables>
          <EnvironmentVariable
             key = "IMAGE_DIFF_DIR"
-            value = "$(SOURCE_ROOT)/$(PROJECT_NAME)/Tests/Screenshots/Diffs"
+            value = "$(SOURCE_ROOT)/ScreenshotsTests/Diffs"
             isEnabled = "YES">
          </EnvironmentVariable>
          <EnvironmentVariable
             key = "FB_REFERENCE_IMAGE_DIR"
-            value = "$(SOURCE_ROOT)/$(PROJECT_NAME)/Tests/Screenshots/References"
+            value = "$(SOURCE_ROOT)/ScreenshotsTests/References"
             isEnabled = "YES">
          </EnvironmentVariable>
       </EnvironmentVariables>

@@ -24,6 +24,8 @@
 		343A4FDB204D70EF00E33E81 /* Locale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343A4FDA204D70EF00E33E81 /* Locale.swift */; };
 		343A4FDF204D711C00E33E81 /* Locale.strings in Resources */ = {isa = PBXBuildFile; fileRef = 343A4FE1204D711C00E33E81 /* Locale.strings */; };
 		34AE621D20540BF400690E51 /* FBSnapshotTestCase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34AE621A205409CF00690E51 /* FBSnapshotTestCase.framework */; };
+		34AE621F20541FAE00690E51 /* FoodViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AE621E20541FAE00690E51 /* FoodViewCell.swift */; };
+		34AE6221205471CF00690E51 /* FoodViewCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AE6220205471CF00690E51 /* FoodViewCellTests.swift */; };
 		34EF9AAF2050B5BB00EB0337 /* LocaleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34EF9AAE2050B5BB00EB0337 /* LocaleTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +61,8 @@
 		343A4FE2204D711F00E33E81 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Locale.strings"; sourceTree = "<group>"; };
 		3481B84B204DB5DA00E10C76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Locale.strings; sourceTree = "<group>"; };
 		34AE621A205409CF00690E51 /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSnapshotTestCase.framework; path = Carthage/Build/iOS/FBSnapshotTestCase.framework; sourceTree = "<group>"; };
+		34AE621E20541FAE00690E51 /* FoodViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodViewCell.swift; sourceTree = "<group>"; };
+		34AE6220205471CF00690E51 /* FoodViewCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodViewCellTests.swift; sourceTree = "<group>"; };
 		34EF9AAC2050B5BB00EB0337 /* SensazonalUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SensazonalUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		34EF9AAE2050B5BB00EB0337 /* LocaleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocaleTests.swift; sourceTree = "<group>"; };
 		34EF9AB02050B5BB00EB0337 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -128,6 +132,7 @@
 				34272CE82051CE9200EABE98 /* ListFoodPresentable.swift */,
 				34272CEA2051CF8200EABE98 /* ListFoodGatewable.swift */,
 				34272CEC2051D04100EABE98 /* ListFoodMemoryGateway.swift */,
+				34AE621E20541FAE00690E51 /* FoodViewCell.swift */,
 			);
 			path = ListFoodByMonth;
 			sourceTree = "<group>";
@@ -137,6 +142,7 @@
 			children = (
 				340D86512051D5130090F1FA /* Doubles */,
 				34272CE62051CE0B00EABE98 /* ListFoodByMonthInteractorTests.swift */,
+				34AE6220205471CF00690E51 /* FoodViewCellTests.swift */,
 			);
 			path = ListFoodByMonth;
 			sourceTree = "<group>";
@@ -362,6 +368,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34AE621F20541FAE00690E51 /* FoodViewCell.swift in Sources */,
 				34272CEF2051D07D00EABE98 /* Result.swift in Sources */,
 				34272CE92051CE9200EABE98 /* ListFoodPresentable.swift in Sources */,
 				34272CF12051D36300EABE98 /* SensazonalError.swift in Sources */,
@@ -383,6 +390,7 @@
 				340D86532051D5270090F1FA /* ListFoodStubPresenter.swift in Sources */,
 				34272CE72051CE0B00EABE98 /* ListFoodByMonthInteractorTests.swift in Sources */,
 				34EF9AAF2050B5BB00EB0337 /* LocaleTests.swift in Sources */,
+				34AE6221205471CF00690E51 /* FoodViewCellTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
