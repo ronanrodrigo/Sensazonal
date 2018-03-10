@@ -9,4 +9,6 @@
 - SwiftLint
 
 ## Setup enviroment
-- Run `./setup.sh`
+- Clone the repository `git clone git@gitlab.com:ronanrodrigo/Sensazonal.git`
+- Access the folder where repository is cloned and run: `./setup.sh`
+- Open the project `open Sensazonal.xcodeproj`
