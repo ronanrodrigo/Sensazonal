@@ -127,7 +127,7 @@
 			path = Entities;
 			sourceTree = "<group>";
 		};
-		34272CE02051CDBA00EABE98 /* ListFoodByMonth */ = {
+		34272CE02051CDBA00EABE98 /* ListFoods */ = {
 			isa = PBXGroup;
 			children = (
 				34272CE12051CDD800EABE98 /* ListFoodByMonthInteractor.swift */,
@@ -137,17 +137,17 @@
 				34AE621E20541FAE00690E51 /* FoodViewCell.swift */,
 				34B5DC45205553C0008BDBDB /* FoodViewModel.swift */,
 			);
-			path = ListFoodByMonth;
+			path = ListFoods;
 			sourceTree = "<group>";
 		};
-		34272CE32051CDF100EABE98 /* ListFoodByMonth */ = {
+		34272CE32051CDF100EABE98 /* ListFoods */ = {
 			isa = PBXGroup;
 			children = (
 				340D86512051D5130090F1FA /* Doubles */,
 				34272CE62051CE0B00EABE98 /* ListFoodByMonthInteractorTests.swift */,
 				34AE6220205471CF00690E51 /* FoodViewCellTests.swift */,
 			);
-			path = ListFoodByMonth;
+			path = ListFoods;
 			sourceTree = "<group>";
 		};
 		343A4FBC204D70CE00E33E81 = {
@@ -172,7 +172,7 @@
 		343A4FC7204D70CE00E33E81 /* Sensazonal */ = {
 			isa = PBXGroup;
 			children = (
-				34272CE02051CDBA00EABE98 /* ListFoodByMonth */,
+				34272CE02051CDBA00EABE98 /* ListFoods */,
 				34272CD62051CC6B00EABE98 /* Common */,
 			);
 			path = Sensazonal;
@@ -189,7 +189,7 @@
 		34EF9AAD2050B5BB00EB0337 /* SensazonalUnitTests */ = {
 			isa = PBXGroup;
 			children = (
-				34272CE32051CDF100EABE98 /* ListFoodByMonth */,
+				34272CE32051CDF100EABE98 /* ListFoods */,
 				34272CD72051CC7100EABE98 /* Common */,
 			);
 			path = SensazonalUnitTests;
