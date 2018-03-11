@@ -67,3 +67,6 @@ fastlane/test_output
 # Coverage
 *.xccoverage.plist
 html/
+
+# Screenshot Tests
+ScreenshotsTests/Diffs
