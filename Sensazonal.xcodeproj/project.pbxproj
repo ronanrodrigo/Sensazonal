@@ -127,7 +127,7 @@
 			path = Entities;
 			sourceTree = "<group>";
 		};
-		34272CE02051CDBA00EABE98 /* ListFoods */ = {
+		34272CE02051CDBA00EABE98 /* FoodList */ = {
 			isa = PBXGroup;
 			children = (
 				34B5DC4820555FF7008BDBDB /* Interactors */,
@@ -136,17 +136,17 @@
 				34B5DC4A20556010008BDBDB /* Views */,
 				34B5DC4B20556014008BDBDB /* ViewModels */,
 			);
-			path = ListFoods;
+			path = FoodList;
 			sourceTree = "<group>";
 		};
-		34272CE32051CDF100EABE98 /* ListFoods */ = {
+		34272CE32051CDF100EABE98 /* FoodList */ = {
 			isa = PBXGroup;
 			children = (
 				340D86512051D5130090F1FA /* Doubles */,
 				34B5DC4C20556020008BDBDB /* Interactors */,
 				34B5DC4D20556024008BDBDB /* Views */,
 			);
-			path = ListFoods;
+			path = FoodList;
 			sourceTree = "<group>";
 		};
 		343A4FBC204D70CE00E33E81 = {
@@ -171,7 +171,7 @@
 		343A4FC7204D70CE00E33E81 /* Sensazonal */ = {
 			isa = PBXGroup;
 			children = (
-				34272CE02051CDBA00EABE98 /* ListFoods */,
+				34272CE02051CDBA00EABE98 /* FoodList */,
 				34272CD62051CC6B00EABE98 /* Common */,
 			);
 			path = Sensazonal;
@@ -245,7 +245,7 @@
 		34EF9AAD2050B5BB00EB0337 /* SensazonalUnitTests */ = {
 			isa = PBXGroup;
 			children = (
-				34272CE32051CDF100EABE98 /* ListFoods */,
+				34272CE32051CDF100EABE98 /* FoodList */,
 				34272CD72051CC7100EABE98 /* Common */,
 			);
 			path = SensazonalUnitTests;
