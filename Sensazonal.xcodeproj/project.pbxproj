@@ -130,12 +130,11 @@
 		34272CE02051CDBA00EABE98 /* ListFoods */ = {
 			isa = PBXGroup;
 			children = (
-				34272CE12051CDD800EABE98 /* ListFoodByMonthInteractor.swift */,
-				34272CE82051CE9200EABE98 /* ListFoodPresentable.swift */,
-				34272CEA2051CF8200EABE98 /* ListFoodGatewable.swift */,
-				34272CEC2051D04100EABE98 /* ListFoodMemoryGateway.swift */,
-				34AE621E20541FAE00690E51 /* FoodViewCell.swift */,
-				34B5DC45205553C0008BDBDB /* FoodViewModel.swift */,
+				34B5DC4820555FF7008BDBDB /* Interactors */,
+				34B5DC4720555FF0008BDBDB /* Presenters */,
+				34B5DC4920555FFD008BDBDB /* Gateways */,
+				34B5DC4A20556010008BDBDB /* Views */,
+				34B5DC4B20556014008BDBDB /* ViewModels */,
 			);
 			path = ListFoods;
 			sourceTree = "<group>";
@@ -144,8 +143,8 @@
 			isa = PBXGroup;
 			children = (
 				340D86512051D5130090F1FA /* Doubles */,
-				34272CE62051CE0B00EABE98 /* ListFoodByMonthInteractorTests.swift */,
-				34AE6220205471CF00690E51 /* FoodViewCellTests.swift */,
+				34B5DC4C20556020008BDBDB /* Interactors */,
+				34B5DC4D20556024008BDBDB /* Views */,
 			);
 			path = ListFoods;
 			sourceTree = "<group>";
@@ -184,6 +183,63 @@
 				34AE621A205409CF00690E51 /* FBSnapshotTestCase.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		34B5DC4720555FF0008BDBDB /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				34272CE82051CE9200EABE98 /* ListFoodPresentable.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		34B5DC4820555FF7008BDBDB /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+				34272CE12051CDD800EABE98 /* ListFoodByMonthInteractor.swift */,
+			);
+			path = Interactors;
+			sourceTree = "<group>";
+		};
+		34B5DC4920555FFD008BDBDB /* Gateways */ = {
+			isa = PBXGroup;
+			children = (
+				34272CEA2051CF8200EABE98 /* ListFoodGatewable.swift */,
+				34272CEC2051D04100EABE98 /* ListFoodMemoryGateway.swift */,
+			);
+			path = Gateways;
+			sourceTree = "<group>";
+		};
+		34B5DC4A20556010008BDBDB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				34AE621E20541FAE00690E51 /* FoodViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		34B5DC4B20556014008BDBDB /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				34B5DC45205553C0008BDBDB /* FoodViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		34B5DC4C20556020008BDBDB /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+				34272CE62051CE0B00EABE98 /* ListFoodByMonthInteractorTests.swift */,
+			);
+			path = Interactors;
+			sourceTree = "<group>";
+		};
+		34B5DC4D20556024008BDBDB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				34AE6220205471CF00690E51 /* FoodViewCellTests.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		34EF9AAD2050B5BB00EB0337 /* SensazonalUnitTests */ = {
