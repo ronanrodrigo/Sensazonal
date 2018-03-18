@@ -1,9 +1,9 @@
 class ListFoodByMonthInteractor {
 
-    private let gateway: ListFoodGatewable
-    private let presenter: ListFoodPresentable
+    private let gateway: ListFoodGateway
+    private let presenter: ListFoodPresenter
 
-    init(gateway: ListFoodGatewable, presenter: ListFoodPresentable) {
+    init(gateway: ListFoodGateway, presenter: ListFoodPresenter) {
         self.gateway = gateway
         self.presenter = presenter
     }

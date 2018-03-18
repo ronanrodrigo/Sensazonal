@@ -13,8 +13,8 @@
 		34272CDE2051CD6E00EABE98 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34272CDD2051CD6E00EABE98 /* Food.swift */; };
 		34272CE22051CDD800EABE98 /* ListFoodByMonthInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34272CE12051CDD800EABE98 /* ListFoodByMonthInteractor.swift */; };
 		34272CE72051CE0B00EABE98 /* ListFoodByMonthInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34272CE62051CE0B00EABE98 /* ListFoodByMonthInteractorTests.swift */; };
-		34272CE92051CE9200EABE98 /* ListFoodPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34272CE82051CE9200EABE98 /* ListFoodPresentable.swift */; };
-		34272CEB2051CF8200EABE98 /* ListFoodGatewable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34272CEA2051CF8200EABE98 /* ListFoodGatewable.swift */; };
+		34272CE92051CE9200EABE98 /* ListFoodPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34272CE82051CE9200EABE98 /* ListFoodPresenter.swift */; };
+		34272CEB2051CF8200EABE98 /* ListFoodGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34272CEA2051CF8200EABE98 /* ListFoodGateway.swift */; };
 		34272CED2051D04100EABE98 /* ListFoodMemoryGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34272CEC2051D04100EABE98 /* ListFoodMemoryGateway.swift */; };
 		34272CEF2051D07D00EABE98 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34272CEE2051D07D00EABE98 /* Result.swift */; };
 		34272CF12051D36300EABE98 /* SensazonalError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34272CF02051D36300EABE98 /* SensazonalError.swift */; };
@@ -47,8 +47,8 @@
 		34272CDD2051CD6E00EABE98 /* Food.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 		34272CE12051CDD800EABE98 /* ListFoodByMonthInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFoodByMonthInteractor.swift; sourceTree = "<group>"; };
 		34272CE62051CE0B00EABE98 /* ListFoodByMonthInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFoodByMonthInteractorTests.swift; sourceTree = "<group>"; };
-		34272CE82051CE9200EABE98 /* ListFoodPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFoodPresentable.swift; sourceTree = "<group>"; };
-		34272CEA2051CF8200EABE98 /* ListFoodGatewable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFoodGatewable.swift; sourceTree = "<group>"; };
+		34272CE82051CE9200EABE98 /* ListFoodPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFoodPresenter.swift; sourceTree = "<group>"; };
+		34272CEA2051CF8200EABE98 /* ListFoodGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFoodGateway.swift; sourceTree = "<group>"; };
 		34272CEC2051D04100EABE98 /* ListFoodMemoryGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFoodMemoryGateway.swift; sourceTree = "<group>"; };
 		34272CEE2051D07D00EABE98 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		34272CF02051D36300EABE98 /* SensazonalError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensazonalError.swift; sourceTree = "<group>"; };
@@ -188,7 +188,7 @@
 		34B5DC4720555FF0008BDBDB /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
-				34272CE82051CE9200EABE98 /* ListFoodPresentable.swift */,
+				34272CE82051CE9200EABE98 /* ListFoodPresenter.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -204,7 +204,7 @@
 		34B5DC4920555FFD008BDBDB /* Gateways */ = {
 			isa = PBXGroup;
 			children = (
-				34272CEA2051CF8200EABE98 /* ListFoodGatewable.swift */,
+				34272CEA2051CF8200EABE98 /* ListFoodGateway.swift */,
 				34272CEC2051D04100EABE98 /* ListFoodMemoryGateway.swift */,
 			);
 			path = Gateways;
@@ -430,12 +430,12 @@
 				34AE621F20541FAE00690E51 /* FoodViewCell.swift in Sources */,
 				34272CEF2051D07D00EABE98 /* Result.swift in Sources */,
 				34B5DC46205553C0008BDBDB /* FoodViewModel.swift in Sources */,
-				34272CE92051CE9200EABE98 /* ListFoodPresentable.swift in Sources */,
+				34272CE92051CE9200EABE98 /* ListFoodPresenter.swift in Sources */,
 				34272CF12051D36300EABE98 /* SensazonalError.swift in Sources */,
 				34272CE22051CDD800EABE98 /* ListFoodByMonthInteractor.swift in Sources */,
 				34272CDB2051CD3C00EABE98 /* DataSource.swift in Sources */,
 				34272CDE2051CD6E00EABE98 /* Food.swift in Sources */,
-				34272CEB2051CF8200EABE98 /* ListFoodGatewable.swift in Sources */,
+				34272CEB2051CF8200EABE98 /* ListFoodGateway.swift in Sources */,
 				34272CED2051D04100EABE98 /* ListFoodMemoryGateway.swift in Sources */,
 				343A4FC9204D70CE00E33E81 /* AppDelegate.swift in Sources */,
 				343A4FDB204D70EF00E33E81 /* Locale.swift in Sources */,
