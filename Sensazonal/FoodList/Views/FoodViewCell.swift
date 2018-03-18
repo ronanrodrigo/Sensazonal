@@ -2,6 +2,8 @@ import UIKit
 
 final class FoodViewCell: UICollectionViewCell {
 
+    static let identifier = String(describing: FoodViewCell.self)
+
     private var nameBackgroundGradient = CAGradientLayer()
 
     private let content: UIView = {
