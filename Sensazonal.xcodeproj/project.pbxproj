@@ -150,8 +150,8 @@
 		34272CE02051CDBA00EABE98 /* FoodList */ = {
 			isa = PBXGroup;
 			children = (
-				34CA501C205EDA650095994A /* Factories */,
 				34CA5017205ED8D40095994A /* Controllers */,
+				34CA501C205EDA650095994A /* Factories */,
 				34B5DC4920555FFD008BDBDB /* Gateways */,
 				34B5DC4820555FF7008BDBDB /* Interactors */,
 				34B5DC4720555FF0008BDBDB /* Presenters */,
