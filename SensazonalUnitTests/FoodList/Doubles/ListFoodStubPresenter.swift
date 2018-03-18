@@ -1,6 +1,6 @@
 @testable import Sensazonal
 
-class ListFoodStubPresenter: ListFoodPresentable {
+class ListFoodStubPresenter: ListFoodPresenter {
 
     var listedFoods: [Food] = []
     var didPresentFoodsStub = false
