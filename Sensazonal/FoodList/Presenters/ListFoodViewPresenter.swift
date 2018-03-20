@@ -12,7 +12,8 @@ final class ListFoodViewPresenter: ListFoodPresenter {
 
     func presentFoods(_ foods: [Food]) {
         let foodViewModels = foods.map { food -> FoodViewModel in
-            return FoodViewModel(name: food.keyName, nameColor: .red, nameBackgroundColor: .white, photo: #imageLiteral(resourceName: "Strawberry"))
+            let name = Locale.localize(food.keyName)
+            return FoodViewModel(name: name, nameColor: .white, nameBackgroundColor: .red, photo: #imageLiteral(resourceName: "Strawberry"))
         }
         let foodListViewModel = FoodListViewModel(foodsViewModel: foodViewModels)
         binder.bind(viewModel: foodListViewModel)
