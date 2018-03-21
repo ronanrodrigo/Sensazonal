@@ -1,3 +1,3 @@
-protocol FoodListBinder {
+protocol FoodListBinder: class {
     func bind(viewModel: FoodListViewModel)
 }

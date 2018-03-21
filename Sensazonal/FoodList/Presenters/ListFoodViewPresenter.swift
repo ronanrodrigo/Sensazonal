@@ -2,7 +2,7 @@ import UIKit
 
 final class ListFoodViewPresenter: ListFoodPresenter {
 
-    private let binder: FoodListBinder
+    private weak var binder: FoodListBinder?
 
     init(binder: FoodListBinder) {
         self.binder = binder
@@ -16,7 +16,7 @@ final class ListFoodViewPresenter: ListFoodPresenter {
             return FoodViewModel(name: name, nameColor: .white, nameBackgroundColor: .red, photo: #imageLiteral(resourceName: "Strawberry"))
         }
         let foodListViewModel = FoodListViewModel(foodsViewModel: foodViewModels)
-        binder.bind(viewModel: foodListViewModel)
+        binder?.bind(viewModel: foodListViewModel)
     }
 
 }
