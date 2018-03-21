@@ -15,7 +15,10 @@ class ListFoodByMonthInteractor {
         }
 
         gateway.filter(byMonth: month, onComplete: { result in
-            result.handle(presenter.presentFoods, presenter.presentError)
+            switch result {
+            case let .success(foods): presenter.presentFoods(foods, monthNumber: month)
+            case let .failure(error): presenter.presentError(error)
+            }
         })
     }
 

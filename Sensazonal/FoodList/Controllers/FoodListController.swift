@@ -9,7 +9,9 @@ class FoodListController {
     init() {
         let presenter = ListFoodViewPresenterFactory.make(binder: listViewController)
         listFoodByMonth = ListFoodByMonthInteractorFactory.make(presenter: presenter)
-        listFoodByMonth.list(byMonth: 4)
+        let currentMonth = Calendar.current.component(.month, from: Date())
+        listFoodByMonth.list(byMonth: currentMonth)
+        viewController.navigationBar.prefersLargeTitles = true
     }
 
 }

@@ -15,6 +15,7 @@ class FoodListCollectionViewController: UIViewController, UICollectionViewDataSo
 
     func bind(viewModel: FoodListViewModel) {
         self.viewModel = viewModel
+        title = viewModel.monthSelected
         foodListView.reloadData()
     }
 
