@@ -36,7 +36,7 @@
 		34CA5022205EDBA40095994A /* ListFoodViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CA5021205EDBA40095994A /* ListFoodViewPresenter.swift */; };
 		34CA5024205EDBDE0095994A /* ListFoodViewPresenterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CA5023205EDBDE0095994A /* ListFoodViewPresenterFactory.swift */; };
 		34CA5026205F1F6C0095994A /* FoodListControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CA5025205F1F6C0095994A /* FoodListControllerFactory.swift */; };
-		34CA5028205F1FBA0095994A /* FoodListCollectionViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CA5027205F1FBA0095994A /* FoodListCollectionViewControllerFactory.swift */; };
+		34CA5028205F1FBA0095994A /* FoodListViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CA5027205F1FBA0095994A /* FoodListViewControllerFactory.swift */; };
 		34CA502A205F20550095994A /* FoodListBinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CA5029205F20550095994A /* FoodListBinder.swift */; };
 		34EF9AAF2050B5BB00EB0337 /* LocaleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34EF9AAE2050B5BB00EB0337 /* LocaleTests.swift */; };
 		34FC8F1B20616A8B00A07C66 /* FoodListCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FC8F1A20616A8B00A07C66 /* FoodListCollectionView.swift */; };
@@ -86,7 +86,7 @@
 		34CA5021205EDBA40095994A /* ListFoodViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFoodViewPresenter.swift; sourceTree = "<group>"; };
 		34CA5023205EDBDE0095994A /* ListFoodViewPresenterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFoodViewPresenterFactory.swift; sourceTree = "<group>"; };
 		34CA5025205F1F6C0095994A /* FoodListControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListControllerFactory.swift; sourceTree = "<group>"; };
-		34CA5027205F1FBA0095994A /* FoodListCollectionViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListCollectionViewControllerFactory.swift; sourceTree = "<group>"; };
+		34CA5027205F1FBA0095994A /* FoodListViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListViewControllerFactory.swift; sourceTree = "<group>"; };
 		34CA5029205F20550095994A /* FoodListBinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListBinder.swift; sourceTree = "<group>"; };
 		34EF9AAC2050B5BB00EB0337 /* SensazonalUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SensazonalUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		34EF9AAE2050B5BB00EB0337 /* LocaleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocaleTests.swift; sourceTree = "<group>"; };
@@ -305,7 +305,7 @@
 				34CA501F205EDB690095994A /* ListFoodMemoryGatewayFactory.swift */,
 				34CA5023205EDBDE0095994A /* ListFoodViewPresenterFactory.swift */,
 				34CA5025205F1F6C0095994A /* FoodListControllerFactory.swift */,
-				34CA5027205F1FBA0095994A /* FoodListCollectionViewControllerFactory.swift */,
+				34CA5027205F1FBA0095994A /* FoodListViewControllerFactory.swift */,
 			);
 			path = Factories;
 			sourceTree = "<group>";
@@ -517,7 +517,7 @@
 				34272CEB2051CF8200EABE98 /* ListFoodGateway.swift in Sources */,
 				34272CED2051D04100EABE98 /* ListFoodMemoryGateway.swift in Sources */,
 				343A4FC9204D70CE00E33E81 /* AppDelegate.swift in Sources */,
-				34CA5028205F1FBA0095994A /* FoodListCollectionViewControllerFactory.swift in Sources */,
+				34CA5028205F1FBA0095994A /* FoodListViewControllerFactory.swift in Sources */,
 				343A4FDB204D70EF00E33E81 /* Locale.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -679,15 +679,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8UEA2ZVXH6;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Sensazonal/Common/Essentials/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ronanrodrigo.sensazonal;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ronanrodrigo.nubank.sensazonal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -697,15 +701,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8UEA2ZVXH6;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Sensazonal/Common/Essentials/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ronanrodrigo.sensazonal;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ronanrodrigo.nubank.sensazonal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

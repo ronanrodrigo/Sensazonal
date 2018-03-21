@@ -2,11 +2,12 @@ import UIKit
 
 class FoodListController {
 
-    let viewController = FoodListCollectionViewController()
+    lazy var viewController = UINavigationController(rootViewController: listViewController)
+    let listViewController = FoodListCollectionViewController()
     private let listFoodByMonth: ListFoodByMonthInteractor
 
     init() {
-        let presenter = ListFoodViewPresenterFactory.make(binder: viewController)
+        let presenter = ListFoodViewPresenterFactory.make(binder: listViewController)
         listFoodByMonth = ListFoodByMonthInteractorFactory.make(presenter: presenter)
         listFoodByMonth.list(byMonth: 4)
     }

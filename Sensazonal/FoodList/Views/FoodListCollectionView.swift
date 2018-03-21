@@ -54,9 +54,9 @@ final class FoodListCollectionView: UIView {
     private func installSuperViewConstraints() {
         guard let parentView = superview else { return }
         let selfConstraints = [
-            leadingAnchor.constraint(equalTo: parentView.leadingAnchor),
+            leadingAnchor.constraint(equalTo: parentView.safeAreaLayoutGuide.leadingAnchor),
             topAnchor.constraint(equalTo: parentView.safeAreaLayoutGuide.topAnchor),
-            trailingAnchor.constraint(equalTo: parentView.trailingAnchor),
+            trailingAnchor.constraint(equalTo: parentView.safeAreaLayoutGuide.trailingAnchor),
             bottomAnchor.constraint(equalTo: parentView.safeAreaLayoutGuide.bottomAnchor)]
         NSLayoutConstraint.activate(selfConstraints)
     }
