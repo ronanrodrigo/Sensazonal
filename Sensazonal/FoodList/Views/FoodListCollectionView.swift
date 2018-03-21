@@ -18,7 +18,8 @@ final class FoodListCollectionView: UIView {
     init() {
         super.init(frame: .zero)
         translatesAutoresizingMaskIntoConstraints = false
-        addSubview(collection)
+        installSubviews()
+        installConstraints()
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -27,7 +28,7 @@ final class FoodListCollectionView: UIView {
 
     override func didMoveToSuperview() {
         super.didMoveToSuperview()
-        installConstraints()
+        installSuperViewConstraints()
     }
 
     override func layoutSubviews() {
@@ -37,7 +38,20 @@ final class FoodListCollectionView: UIView {
         layout.minimumInteritemSpacing = FoodListCollectionView.margin
     }
 
+    private func installSubviews() {
+        addSubview(collection)
+    }
+
     private func installConstraints() {
+        let collectionConstraints = [
+            collection.leadingAnchor.constraint(equalTo: leadingAnchor),
+            collection.topAnchor.constraint(equalTo: topAnchor),
+            collection.trailingAnchor.constraint(equalTo: trailingAnchor),
+            collection.bottomAnchor.constraint(equalTo: bottomAnchor)]
+        NSLayoutConstraint.activate(collectionConstraints)
+    }
+
+    private func installSuperViewConstraints() {
         guard let parentView = superview else { return }
         let selfConstraints = [
             leadingAnchor.constraint(equalTo: parentView.leadingAnchor),
@@ -45,13 +59,6 @@ final class FoodListCollectionView: UIView {
             trailingAnchor.constraint(equalTo: parentView.trailingAnchor),
             bottomAnchor.constraint(equalTo: parentView.safeAreaLayoutGuide.bottomAnchor)]
         NSLayoutConstraint.activate(selfConstraints)
-
-        let collectionConstraints = [
-            collection.leadingAnchor.constraint(equalTo: leadingAnchor),
-            collection.topAnchor.constraint(equalTo: topAnchor),
-            collection.trailingAnchor.constraint(equalTo: trailingAnchor),
-            collection.bottomAnchor.constraint(equalTo: bottomAnchor)]
-        NSLayoutConstraint.activate(collectionConstraints)
     }
 
     private static func generateItemSize(width: CGFloat) -> CGSize {
