@@ -10,7 +10,7 @@ final class FoodViewCell: UICollectionViewCell {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.layer.masksToBounds = true
-        view.layer.cornerRadius = 4
+        view.layer.cornerRadius = Metric.extraSmall
         return view
     }()
 
@@ -25,7 +25,7 @@ final class FoodViewCell: UICollectionViewCell {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.numberOfLines = 0
-        label.font = UIFont.boldSystemFont(ofSize: 12)
+        label.font = UIFont.boldSystemFont(ofSize: Metric.large)
         return label
     }()
 
@@ -83,9 +83,9 @@ final class FoodViewCell: UICollectionViewCell {
         nameBackground.bottomAnchor.constraint(equalTo: content.bottomAnchor).isActive = true
         nameBackground.heightAnchor.constraint(equalTo: content.heightAnchor, multiplier: 0.7).isActive = true
 
-        name.leadingAnchor.constraint(equalTo: content.leadingAnchor, constant: 8).isActive = true
-        name.trailingAnchor.constraint(equalTo: content.trailingAnchor, constant: -8).isActive = true
-        name.bottomAnchor.constraint(equalTo: content.bottomAnchor, constant: -8).isActive = true
+        name.leadingAnchor.constraint(equalTo: content.leadingAnchor, constant: Metric.small).isActive = true
+        name.trailingAnchor.constraint(equalTo: content.trailingAnchor, constant: -Metric.small).isActive = true
+        name.bottomAnchor.constraint(equalTo: content.bottomAnchor, constant: -Metric.small).isActive = true
     }
 
 }
