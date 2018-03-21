@@ -1,34 +1,32 @@
 import UIKit
 
-class FoodListCollectionViewController: UICollectionViewController, FoodListBinder {
+class FoodListCollectionViewController: UIViewController, UICollectionViewDataSource, FoodListBinder {
 
-    private var viewModel: FoodListViewModel = FoodListViewModel() {
-        didSet { collectionView?.reloadData() }
-    }
+    private var viewModel = FoodListViewModel()
+    private lazy var foodListView: FoodListCollectionView = {
+        let view = FoodListCollectionView()
+        view.dataSource = self
+        return view
+    }()
 
-    init() {
-        super.init(collectionViewLayout: UICollectionViewFlowLayout())
-        self.collectionView!.register(FoodViewCell.self, forCellWithReuseIdentifier: FoodViewCell.identifier)
-    }
-
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    override func viewDidLoad() {
+        view.addSubview(foodListView)
     }
 
     func bind(viewModel: FoodListViewModel) {
         self.viewModel = viewModel
+        foodListView.reloadData()
     }
 
-    override func numberOfSections(in collectionView: UICollectionView) -> Int {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
 
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return viewModel.foodsViewModel.count
     }
 
-    override func collectionView(_ collectionView: UICollectionView,
-                                 cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FoodViewCell.identifier, for: indexPath)
         guard let foodCell = cell as? FoodViewCell else { return cell }
 
