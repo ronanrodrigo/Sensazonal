@@ -39,6 +39,7 @@
 		34CA5028205F1FBA0095994A /* FoodListCollectionViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CA5027205F1FBA0095994A /* FoodListCollectionViewControllerFactory.swift */; };
 		34CA502A205F20550095994A /* FoodListBinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CA5029205F20550095994A /* FoodListBinder.swift */; };
 		34EF9AAF2050B5BB00EB0337 /* LocaleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34EF9AAE2050B5BB00EB0337 /* LocaleTests.swift */; };
+		34FC8F1B20616A8B00A07C66 /* FoodListCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FC8F1A20616A8B00A07C66 /* FoodListCollectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +91,7 @@
 		34EF9AAC2050B5BB00EB0337 /* SensazonalUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SensazonalUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		34EF9AAE2050B5BB00EB0337 /* LocaleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocaleTests.swift; sourceTree = "<group>"; };
 		34EF9AB02050B5BB00EB0337 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		34FC8F1A20616A8B00A07C66 /* FoodListCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListCollectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -249,6 +251,7 @@
 			isa = PBXGroup;
 			children = (
 				34AE621E20541FAE00690E51 /* FoodViewCell.swift */,
+				34FC8F1A20616A8B00A07C66 /* FoodListCollectionView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -510,6 +513,7 @@
 				34CA5016205ED6FD0095994A /* FoodListCollectionViewController.swift in Sources */,
 				34272CDE2051CD6E00EABE98 /* Food.swift in Sources */,
 				34CA5024205EDBDE0095994A /* ListFoodViewPresenterFactory.swift in Sources */,
+				34FC8F1B20616A8B00A07C66 /* FoodListCollectionView.swift in Sources */,
 				34272CEB2051CF8200EABE98 /* ListFoodGateway.swift in Sources */,
 				34272CED2051D04100EABE98 /* ListFoodMemoryGateway.swift in Sources */,
 				343A4FC9204D70CE00E33E81 /* AppDelegate.swift in Sources */,
