@@ -2,7 +2,7 @@ import UIKit
 
 final class FoodListCollectionView: UIView {
 
-    private static let margin = Metric.extraLarge
+    private static let margin = Metric.large
     private static let columns: CGFloat = 2
     private static let edges = UIEdgeInsets(top: margin, left: margin, bottom: margin, right: margin)
     private let layout = UICollectionViewFlowLayout()
