@@ -125,6 +125,7 @@
 		34272CD62051CC6B00EABE98 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				34F82D82206416EE002D7062 /* ViewControllers */,
 				343352032062CD3C004549A0 /* Layout */,
 				34272CDC2051CD4F00EABE98 /* Entities */,
 				34EF9AB82050B6D100EB0337 /* Essentials */,
@@ -354,6 +355,13 @@
 				34EF9AB02050B5BB00EB0337 /* Info.plist */,
 			);
 			path = Essentials;
+			sourceTree = "<group>";
+		};
+		34F82D82206416EE002D7062 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
