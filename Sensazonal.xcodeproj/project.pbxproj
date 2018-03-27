@@ -130,7 +130,7 @@
 				34F82D82206416EE002D7062 /* ViewControllers */,
 				343352032062CD3C004549A0 /* Layout */,
 				34272CDC2051CD4F00EABE98 /* Entities */,
-				34EF9AB82050B6D100EB0337 /* Essentials */,
+				34EF9AB82050B6D100EB0337 /* Base */,
 				34EF9AB62050B6B500EB0337 /* Locale */,
 			);
 			path = Common;
@@ -139,7 +139,7 @@
 		34272CD72051CC7100EABE98 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				34EF9ABA2050B72B00EB0337 /* Essentials */,
+				34EF9ABA2050B72B00EB0337 /* Base */,
 				34EF9AB92050B71D00EB0337 /* Locale */,
 			);
 			path = Common;
@@ -331,7 +331,7 @@
 			path = Locale;
 			sourceTree = "<group>";
 		};
-		34EF9AB82050B6D100EB0337 /* Essentials */ = {
+		34EF9AB82050B6D100EB0337 /* Base */ = {
 			isa = PBXGroup;
 			children = (
 				34272CDA2051CD3C00EABE98 /* DataSource.swift */,
@@ -340,7 +340,7 @@
 				343A4FCF204D70CE00E33E81 /* Assets.xcassets */,
 				343A4FD1204D70CE00E33E81 /* LaunchScreen.storyboard */,
 			);
-			path = Essentials;
+			path = Base;
 			sourceTree = "<group>";
 		};
 		34EF9AB92050B71D00EB0337 /* Locale */ = {
@@ -351,12 +351,12 @@
 			path = Locale;
 			sourceTree = "<group>";
 		};
-		34EF9ABA2050B72B00EB0337 /* Essentials */ = {
+		34EF9ABA2050B72B00EB0337 /* Base */ = {
 			isa = PBXGroup;
 			children = (
 				34EF9AB02050B5BB00EB0337 /* Info.plist */,
 			);
-			path = Essentials;
+			path = Base;
 			sourceTree = "<group>";
 		};
 		34F82D82206416EE002D7062 /* ViewControllers */ = {
@@ -698,7 +698,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = "$(SRCROOT)/Sensazonal/Common/Essentials/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Sensazonal/Common/Base/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ronanrodrigo.nubank.sensazonal;
@@ -720,7 +720,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = "$(SRCROOT)/Sensazonal/Common/Essentials/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Sensazonal/Common/Base/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ronanrodrigo.nubank.sensazonal;
@@ -740,7 +740,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = SensazonalUnitTests/Common/Essentials/Info.plist;
+				INFOPLIST_FILE = SensazonalUnitTests/Common/Base/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ronanrodrigo.SensazonalUnitTests;
@@ -760,7 +760,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = SensazonalUnitTests/Common/Essentials/Info.plist;
+				INFOPLIST_FILE = SensazonalUnitTests/Common/Base/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ronanrodrigo.SensazonalUnitTests;
