@@ -6,7 +6,7 @@ class ListFoodStubPresenter: ListFoodPresenter {
     var didPresentFoodsStub = false
     var presentedError: SensazonalError!
 
-    func presentFoods(_ foods: [Food]) {
+    func presentFoods(_ foods: [Food], monthNumber: Int) {
         listedFoods = foods
         didPresentFoodsStub = true
     }
