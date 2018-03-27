@@ -14,12 +14,15 @@ class ListFoodByMonthInteractor {
             return presenter.presentError(.invalidMonth)
         }
 
-        gateway.filter(byMonth: month, onComplete: { result in
-            switch result {
-            case let .success(foods): presenter.presentFoods(foods, monthNumber: month)
-            case let .failure(error): presenter.presentError(error)
-            }
-        })
+        gateway.filter(byMonth: month) { [weak self] in
+            guard let this = self else { return }
+            $0.onSuccess(this.presentFoods(monthNumber: month))
+            $0.onFailure(this.presenter.presentError)
+        }
+    }
+
+    private func presentFoods(monthNumber: Int) -> ([Food]) -> Void {
+        return { foods in self.presenter.presentFoods(foods, monthNumber: monthNumber) }
     }
 
 }
