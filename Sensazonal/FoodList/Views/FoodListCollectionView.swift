@@ -22,9 +22,7 @@ final class FoodListCollectionView: UIView {
         installConstraints()
     }
 
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+    required init?(coder aDecoder: NSCoder) { Logger.shared.notImplemented(#file, #function, #line); return nil }
 
     override func didMoveToSuperview() {
         super.didMoveToSuperview()
