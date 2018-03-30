@@ -6,9 +6,9 @@ class FoodListController {
     private let listViewController = FoodListCollectionViewController()
     private let listFoodByMonth: ListFoodByMonthInteractor
 
-    init() {
+    init(interactorBuilder: (ListFoodPresenter) -> ListFoodByMonthInteractor = ListFoodByMonthInteractorFactory.make) {
         let presenter = ListFoodViewPresenterFactory.make(binder: listViewController)
-        listFoodByMonth = ListFoodByMonthInteractorFactory.make(presenter: presenter)
+        listFoodByMonth = interactorBuilder(presenter)
         let currentMonth = Calendar.current.component(.month, from: Date())
         listFoodByMonth.list(byMonth: currentMonth)
     }
