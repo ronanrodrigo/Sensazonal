@@ -12,8 +12,8 @@ final class GradientTests: XCTestCase {
         let startColorComponents = cgColors[1].components
         let endColorComponents = cgColors[0].components
 
-        XCTAssertEqual(startColorComponents, black.cgColor.components)
-        XCTAssertEqual(endColorComponents, transparentBlack.cgColor.components)
+        XCTAssertEqual(startColorComponents!, black.cgColor.components!)
+        XCTAssertEqual(endColorComponents!, transparentBlack.cgColor.components!)
     }
 
 }
