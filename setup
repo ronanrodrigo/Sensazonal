@@ -1,19 +1,28 @@
-setup_enviroment() {
-    brew_dependencies=(carthage swiftlint)
-    for brew_dependency in "${brew_dependencies[@]}"; do
-        install_brew_dependency_if_needed $brew_dependency
-    done
+#!/usr/bin/env bash
 
-    carthage bootstrap --platform iOS
+setup_enviroment() {
+    install_system_basics
+    install_brew_dependencies
+    install_carthage_dependencies
 }
 
-install_brew_dependency_if_needed() {
-    brew_dependency=$1
+install_system_basics() {
+    if ! type "brew" &> /dev/null; then
+        echo "Installing brew..."
+        eval '/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)'
+    fi
+}
 
-    if ! type "$brew_dependency" &> /dev/null; then
+install_brew_dependencies() {
+    brew_dependencies=(carthage swiftlint)
+    for brew_dependency in "${brew_dependencies[@]}"; do
         echo "Installing $brew_dependency..."
         brew install $brew_dependency
-    fi
+    done
+}
+
+install_carthage_dependencies() {
+    carthage bootstrap --platform iOS
 }
 
 setup_enviroment

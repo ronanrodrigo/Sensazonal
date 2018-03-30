@@ -1,3 +1,4 @@
 excluded:
   - "Sensazonal/CoreData/Models/"
   - "Carthage/"
+line_length: 140
