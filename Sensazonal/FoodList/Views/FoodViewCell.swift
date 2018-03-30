@@ -64,24 +64,45 @@ final class FoodViewCell: UICollectionViewCell {
     }
 
     private func installConstraints() {
-        content.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
-        content.topAnchor.constraint(equalTo: topAnchor).isActive = true
-        content.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
-        content.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+        installContentConstraints()
+        installPhotoConstraints()
+        installNameBackgroundConstraints()
+        installNameConstraints()
+    }
 
-        photo.leadingAnchor.constraint(equalTo: content.leadingAnchor).isActive = true
-        photo.topAnchor.constraint(equalTo: content.topAnchor).isActive = true
-        photo.trailingAnchor.constraint(equalTo: content.trailingAnchor).isActive = true
-        photo.bottomAnchor.constraint(equalTo: content.bottomAnchor).isActive = true
+    private func installContentConstraints() {
+        NSLayoutConstraint.activate([
+            content.leadingAnchor.constraint(equalTo: leadingAnchor),
+            content.topAnchor.constraint(equalTo: topAnchor),
+            content.trailingAnchor.constraint(equalTo: trailingAnchor),
+            content.bottomAnchor.constraint(equalTo: bottomAnchor)
+        ])
+    }
 
-        nameBackground.leadingAnchor.constraint(equalTo: content.leadingAnchor).isActive = true
-        nameBackground.trailingAnchor.constraint(equalTo: content.trailingAnchor).isActive = true
-        nameBackground.bottomAnchor.constraint(equalTo: content.bottomAnchor).isActive = true
-        nameBackground.heightAnchor.constraint(equalTo: content.heightAnchor, multiplier: 0.7).isActive = true
+    private func installPhotoConstraints() {
+        NSLayoutConstraint.activate([
+            photo.leadingAnchor.constraint(equalTo: content.leadingAnchor),
+            photo.topAnchor.constraint(equalTo: content.topAnchor),
+            photo.trailingAnchor.constraint(equalTo: content.trailingAnchor),
+            photo.bottomAnchor.constraint(equalTo: content.bottomAnchor)
+        ])
+    }
 
-        name.leadingAnchor.constraint(equalTo: content.leadingAnchor, constant: Metric.small).isActive = true
-        name.trailingAnchor.constraint(equalTo: content.trailingAnchor, constant: -Metric.small).isActive = true
-        name.bottomAnchor.constraint(equalTo: content.bottomAnchor, constant: -Metric.small).isActive = true
+    private func installNameBackgroundConstraints() {
+        NSLayoutConstraint.activate([
+            nameBackground.leadingAnchor.constraint(equalTo: content.leadingAnchor),
+            nameBackground.trailingAnchor.constraint(equalTo: content.trailingAnchor),
+            nameBackground.bottomAnchor.constraint(equalTo: content.bottomAnchor),
+            nameBackground.heightAnchor.constraint(equalTo: content.heightAnchor, multiplier: 0.7)
+        ])
+    }
+
+    private func installNameConstraints() {
+        NSLayoutConstraint.activate([
+            name.leadingAnchor.constraint(equalTo: content.leadingAnchor, constant: Metric.small),
+            name.trailingAnchor.constraint(equalTo: content.trailingAnchor, constant: -Metric.small),
+            name.bottomAnchor.constraint(equalTo: content.bottomAnchor, constant: -Metric.small)
+        ])
     }
 
 }
