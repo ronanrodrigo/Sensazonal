@@ -1,5 +1,3 @@
-import Foundation
-
 class Logger {
 
     static var shared: Logger = Logger()
