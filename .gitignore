@@ -70,3 +70,6 @@ html/
 
 # Screenshot Tests
 ScreenshotsTests/Diffs
+
+# AppCode
+.idea/
