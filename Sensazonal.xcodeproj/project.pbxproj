@@ -42,6 +42,7 @@
 		34CA5028205F1FBA0095994A /* FoodListViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CA5027205F1FBA0095994A /* FoodListViewControllerFactory.swift */; };
 		34CA502A205F20550095994A /* FoodListBinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CA5029205F20550095994A /* FoodListBinder.swift */; };
 		34EF9AAF2050B5BB00EB0337 /* LocaleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34EF9AAE2050B5BB00EB0337 /* LocaleTests.swift */; };
+		34F1991C206E64B800DEF735 /* Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F1991B206E64B800DEF735 /* Gradient.swift */; };
 		34FC8F1B20616A8B00A07C66 /* FoodListCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FC8F1A20616A8B00A07C66 /* FoodListCollectionView.swift */; };
 /* End PBXBuildFile section */
 
@@ -97,6 +98,7 @@
 		34EF9AAC2050B5BB00EB0337 /* SensazonalUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SensazonalUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		34EF9AAE2050B5BB00EB0337 /* LocaleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocaleTests.swift; sourceTree = "<group>"; };
 		34EF9AB02050B5BB00EB0337 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		34F1991B206E64B800DEF735 /* Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gradient.swift; sourceTree = "<group>"; };
 		34FC8F1A20616A8B00A07C66 /* FoodListCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListCollectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -132,6 +134,7 @@
 		34272CD62051CC6B00EABE98 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				34F1991A206E64A800DEF735 /* Styles */,
 				34275084206E5504001F871E /* Extra */,
 				34F82D82206416EE002D7062 /* ViewControllers */,
 				343352032062CD3C004549A0 /* Layout */,
@@ -371,6 +374,14 @@
 				34EF9AB02050B5BB00EB0337 /* Info.plist */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		34F1991A206E64A800DEF735 /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				34F1991B206E64B800DEF735 /* Gradient.swift */,
+			);
+			path = Styles;
 			sourceTree = "<group>";
 		};
 		34F82D82206416EE002D7062 /* ViewControllers */ = {
