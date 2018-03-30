@@ -74,13 +74,11 @@ final class FoodListCollectionView: UIView {
 
 extension FoodListCollectionView {
 
-    var dataSource: UICollectionViewDataSource? {
-        get { return collection.dataSource }
-        set { collection.dataSource = newValue }
-    }
-
     func reloadData() {
         collection.reloadData()
     }
 
+    func setupDataSource(_ dataSource: UICollectionViewDataSource) {
+        collection.dataSource = dataSource
+    }
 }

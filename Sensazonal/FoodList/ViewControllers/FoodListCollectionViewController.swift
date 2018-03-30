@@ -5,7 +5,7 @@ class FoodListCollectionViewController: UIViewController, UICollectionViewDataSo
     private var viewModel = FoodListViewModel()
     private lazy var foodListView: FoodListCollectionView = {
         let view = FoodListCollectionView()
-        view.dataSource = self
+        view.setupDataSource(self)
         return view
     }()
 
