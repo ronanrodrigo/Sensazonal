@@ -50,6 +50,8 @@
 		34F1992B206E6E1900DEF735 /* StubBinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F1992A206E6E1900DEF735 /* StubBinder.swift */; };
 		34F1992E206E6EE400DEF735 /* FoodListCollectionViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F1992D206E6EE400DEF735 /* FoodListCollectionViewControllerTests.swift */; };
 		34F19931206E724D00DEF735 /* FoodListCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F19930206E724D00DEF735 /* FoodListCollectionViewController.swift */; };
+		34F19934206E738300DEF735 /* FoodViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F19933206E738300DEF735 /* FoodViewModelTests.swift */; };
+		34F19936206E762C00DEF735 /* FoodListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F19935206E762C00DEF735 /* FoodListViewModelTests.swift */; };
 		34FC8F1B20616A8B00A07C66 /* FoodListCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FC8F1A20616A8B00A07C66 /* FoodListCollectionView.swift */; };
 /* End PBXBuildFile section */
 
@@ -113,6 +115,8 @@
 		34F1992A206E6E1900DEF735 /* StubBinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubBinder.swift; sourceTree = "<group>"; };
 		34F1992D206E6EE400DEF735 /* FoodListCollectionViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListCollectionViewControllerTests.swift; sourceTree = "<group>"; };
 		34F19930206E724D00DEF735 /* FoodListCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListCollectionViewController.swift; sourceTree = "<group>"; };
+		34F19933206E738300DEF735 /* FoodViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodViewModelTests.swift; sourceTree = "<group>"; };
+		34F19935206E762C00DEF735 /* FoodListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListViewModelTests.swift; sourceTree = "<group>"; };
 		34FC8F1A20616A8B00A07C66 /* FoodListCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListCollectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -198,6 +202,7 @@
 		34272CE32051CDF100EABE98 /* FoodList */ = {
 			isa = PBXGroup;
 			children = (
+				34F19932206E736800DEF735 /* ViewModels */,
 				34F1992F206E724400DEF735 /* Extensions */,
 				34F1992C206E6ED500DEF735 /* ViewControllers */,
 				34F19927206E6D0C00DEF735 /* Presenters */,
@@ -443,6 +448,15 @@
 				34F19930206E724D00DEF735 /* FoodListCollectionViewController.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		34F19932206E736800DEF735 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				34F19933206E738300DEF735 /* FoodViewModelTests.swift */,
+				34F19935206E762C00DEF735 /* FoodListViewModelTests.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		34F82D82206416EE002D7062 /* ViewControllers */ = {
