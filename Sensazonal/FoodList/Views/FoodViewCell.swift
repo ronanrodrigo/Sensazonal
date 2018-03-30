@@ -41,11 +41,7 @@ final class FoodViewCell: UICollectionViewCell {
         installConstraints()
     }
 
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        installSubviews()
-        installConstraints()
-    }
+    required init?(coder aDecoder: NSCoder) { Logger.shared.notImplemented(#file, #function, #line); return nil }
 
     override func layoutSubviews() {
         super.layoutSubviews()
