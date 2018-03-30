@@ -52,6 +52,7 @@
 		34F19931206E724D00DEF735 /* FoodListCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F19930206E724D00DEF735 /* FoodListCollectionViewController.swift */; };
 		34F19934206E738300DEF735 /* FoodViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F19933206E738300DEF735 /* FoodViewModelTests.swift */; };
 		34F19936206E762C00DEF735 /* FoodListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F19935206E762C00DEF735 /* FoodListViewModelTests.swift */; };
+		34F19939206E772F00DEF735 /* GradientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F19938206E772F00DEF735 /* GradientTests.swift */; };
 		34FC8F1B20616A8B00A07C66 /* FoodListCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FC8F1A20616A8B00A07C66 /* FoodListCollectionView.swift */; };
 /* End PBXBuildFile section */
 
@@ -117,6 +118,7 @@
 		34F19930206E724D00DEF735 /* FoodListCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListCollectionViewController.swift; sourceTree = "<group>"; };
 		34F19933206E738300DEF735 /* FoodViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodViewModelTests.swift; sourceTree = "<group>"; };
 		34F19935206E762C00DEF735 /* FoodListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListViewModelTests.swift; sourceTree = "<group>"; };
+		34F19938206E772F00DEF735 /* GradientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientTests.swift; sourceTree = "<group>"; };
 		34FC8F1A20616A8B00A07C66 /* FoodListCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListCollectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -168,6 +170,7 @@
 		34272CD72051CC7100EABE98 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				34F19937206E772500DEF735 /* Styles */,
 				34EF9ABA2050B72B00EB0337 /* Base */,
 				34EF9AB92050B71D00EB0337 /* Locale */,
 			);
@@ -202,14 +205,14 @@
 		34272CE32051CDF100EABE98 /* FoodList */ = {
 			isa = PBXGroup;
 			children = (
-				34F19932206E736800DEF735 /* ViewModels */,
-				34F1992F206E724400DEF735 /* Extensions */,
-				34F1992C206E6ED500DEF735 /* ViewControllers */,
-				34F19927206E6D0C00DEF735 /* Presenters */,
-				34F19924206E6C1D00DEF735 /* Gateways */,
 				34F1991D206E66CE00DEF735 /* Controllers */,
 				340D86512051D5130090F1FA /* Doubles */,
+				34F1992F206E724400DEF735 /* Extensions */,
+				34F19924206E6C1D00DEF735 /* Gateways */,
 				34B5DC4C20556020008BDBDB /* Interactors */,
+				34F19927206E6D0C00DEF735 /* Presenters */,
+				34F1992C206E6ED500DEF735 /* ViewControllers */,
+				34F19932206E736800DEF735 /* ViewModels */,
 				34B5DC4D20556024008BDBDB /* Views */,
 			);
 			path = FoodList;
@@ -459,6 +462,14 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		34F19937206E772500DEF735 /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				34F19938206E772F00DEF735 /* GradientTests.swift */,
+			);
+			path = Styles;
+			sourceTree = "<group>";
+		};
 		34F82D82206416EE002D7062 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -641,9 +652,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				34F1992E206E6EE400DEF735 /* FoodListCollectionViewControllerTests.swift in Sources */,
+				34F19936206E762C00DEF735 /* FoodListViewModelTests.swift in Sources */,
 				34F19929206E6D1C00DEF735 /* ListFoodViewPresenterTests.swift in Sources */,
 				340D86552051D78E0090F1FA /* ListFoodStubGateway.swift in Sources */,
 				340D86532051D5270090F1FA /* ListFoodStubPresenter.swift in Sources */,
+				34F19934206E738300DEF735 /* FoodViewModelTests.swift in Sources */,
 				34272CE72051CE0B00EABE98 /* ListFoodByMonthInteractorTests.swift in Sources */,
 				34F1992B206E6E1900DEF735 /* StubBinder.swift in Sources */,
 				34F19921206E66E500DEF735 /* FoodListControllerTests.swift in Sources */,
@@ -653,6 +666,7 @@
 				34F19926206E6C3100DEF735 /* ListFoodMemoryGatewayTests.swift in Sources */,
 				34AE6221205471CF00690E51 /* FoodViewCellTests.swift in Sources */,
 				3427508B206E61F4001F871E /* StubLogger.swift in Sources */,
+				34F19939206E772F00DEF735 /* GradientTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
