@@ -18,7 +18,7 @@
 		34272CED2051D04100EABE98 /* ListFoodMemoryGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34272CEC2051D04100EABE98 /* ListFoodMemoryGateway.swift */; };
 		34272CEF2051D07D00EABE98 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34272CEE2051D07D00EABE98 /* Result.swift */; };
 		34272CF12051D36300EABE98 /* SensazonalError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34272CF02051D36300EABE98 /* SensazonalError.swift */; };
-		34275086206E551A001F871E /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34275085206E551A001F871E /* Log.swift */; };
+		34275086206E551A001F871E /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34275085206E551A001F871E /* Logger.swift */; };
 		3427508B206E61F4001F871E /* StubLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3427508A206E61F4001F871E /* StubLogger.swift */; };
 		343352052062CD5D004549A0 /* Metric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343352042062CD5D004549A0 /* Metric.swift */; };
 		343A4FC9204D70CE00E33E81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343A4FC8204D70CE00E33E81 /* AppDelegate.swift */; };
@@ -67,7 +67,7 @@
 		34272CEC2051D04100EABE98 /* ListFoodMemoryGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFoodMemoryGateway.swift; sourceTree = "<group>"; };
 		34272CEE2051D07D00EABE98 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		34272CF02051D36300EABE98 /* SensazonalError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensazonalError.swift; sourceTree = "<group>"; };
-		34275085206E551A001F871E /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		34275085206E551A001F871E /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		3427508A206E61F4001F871E /* StubLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubLogger.swift; sourceTree = "<group>"; };
 		343352042062CD5D004549A0 /* Metric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Metric.swift; sourceTree = "<group>"; };
 		343A4FC5204D70CE00E33E81 /* Sensazonal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sensazonal.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -189,7 +189,7 @@
 		34275084206E5504001F871E /* Extra */ = {
 			isa = PBXGroup;
 			children = (
-				34275085206E551A001F871E /* Log.swift */,
+				34275085206E551A001F871E /* Logger.swift */,
 			);
 			path = Extra;
 			sourceTree = "<group>";
@@ -522,7 +522,7 @@
 			files = (
 				34AE621F20541FAE00690E51 /* FoodViewCell.swift in Sources */,
 				34CA5020205EDB690095994A /* ListFoodMemoryGatewayFactory.swift in Sources */,
-				34275086206E551A001F871E /* Log.swift in Sources */,
+				34275086206E551A001F871E /* Logger.swift in Sources */,
 				34CA5019205ED8EE0095994A /* FoodListController.swift in Sources */,
 				34BC47AE20698A4A003506DB /* NavigationViewController.swift in Sources */,
 				34CA5022205EDBA40095994A /* ListFoodViewPresenter.swift in Sources */,
