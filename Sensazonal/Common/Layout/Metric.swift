@@ -14,6 +14,4 @@ struct Metric {
     static let extraLarge = multiplier * 5
     /// Size: 24
     static let doubleExtraLarge = multiplier * 6
-
-    private init() { }
 }

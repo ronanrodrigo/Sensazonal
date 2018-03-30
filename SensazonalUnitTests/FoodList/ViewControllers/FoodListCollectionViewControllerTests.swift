@@ -1,11 +1,15 @@
 import XCTest
+import FBSnapshotTestCase
 @testable import Sensazonal
 
-final class FoodListCollectionViewControllerTests: XCTestCase {
+final class FoodListCollectionViewControllerTests: FBSnapshotTestCase {
+
+    private var foodViewModel: FoodViewModel {
+        return FoodViewModel(name: "Name", nameColor: .white, nameBackgroundColor: .red, photo: #imageLiteral(resourceName: "Strawberry"))
+    }
 
     func testBindViewModelThenPopulateCollectionView() {
         let viewController = FoodListCollectionViewController()
-        let foodViewModel = FoodViewModel(name: "Name", nameColor: .black, nameBackgroundColor: .white, photo: UIImage())
         let viewModel = FoodListViewModel(foodsViewModel: [foodViewModel], monthSelected: "Janeiro")
 
         viewController.bind(viewModel: viewModel)
@@ -17,6 +21,16 @@ final class FoodListCollectionViewControllerTests: XCTestCase {
         let viewController = FoodListCollectionViewController()
 
         XCTAssertEqual(viewController.numberOfItemsImSection(0), 0)
+    }
+
+    func testBindViewModelThePresentViewControllerWithCollectionView() {
+        let viewController = FoodListCollectionViewController()
+        let viewModel = FoodListViewModel(foodsViewModel: [foodViewModel, foodViewModel, foodViewModel], monthSelected: "Janeiro")
+
+        viewController.bind(viewModel: viewModel)
+
+        FBSnapshotVerifyView(viewController.view)
+        FBSnapshotVerifyLayer(viewController.view.layer)
     }
 
 }
