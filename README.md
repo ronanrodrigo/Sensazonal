@@ -4,7 +4,7 @@
 
 
 ## Requiremetnts
-- Xcode 9.20
+- Xcode 9.30
 - Carthage
 - SwiftLint
 
