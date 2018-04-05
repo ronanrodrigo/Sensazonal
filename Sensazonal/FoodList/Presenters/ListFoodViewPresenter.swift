@@ -13,7 +13,7 @@ final class ListFoodViewPresenter: ListFoodPresenter {
     func presentFoods(_ foods: [Food], monthNumber: Int) {
         let foodViewModels = foods.map { food -> FoodViewModel in
             let name = Locale.localize(food.keyName)
-            return FoodViewModel(name: name, nameColor: .white, nameBackgroundColor: .red, photo: #imageLiteral(resourceName: "Strawberry"))
+            return FoodViewModel(name: name, nameColor: .white, nameBackgroundColor: .red, photo: #imageLiteral(resourceName: "content/strawberry"))
         }
         let monthName = DateFormatter().monthSymbols[monthNumber - 1].capitalized
         let foodListViewModel = FoodListViewModel(foodsViewModel: foodViewModels, monthSelected: monthName)

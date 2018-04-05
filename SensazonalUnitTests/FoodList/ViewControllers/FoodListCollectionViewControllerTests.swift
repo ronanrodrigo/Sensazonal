@@ -5,7 +5,7 @@ import FBSnapshotTestCase
 final class FoodListCollectionViewControllerTests: FBSnapshotTestCase {
 
     private var foodViewModel: FoodViewModel {
-        return FoodViewModel(name: "Name", nameColor: .white, nameBackgroundColor: .red, photo: #imageLiteral(resourceName: "Strawberry"))
+        return FoodViewModel(name: "Name", nameColor: .white, nameBackgroundColor: .red, photo: #imageLiteral(resourceName: "content/strawberry"))
     }
 
     func testBindViewModelThenPopulateCollectionView() {
