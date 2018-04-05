@@ -28,6 +28,7 @@ final class MonthPicker: UIView {
         monthPicker.delegate = delegateAndDataSource
         translatesAutoresizingMaskIntoConstraints = false
         backgroundColor = UIColor.white.withAlphaComponent(0.95)
+        alpha = 0
         installSubviews()
         installConstraints()
     }
@@ -69,6 +70,11 @@ final class MonthPicker: UIView {
 
     func selectMonth(monthNumber: Int) {
         monthPicker.selectRow(monthNumber, inComponent: 0, animated: false)
+    }
+
+    func toggleVisibility() {
+        let isHide = alpha == 0
+        alpha = isHide ? 1 : 0
     }
 
 }

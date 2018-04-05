@@ -11,7 +11,7 @@ class FoodListCollectionViewController: UIViewController {
     }()
 
     private lazy var monthSelectorBarButton: MonthSelectorBarButton = {
-        return MonthSelectorBarButton(onTouch: { print(#function) })
+        return MonthSelectorBarButton(onTouch: { [weak self] in self?.monthPicker.toggleVisibility() })
     }()
 
     private lazy var monthPicker: MonthPicker = {
