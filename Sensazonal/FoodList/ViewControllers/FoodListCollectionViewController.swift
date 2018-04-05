@@ -1,6 +1,6 @@
 import UIKit
 
-class FoodListCollectionViewController: UIViewController, UICollectionViewDataSource, FoodListBinder {
+class FoodListCollectionViewController: UIViewController {
 
     private var viewModel = FoodListViewModel()
     private lazy var foodListView: FoodListCollectionView = {
@@ -11,13 +11,31 @@ class FoodListCollectionViewController: UIViewController, UICollectionViewDataSo
 
     override func viewDidLoad() {
         view.addSubview(foodListView)
+        addMonthSelectorBarButton()
     }
+
+    private func addMonthSelectorBarButton() {
+        let button = UIBarButtonItem.init(image: #imageLiteral(resourceName: "top/month"), style: .plain, target: self, action: #selector(didTouchAtMonthSelectorButton))
+        navigationItem.rightBarButtonItem = button
+    }
+
+    @objc private func didTouchAtMonthSelectorButton() {
+        print(#function)
+    }
+
+}
+
+extension FoodListCollectionViewController: FoodListBinder {
 
     func bind(viewModel: FoodListViewModel) {
         self.viewModel = viewModel
         title = viewModel.monthSelected
         foodListView.reloadData()
     }
+
+}
+
+extension FoodListCollectionViewController: UICollectionViewDataSource {
 
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
