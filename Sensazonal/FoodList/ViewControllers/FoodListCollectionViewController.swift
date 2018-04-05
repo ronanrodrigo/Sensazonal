@@ -14,8 +14,15 @@ class FoodListCollectionViewController: UIViewController {
         return MonthSelectorBarButton(onTouch: { print(#function) })
     }()
 
+    private lazy var monthPicker: MonthPicker = {
+        let picker = MonthPicker(delegateAndDataSource: self)
+        picker.selectMonth(monthNumber: self.viewModel.monthNumber)
+        return picker
+    }()
+
     override func viewDidLoad() {
         view.addSubview(foodListView)
+        view.addSubview(monthPicker)
         navigationItem.rightBarButtonItem = monthSelectorBarButton
     }
 
@@ -49,6 +56,22 @@ extension FoodListCollectionViewController: UICollectionViewDataSource {
         foodCell.bind(viewModel: foodViewModel)
 
         return cell
+    }
+
+}
+
+extension FoodListCollectionViewController: UIPickerViewDataSource, UIPickerViewDelegate {
+
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return viewModel.monthNames.count
+    }
+
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return viewModel.monthNames[row]
     }
 
 }
