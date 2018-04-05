@@ -3,24 +3,20 @@ import UIKit
 class FoodListCollectionViewController: UIViewController {
 
     private var viewModel = FoodListViewModel()
+
     private lazy var foodListView: FoodListCollectionView = {
         let view = FoodListCollectionView()
         view.setupDataSource(self)
         return view
     }()
 
+    private lazy var monthSelectorBarButton: MonthSelectorBarButton = {
+        return MonthSelectorBarButton(onTouch: { print(#function) })
+    }()
+
     override func viewDidLoad() {
         view.addSubview(foodListView)
-        addMonthSelectorBarButton()
-    }
-
-    private func addMonthSelectorBarButton() {
-        let button = UIBarButtonItem.init(image: #imageLiteral(resourceName: "top/month"), style: .plain, target: self, action: #selector(didTouchAtMonthSelectorButton))
-        navigationItem.rightBarButtonItem = button
-    }
-
-    @objc private func didTouchAtMonthSelectorButton() {
-        print(#function)
+        navigationItem.rightBarButtonItem = monthSelectorBarButton
     }
 
 }
