@@ -7,7 +7,7 @@ class MonthSelectorBarButton: UIBarButtonItem {
     init(onTouch: @escaping () -> Void) {
         self.onTouch = onTouch
         super.init()
-        image = #imageLiteral(resourceName: "top/month")
+        image = #imageLiteral(resourceName: "top/filter")
         action = #selector(didTouchAtMonthSelectorButton)
     }
 
