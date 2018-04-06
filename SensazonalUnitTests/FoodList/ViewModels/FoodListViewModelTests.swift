@@ -12,7 +12,7 @@ final class FoodListViewModelTests: XCTestCase {
 
     func testInitWithFoodsViewModel() {
         let foodViewModel = FoodViewModel(name: "", nameColor: .black, nameBackgroundColor: .white, photo: UIImage())
-        let viewModel = FoodListViewModel(foodsViewModel: [foodViewModel], monthSelected: "Janeiro")
+        let viewModel = FoodListViewModel(foodsViewModel: [foodViewModel], monthSelected: "Janeiro", monthNumber: 0)
 
         XCTAssertEqual(viewModel.foodsViewModel.count, 1)
         XCTAssertEqual(viewModel.monthSelected, "Janeiro")

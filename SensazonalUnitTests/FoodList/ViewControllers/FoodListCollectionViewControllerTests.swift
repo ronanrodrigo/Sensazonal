@@ -10,7 +10,7 @@ final class FoodListCollectionViewControllerTests: FBSnapshotTestCase {
 
     func testBindViewModelThenPopulateCollectionView() {
         let viewController = FoodListCollectionViewController()
-        let viewModel = FoodListViewModel(foodsViewModel: [foodViewModel], monthSelected: "Janeiro")
+        let viewModel = FoodListViewModel(foodsViewModel: [foodViewModel], monthSelected: "Janeiro", monthNumber: 0)
 
         viewController.bind(viewModel: viewModel)
 
@@ -25,7 +25,7 @@ final class FoodListCollectionViewControllerTests: FBSnapshotTestCase {
 
     func testBindViewModelThePresentViewControllerWithCollectionView() {
         let viewController = FoodListCollectionViewController()
-        let viewModel = FoodListViewModel(foodsViewModel: [foodViewModel, foodViewModel, foodViewModel], monthSelected: "Janeiro")
+        let viewModel = FoodListViewModel(foodsViewModel: [foodViewModel, foodViewModel, foodViewModel], monthSelected: "Janeiro", monthNumber: 0)
 
         viewController.bind(viewModel: viewModel)
 
