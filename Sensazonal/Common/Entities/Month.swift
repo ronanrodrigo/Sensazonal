@@ -11,10 +11,6 @@ struct Month {
     var name: String { return DateFormatter().monthSymbols[position].capitalized }
     private var position: Int { return number - 1 }
 
-    static func isValid(monthNumber: Int) -> Bool {
-        return (1...12) ~= monthNumber
-    }
-
 }
 
 extension Month {
