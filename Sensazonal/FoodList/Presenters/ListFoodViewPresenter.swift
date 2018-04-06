@@ -15,8 +15,8 @@ final class ListFoodViewPresenter: ListFoodPresenter {
             let name = Locale.localize(food.keyName)
             return FoodViewModel(name: name, nameColor: .white, nameBackgroundColor: .red, photo: #imageLiteral(resourceName: "content/strawberry"))
         }
-        let monthName = DateFormatter().monthSymbols[monthNumber - 1].capitalized
-        let foodListViewModel = FoodListViewModel(foodsViewModel: foodViewModels, monthSelected: monthName, monthNumber: monthNumber - 1)
+
+        let foodListViewModel = FoodListViewModel(foodsViewModel: foodViewModels, month: Month(number: monthNumber))
         binder?.bind(viewModel: foodListViewModel)
     }
 

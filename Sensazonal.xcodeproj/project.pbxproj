@@ -26,6 +26,7 @@
 		343A4FD3204D70CE00E33E81 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 343A4FD1204D70CE00E33E81 /* LaunchScreen.storyboard */; };
 		343A4FDB204D70EF00E33E81 /* Locale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343A4FDA204D70EF00E33E81 /* Locale.swift */; };
 		343A4FDF204D711C00E33E81 /* Locale.strings in Resources */ = {isa = PBXBuildFile; fileRef = 343A4FE1204D711C00E33E81 /* Locale.strings */; };
+		3451C45A2077F3A100CF6886 /* Month.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3451C4592077F3A100CF6886 /* Month.swift */; };
 		346391D82076D146007CDBCE /* MonthSelectorBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346391D72076D146007CDBCE /* MonthSelectorBarButton.swift */; };
 		346391DA2076D759007CDBCE /* MonthPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346391D92076D759007CDBCE /* MonthPicker.swift */; };
 		34AE621D20540BF400690E51 /* FBSnapshotTestCase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34AE621A205409CF00690E51 /* FBSnapshotTestCase.framework */; };
@@ -93,6 +94,7 @@
 		343A4FDA204D70EF00E33E81 /* Locale.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Locale.swift; sourceTree = "<group>"; };
 		343A4FDC204D710B00E33E81 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		343A4FE2204D711F00E33E81 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Locale.strings"; sourceTree = "<group>"; };
+		3451C4592077F3A100CF6886 /* Month.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Month.swift; sourceTree = "<group>"; };
 		346391D72076D146007CDBCE /* MonthSelectorBarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthSelectorBarButton.swift; sourceTree = "<group>"; };
 		346391D92076D759007CDBCE /* MonthPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthPicker.swift; sourceTree = "<group>"; };
 		3481B84B204DB5DA00E10C76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Locale.strings; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 				34272CF02051D36300EABE98 /* SensazonalError.swift */,
 				34272CDD2051CD6E00EABE98 /* Food.swift */,
 				34272CEE2051D07D00EABE98 /* Result.swift */,
+				3451C4592077F3A100CF6886 /* Month.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -653,6 +656,7 @@
 				34CA5022205EDBA40095994A /* ListFoodViewPresenter.swift in Sources */,
 				34CA501B205ED94F0095994A /* FoodListViewModel.swift in Sources */,
 				346391D82076D146007CDBCE /* MonthSelectorBarButton.swift in Sources */,
+				3451C45A2077F3A100CF6886 /* Month.swift in Sources */,
 				34272CEF2051D07D00EABE98 /* Result.swift in Sources */,
 				34B5DC46205553C0008BDBDB /* FoodViewModel.swift in Sources */,
 				343352052062CD5D004549A0 /* Metric.swift in Sources */,

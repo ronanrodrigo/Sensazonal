@@ -7,15 +7,15 @@ final class FoodListViewModelTests: XCTestCase {
         let viewModel = FoodListViewModel()
 
         XCTAssertTrue(viewModel.foodsViewModel.isEmpty)
-        XCTAssertEqual(viewModel.monthSelected, "")
+        XCTAssertEqual(viewModel.month.name, Month().name)
     }
 
     func testInitWithFoodsViewModel() {
         let foodViewModel = FoodViewModel(name: "", nameColor: .black, nameBackgroundColor: .white, photo: UIImage())
-        let viewModel = FoodListViewModel(foodsViewModel: [foodViewModel], monthSelected: "Janeiro", monthNumber: 0)
+        let viewModel = FoodListViewModel(foodsViewModel: [foodViewModel], month: Month(number: 1))
 
         XCTAssertEqual(viewModel.foodsViewModel.count, 1)
-        XCTAssertEqual(viewModel.monthSelected, "Janeiro")
+        XCTAssertEqual(viewModel.month.name, "Janeiro")
     }
 
 }
