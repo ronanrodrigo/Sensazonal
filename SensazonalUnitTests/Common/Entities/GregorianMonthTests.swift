@@ -59,4 +59,10 @@ final class GregorianMonthTests: XCTestCase {
         XCTAssertTrue(isValid)
     }
 
+    func testAllMonthsThenIncludeTwelveMonths() {
+        let months = GregorianMonth.allMonths
+
+        XCTAssertEqual(months.count, 12)
+    }
+
 }

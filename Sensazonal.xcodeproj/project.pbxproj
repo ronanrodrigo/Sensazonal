@@ -183,6 +183,7 @@
 		34272CD72051CC7100EABE98 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				3460D053207B87F400BBEDA3 /* Entities */,
 				34F1993D206E7A9400DEF735 /* Doubles */,
 				34F1993A206E792A00DEF735 /* ViewControllers */,
 				34F19937206E772500DEF735 /* Styles */,
@@ -199,7 +200,6 @@
 				34272CDD2051CD6E00EABE98 /* Food.swift */,
 				34272CEE2051D07D00EABE98 /* Result.swift */,
 				3451C4592077F3A100CF6886 /* GregorianMonth.swift */,
-				3460D04D207B810400BBEDA3 /* GregorianMonthTests.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -277,6 +277,14 @@
 				34272CD62051CC6B00EABE98 /* Common */,
 			);
 			path = Sensazonal;
+			sourceTree = "<group>";
+		};
+		3460D053207B87F400BBEDA3 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				3460D04D207B810400BBEDA3 /* GregorianMonthTests.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 		34AE6219205409CF00690E51 /* Frameworks */ = {

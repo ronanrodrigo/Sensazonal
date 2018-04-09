@@ -1,9 +1,10 @@
 import Foundation
 
 struct GregorianMonth {
+    static var allMonths = (0...11).map(GregorianMonth.monthName)
     private let number: Int
     var position: Int { return number - 1 }
-    var name: String { return DateFormatter().monthSymbols[position].capitalized }
+    var name: String { return GregorianMonth.monthName(position: position) }
 
     /**
      Init with gregorian month number.
@@ -23,6 +24,10 @@ struct GregorianMonth {
 
     static func isValid(month: Int) -> Bool {
         return (1...12) ~= month
+    }
+
+    private static func monthName(position: Int) -> String {
+        return DateFormatter().monthSymbols[position].capitalized
     }
 
 }
