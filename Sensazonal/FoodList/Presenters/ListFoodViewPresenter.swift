@@ -12,7 +12,7 @@ final class ListFoodViewPresenter: ListFoodPresenter {
 
     func presentFoods(_ foods: [Food], monthNumber: Int) {
         let foodViewModels = foods.map { food -> FoodViewModel in
-            return FoodViewModel(name: food.name, nameColor: .white, nameBackgroundColor: .red, photo: #imageLiteral(resourceName: "content/strawberry"))
+            return FoodViewModel(FoodViewModelParams(food.name, .white, .red, #imageLiteral(resourceName: "content/strawberry")))
         }
 
         do {
