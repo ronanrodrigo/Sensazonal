@@ -11,7 +11,7 @@ validate_xcode_version() {
     echo "Validating Xcode version..."
     xcode_version=$(xcodebuild -version)
     if ! [[ $xcode_version = *"9.3"* ]]; then
-        echo -e "\033[31mYou must have/select Xcode 9.3.0" >&2
+        echo -e "\033[31mYou must have/select Xcode 9.3.0"
         exit 1
     fi
 }
