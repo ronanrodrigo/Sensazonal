@@ -7,9 +7,7 @@ struct GregorianMonth {
 
     /**
      Init with gregorian month number.
-
-     - Parameter number: Must be between 1 and 12
-
+     - Parameter number: The month number in gregorian calendar.
      - Throws: `SensazonalError.invalidMonth` if the `number` parameter is not between 1 and 12.
      */
     init(number: Int) throws {
