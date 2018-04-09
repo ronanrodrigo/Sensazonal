@@ -11,7 +11,7 @@ class MonthSelectorBarButton: UIBarButtonItem {
         action = #selector(didTouchAtMonthSelectorButton)
     }
 
-    required init?(coder aDecoder: NSCoder) { Logger.shared.notImplemented(#file, #function, #line); return nil }
+    required init?(coder aDecoder: NSCoder) { Logger.shared.notImplemented(); return nil }
 
     @objc private func didTouchAtMonthSelectorButton() {
         onTouch()
