@@ -21,6 +21,17 @@ final class MonthPickerTests: XCTestCase {
         XCTAssertEqual(picker.alpha, 1)
     }
 
+    func testInitWithCoderThenLogErrorMessage() {
+        let stubLogger = StubLogger()
+        Logger.shared = stubLogger
+
+        let picker = MonthPicker(coder: NSCoder())
+
+        XCTAssertTrue(stubLogger.fileLogged.contains("MonthPicker.swift"))
+        XCTAssertEqual(stubLogger.functionLogged, "init(coder:)")
+        XCTAssertNil(picker)
+    }
+
 }
 
 class FakePickerViewDataSourceAndDelegate: NSObject, UIPickerViewDelegate, UIPickerViewDataSource {
