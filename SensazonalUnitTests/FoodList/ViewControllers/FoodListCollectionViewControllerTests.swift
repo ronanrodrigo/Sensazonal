@@ -8,9 +8,9 @@ final class FoodListCollectionViewControllerTests: FBSnapshotTestCase {
         return FoodViewModel(name: "Name", nameColor: .white, nameBackgroundColor: .red, photo: #imageLiteral(resourceName: "content/strawberry"))
     }
 
-    func testBindViewModelThenPopulateCollectionView() {
+    func testBindViewModelThenPopulateCollectionView() throws {
         let viewController = FoodListCollectionViewController()
-        let viewModel = FoodListViewModel(foodsViewModel: [foodViewModel], month: Month(number: 1))
+        let viewModel = FoodListViewModel(foodsViewModel: [foodViewModel], month: try GregorianMonth(number: 1))
 
         viewController.bind(viewModel: viewModel)
 
@@ -23,9 +23,11 @@ final class FoodListCollectionViewControllerTests: FBSnapshotTestCase {
         XCTAssertEqual(viewController.numberOfItemsImSection(0), 0)
     }
 
+    // swiftlint:disable force_try
     func testBindViewModelThePresentViewControllerWithCollectionView() {
         let viewController = FoodListCollectionViewController()
-        let viewModel = FoodListViewModel(foodsViewModel: [foodViewModel, foodViewModel, foodViewModel], month: Month(number: 1))
+        let viewModel = FoodListViewModel(foodsViewModel: [foodViewModel, foodViewModel, foodViewModel],
+                                          month: try! GregorianMonth(number: 1))
 
         viewController.bind(viewModel: viewModel)
 

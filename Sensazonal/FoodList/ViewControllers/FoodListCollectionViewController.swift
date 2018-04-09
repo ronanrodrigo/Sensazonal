@@ -16,7 +16,7 @@ class FoodListCollectionViewController: UIViewController {
 
     private lazy var monthPicker: MonthPicker = {
         let picker = MonthPicker(delegateAndDataSource: self)
-        picker.selectMonth(monthNumber: self.viewModel.month.number)
+        picker.selectMonth(monthNumber: self.viewModel.month.position)
         return picker
     }()
 

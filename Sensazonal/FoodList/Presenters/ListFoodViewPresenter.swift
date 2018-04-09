@@ -12,12 +12,18 @@ final class ListFoodViewPresenter: ListFoodPresenter {
 
     func presentFoods(_ foods: [Food], monthNumber: Int) {
         let foodViewModels = foods.map { food -> FoodViewModel in
-            let name = Locale.localize(food.keyName)
-            return FoodViewModel(name: name, nameColor: .white, nameBackgroundColor: .red, photo: #imageLiteral(resourceName: "content/strawberry"))
+            return FoodViewModel(name: food.name, nameColor: .white, nameBackgroundColor: .red, photo: #imageLiteral(resourceName: "content/strawberry"))
         }
 
-        let foodListViewModel = FoodListViewModel(foodsViewModel: foodViewModels, month: Month(number: monthNumber))
-        binder?.bind(viewModel: foodListViewModel)
+        do {
+            let month = try GregorianMonth(number: monthNumber)
+            let foodListViewModel = FoodListViewModel(foodsViewModel: foodViewModels, month: month)
+            binder?.bind(viewModel: foodListViewModel)
+        } catch { presentError(.invalidMonth) }
     }
 
+}
+
+fileprivate extension Food {
+    var name: String { return Locale.localize(keyName) }
 }
