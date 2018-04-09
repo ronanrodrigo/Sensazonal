@@ -52,20 +52,31 @@ final class MonthPicker: UIView {
     }
 
     private func installConstraints() {
+        installNavigationConstraints()
+        installMonthPickerConstraints()
+        installConfirmConstraints()
+    }
+
+    private func installNavigationConstraints() {
         NSLayoutConstraint.activate([
             navigation.leadingAnchor.constraint(equalTo: leadingAnchor),
             navigation.trailingAnchor.constraint(equalTo: trailingAnchor),
-            navigation.bottomAnchor.constraint(equalTo: monthPicker.topAnchor),
+            navigation.bottomAnchor.constraint(equalTo: monthPicker.topAnchor)])
+    }
 
+    private func installMonthPickerConstraints() {
+        NSLayoutConstraint.activate([
             monthPicker.leadingAnchor.constraint(equalTo: leadingAnchor),
             monthPicker.topAnchor.constraint(equalTo: topAnchor),
             monthPicker.trailingAnchor.constraint(equalTo: trailingAnchor),
-            monthPicker.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
+            monthPicker.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor)])
+    }
 
+    private func installConfirmConstraints() {
+        NSLayoutConstraint.activate([
             confirm.topAnchor.constraint(equalTo: navigation.topAnchor, constant: Metric.small),
             confirm.trailingAnchor.constraint(equalTo: navigation.trailingAnchor, constant: -Metric.large),
-            confirm.bottomAnchor.constraint(equalTo: navigation.bottomAnchor, constant: -Metric.small)
-        ])
+            confirm.bottomAnchor.constraint(equalTo: navigation.bottomAnchor, constant: -Metric.small)])
     }
 
     func selectMonth(monthNumber: Int) {
