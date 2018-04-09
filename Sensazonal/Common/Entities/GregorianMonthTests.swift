@@ -43,4 +43,20 @@ final class GregorianMonthTests: XCTestCase {
         XCTAssertEqual(month.name, DateFormatter().monthSymbols[currentMonthNumber - 1].capitalized)
     }
 
+    func testIsValidWhenInvalidNumberThenReturnFalse() {
+        let isValid = GregorianMonth.isValid(month: -1) &&
+            GregorianMonth.isValid(month: 0) &&
+            GregorianMonth.isValid(month: 13)
+
+        XCTAssertFalse(isValid)
+    }
+
+    func testIsValidWhenValidNumberThenReturnTrue() {
+        let isValid = GregorianMonth.isValid(month: 1) &&
+            GregorianMonth.isValid(month: 6) &&
+            GregorianMonth.isValid(month: 12)
+
+        XCTAssertTrue(isValid)
+    }
+
 }

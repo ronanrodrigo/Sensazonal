@@ -21,7 +21,7 @@ struct GregorianMonth {
         self.number = currentMonth
     }
 
-    private static func isValid(month: Int) -> Bool {
+    static func isValid(month: Int) -> Bool {
         return (1...12) ~= month
     }
 
