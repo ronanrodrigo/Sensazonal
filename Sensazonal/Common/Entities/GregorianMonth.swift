@@ -2,7 +2,7 @@ import Foundation
 
 struct GregorianMonth {
     static var allMonths = (0...11).map(GregorianMonth.monthName)
-    private let number: Int
+    let number: Int
     var position: Int { return number - 1 }
     var name: String { return GregorianMonth.monthName(position: position) }
 
