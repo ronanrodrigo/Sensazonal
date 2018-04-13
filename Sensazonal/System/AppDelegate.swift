@@ -8,7 +8,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationDidFinishLaunching(_ application: UIApplication) {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.backgroundColor = .white
-        window?.rootViewController = FoodListViewControllerFactory.make()
+        window?.rootViewController = RootViewControllerFactory.make()
         window?.makeKeyAndVisible()
     }
 
