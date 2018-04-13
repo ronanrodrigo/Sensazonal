@@ -27,11 +27,13 @@
 		343A4FDB204D70EF00E33E81 /* Locale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343A4FDA204D70EF00E33E81 /* Locale.swift */; };
 		343A4FDF204D711C00E33E81 /* Locale.strings in Resources */ = {isa = PBXBuildFile; fileRef = 343A4FE1204D711C00E33E81 /* Locale.strings */; };
 		3451C45A2077F3A100CF6886 /* GregorianMonth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3451C4592077F3A100CF6886 /* GregorianMonth.swift */; };
+		345C3DA4207FB99100B04250 /* SelectMonthPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345C3DA3207FB99100B04250 /* SelectMonthPickerViewController.swift */; };
 		3460D050207B814200BBEDA3 /* GregorianMonthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3460D04D207B810400BBEDA3 /* GregorianMonthTests.swift */; };
 		3460D052207B85D200BBEDA3 /* MonthPickerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3460D051207B85D200BBEDA3 /* MonthPickerTests.swift */; };
 		3460D055207B889200BBEDA3 /* MonthSelectorBarButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3460D054207B889200BBEDA3 /* MonthSelectorBarButtonTests.swift */; };
 		346391D82076D146007CDBCE /* MonthSelectorBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346391D72076D146007CDBCE /* MonthSelectorBarButton.swift */; };
 		346391DA2076D759007CDBCE /* MonthPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346391D92076D759007CDBCE /* MonthPicker.swift */; };
+		349A1F30207FC01100BBC5F3 /* SelectMonthViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349A1F2F207FC01100BBC5F3 /* SelectMonthViewControllerFactory.swift */; };
 		349A1F36207FC14900BBC5F3 /* MonthFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349A1F35207FC14900BBC5F3 /* MonthFactory.swift */; };
 		34AE621D20540BF400690E51 /* FBSnapshotTestCase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34AE621A205409CF00690E51 /* FBSnapshotTestCase.framework */; };
 		34AE621F20541FAE00690E51 /* FoodViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AE621E20541FAE00690E51 /* FoodViewCell.swift */; };
@@ -99,12 +101,14 @@
 		343A4FDC204D710B00E33E81 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		343A4FE2204D711F00E33E81 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Locale.strings"; sourceTree = "<group>"; };
 		3451C4592077F3A100CF6886 /* GregorianMonth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GregorianMonth.swift; sourceTree = "<group>"; };
+		345C3DA3207FB99100B04250 /* SelectMonthPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectMonthPickerViewController.swift; sourceTree = "<group>"; };
 		3460D04D207B810400BBEDA3 /* GregorianMonthTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GregorianMonthTests.swift; sourceTree = "<group>"; };
 		3460D051207B85D200BBEDA3 /* MonthPickerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthPickerTests.swift; sourceTree = "<group>"; };
 		3460D054207B889200BBEDA3 /* MonthSelectorBarButtonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthSelectorBarButtonTests.swift; sourceTree = "<group>"; };
 		346391D72076D146007CDBCE /* MonthSelectorBarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthSelectorBarButton.swift; sourceTree = "<group>"; };
 		346391D92076D759007CDBCE /* MonthPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthPicker.swift; sourceTree = "<group>"; };
 		3481B84B204DB5DA00E10C76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Locale.strings; sourceTree = "<group>"; };
+		349A1F2F207FC01100BBC5F3 /* SelectMonthViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectMonthViewControllerFactory.swift; sourceTree = "<group>"; };
 		349A1F35207FC14900BBC5F3 /* MonthFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthFactory.swift; sourceTree = "<group>"; };
 		34AE621A205409CF00690E51 /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSnapshotTestCase.framework; path = Carthage/Build/iOS/FBSnapshotTestCase.framework; sourceTree = "<group>"; };
 		34AE621E20541FAE00690E51 /* FoodViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodViewCell.swift; sourceTree = "<group>"; };
@@ -378,6 +382,7 @@
 			isa = PBXGroup;
 			children = (
 				34CA5015205ED6FD0095994A /* FoodListCollectionViewController.swift */,
+				345C3DA3207FB99100B04250 /* SelectMonthPickerViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -398,6 +403,7 @@
 				34CA5023205EDBDE0095994A /* ListFoodViewPresenterFactory.swift */,
 				34CA5025205F1F6C0095994A /* FoodListControllerFactory.swift */,
 				34CA5027205F1FBA0095994A /* FoodListViewControllerFactory.swift */,
+				349A1F2F207FC01100BBC5F3 /* SelectMonthViewControllerFactory.swift */,
 			);
 			path = Factories;
 			sourceTree = "<group>";
@@ -680,11 +686,13 @@
 				34CA5020205EDB690095994A /* ListFoodMemoryGatewayFactory.swift in Sources */,
 				34275086206E551A001F871E /* Logger.swift in Sources */,
 				34CA5019205ED8EE0095994A /* FoodListController.swift in Sources */,
+				345C3DA4207FB99100B04250 /* SelectMonthPickerViewController.swift in Sources */,
 				34BC47AE20698A4A003506DB /* NavigationViewController.swift in Sources */,
 				34CA5022205EDBA40095994A /* ListFoodViewPresenter.swift in Sources */,
 				34CA501B205ED94F0095994A /* FoodListViewModel.swift in Sources */,
 				346391D82076D146007CDBCE /* MonthSelectorBarButton.swift in Sources */,
 				3451C45A2077F3A100CF6886 /* GregorianMonth.swift in Sources */,
+				349A1F30207FC01100BBC5F3 /* SelectMonthViewControllerFactory.swift in Sources */,
 				34272CEF2051D07D00EABE98 /* Result.swift in Sources */,
 				34B5DC46205553C0008BDBDB /* FoodViewModel.swift in Sources */,
 				343352052062CD5D004549A0 /* Metric.swift in Sources */,

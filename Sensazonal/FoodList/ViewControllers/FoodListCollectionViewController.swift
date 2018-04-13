@@ -3,6 +3,7 @@ import UIKit
 class FoodListCollectionViewController: UIViewController {
 
     private var viewModel = FoodListViewModel()
+    private lazy var selectMonthViewController = SelectMonthViewControllerFactory.make(viewModel.monthNames, viewModel.month)
 
     private lazy var foodListView: FoodListCollectionView = {
         let view = FoodListCollectionView()
@@ -10,20 +11,19 @@ class FoodListCollectionViewController: UIViewController {
         return view
     }()
 
-    private lazy var monthSelectorBarButton: MonthSelectorBarButton = {
-        return MonthSelectorBarButton(onTouch: { [weak self] in self?.monthPicker.toggleVisibility() })
-    }()
-
-    private lazy var monthPicker: MonthPicker = {
-        let picker = MonthPicker(delegateAndDataSource: self)
-        picker.selectMonth(monthNumber: self.viewModel.month.position)
-        return picker
-    }()
-
     override func viewDidLoad() {
         view.addSubview(foodListView)
-        view.addSubview(monthPicker)
-        navigationItem.rightBarButtonItem = monthSelectorBarButton
+        navigationItem.rightBarButtonItem = MonthSelectorBarButton(
+            firstAction: weak(self) { $0.openMonthSelector() },
+            secondAction: weak(self) { $0.closeMonthSelector() })
+    }
+
+    private func openMonthSelector() {
+        print(#function)
+    }
+
+    private func closeMonthSelector() {
+        print(#function)
     }
 
 }
@@ -56,22 +56,6 @@ extension FoodListCollectionViewController: UICollectionViewDataSource {
         foodCell.bind(viewModel: foodViewModel)
 
         return cell
-    }
-
-}
-
-extension FoodListCollectionViewController: UIPickerViewDataSource, UIPickerViewDelegate {
-
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return viewModel.monthNames.count
-    }
-
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return viewModel.monthNames[row]
     }
 
 }
