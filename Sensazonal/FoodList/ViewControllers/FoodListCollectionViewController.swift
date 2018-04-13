@@ -4,12 +4,7 @@ class FoodListCollectionViewController: UIViewController {
 
     private var viewModel = FoodListViewModel()
     private lazy var selectMonthViewController = SelectMonthViewControllerFactory.make(viewModel.monthNames, viewModel.month)
-
-    private lazy var foodListView: FoodListCollectionView = {
-        let view = FoodListCollectionView()
-        view.setupDataSource(self)
-        return view
-    }()
+    private lazy var foodListView = FoodListViewFacotry.make(dataSource: self)
 
     override func viewDidLoad() {
         view.addSubview(foodListView)
@@ -32,7 +27,7 @@ extension FoodListCollectionViewController: FoodListBinder {
     func bind(viewModel: FoodListViewModel) {
         self.viewModel = viewModel
         title = viewModel.month.name
-        foodListView.reloadData()
+        foodListView.reload()
     }
 
 }

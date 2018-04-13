@@ -43,6 +43,7 @@
 		34BC47AE20698A4A003506DB /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BC47AD20698A4A003506DB /* NavigationViewController.swift */; };
 		34CA1C252081096B00DCA45F /* NavigationViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CA1C242081096B00DCA45F /* NavigationViewControllerFactory.swift */; };
 		34CA1C2720810AD800DCA45F /* RootViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CA1C2620810AD800DCA45F /* RootViewControllerFactory.swift */; };
+		34CA1C292081110100DCA45F /* FoodListViewFacotry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CA1C282081110100DCA45F /* FoodListViewFacotry.swift */; };
 		34CA5016205ED6FD0095994A /* FoodListCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CA5015205ED6FD0095994A /* FoodListCollectionViewController.swift */; };
 		34CA5019205ED8EE0095994A /* FoodListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CA5018205ED8EE0095994A /* FoodListController.swift */; };
 		34CA501B205ED94F0095994A /* FoodListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CA501A205ED94F0095994A /* FoodListViewModel.swift */; };
@@ -121,6 +122,7 @@
 		34BC47AD20698A4A003506DB /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		34CA1C242081096B00DCA45F /* NavigationViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewControllerFactory.swift; sourceTree = "<group>"; };
 		34CA1C2620810AD800DCA45F /* RootViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewControllerFactory.swift; sourceTree = "<group>"; };
+		34CA1C282081110100DCA45F /* FoodListViewFacotry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListViewFacotry.swift; sourceTree = "<group>"; };
 		34CA5015205ED6FD0095994A /* FoodListCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListCollectionViewController.swift; sourceTree = "<group>"; };
 		34CA5018205ED8EE0095994A /* FoodListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListController.swift; sourceTree = "<group>"; };
 		34CA501A205ED94F0095994A /* FoodListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListViewModel.swift; sourceTree = "<group>"; };
@@ -417,6 +419,7 @@
 				34CA5025205F1F6C0095994A /* FoodListControllerFactory.swift */,
 				34CA5027205F1FBA0095994A /* FoodListViewControllerFactory.swift */,
 				349A1F2F207FC01100BBC5F3 /* SelectMonthViewControllerFactory.swift */,
+				34CA1C282081110100DCA45F /* FoodListViewFacotry.swift */,
 			);
 			path = Factories;
 			sourceTree = "<group>";
@@ -685,6 +688,7 @@
 				34BC47AE20698A4A003506DB /* NavigationViewController.swift in Sources */,
 				34CA5022205EDBA40095994A /* ListFoodViewPresenter.swift in Sources */,
 				34CA501B205ED94F0095994A /* FoodListViewModel.swift in Sources */,
+				34CA1C292081110100DCA45F /* FoodListViewFacotry.swift in Sources */,
 				34CA1C252081096B00DCA45F /* NavigationViewControllerFactory.swift in Sources */,
 				346391D82076D146007CDBCE /* MonthSelectorBarButton.swift in Sources */,
 				3451C45A2077F3A100CF6886 /* GregorianMonth.swift in Sources */,

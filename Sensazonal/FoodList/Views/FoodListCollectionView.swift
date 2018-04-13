@@ -1,5 +1,9 @@
 import UIKit
 
+protocol Reloadable {
+    func reload()
+}
+
 final class FoodListCollectionView: UIView {
 
     private static let margin = Metric.large
@@ -72,9 +76,9 @@ final class FoodListCollectionView: UIView {
 
 // MARK: - Collection view wrapper
 
-extension FoodListCollectionView {
+extension FoodListCollectionView: Reloadable {
 
-    func reloadData() {
+    func reload() {
         collection.reloadData()
     }
 
