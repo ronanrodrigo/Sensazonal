@@ -8,7 +8,11 @@ struct MonthFactory {
         return try GregorianMonth(number: number)
     }
 
-    static func make() -> Month.Type {
+    static func make(position: Int) throws -> Month {
+        return try GregorianMonth(position: position)
+    }
+
+    static var makeType: Month.Type {
         return GregorianMonth.self
     }
 

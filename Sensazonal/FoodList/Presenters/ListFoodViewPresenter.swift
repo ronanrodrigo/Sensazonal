@@ -16,7 +16,7 @@ final class ListFoodViewPresenter: ListFoodPresenter {
         }
 
         do {
-            let month = try GregorianMonth(number: monthNumber)
+            let month = try MonthFactory.make(number: monthNumber)
             let foodListViewModel = FoodListViewModel(foodsViewModel: foodViewModels, month: month)
             binder?.bind(viewModel: foodListViewModel)
         } catch { presentError(.invalidMonth) }
