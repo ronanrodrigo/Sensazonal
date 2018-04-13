@@ -2,7 +2,6 @@ import UIKit
 
 class SelectMonthPickerViewController: UIViewController {
 
-    weak var delegate: SelectMonthDelegate?
     private let months: [String]
     private let currentMonth: Month
 
