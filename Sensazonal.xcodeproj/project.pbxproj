@@ -184,8 +184,6 @@
 				34275084206E5504001F871E /* Extra */,
 				34F82D82206416EE002D7062 /* ViewControllers */,
 				34272CDC2051CD4F00EABE98 /* Entities */,
-				34EF9AB82050B6D100EB0337 /* Base */,
-				34EF9AB62050B6B500EB0337 /* Locale */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -206,6 +204,8 @@
 		34272CDC2051CD4F00EABE98 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				343A4FDA204D70EF00E33E81 /* Locale.swift */,
+				34272CDA2051CD3C00EABE98 /* DataSource.swift */,
 				34272CF02051D36300EABE98 /* SensazonalError.swift */,
 				34272CDD2051CD6E00EABE98 /* Food.swift */,
 				34272CEE2051D07D00EABE98 /* Result.swift */,
@@ -276,6 +276,7 @@
 		343A4FC7204D70CE00E33E81 /* Sensazonal */ = {
 			isa = PBXGroup;
 			children = (
+				34CA1C232081086600DCA45F /* System */,
 				34272CE02051CDBA00EABE98 /* FoodList */,
 				34272CD62051CC6B00EABE98 /* Common */,
 			);
@@ -372,6 +373,18 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		34CA1C232081086600DCA45F /* System */ = {
+			isa = PBXGroup;
+			children = (
+				343A4FE1204D711C00E33E81 /* Locale.strings */,
+				343A4FD4204D70CE00E33E81 /* Info.plist */,
+				343A4FC8204D70CE00E33E81 /* AppDelegate.swift */,
+				343A4FCF204D70CE00E33E81 /* Assets.xcassets */,
+				343A4FD1204D70CE00E33E81 /* LaunchScreen.storyboard */,
+			);
+			path = System;
+			sourceTree = "<group>";
+		};
 		34CA5013205ED5C70095994A /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -409,27 +422,6 @@
 				34272CD72051CC7100EABE98 /* Common */,
 			);
 			path = SensazonalUnitTests;
-			sourceTree = "<group>";
-		};
-		34EF9AB62050B6B500EB0337 /* Locale */ = {
-			isa = PBXGroup;
-			children = (
-				343A4FDA204D70EF00E33E81 /* Locale.swift */,
-				343A4FE1204D711C00E33E81 /* Locale.strings */,
-			);
-			path = Locale;
-			sourceTree = "<group>";
-		};
-		34EF9AB82050B6D100EB0337 /* Base */ = {
-			isa = PBXGroup;
-			children = (
-				34272CDA2051CD3C00EABE98 /* DataSource.swift */,
-				343A4FD4204D70CE00E33E81 /* Info.plist */,
-				343A4FC8204D70CE00E33E81 /* AppDelegate.swift */,
-				343A4FCF204D70CE00E33E81 /* Assets.xcassets */,
-				343A4FD1204D70CE00E33E81 /* LaunchScreen.storyboard */,
-			);
-			path = Base;
 			sourceTree = "<group>";
 		};
 		34EF9AB92050B71D00EB0337 /* Locale */ = {
@@ -900,7 +892,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = "$(SRCROOT)/Sensazonal/Common/Base/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Sensazonal/System/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -925,7 +917,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = "$(SRCROOT)/Sensazonal/Common/Base/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Sensazonal/System/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
