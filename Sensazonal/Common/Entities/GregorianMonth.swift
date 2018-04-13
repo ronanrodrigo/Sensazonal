@@ -6,6 +6,7 @@ protocol Month {
     var position: Int { get }
     var name: String { get }
     init(number: Int) throws
+    init(position: Int) throws
 }
 
 struct GregorianMonth: Month {
@@ -24,6 +25,11 @@ struct GregorianMonth: Month {
         self.number = number
     }
 
+    /**
+     Init based on array position.
+     - Parameter position: The position reference for the month number in gregorian calendar.
+     - Throws: `SensazonalError.invalidMonth` if the `position + 1` parameter is not between 1 and 12.
+     */
     init(position: Int) throws {
         try self.init(number: position + 1)
     }

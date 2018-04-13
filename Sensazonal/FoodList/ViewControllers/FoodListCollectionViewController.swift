@@ -13,9 +13,8 @@ class FoodListCollectionViewController: UIViewController {
 
     override func viewDidLoad() {
         view.addSubview(foodListView)
-        navigationItem.rightBarButtonItem = MonthSelectorBarButton(
-            firstAction: weak(self) { $0.openMonthSelector() },
-            secondAction: weak(self) { $0.closeMonthSelector() })
+        navigationItem.rightBarButtonItem = MonthSelectorBarButton(firstAction: weak(self) { $0.openMonthSelector() },
+                                                                   secondAction: weak(self) { $0.closeMonthSelector() })
     }
 
     private func openMonthSelector() {

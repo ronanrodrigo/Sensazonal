@@ -21,6 +21,18 @@ final class GregorianMonthTests: XCTestCase {
         XCTAssertEqual(month.name, "Janeiro")
     }
 
+    func testInitWithPositionWhenValidPositionThenNotThrownError() throws {
+        XCTAssertNoThrow(try GregorianMonth(position: 0))
+        XCTAssertNoThrow(try GregorianMonth(position: 5))
+        XCTAssertNoThrow(try GregorianMonth(position: 11))
+    }
+
+    func testInitWithPositionWhenInvalidPositionThenThrownError() throws {
+        XCTAssertThrowsError(try GregorianMonth(position: -2))
+        XCTAssertThrowsError(try GregorianMonth(position: -1))
+        XCTAssertThrowsError(try GregorianMonth(position: 12))
+    }
+
     func testInitWithInvalidNumberThrowsError() {
         XCTAssertThrowsError(try GregorianMonth(number: -1))
         XCTAssertThrowsError(try GregorianMonth(number: 0))
