@@ -9,7 +9,7 @@ class ListFoodByMonthInteractor {
     }
 
     func listByCurrentMonth() {
-        list(byMonth: GregorianMonth().number)
+        list(byMonth: MonthFactory.make().number)
     }
 
     func list(byMonth month: Int) {

@@ -1,7 +1,15 @@
 import Foundation
 
-struct GregorianMonth {
-    static var allMonths = (0...11).map(GregorianMonth.monthName)
+protocol Month {
+    static var allMonths: [String] { get }
+    var number: Int { get }
+    var position: Int { get }
+    var name: String { get }
+    init(number: Int) throws
+}
+
+struct GregorianMonth: Month {
+    static let allMonths = (0...11).map(GregorianMonth.monthName)
     let number: Int
     var position: Int { return number - 1 }
     var name: String { return GregorianMonth.monthName(position: position) }
@@ -14,6 +22,10 @@ struct GregorianMonth {
     init(number: Int) throws {
         guard GregorianMonth.isValid(month: number) else { throw SensazonalError.invalidMonth }
         self.number = number
+    }
+
+    init(position: Int) throws {
+        try self.init(number: position + 1)
     }
 
     /// Init with current month number

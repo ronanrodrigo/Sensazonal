@@ -2,13 +2,13 @@ import Foundation
 
 struct FoodListViewModel {
     let foodsViewModel: [FoodViewModel]
-    let month: GregorianMonth
-    let monthNames = GregorianMonth.allMonths
+    let month: Month
+    let monthNames = MonthFactory.make().allMonths
 }
 
 extension FoodListViewModel {
     init() {
         foodsViewModel = []
-        month = GregorianMonth()
+        month = MonthFactory.make()
     }
 }
