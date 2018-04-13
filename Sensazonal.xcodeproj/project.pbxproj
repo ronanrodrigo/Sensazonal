@@ -183,7 +183,6 @@
 				34F1991A206E64A800DEF735 /* Styles */,
 				34275084206E5504001F871E /* Extra */,
 				34F82D82206416EE002D7062 /* ViewControllers */,
-				343352032062CD3C004549A0 /* Layout */,
 				34272CDC2051CD4F00EABE98 /* Entities */,
 				34EF9AB82050B6D100EB0337 /* Base */,
 				34EF9AB62050B6B500EB0337 /* Locale */,
@@ -253,14 +252,6 @@
 				343B9A012080E29B00DA71F6 /* Weak.swift */,
 			);
 			path = Extra;
-			sourceTree = "<group>";
-		};
-		343352032062CD3C004549A0 /* Layout */ = {
-			isa = PBXGroup;
-			children = (
-				343352042062CD5D004549A0 /* Metric.swift */,
-			);
-			path = Layout;
 			sourceTree = "<group>";
 		};
 		343A4FBC204D70CE00E33E81 = {
@@ -460,6 +451,7 @@
 		34F1991A206E64A800DEF735 /* Styles */ = {
 			isa = PBXGroup;
 			children = (
+				343352042062CD5D004549A0 /* Metric.swift */,
 				34F1991B206E64B800DEF735 /* Gradient.swift */,
 			);
 			path = Styles;
