@@ -4,14 +4,25 @@ import UIKit
 
 final class MonthSelectorBarButtonTests: XCTestCase {
 
-    func testDidTouchAtButtonThenCallCallbackFunction() {
-        var didRunCallback = false
-        let callback: () -> Void = { didRunCallback = true }
-        let button = MonthSelectorBarButton(firstAction: callback, secondAction: callback)
+    func testDidTouchAtButtonInFirstActionThenCallCallbackFunction() {
+        var didRunFirstCallback = false
+        let firstCallback: () -> Void = { didRunFirstCallback = true }
+        let button = MonthSelectorBarButton(firstAction: firstCallback, secondAction: {})
 
         button.perform(button.action!)
 
-        XCTAssertTrue(didRunCallback)
+        XCTAssertTrue(didRunFirstCallback)
+    }
+
+    func testDidTouchAtButtonInSecondActionThenCallCallbackFunction() {
+        var didRunSecondCallback = false
+        let secondCallback: () -> Void = { didRunSecondCallback = true }
+        let button = MonthSelectorBarButton(firstAction: {}, secondAction: secondCallback)
+
+        button.perform(button.action!)
+        button.perform(button.action!)
+
+        XCTAssertTrue(didRunSecondCallback)
     }
 
     func testInitWithCoderThenLogErrorMessage() {
