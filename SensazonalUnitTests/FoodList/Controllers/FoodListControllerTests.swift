@@ -4,18 +4,18 @@ import XCTest
 final class FoodListControllerTests: XCTestCase {
 
     func testInitWhenConstructedThenHasFoodListViewControllerAsRootViewController() {
-        let controller = FoodListController()
+        let interactor = ListFoodByMonthInteractor(gateway: ListFoodStubGateway(), presenter: ListFoodStubPresenter())
 
-        XCTAssertTrue(controller.viewController.viewControllers[0].isKind(of: FoodListCollectionViewController.self))
+        let controller = FoodListController(interactor: interactor,
+                                            listViewController: FoodListCollectionViewController(nibName: nil, bundle: nil))
+
+        XCTAssertTrue(controller.viewController.isKind(of: FoodListCollectionViewController.self))
     }
 
     func testInitWhenConstructedThenExecuteFoodListInteractor() {
-        var interactor: StubListFoodByMonthInteractor!
+        let interactor = StubListFoodByMonthInteractor(gateway: ListFoodStubGateway(), presenter: ListFoodStubPresenter())
 
-        _ = FoodListController {
-            interactor = StubListFoodByMonthInteractor(gateway: ListFoodStubGateway(), presenter: $0)
-            return interactor
-        }
+        _ = FoodListController(interactor: interactor, listViewController: UIViewController())
 
         XCTAssertTrue(interactor.didCallList)
     }
