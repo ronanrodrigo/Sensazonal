@@ -7,6 +7,7 @@ protocol Month {
     var name: String { get }
     init(number: Int) throws
     init(position: Int) throws
+    init()
 }
 
 struct GregorianMonth: Month {

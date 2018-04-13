@@ -1,19 +1,19 @@
 struct MonthFactory {
 
     static func make() -> Month {
-        return GregorianMonth()
+        return type.init()
     }
 
     static func make(number: Int) throws -> Month {
-        return try GregorianMonth(number: number)
+        return try type.init(number: number)
     }
 
     static func make(position: Int) throws -> Month {
-        return try GregorianMonth(position: position)
+        return try type.init(position: position)
     }
 
-    static var makeType: Month.Type {
+    static var type: Month.Type = {
         return GregorianMonth.self
-    }
+    }()
 
 }

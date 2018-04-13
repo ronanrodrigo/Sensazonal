@@ -3,7 +3,7 @@ import Foundation
 struct FoodListViewModel {
     let foodsViewModel: [FoodViewModel]
     let month: Month
-    let monthNames = MonthFactory.makeType.allMonths
+    let monthNames = MonthFactory.type.allMonths
 }
 
 extension FoodListViewModel {
