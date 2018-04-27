@@ -11,6 +11,5 @@
 ## Setup Enviroment
 - Clone the repository:
 `git clone git@gitlab.com:ronanrodrigo/Sensazonal.git`
-
 - Access the project folder and run setup script:
 `./setup`
