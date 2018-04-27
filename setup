@@ -54,8 +54,4 @@ open_project() {
     done
 }
 
-separator() {
-    echo ""
-}
-
 setup_enviroment
