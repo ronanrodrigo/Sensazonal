@@ -8,7 +8,9 @@
 - Carthage
 - SwiftLint
 
-## Setup enviroment
-- Clone the repository `git clone git@gitlab.com:ronanrodrigo/Sensazonal.git`
-- Access the project folder, run `./setup`
-- Open the project `open Sensazonal.xcodeproj`
+## Setup Enviroment
+- Clone the repository:
+`git clone git@gitlab.com:ronanrodrigo/Sensazonal.git`
+
+- Access the project folder and run setup script:
+`./setup`
