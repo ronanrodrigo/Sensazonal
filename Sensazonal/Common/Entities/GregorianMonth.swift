@@ -1,7 +1,7 @@
 import Foundation
 
 protocol Month {
-    static var allMonths: [String] { get }
+    static var allMonths: [Month] { get }
     var number: Int { get }
     var position: Int { get }
     var name: String { get }
@@ -11,7 +11,7 @@ protocol Month {
 }
 
 struct GregorianMonth: Month {
-    static let allMonths = (0...11).map(GregorianMonth.monthName)
+    static let allMonths: [Month] = (0...11).compactMap { try? GregorianMonth(position: $0) }
     let number: Int
     var position: Int { return number - 1 }
     var name: String { return GregorianMonth.monthName(position: position) }

@@ -3,21 +3,21 @@ import UIKit
 class FoodListCollectionViewController: UIViewController {
 
     private var viewModel = FoodListViewModel()
-    private lazy var selectMonthViewController = SelectMonthViewControllerFactory.make(viewModel.monthNames, viewModel.month)
+    private var selectMonthViewController: UIViewController!
     private lazy var foodListView = FoodListViewFacotry.make(dataSource: self)
 
     override func viewDidLoad() {
         view.addSubview(foodListView)
-        navigationItem.rightBarButtonItem = MonthSelectorBarButton(firstAction: weak(self) { $0.openMonthSelector() },
-                                                                   secondAction: weak(self) { $0.closeMonthSelector() })
+        navigationItem.rightBarButtonItem = MonthSelectorBarButton(selectAction: weak(self) { $0.openMonthSelector() })
     }
 
     private func openMonthSelector() {
-        print(#function)
+        selectMonthViewController = SelectMonthViewControllerFactory.make(delegate: self)
+        present(selectMonthViewController, animated: true, completion: nil)
     }
 
     private func closeMonthSelector() {
-        print(#function)
+        selectMonthViewController.dismiss(animated: true, completion: nil)
     }
 
 }
@@ -52,4 +52,14 @@ extension FoodListCollectionViewController: UICollectionViewDataSource {
         return cell
     }
 
+}
+
+extension FoodListCollectionViewController: SelectMonthDelegate {
+    func didSelectMonth(_ month: Month) {
+        print("\(#function) \(month)")
+    }
+
+    func didFinishSelection() {
+        closeMonthSelector()
+    }
 }
