@@ -77,7 +77,7 @@
 		34F19926206E6C3100DEF735 /* ListFoodMemoryGatewayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F19925206E6C3100DEF735 /* ListFoodMemoryGatewayTests.swift */; };
 		34F19929206E6D1C00DEF735 /* ListFoodViewPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F19928206E6D1C00DEF735 /* ListFoodViewPresenterTests.swift */; };
 		34F1992B206E6E1900DEF735 /* StubBinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F1992A206E6E1900DEF735 /* StubBinder.swift */; };
-		34F1992E206E6EE400DEF735 /* FoodListCollectionViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F1992D206E6EE400DEF735 /* FoodListCollectionViewControllerTests.swift */; };
+		34F1992E206E6EE400DEF735 /* FoodListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F1992D206E6EE400DEF735 /* FoodListViewControllerTests.swift */; };
 		34F19931206E724D00DEF735 /* FoodListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F19930206E724D00DEF735 /* FoodListViewController.swift */; };
 		34F19934206E738300DEF735 /* FoodViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F19933206E738300DEF735 /* FoodViewModelTests.swift */; };
 		34F19936206E762C00DEF735 /* FoodListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F19935206E762C00DEF735 /* FoodListViewModelTests.swift */; };
@@ -174,7 +174,7 @@
 		34F19925206E6C3100DEF735 /* ListFoodMemoryGatewayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFoodMemoryGatewayTests.swift; sourceTree = "<group>"; };
 		34F19928206E6D1C00DEF735 /* ListFoodViewPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFoodViewPresenterTests.swift; sourceTree = "<group>"; };
 		34F1992A206E6E1900DEF735 /* StubBinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubBinder.swift; sourceTree = "<group>"; };
-		34F1992D206E6EE400DEF735 /* FoodListCollectionViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListCollectionViewControllerTests.swift; sourceTree = "<group>"; };
+		34F1992D206E6EE400DEF735 /* FoodListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListViewControllerTests.swift; sourceTree = "<group>"; };
 		34F19930206E724D00DEF735 /* FoodListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListViewController.swift; sourceTree = "<group>"; };
 		34F19933206E738300DEF735 /* FoodViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodViewModelTests.swift; sourceTree = "<group>"; };
 		34F19935206E762C00DEF735 /* FoodListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListViewModelTests.swift; sourceTree = "<group>"; };
@@ -612,7 +612,7 @@
 		34F1992C206E6ED500DEF735 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				34F1992D206E6EE400DEF735 /* FoodListCollectionViewControllerTests.swift */,
+				34F1992D206E6EE400DEF735 /* FoodListViewControllerTests.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -867,7 +867,7 @@
 				3460D052207B85D200BBEDA3 /* MonthPickerTests.swift in Sources */,
 				3460D055207B889200BBEDA3 /* MonthSelectorBarButtonTests.swift in Sources */,
 				34F1993C206E793700DEF735 /* NavigationViewControllerTests.swift in Sources */,
-				34F1992E206E6EE400DEF735 /* FoodListCollectionViewControllerTests.swift in Sources */,
+				34F1992E206E6EE400DEF735 /* FoodListViewControllerTests.swift in Sources */,
 				34F19936206E762C00DEF735 /* FoodListViewModelTests.swift in Sources */,
 				34F19929206E6D1C00DEF735 /* ListFoodViewPresenterTests.swift in Sources */,
 				340D86552051D78E0090F1FA /* ListFoodStubGateway.swift in Sources */,

@@ -2,7 +2,7 @@ import XCTest
 import FBSnapshotTestCase
 @testable import Sensazonal
 
-final class FoodListCollectionViewControllerTests: FBSnapshotTestCase {
+final class FoodListViewControllerTests: FBSnapshotTestCase {
 
     private var foodViewModel: FoodViewModel {
         return FoodViewModel(name: "Name", nameColor: .white, nameBackgroundColor: .red, photo: #imageLiteral(resourceName: "content/strawberry"))
