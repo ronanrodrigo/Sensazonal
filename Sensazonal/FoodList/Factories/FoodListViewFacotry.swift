@@ -2,9 +2,9 @@ import UIKit
 
 struct FoodListViewFacotry {
 
-    static func make(dataSource: UICollectionViewDataSource) -> UIView & Reloadable {
+    static func make(dataProvider: FoodListDataProvider) -> UIView & Reloadable {
         let view = FoodListCollectionView()
-        view.setupDataSource(dataSource)
+        view.setupDataSource(dataProvider)
         return view
     }
 

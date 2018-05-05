@@ -4,11 +4,11 @@ class MonthSelectorBarButton: UIBarButtonItem {
 
     private let selectAction: () -> Void
 
-    init(selectAction: @escaping () -> Void) {
-        self.selectAction = selectAction
+    init(action: @escaping () -> Void) {
+        self.selectAction = action
         super.init()
         image = #imageLiteral(resourceName: "top/filter")
-        action = #selector(executeSelectAction)
+        self.action = #selector(executeSelectAction)
     }
 
     required init?(coder aDecoder: NSCoder) { Logger.shared.notImplemented(); return nil }

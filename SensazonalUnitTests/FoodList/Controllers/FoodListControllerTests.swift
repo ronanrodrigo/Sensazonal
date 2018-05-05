@@ -7,9 +7,9 @@ final class FoodListControllerTests: XCTestCase {
         let interactor = ListFoodByMonthInteractor(gateway: ListFoodStubGateway(), presenter: ListFoodStubPresenter())
 
         let controller = FoodListController(interactor: interactor,
-                                            listViewController: FoodListCollectionViewController(nibName: nil, bundle: nil))
+                                            listViewController: FoodListViewController(nibName: nil, bundle: nil))
 
-        XCTAssertTrue(controller.viewController.isKind(of: FoodListCollectionViewController.self))
+        XCTAssertTrue(controller.viewController.isKind(of: FoodListViewController.self))
     }
 
     func testInitWhenConstructedThenExecuteFoodListInteractor() {

@@ -1,15 +1,11 @@
 import UIKit
 
-protocol Reloadable {
-    func reload()
-}
-
 final class FoodListCollectionView: UIView {
-
     private static let margin = Metric.large
     private static let columns: CGFloat = 2
     private static let edges = UIEdgeInsets(top: margin, left: margin, bottom: margin, right: margin)
     private let layout = UICollectionViewFlowLayout()
+    private var dataSource: FoodCollectionViewDataSource?
     private lazy var collection: UICollectionView = {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
@@ -72,17 +68,14 @@ final class FoodListCollectionView: UIView {
         return CGSize(width: size, height: size)
     }
 
+    func setupDataSource(_ dataProvider: FoodListDataProvider) {
+        dataSource = FoodCollectionViewDataSource(dataProvider: dataProvider)
+        collection.dataSource = dataSource
+    }
 }
 
-// MARK: - Collection view wrapper
-
 extension FoodListCollectionView: Reloadable {
-
     func reload() {
         collection.reloadData()
-    }
-
-    func setupDataSource(_ dataSource: UICollectionViewDataSource) {
-        collection.dataSource = dataSource
     }
 }

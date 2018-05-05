@@ -6,7 +6,7 @@ final class FoodViewModelTests: XCTestCase {
     func testInit() {
         let photo = UIImage()
 
-        let viewModel = FoodViewModel(FoodViewModelParams("Name", .black, .red, photo))
+        let viewModel = FoodViewModel(name: "Name", nameColor: .black, nameBackgroundColor: .red, photo: photo)
 
         XCTAssertEqual(viewModel.name, "Name")
         XCTAssertEqual(viewModel.nameBackgroundGradient.colors?.count, 2)

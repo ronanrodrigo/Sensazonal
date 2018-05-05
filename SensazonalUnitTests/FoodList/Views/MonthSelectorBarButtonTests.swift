@@ -6,8 +6,8 @@ final class MonthSelectorBarButtonTests: XCTestCase {
 
     func testDidTouchAtButtonInFirstActionThenCallCallbackFunction() {
         var didSelectCallback = false
-        let selectAction: () -> Void = { didSelectCallback = true }
-        let button = MonthSelectorBarButton(selectAction: selectAction)
+        let action: () -> Void = { didSelectCallback = true }
+        let button = MonthSelectorBarButton(action: action)
 
         button.perform(button.action!)
 

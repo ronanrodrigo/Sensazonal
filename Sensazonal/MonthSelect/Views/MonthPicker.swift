@@ -1,6 +1,8 @@
 import UIKit
 
-final class MonthPicker: UIView {
+typealias MonthSelectorView = UIView & MonthSelectable & Reloadable
+
+final class MonthPicker: MonthSelectorView {
 
     private let finishAction: () -> Void
 
@@ -25,14 +27,16 @@ final class MonthPicker: UIView {
         return button
     }()
 
-    init(delegateAndDataSource: UIPickerViewDelegate & UIPickerViewDataSource, finishAction: @escaping () -> Void) {
+    private var delegateDataSource: MonthPickerDelegateDataSource
+
+    init(dataProvider: MonthSelectorDataProvider, finishAction: @escaping () -> Void) {
         self.finishAction = finishAction
+        delegateDataSource = MonthPickerDelegateDataSourceFactory.make(dataProvider: dataProvider)
         super.init(frame: .zero)
-        monthPicker.dataSource = delegateAndDataSource
-        monthPicker.delegate = delegateAndDataSource
+        monthPicker.dataSource = delegateDataSource
+        monthPicker.delegate = delegateDataSource
         translatesAutoresizingMaskIntoConstraints = false
         backgroundColor = UIColor.white.withAlphaComponent(0.95)
-        alpha = 0
         installSubviews()
         installConstraints()
     }
@@ -91,9 +95,8 @@ final class MonthPicker: UIView {
         monthPicker.selectRow(monthNumber, inComponent: 0, animated: false)
     }
 
-    func toggleVisibility() {
-        let isHide = alpha == 0
-        alpha = isHide ? 1 : 0
+    func reload() {
+        monthPicker.reloadAllComponents()
     }
 
 }

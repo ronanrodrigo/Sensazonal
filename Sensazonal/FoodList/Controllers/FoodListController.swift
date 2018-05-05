@@ -1,7 +1,6 @@
 import UIKit
 
 class FoodListController {
-
     let viewController: UIViewController
     private let listFoodByMonth: ListFoodByMonthInteractor
 
@@ -10,5 +9,4 @@ class FoodListController {
         listFoodByMonth = interactor
         listFoodByMonth.listByCurrentMonth()
     }
-
 }

@@ -3,7 +3,7 @@ import UIKit
 struct FoodListViewControllerFactory {
 
     static func make() -> UIViewController & FoodListBinder {
-        return FoodListCollectionViewController()
+        return FoodListViewController()
     }
 
 }
