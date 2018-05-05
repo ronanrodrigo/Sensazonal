@@ -699,6 +699,7 @@
 				34EF9AA82050B5BB00EB0337 /* Sources */,
 				34EF9AA92050B5BB00EB0337 /* Frameworks */,
 				34EF9AAA2050B5BB00EB0337 /* Resources */,
+				34D196A9209E5D6C0073CA54 /* Create Alias References_32 */,
 			);
 			buildRules = (
 			);
@@ -787,6 +788,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+		34D196A9209E5D6C0073CA54 /* Create Alias References_32 */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Create Alias References_32";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "rm ScreenshotsTests/References_32 || true;\nln -s References_64 ScreenshotsTests/References_32";
 		};
 		34EF9ABB2050B79200EB0337 /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
