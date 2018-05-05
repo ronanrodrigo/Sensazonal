@@ -311,10 +311,10 @@
 		343A4FC7204D70CE00E33E81 /* Sensazonal */ = {
 			isa = PBXGroup;
 			children = (
-				34CA1C232081086600DCA45F /* System */,
 				34272CE02051CDBA00EABE98 /* FoodList */,
 				3478D4D1209DE7AE00515251 /* MonthSelect */,
 				34272CD62051CC6B00EABE98 /* Common */,
+				34CA1C232081086600DCA45F /* System */,
 			);
 			path = Sensazonal;
 			sourceTree = "<group>";
