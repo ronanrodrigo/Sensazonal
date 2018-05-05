@@ -55,7 +55,6 @@ final class FoodViewCell: UICollectionViewCell {
         name.text = viewModel.name
         name.textColor = viewModel.nameColor
         nameBackgroundGradient = viewModel.nameBackgroundGradient
-
         nameBackgroundGradient.frame = bounds
         nameBackground.layer.addSublayer(nameBackgroundGradient)
     }
