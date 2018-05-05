@@ -43,8 +43,11 @@ final class FoodViewCell: UICollectionViewCell {
 
     override func layoutSubviews() {
         super.layoutSubviews()
-        nameBackgroundGradient.frame = bounds
-        nameBackground.layer.addSublayer(nameBackgroundGradient)
+    }
+
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        nameBackgroundGradient.removeFromSuperlayer()
     }
 
     func bind(viewModel: FoodViewModel) {
@@ -52,6 +55,9 @@ final class FoodViewCell: UICollectionViewCell {
         name.text = viewModel.name
         name.textColor = viewModel.nameColor
         nameBackgroundGradient = viewModel.nameBackgroundGradient
+
+        nameBackgroundGradient.frame = bounds
+        nameBackground.layer.addSublayer(nameBackgroundGradient)
     }
 
     private func installSubviews() {

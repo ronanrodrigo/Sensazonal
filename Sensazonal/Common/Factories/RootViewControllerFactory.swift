@@ -2,8 +2,7 @@ import UIKit
 
 struct RootViewControllerFactory {
 
-    static func make() -> UIViewController {
-        let controller = FoodListControllerFactory.make()
+    static func make(rootController controller: BaseController) -> UIViewController {
         return NavigationViewControllerFactory.make(rootViewController: controller.viewController)
     }
 

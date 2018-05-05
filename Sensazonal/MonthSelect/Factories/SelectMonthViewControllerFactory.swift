@@ -2,7 +2,7 @@ import UIKit
 
 struct SelectMonthViewControllerFactory {
 
-    static func make(delegate: SelectMonthDelegate) -> UIViewController {
+    static func make(delegate: FoodListControllerDelegate) -> UIViewController {
         let viewController = SelectMonthViewController()
         viewController.delegate = delegate
         let viewModel = SelectMonthViewModelFactory.make()

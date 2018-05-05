@@ -3,11 +3,11 @@ import UIKit
 class SelectMonthViewController: UIViewController {
 
     private var viewModel = SelectMonthViewModelFactory.make()
-    weak var delegate: SelectMonthDelegate?
+    weak var delegate: FoodListControllerDelegate?
 
-    private lazy var monthPicker = MonthSelectorViewFactory.make(dataProvider: self, action: weak(self) {
-        $0.delegate?.didFinishSelection()
-    })
+    private lazy var monthPicker = MonthSelectorViewFactory.make(dataProvider: self) { [weak self] in
+        self?.delegate?.closeMonthSelector()
+    }
 
     init() {
         super.init(nibName: nil, bundle: nil)
@@ -39,7 +39,7 @@ extension SelectMonthViewController: MonthSelectorDataProvider {
 
     func monthSelected(in position: Int) {
         let month = viewModel.months[position]
-        delegate?.didSelectMonth(month)
+        delegate?.updateList(with: month)
     }
 
 }
