@@ -1,5 +1,3 @@
-import UIKit
-
 struct FoodListControllerFactory {
 
     static func make() -> BaseController {
