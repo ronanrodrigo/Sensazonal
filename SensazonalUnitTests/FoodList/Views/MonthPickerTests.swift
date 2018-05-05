@@ -4,7 +4,7 @@ import XCTest
 final class MonthPickerTests: XCTestCase {
 
     func testToggleVisibilityWhenVisibleThenAlphaChangesToZero() {
-        let picker = MonthPicker(delegateAndDataSource: FakePickerViewDataSourceAndDelegate())
+        let picker = MonthPicker(delegateAndDataSource: FakePickerViewDataSourceAndDelegate(), finishAction: {})
         picker.alpha = 1
 
         picker.toggleVisibility()
@@ -13,7 +13,7 @@ final class MonthPickerTests: XCTestCase {
     }
 
     func testToggleVisibilityWhenInvisibleThenAlphaChangesToOne() {
-        let picker = MonthPicker(delegateAndDataSource: FakePickerViewDataSourceAndDelegate())
+        let picker = MonthPicker(delegateAndDataSource: FakePickerViewDataSourceAndDelegate(), finishAction: {})
         picker.alpha = 0
 
         picker.toggleVisibility()
