@@ -35,4 +35,47 @@ final class FoodListViewControllerTests: FBSnapshotTestCase {
         FBSnapshotVerifyLayer(viewController.view.layer)
     }
 
+    func testNavigationItemRightBarButtonItemWhenViewDidLoadThenIsAMonthSelectorBarButton() {
+        let viewController = FoodListViewController()
+
+        viewController.viewDidLoad()
+
+        XCTAssertTrue(viewController.navigationItem.rightBarButtonItem!.isKind(of: MonthSelectorBarButton.self))
+    }
+
+    func testNavigationItemRightBarButtonItemWhenTappedThenOpenMonthSelector() {
+        let viewController = FoodListViewController()
+        let delegate = StubFoodListControllerDelegate()
+        viewController.delegate = delegate
+        viewController.viewDidLoad()
+        let monthSelectorBarButton = viewController.navigationItem.rightBarButtonItem!
+
+        UIApplication.shared.sendAction(monthSelectorBarButton.action!, to: monthSelectorBarButton.target!,
+                                        from: self, for: nil)
+
+        XCTAssertTrue(delegate.didOpenMonthSelector)
+    }
+
+    func testFoodsTotalWhenViewModelHasFoodsThenReturnTotalFoods() {
+        let viewController = FoodListViewController()
+        let viewModel = FoodListViewModel(foodsViewModel: [foodViewModel, foodViewModel, foodViewModel],
+                                          month: try! GregorianMonth(number: 1))
+        viewController.bind(viewModel: viewModel)
+
+        let totalFoods = viewController.foodsTotal()
+
+        XCTAssertEqual(totalFoods, viewModel.foodsViewModel.count)
+    }
+
+    func testFoodsAtPositionWhenGivenAValidPositionFoodsThenReturnAFoodViewModel() {
+        let viewController = FoodListViewController()
+        let viewModel = FoodListViewModel(foodsViewModel: [foodViewModel, foodViewModel, foodViewModel],
+                                          month: try! GregorianMonth(number: 1))
+        viewController.bind(viewModel: viewModel)
+
+        let totalFoods = viewController.foodsTotal()
+
+        XCTAssertEqual(totalFoods, viewModel.foodsViewModel.count)
+    }
+
 }
