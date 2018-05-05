@@ -3,7 +3,7 @@ import UIKit
 class FoodListController: BaseController {
     let viewController: UIViewController
     private let listFoodByMonth: ListFoodByMonthInteractor
-    private var selectMonthViewController: UIViewController!
+    private lazy var selectMonthViewController = SelectMonthViewControllerFactory.make(delegate: self)
 
     init(interactor: ListFoodByMonthInteractor, listViewController: UIViewController) {
         self.viewController = listViewController
@@ -17,8 +17,12 @@ extension FoodListController: FoodListControllerDelegate {
         selectMonthViewController.dismiss(animated: true, completion: nil)
     }
 
-    func openMonthSelector() {
+    func openMonthSelector(at month: Month) {
         selectMonthViewController = SelectMonthViewControllerFactory.make(delegate: self)
+
+        let viewModel = SelectMonthViewModelFactory.make(month: month)
+        selectMonthViewController.bind(viewModel: viewModel)
+
         viewController.present(selectMonthViewController, animated: true, completion: nil)
     }
 

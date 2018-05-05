@@ -1,7 +1,7 @@
 struct SelectMonthViewModelFactory {
 
-    static func make() -> SelectMonthViewModel {
-        return SelectMonthViewModel(currentMonth: MonthFactory.make())
+    static func make(month: Month = MonthFactory.make()) -> SelectMonthViewModel {
+        return SelectMonthViewModel(currentMonth: month)
     }
 
 }

@@ -1,5 +1,5 @@
 protocol FoodListControllerDelegate: class {
     func closeMonthSelector()
-    func openMonthSelector()
+    func openMonthSelector(at month: Month)
     func updateList(with month: Month)
 }
