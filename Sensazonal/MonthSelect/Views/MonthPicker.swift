@@ -45,12 +45,13 @@ final class MonthPicker: MonthSelectorView {
 
     override func didMoveToSuperview() {
         super.didMoveToSuperview()
-        guard let parentView = superview else { return }
-        NSLayoutConstraint.activate([
-            leadingAnchor.constraint(equalTo: parentView.leadingAnchor),
-            trailingAnchor.constraint(equalTo: parentView.trailingAnchor),
-            bottomAnchor.constraint(equalTo: parentView.bottomAnchor)
-        ])
+        if let parentView = superview {
+            NSLayoutConstraint.activate([
+                leadingAnchor.constraint(equalTo: parentView.leadingAnchor),
+                trailingAnchor.constraint(equalTo: parentView.trailingAnchor),
+                bottomAnchor.constraint(equalTo: parentView.bottomAnchor)
+            ])
+        }
     }
 
     private func installSubviews() {

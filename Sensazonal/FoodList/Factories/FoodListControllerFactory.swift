@@ -1,7 +1,5 @@
 struct FoodListControllerFactory {
 
-    private init() { }
-
     static func make() -> BaseController {
         let listViewController = FoodListViewControllerFactory.make()
         let presenter = ListFoodViewPresenterFactory.make(binder: listViewController)

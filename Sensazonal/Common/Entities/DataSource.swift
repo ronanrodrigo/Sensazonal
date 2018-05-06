@@ -1,7 +1,5 @@
 struct DataSource {
 
-    private init() { }
-
     private static let pineapple = Food(keyName: "PINEAPPLE", months: [1, 3, 9, 10, 11, 12])
     private static let starFruit = Food(keyName: "STAR_FRUIT", months: [1, 2, 6, 7, 8])
     private static let greenCoconut = Food(keyName: "GREEN_COCONUT", months: [1, 2, 3, 10, 11, 12])

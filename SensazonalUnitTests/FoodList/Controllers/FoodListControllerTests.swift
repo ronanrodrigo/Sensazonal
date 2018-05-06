@@ -32,4 +32,17 @@ final class FoodListControllerTests: XCTestCase {
         XCTAssertTrue(controller.viewController.presentedViewController!.isKind(of: SelectMonthViewController.self))
     }
 
+    func testUpdateListWhenHasMonthThenCallInteractorListFoodByMonth() throws {
+        let interactor = StubListFoodByMonthInteractor(gateway: ListFoodStubGateway(),
+                                                       presenter: ListFoodStubPresenter())
+        let controller = FoodListController(interactor: interactor,
+                                            listViewController: FoodListViewController(nibName: nil, bundle: nil))
+        let month = try MonthFactory.make(number: 11)
+
+        controller.updateList(with: month)
+
+        XCTAssertEqual(interactor.didCallListWithMonth, month.number)
+        XCTAssertTrue(interactor.didCallList)
+    }
+
 }

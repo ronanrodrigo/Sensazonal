@@ -71,6 +71,10 @@
 		34D196A2209E39280073CA54 /* FoodViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D196A1209E39280073CA54 /* FoodViewModel.swift */; };
 		34D196A6209E3AAA0073CA54 /* StubFoodListDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D196A5209E3AAA0073CA54 /* StubFoodListDataProvider.swift */; };
 		34D196A8209E5C560073CA54 /* StubFoodListControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D196A7209E5C560073CA54 /* StubFoodListControllerDelegate.swift */; };
+		34D487CD209F2735006EA78A /* StubMonthSelectorDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D487CC209F2735006EA78A /* StubMonthSelectorDataProvider.swift */; };
+		34D487D0209F29A1006EA78A /* SelectMonthViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D487CF209F29A1006EA78A /* SelectMonthViewModelTests.swift */; };
+		34D487D3209F2AAE006EA78A /* SelectMonthViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D487D2209F2AAE006EA78A /* SelectMonthViewControllerTests.swift */; };
+		34D487D6209F2F31006EA78A /* MonthPickerDelegateDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D487D5209F2F31006EA78A /* MonthPickerDelegateDataSourceTests.swift */; };
 		34EF9AAF2050B5BB00EB0337 /* LocaleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34EF9AAE2050B5BB00EB0337 /* LocaleTests.swift */; };
 		34F1991C206E64B800DEF735 /* Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F1991B206E64B800DEF735 /* Gradient.swift */; };
 		34F19921206E66E500DEF735 /* FoodListControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F19920206E66E500DEF735 /* FoodListControllerTests.swift */; };
@@ -167,6 +171,10 @@
 		34D196A1209E39280073CA54 /* FoodViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodViewModel.swift; sourceTree = "<group>"; };
 		34D196A5209E3AAA0073CA54 /* StubFoodListDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubFoodListDataProvider.swift; sourceTree = "<group>"; };
 		34D196A7209E5C560073CA54 /* StubFoodListControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubFoodListControllerDelegate.swift; sourceTree = "<group>"; };
+		34D487CC209F2735006EA78A /* StubMonthSelectorDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubMonthSelectorDataProvider.swift; sourceTree = "<group>"; };
+		34D487CF209F29A1006EA78A /* SelectMonthViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectMonthViewModelTests.swift; sourceTree = "<group>"; };
+		34D487D2209F2AAE006EA78A /* SelectMonthViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectMonthViewControllerTests.swift; sourceTree = "<group>"; };
+		34D487D5209F2F31006EA78A /* MonthPickerDelegateDataSourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthPickerDelegateDataSourceTests.swift; sourceTree = "<group>"; };
 		34EF9AAC2050B5BB00EB0337 /* SensazonalUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SensazonalUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		34EF9AAE2050B5BB00EB0337 /* LocaleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocaleTests.swift; sourceTree = "<group>"; };
 		34EF9AB02050B5BB00EB0337 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -491,7 +499,6 @@
 			children = (
 				34AE6220205471CF00690E51 /* FoodViewCellTests.swift */,
 				34F1993E206E7D4500DEF735 /* FoodListCollectionViewTests.swift */,
-				3460D051207B85D200BBEDA3 /* MonthPickerTests.swift */,
 				3460D054207B889200BBEDA3 /* MonthSelectorBarButtonTests.swift */,
 			);
 			path = Views;
@@ -546,10 +553,63 @@
 			path = DataProviers;
 			sourceTree = "<group>";
 		};
+		34D487C7209F2535006EA78A /* MonthSelect */ = {
+			isa = PBXGroup;
+			children = (
+				34D487D4209F2F26006EA78A /* DataProviders */,
+				34D487D1209F2AA0006EA78A /* ViewControllers */,
+				34D487CE209F2994006EA78A /* ViewModels */,
+				34D487CB209F272B006EA78A /* Doubles */,
+				34D487C8209F257D006EA78A /* Views */,
+			);
+			path = MonthSelect;
+			sourceTree = "<group>";
+		};
+		34D487C8209F257D006EA78A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3460D051207B85D200BBEDA3 /* MonthPickerTests.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		34D487CB209F272B006EA78A /* Doubles */ = {
+			isa = PBXGroup;
+			children = (
+				34D487CC209F2735006EA78A /* StubMonthSelectorDataProvider.swift */,
+			);
+			path = Doubles;
+			sourceTree = "<group>";
+		};
+		34D487CE209F2994006EA78A /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				34D487CF209F29A1006EA78A /* SelectMonthViewModelTests.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		34D487D1209F2AA0006EA78A /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				34D487D2209F2AAE006EA78A /* SelectMonthViewControllerTests.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		34D487D4209F2F26006EA78A /* DataProviders */ = {
+			isa = PBXGroup;
+			children = (
+				34D487D5209F2F31006EA78A /* MonthPickerDelegateDataSourceTests.swift */,
+			);
+			path = DataProviders;
+			sourceTree = "<group>";
+		};
 		34EF9AAD2050B5BB00EB0337 /* SensazonalUnitTests */ = {
 			isa = PBXGroup;
 			children = (
 				34272CE32051CDF100EABE98 /* FoodList */,
+				34D487C7209F2535006EA78A /* MonthSelect */,
 				34272CD72051CC7100EABE98 /* Common */,
 			);
 			path = SensazonalUnitTests;
@@ -883,7 +943,9 @@
 				34F19929206E6D1C00DEF735 /* ListFoodViewPresenterTests.swift in Sources */,
 				340D86552051D78E0090F1FA /* ListFoodStubGateway.swift in Sources */,
 				340D86532051D5270090F1FA /* ListFoodStubPresenter.swift in Sources */,
+				34D487CD209F2735006EA78A /* StubMonthSelectorDataProvider.swift in Sources */,
 				34F19934206E738300DEF735 /* FoodViewModelTests.swift in Sources */,
+				34D487D6209F2F31006EA78A /* MonthPickerDelegateDataSourceTests.swift in Sources */,
 				34272CE72051CE0B00EABE98 /* ListFoodByMonthInteractorTests.swift in Sources */,
 				34F1992B206E6E1900DEF735 /* StubBinder.swift in Sources */,
 				34F19921206E66E500DEF735 /* FoodListControllerTests.swift in Sources */,
@@ -894,10 +956,12 @@
 				34F1993F206E7D4500DEF735 /* FoodListCollectionViewTests.swift in Sources */,
 				34EF9AAF2050B5BB00EB0337 /* LocaleTests.swift in Sources */,
 				34F19926206E6C3100DEF735 /* ListFoodMemoryGatewayTests.swift in Sources */,
+				34D487D0209F29A1006EA78A /* SelectMonthViewModelTests.swift in Sources */,
 				34AE6221205471CF00690E51 /* FoodViewCellTests.swift in Sources */,
 				3427508B206E61F4001F871E /* StubLogger.swift in Sources */,
 				34F19939206E772F00DEF735 /* GradientTests.swift in Sources */,
 				34D1969F209E386F0073CA54 /* FoodCollectionViewDataSourceTests.swift in Sources */,
+				34D487D3209F2AAE006EA78A /* SelectMonthViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
