@@ -1,16 +1,36 @@
 import UIKit
 
-class FoodListController {
+final class FoodListController: BaseController {
 
-    lazy var viewController = NavigationViewController(rootViewController: listViewController)
-    private let listViewController = FoodListCollectionViewController()
+    let viewController: UIViewController
     private let listFoodByMonth: ListFoodByMonthInteractor
+    private lazy var selectMonthViewController = SelectMonthViewControllerFactory.make(delegate: self)
 
-    init(interactorBuilder: (ListFoodPresenter) -> ListFoodByMonthInteractor = ListFoodByMonthInteractorFactory.make) {
-        let presenter = ListFoodViewPresenterFactory.make(binder: listViewController)
-        listFoodByMonth = interactorBuilder(presenter)
-        let currentMonth = Calendar.current.component(.month, from: Date())
-        listFoodByMonth.list(byMonth: currentMonth)
+    init(interactor: ListFoodByMonthInteractor, listViewController: UIViewController) {
+        self.viewController = listViewController
+        listFoodByMonth = interactor
+        listFoodByMonth.listByCurrentMonth()
+    }
+
+}
+
+extension FoodListController: FoodListControllerDelegate {
+
+    func closeMonthSelector() {
+        selectMonthViewController.dismiss(animated: true, completion: nil)
+    }
+
+    func openMonthSelector(at month: Month) {
+        selectMonthViewController = SelectMonthViewControllerFactory.make(delegate: self)
+
+        let viewModel = SelectMonthViewModelFactory.make(month: month)
+        selectMonthViewController.bind(viewModel: viewModel)
+
+        viewController.present(selectMonthViewController, animated: true, completion: nil)
+    }
+
+    func updateList(with month: Month) {
+        listFoodByMonth.list(byMonth: month.number)
     }
 
 }

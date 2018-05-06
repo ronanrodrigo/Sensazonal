@@ -7,7 +7,7 @@ final class GradientTests: XCTestCase {
         let black = UIColor.black
         let transparentBlack = black.withAlphaComponent(0)
 
-        let gradient = Gradient.make(startColor: .black)
+        let gradient = CAGradientLayer(startColor: .black)
         let cgColors: [CGColor]! = gradient.colors as? [CGColor]
         let startColorComponents = cgColors[1].components
         let endColorComponents = cgColors[0].components

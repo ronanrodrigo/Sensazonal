@@ -1,0 +1,5 @@
+protocol Reloadable {
+
+    func reload()
+
+}

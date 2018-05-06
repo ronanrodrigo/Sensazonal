@@ -1,19 +1,13 @@
 enum Result<T> {
-    case success(T)
-    case failure(SensazonalError)
+
+    case success(T), failure(SensazonalError)
 
     func onSuccess(_ callback: (T) -> Void) {
-        switch self {
-        case let .success(data): callback(data)
-        default: return
-        }
+        if case let .success(data) = self { callback(data) }
     }
 
     func onFailure(_ callback: (SensazonalError) -> Void) {
-        switch self {
-        case let .failure(error): callback(error)
-        default: return
-        }
+        if case let .failure(error) = self { callback(error) }
     }
 
 }

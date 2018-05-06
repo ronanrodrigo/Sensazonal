@@ -1,11 +1,17 @@
+import Foundation
+
 struct FoodListViewModel {
+
     let foodsViewModel: [FoodViewModel]
-    let monthSelected: String
+    let month: Month
+
 }
 
 extension FoodListViewModel {
+
     init() {
         foodsViewModel = []
-        monthSelected = ""
+        month = MonthFactory.make()
     }
+
 }

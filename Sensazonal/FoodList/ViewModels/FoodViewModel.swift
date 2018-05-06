@@ -10,7 +10,7 @@ struct FoodViewModel {
     init(name: String, nameColor: UIColor, nameBackgroundColor: UIColor, photo: UIImage) {
         self.name = name
         self.nameColor = nameColor
-        self.nameBackgroundGradient = Gradient.make(startColor: nameBackgroundColor)
+        self.nameBackgroundGradient = CAGradientLayer(startColor: nameBackgroundColor)
         self.photo = photo
     }
 

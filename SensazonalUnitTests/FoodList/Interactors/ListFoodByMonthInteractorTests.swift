@@ -20,6 +20,13 @@ final class ListFoodByMonthInteractorTests: XCTestCase {
         XCTAssertEqual(presenter.listedFoods.count, 23)
     }
 
+    func testListByCurrentMonthWhenExistingMonthThenPresentFoodsForSelectedMonth() {
+        interactor.listByCurrentMonth()
+
+        XCTAssertFalse(presenter.listedFoods.isEmpty)
+        XCTAssertEqual(presenter.presentedMonthNumber, GregorianMonth().number)
+    }
+
     func testListWhenMonthNumberIsGreaterThanTwelveThenPresentError() {
         interactor.list(byMonth: 13)
 

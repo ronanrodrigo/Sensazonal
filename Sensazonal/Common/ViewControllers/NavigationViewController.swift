@@ -1,6 +1,6 @@
 import UIKit
 
-class NavigationViewController: UINavigationController {
+final class NavigationViewController: UINavigationController {
 
     override init(rootViewController: UIViewController) {
         super.init(rootViewController: rootViewController)
@@ -12,7 +12,7 @@ class NavigationViewController: UINavigationController {
         setup()
     }
 
-    required init?(coder aDecoder: NSCoder) { Logger.shared.notImplemented(#file, #function, #line); return nil }
+    required init?(coder aDecoder: NSCoder) { Logger.shared.notImplemented(); return nil }
 
     private func setup() {
         navigationBar.prefersLargeTitles = true

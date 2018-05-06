@@ -19,7 +19,16 @@ final class ListFoodViewPresenterTests: XCTestCase {
         presenter.presentFoods([Food(keyName: "", months: [])], monthNumber: 1)
 
         XCTAssertEqual(binder.viewModel?.foodsViewModel.count, 1)
-        XCTAssertEqual(binder.viewModel?.monthSelected, "Janeiro")
+        XCTAssertEqual(binder.viewModel?.month.name, "Janeiro")
+    }
+
+    func testPresentFoodsWhenInvalidMonthThenDontCallBinder() {
+        let binder = StubBinder()
+        let presenter = ListFoodViewPresenter(binder: binder)
+
+        presenter.presentFoods([Food(keyName: "", months: [])], monthNumber: 0)
+
+        XCTAssertFalse(binder.didCallBinder)
     }
 
 }

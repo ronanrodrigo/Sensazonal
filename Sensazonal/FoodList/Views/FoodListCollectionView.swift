@@ -6,6 +6,7 @@ final class FoodListCollectionView: UIView {
     private static let columns: CGFloat = 2
     private static let edges = UIEdgeInsets(top: margin, left: margin, bottom: margin, right: margin)
     private let layout = UICollectionViewFlowLayout()
+    private var dataSource: FoodCollectionViewDataSource?
     private lazy var collection: UICollectionView = {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
@@ -22,7 +23,7 @@ final class FoodListCollectionView: UIView {
         installConstraints()
     }
 
-    required init?(coder aDecoder: NSCoder) { Logger.shared.notImplemented(#file, #function, #line); return nil }
+    required init?(coder aDecoder: NSCoder) { Logger.shared.notImplemented(); return nil }
 
     override func didMoveToSuperview() {
         super.didMoveToSuperview()
@@ -41,22 +42,22 @@ final class FoodListCollectionView: UIView {
     }
 
     private func installConstraints() {
-        let collectionConstraints = [
+        let constraints = [
             collection.leadingAnchor.constraint(equalTo: leadingAnchor),
             collection.topAnchor.constraint(equalTo: topAnchor),
             collection.trailingAnchor.constraint(equalTo: trailingAnchor),
             collection.bottomAnchor.constraint(equalTo: bottomAnchor)]
-        NSLayoutConstraint.activate(collectionConstraints)
+        NSLayoutConstraint.activate(constraints)
     }
 
     private func installSuperViewConstraints() {
         guard let parentView = superview else { return }
-        let selfConstraints = [
+        let constraints = [
             leadingAnchor.constraint(equalTo: parentView.safeAreaLayoutGuide.leadingAnchor),
             topAnchor.constraint(equalTo: parentView.topAnchor),
             trailingAnchor.constraint(equalTo: parentView.safeAreaLayoutGuide.trailingAnchor),
             bottomAnchor.constraint(equalTo: parentView.bottomAnchor)]
-        NSLayoutConstraint.activate(selfConstraints)
+        NSLayoutConstraint.activate(constraints)
     }
 
     private static func generateItemSize(width: CGFloat) -> CGSize {
@@ -68,17 +69,14 @@ final class FoodListCollectionView: UIView {
         return CGSize(width: size, height: size)
     }
 
+    func setupDataSource(_ dataProvider: FoodListDataProvider) {
+        dataSource = FoodCollectionViewDataSource(dataProvider: dataProvider)
+        collection.dataSource = dataSource
+    }
 }
 
-// MARK: - Collection view wrapper
-
-extension FoodListCollectionView {
-
-    func reloadData() {
+extension FoodListCollectionView: Reloadable {
+    func reload() {
         collection.reloadData()
-    }
-
-    func setupDataSource(_ dataSource: UICollectionViewDataSource) {
-        collection.dataSource = dataSource
     }
 }

@@ -1,12 +1,25 @@
 #!/usr/bin/env bash
 
 setup_enviroment() {
+    validate_xcode_version
     install_system_basics
     install_brew_dependencies
     install_carthage_dependencies
+    open_project
+}
+
+validate_xcode_version() {
+    echo "Validating Xcode version..."
+    xcode_version=$(xcodebuild -version)
+    if ! [[ $xcode_version = *"9.3"* ]]; then
+        echo -e "\033[31mYou must have/select Xcode 9.3.0"
+        echo "Try: sudo xcode-select -s /Applications/Xcode[9.3.0-Version].app"
+        exit 1
+    fi
 }
 
 install_system_basics() {
+    echo "Setup system basics..."
     if ! type "brew" &> /dev/null; then
         echo "Installing brew..."
         eval '/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)'
@@ -14,15 +27,31 @@ install_system_basics() {
 }
 
 install_brew_dependencies() {
+    echo "Setup brew packages..."
     brew_dependencies=(carthage swiftlint)
+
     for brew_dependency in "${brew_dependencies[@]}"; do
-        echo "Installing $brew_dependency..."
-        brew install $brew_dependency
+        if ! brew ls --versions ${brew_dependency} > /dev/null; then
+            echo "Installing $brew_dependency..."
+            brew install $brew_dependency
+        fi
     done
 }
 
 install_carthage_dependencies() {
+    echo "Setup carthage..."
     carthage bootstrap --platform iOS
+}
+
+open_project() {
+    while true; do
+        read -p "Open project on Xcode? " yn
+        case $yn in
+            [Yy]* ) open Sensazonal.xcodeproj; break;;
+            [Nn]* ) exit;;
+            * ) echo "Please answer yes or no.";;
+        esac
+    done
 }
 
 setup_enviroment

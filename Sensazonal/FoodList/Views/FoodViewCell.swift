@@ -2,8 +2,6 @@ import UIKit
 
 final class FoodViewCell: UICollectionViewCell {
 
-    static let identifier = String(describing: FoodViewCell.self)
-
     private var nameBackgroundGradient = CAGradientLayer()
 
     private let content: UIView = {
@@ -41,12 +39,15 @@ final class FoodViewCell: UICollectionViewCell {
         installConstraints()
     }
 
-    required init?(coder aDecoder: NSCoder) { Logger.shared.notImplemented(#file, #function, #line); return nil }
+    required init?(coder aDecoder: NSCoder) { Logger.shared.notImplemented(); return nil }
 
     override func layoutSubviews() {
         super.layoutSubviews()
-        nameBackgroundGradient.frame = bounds
-        nameBackground.layer.addSublayer(nameBackgroundGradient)
+    }
+
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        nameBackgroundGradient.removeFromSuperlayer()
     }
 
     func bind(viewModel: FoodViewModel) {
@@ -54,6 +55,8 @@ final class FoodViewCell: UICollectionViewCell {
         name.text = viewModel.name
         name.textColor = viewModel.nameColor
         nameBackgroundGradient = viewModel.nameBackgroundGradient
+        nameBackgroundGradient.frame = bounds
+        nameBackground.layer.addSublayer(nameBackgroundGradient)
     }
 
     private func installSubviews() {
