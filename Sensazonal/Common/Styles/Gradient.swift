@@ -1,14 +1,11 @@
 import UIKit
 
-class Gradient {
+extension CAGradientLayer {
 
-    static func make(startColor: UIColor) -> CAGradientLayer {
-        let gradientLayer = CAGradientLayer()
+    convenience init(startColor: UIColor) {
+        self.init()
         let finalColor = startColor.withAlphaComponent(0).cgColor
-
-        gradientLayer.colors = [finalColor, startColor.cgColor]
-
-        return gradientLayer
+        colors = [finalColor, startColor.cgColor]
     }
 
 }

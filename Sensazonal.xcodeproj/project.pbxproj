@@ -208,6 +208,8 @@
 		340D86512051D5130090F1FA /* Doubles */ = {
 			isa = PBXGroup;
 			children = (
+				34D196A5209E3AAA0073CA54 /* StubFoodListDataProvider.swift */,
+				34D196A7209E5C560073CA54 /* StubFoodListControllerDelegate.swift */,
 				340D86522051D5270090F1FA /* ListFoodStubPresenter.swift */,
 				340D86542051D78E0090F1FA /* ListFoodStubGateway.swift */,
 				34F19922206E69D300DEF735 /* StubListFoodByMonthInteractor.swift */,
@@ -275,7 +277,6 @@
 		34272CE32051CDF100EABE98 /* FoodList */ = {
 			isa = PBXGroup;
 			children = (
-				34D196A4209E3A9F0073CA54 /* TestDoubles */,
 				34D1969D209E38610073CA54 /* DataProviers */,
 				34F1991D206E66CE00DEF735 /* Controllers */,
 				340D86512051D5130090F1FA /* Doubles */,
@@ -543,15 +544,6 @@
 				34D1969E209E386F0073CA54 /* FoodCollectionViewDataSourceTests.swift */,
 			);
 			path = DataProviers;
-			sourceTree = "<group>";
-		};
-		34D196A4209E3A9F0073CA54 /* TestDoubles */ = {
-			isa = PBXGroup;
-			children = (
-				34D196A5209E3AAA0073CA54 /* StubFoodListDataProvider.swift */,
-				34D196A7209E5C560073CA54 /* StubFoodListControllerDelegate.swift */,
-			);
-			path = TestDoubles;
 			sourceTree = "<group>";
 		};
 		34EF9AAD2050B5BB00EB0337 /* SensazonalUnitTests */ = {

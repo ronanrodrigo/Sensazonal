@@ -25,5 +25,7 @@ final class ListFoodViewPresenter: ListFoodPresenter {
 }
 
 fileprivate extension Food {
+
     var name: String { return Locale.localize(keyName) }
+
 }

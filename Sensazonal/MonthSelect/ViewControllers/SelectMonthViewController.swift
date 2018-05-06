@@ -1,6 +1,6 @@
 import UIKit
 
-class SelectMonthViewController: UIViewController {
+final class SelectMonthViewController: UIViewController {
 
     private var viewModel = SelectMonthViewModelFactory.make()
     weak var delegate: FoodListControllerDelegate?
@@ -20,11 +20,13 @@ class SelectMonthViewController: UIViewController {
 }
 
 extension SelectMonthViewController: SelectMonthBinder {
+
     func bind(viewModel: SelectMonthViewModel) {
         self.viewModel = viewModel
         monthPicker.selectMonth(monthNumber: viewModel.currentMonth.position)
         monthPicker.reload()
     }
+
 }
 
 extension SelectMonthViewController: MonthSelectorDataProvider {

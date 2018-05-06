@@ -1,6 +1,6 @@
 enum Result<T> {
-    case success(T)
-    case failure(SensazonalError)
+
+    case success(T), failure(SensazonalError)
 
     func onSuccess(_ callback: (T) -> Void) {
         if case let .success(data) = self { callback(data) }

@@ -4,9 +4,7 @@ import FBSnapshotTestCase
 
 final class FoodListViewControllerTests: FBSnapshotTestCase {
 
-    private var foodViewModel: FoodViewModel {
-        return FoodViewModel(name: "Name", nameColor: .white, nameBackgroundColor: .red, photo: #imageLiteral(resourceName: "content/strawberry"))
-    }
+    private var foodViewModel: FoodViewModel { return FoodViewModel.sample }
 
     func testBindViewModelThenPopulateCollectionView() throws {
         let viewController = FoodListViewController()
@@ -23,11 +21,10 @@ final class FoodListViewControllerTests: FBSnapshotTestCase {
         XCTAssertEqual(viewController.numberOfItemsImSection(0), 0)
     }
 
-    // swiftlint:disable force_try
     func testBindViewModelThePresentViewControllerWithCollectionView() {
         let viewController = FoodListViewController()
-        let viewModel = FoodListViewModel(foodsViewModel: [foodViewModel, foodViewModel, foodViewModel],
-                                          month: try! GregorianMonth(number: 1))
+        let month = try! GregorianMonth(number: 1) // swiftlint:disable:this force_try
+        let viewModel = FoodListViewModel(foodsViewModel: [foodViewModel, foodViewModel, foodViewModel], month: month)
 
         viewController.bind(viewModel: viewModel)
 
@@ -58,8 +55,8 @@ final class FoodListViewControllerTests: FBSnapshotTestCase {
 
     func testFoodsTotalWhenViewModelHasFoodsThenReturnTotalFoods() {
         let viewController = FoodListViewController()
-        let viewModel = FoodListViewModel(foodsViewModel: [foodViewModel, foodViewModel, foodViewModel],
-                                          month: try! GregorianMonth(number: 1))
+        let month = try! GregorianMonth(number: 1) // swiftlint:disable:this force_try
+        let viewModel = FoodListViewModel(foodsViewModel: [foodViewModel, foodViewModel, foodViewModel], month: month)
         viewController.bind(viewModel: viewModel)
 
         let totalFoods = viewController.foodsTotal()
@@ -69,8 +66,8 @@ final class FoodListViewControllerTests: FBSnapshotTestCase {
 
     func testFoodsAtPositionWhenGivenAValidPositionFoodsThenReturnAFoodViewModel() {
         let viewController = FoodListViewController()
-        let viewModel = FoodListViewModel(foodsViewModel: [foodViewModel, foodViewModel, foodViewModel],
-                                          month: try! GregorianMonth(number: 1))
+        let month = try! GregorianMonth(number: 1) // swiftlint:disable:this force_try
+        let viewModel = FoodListViewModel(foodsViewModel: [foodViewModel, foodViewModel, foodViewModel], month: month)
         viewController.bind(viewModel: viewModel)
 
         let totalFoods = viewController.foodsTotal()

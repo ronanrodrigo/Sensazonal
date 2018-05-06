@@ -1,4 +1,5 @@
-class SelectMonthViewModel {
+final class SelectMonthViewModel {
+
     let months: [Month]
     let currentMonth: Month
 
@@ -10,4 +11,5 @@ class SelectMonthViewModel {
     func monthNameAt(_ position: Int) -> String {
         return months[position].name
     }
+
 }

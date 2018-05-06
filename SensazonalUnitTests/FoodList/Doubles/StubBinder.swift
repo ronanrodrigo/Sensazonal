@@ -1,6 +1,6 @@
 @testable import Sensazonal
 
-class StubBinder: FoodListBinder {
+final class StubBinder: FoodListBinder {
 
     var didCallBinder = false
     var viewModel: FoodListViewModel?

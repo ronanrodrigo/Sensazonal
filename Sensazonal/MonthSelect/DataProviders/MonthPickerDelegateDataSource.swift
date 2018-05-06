@@ -1,6 +1,7 @@
 import UIKit
 
 final class MonthPickerDelegateDataSource: NSObject, UIPickerViewDataSource, UIPickerViewDelegate {
+
     private let dataProvider: MonthSelectorDataProvider
 
     init(dataProvider: MonthSelectorDataProvider) {
@@ -22,4 +23,5 @@ final class MonthPickerDelegateDataSource: NSObject, UIPickerViewDataSource, UIP
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         dataProvider.monthSelected(in: row)
     }
+
 }

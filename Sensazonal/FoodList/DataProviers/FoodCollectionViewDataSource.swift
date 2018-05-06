@@ -1,6 +1,7 @@
 import UIKit
 
 final class FoodCollectionViewDataSource: NSObject, UICollectionViewDataSource {
+
     private let dataProvider: FoodListDataProvider
 
     init(dataProvider: FoodListDataProvider) {
@@ -23,4 +24,5 @@ final class FoodCollectionViewDataSource: NSObject, UICollectionViewDataSource {
 
         return cell
     }
+
 }

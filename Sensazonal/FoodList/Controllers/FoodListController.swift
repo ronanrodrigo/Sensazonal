@@ -1,6 +1,7 @@
 import UIKit
 
-class FoodListController: BaseController {
+final class FoodListController: BaseController {
+
     let viewController: UIViewController
     private let listFoodByMonth: ListFoodByMonthInteractor
     private lazy var selectMonthViewController = SelectMonthViewControllerFactory.make(delegate: self)
@@ -10,9 +11,11 @@ class FoodListController: BaseController {
         listFoodByMonth = interactor
         listFoodByMonth.listByCurrentMonth()
     }
+
 }
 
 extension FoodListController: FoodListControllerDelegate {
+
     func closeMonthSelector() {
         selectMonthViewController.dismiss(animated: true, completion: nil)
     }
@@ -29,4 +32,5 @@ extension FoodListController: FoodListControllerDelegate {
     func updateList(with month: Month) {
         listFoodByMonth.list(byMonth: month.number)
     }
+
 }

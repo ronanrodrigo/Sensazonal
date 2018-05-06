@@ -1,6 +1,7 @@
 import UIKit
 
 struct FoodViewModel {
+
     let name: String
     let nameColor: UIColor
     let nameBackgroundGradient: CAGradientLayer
@@ -9,7 +10,8 @@ struct FoodViewModel {
     init(name: String, nameColor: UIColor, nameBackgroundColor: UIColor, photo: UIImage) {
         self.name = name
         self.nameColor = nameColor
-        self.nameBackgroundGradient = Gradient.make(startColor: nameBackgroundColor)
+        self.nameBackgroundGradient = CAGradientLayer(startColor: nameBackgroundColor)
         self.photo = photo
     }
+
 }

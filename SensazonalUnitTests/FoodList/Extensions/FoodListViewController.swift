@@ -2,6 +2,7 @@ import UIKit
 @testable import Sensazonal
 
 extension FoodListViewController {
+
     var collectionView: UICollectionView? {
         let list = self.view.subviews.first { $0.isKind(of: FoodListCollectionView.self) }
         return list?.subviews.first { $0.isKind(of: UICollectionView.self) } as? UICollectionView
@@ -14,4 +15,5 @@ extension FoodListViewController {
     func numberOfItemsImSection(_ section: Int) -> Int {
         return dataSource!.collectionView(collectionView!, numberOfItemsInSection: 0)
     }
+
 }

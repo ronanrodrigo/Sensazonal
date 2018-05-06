@@ -1,6 +1,7 @@
 @testable import Sensazonal
 
 final class StubFoodListDataProvider: FoodListDataProvider {
+
     private let total: Int
 
     init(total: Int = 0) {
@@ -14,4 +15,5 @@ final class StubFoodListDataProvider: FoodListDataProvider {
     func foodsTotal() -> Int {
         return total
     }
+
 }

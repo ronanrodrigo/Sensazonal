@@ -1,6 +1,6 @@
 import UIKit
 
-class MonthSelectorBarButton: UIBarButtonItem {
+final class MonthSelectorBarButton: UIBarButtonItem {
 
     private let selectAction: () -> Void
 

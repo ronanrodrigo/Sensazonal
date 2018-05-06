@@ -1,5 +1,7 @@
 struct MonthFactory {
 
+    private init() { }
+
     static func make() -> Month {
         return type.init()
     }

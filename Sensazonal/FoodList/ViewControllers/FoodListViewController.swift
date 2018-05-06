@@ -1,6 +1,7 @@
 import UIKit
 
-class FoodListViewController: UIViewController {
+final class FoodListViewController: UIViewController {
+
     private var selectedMonth = MonthFactory.make()
     private var viewModel = FoodListViewModel()
     private lazy var foodListView = FoodListViewFacotry.make(dataProvider: self)
@@ -17,15 +18,18 @@ class FoodListViewController: UIViewController {
 }
 
 extension FoodListViewController: FoodListBinder {
+
     func bind(viewModel: FoodListViewModel) {
         self.viewModel = viewModel
         title = viewModel.month.name
         selectedMonth = viewModel.month
         foodListView.reload()
     }
+
 }
 
 extension FoodListViewController: FoodListDataProvider {
+
     func foodsTotal() -> Int {
         return viewModel.foodsViewModel.count
     }
@@ -33,4 +37,5 @@ extension FoodListViewController: FoodListDataProvider {
     func food(at position: Int) -> FoodViewModel {
         return viewModel.foodsViewModel[position]
     }
+
 }
