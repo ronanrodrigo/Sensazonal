@@ -473,10 +473,9 @@
 		34B117CC20A072740071D7F7 /* SensazonalScreenshotTests */ = {
 			isa = PBXGroup;
 			children = (
-				34B117E420A074580071D7F7 /* MonthSelect */,
-				34B117DE20A073CE0071D7F7 /* Extensions */,
 				34B117D620A072E20071D7F7 /* FoodList */,
-				34B117CF20A072740071D7F7 /* Info.plist */,
+				34B117E420A074580071D7F7 /* MonthSelect */,
+				34B117EC20A0759E0071D7F7 /* Common */,
 			);
 			path = SensazonalScreenshotTests;
 			sourceTree = "<group>";
@@ -484,6 +483,7 @@
 		34B117D620A072E20071D7F7 /* FoodList */ = {
 			isa = PBXGroup;
 			children = (
+				34B117DE20A073CE0071D7F7 /* Extensions */,
 				34B117D820A0731F0071D7F7 /* Views */,
 				34B117D720A072EE0071D7F7 /* ViewControllers */,
 			);
@@ -538,6 +538,14 @@
 				34B117E920A074BB0071D7F7 /* StubMonthSelectorDataProvider.swift */,
 			);
 			path = Doubles;
+			sourceTree = "<group>";
+		};
+		34B117EC20A0759E0071D7F7 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				34B117CF20A072740071D7F7 /* Info.plist */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		34B5DC4720555FF0008BDBDB /* Presenters */ = {
@@ -1322,7 +1330,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = SensazonalScreenshotTests/Info.plist;
+				INFOPLIST_FILE = SensazonalScreenshotTests/Common/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1350,7 +1358,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = SensazonalScreenshotTests/Info.plist;
+				INFOPLIST_FILE = SensazonalScreenshotTests/Common/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
