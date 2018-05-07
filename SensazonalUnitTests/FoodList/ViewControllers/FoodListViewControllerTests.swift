@@ -1,8 +1,7 @@
 import XCTest
-import FBSnapshotTestCase
 @testable import Sensazonal
 
-final class FoodListViewControllerTests: FBSnapshotTestCase {
+final class FoodListViewControllerTests: XCTestCase {
 
     private var foodViewModel: FoodViewModel { return FoodViewModel.sample }
 
@@ -19,17 +18,6 @@ final class FoodListViewControllerTests: FBSnapshotTestCase {
         let viewController = FoodListViewController()
 
         XCTAssertEqual(viewController.numberOfItemsImSection(0), 0)
-    }
-
-    func testBindViewModelThePresentViewControllerWithCollectionView() {
-        let viewController = FoodListViewController()
-        let month = try! GregorianMonth(number: 1) // swiftlint:disable:this force_try
-        let viewModel = FoodListViewModel(foodsViewModel: [foodViewModel, foodViewModel, foodViewModel], month: month)
-
-        viewController.bind(viewModel: viewModel)
-
-        FBSnapshotVerifyView(viewController.view)
-        FBSnapshotVerifyLayer(viewController.view.layer)
     }
 
     func testNavigationItemRightBarButtonItemWhenViewDidLoadThenIsAMonthSelectorBarButton() {

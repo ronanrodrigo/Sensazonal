@@ -41,6 +41,16 @@
                ReferencedContainer = "container:Sensazonal.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "34B117CA20A072740071D7F7"
+               BuildableName = "SensazonalScreenshotTests.xctest"
+               BlueprintName = "SensazonalScreenshotTests"
+               ReferencedContainer = "container:Sensazonal.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

@@ -1,8 +1,7 @@
 import XCTest
-import FBSnapshotTestCase
 @testable import Sensazonal
 
-final class MonthPickerTests: FBSnapshotTestCase {
+final class MonthPickerTests: XCTestCase {
 
     func testInitWithCoderThenLogErrorMessage() {
         let stubLogger = StubLogger()
@@ -13,13 +12,6 @@ final class MonthPickerTests: FBSnapshotTestCase {
         XCTAssertTrue(stubLogger.fileLogged.contains("MonthPicker.swift"))
         XCTAssertEqual(stubLogger.functionLogged, "init(coder:)")
         XCTAssertNil(picker)
-    }
-
-    func testViewCreationWhenDataProviderHasItemsThenPresentMonthSelectorWithMonths() {
-        let view = MonthPicker(dataProvider: StubMonthSelectorDataProvider(), finishAction: {})
-
-        FBSnapshotVerifyView(view)
-        FBSnapshotVerifyLayer(view.layer)
     }
 
 }
