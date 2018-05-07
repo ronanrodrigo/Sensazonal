@@ -47,6 +47,8 @@
 		3478D4DC209DEB4000515251 /* Reloadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3478D4DB209DEB4000515251 /* Reloadable.swift */; };
 		3478D4DE209DEF8F00515251 /* UICollectionViewCell+Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3478D4DD209DEF8F00515251 /* UICollectionViewCell+Identifier.swift */; };
 		3478D4E0209DF36A00515251 /* MonthPickerDelegateDataSourceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3478D4DF209DF36A00515251 /* MonthPickerDelegateDataSourceFactory.swift */; };
+		348CA47320A0898F003892AF /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 348CA47120A0898F003892AF /* Crashlytics.framework */; };
+		348CA47420A0898F003892AF /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 348CA47220A0898F003892AF /* Fabric.framework */; };
 		349A1F30207FC01100BBC5F3 /* SelectMonthViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349A1F2F207FC01100BBC5F3 /* SelectMonthViewControllerFactory.swift */; };
 		349A1F36207FC14900BBC5F3 /* MonthFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349A1F35207FC14900BBC5F3 /* MonthFactory.swift */; };
 		34AE621F20541FAE00690E51 /* FoodViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AE621E20541FAE00690E51 /* FoodViewCell.swift */; };
@@ -160,6 +162,8 @@
 		3478D4DD209DEF8F00515251 /* UICollectionViewCell+Identifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+Identifier.swift"; sourceTree = "<group>"; };
 		3478D4DF209DF36A00515251 /* MonthPickerDelegateDataSourceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthPickerDelegateDataSourceFactory.swift; sourceTree = "<group>"; };
 		3481B84B204DB5DA00E10C76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Locale.strings; sourceTree = "<group>"; };
+		348CA47120A0898F003892AF /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
+		348CA47220A0898F003892AF /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		349A1F2F207FC01100BBC5F3 /* SelectMonthViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectMonthViewControllerFactory.swift; sourceTree = "<group>"; };
 		349A1F35207FC14900BBC5F3 /* MonthFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthFactory.swift; sourceTree = "<group>"; };
 		34AE621A205409CF00690E51 /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSnapshotTestCase.framework; path = Carthage/Build/iOS/FBSnapshotTestCase.framework; sourceTree = "<group>"; };
@@ -220,6 +224,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				348CA47320A0898F003892AF /* Crashlytics.framework in Frameworks */,
+				348CA47420A0898F003892AF /* Fabric.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -465,6 +471,8 @@
 		34AE6219205409CF00690E51 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				348CA47120A0898F003892AF /* Crashlytics.framework */,
+				348CA47220A0898F003892AF /* Fabric.framework */,
 				34AE621A205409CF00690E51 /* FBSnapshotTestCase.framework */,
 			);
 			name = Frameworks;
@@ -842,6 +850,7 @@
 				343A4FC3204D70CE00E33E81 /* Resources */,
 				34EF9ABB2050B79200EB0337 /* SwiftLint */,
 				34AE621C205409E000690E51 /* Carthage - Copy Frameworks */,
+				348CA47020A08973003892AF /* Fabric */,
 			);
 			buildRules = (
 			);
@@ -963,6 +972,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		348CA47020A08973003892AF /* Fabric */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Fabric;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run 6f94d628f9793ae75d58ebde5d6e60448cbd0278 d0bd87c1ce771338f0ef5dd33e39f04efcc0a2ad2a5366bbbccd08707e48c328";
+		};
 		34AE621C205409E000690E51 /* Carthage - Copy Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1274,10 +1297,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 8UEA2ZVXH6;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Sensazonal/System/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -1303,6 +1328,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Sensazonal/System/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
