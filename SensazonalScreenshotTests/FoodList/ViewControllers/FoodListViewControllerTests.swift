@@ -1,5 +1,6 @@
 import XCTest
 import FBSnapshotTestCase
+import SensazonalTestUtils
 @testable import Sensazonal
 
 final class FoodListViewControllerTests: FBSnapshotTestCase {
