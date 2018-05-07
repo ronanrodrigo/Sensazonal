@@ -58,6 +58,7 @@
 		348CA48F20A0A669003892AF /* StubListFoodByMonthInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F19922206E69D300DEF735 /* StubListFoodByMonthInteractor.swift */; };
 		348CA49020A0A669003892AF /* StubBinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F1992A206E6E1900DEF735 /* StubBinder.swift */; };
 		348CA49220A0A68C003892AF /* StubMonthSelectorDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D487CC209F2735006EA78A /* StubMonthSelectorDataProvider.swift */; };
+		348CA49620A0C537003892AF /* MonthPickerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348CA49520A0C534003892AF /* MonthPickerTests.swift */; };
 		349A1F30207FC01100BBC5F3 /* SelectMonthViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349A1F2F207FC01100BBC5F3 /* SelectMonthViewControllerFactory.swift */; };
 		349A1F36207FC14900BBC5F3 /* MonthFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349A1F35207FC14900BBC5F3 /* MonthFactory.swift */; };
 		34AE621F20541FAE00690E51 /* FoodViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AE621E20541FAE00690E51 /* FoodViewCell.swift */; };
@@ -184,6 +185,7 @@
 		348CA47A20A0A45B003892AF /* libSensazonalTestUtils.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSensazonalTestUtils.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		348CA48220A0A474003892AF /* FoodViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodViewModel.swift; sourceTree = "<group>"; };
 		348CA48320A0A474003892AF /* FoodListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListViewController.swift; sourceTree = "<group>"; };
+		348CA49520A0C534003892AF /* MonthPickerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthPickerTests.swift; sourceTree = "<group>"; };
 		349A1F2F207FC01100BBC5F3 /* SelectMonthViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectMonthViewControllerFactory.swift; sourceTree = "<group>"; };
 		349A1F35207FC14900BBC5F3 /* MonthFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthFactory.swift; sourceTree = "<group>"; };
 		34AE621A205409CF00690E51 /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSnapshotTestCase.framework; path = Carthage/Build/iOS/FBSnapshotTestCase.framework; sourceTree = "<group>"; };
@@ -516,6 +518,22 @@
 			path = MonthSelect;
 			sourceTree = "<group>";
 		};
+		348CA49320A0C529003892AF /* MonthSelect */ = {
+			isa = PBXGroup;
+			children = (
+				348CA49420A0C52E003892AF /* Views */,
+			);
+			path = MonthSelect;
+			sourceTree = "<group>";
+		};
+		348CA49420A0C52E003892AF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				348CA49520A0C534003892AF /* MonthPickerTests.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		349A1F34207FC14100BBC5F3 /* Factories */ = {
 			isa = PBXGroup;
 			children = (
@@ -539,6 +557,7 @@
 		34B117CC20A072740071D7F7 /* SensazonalScreenshotTests */ = {
 			isa = PBXGroup;
 			children = (
+				348CA49320A0C529003892AF /* MonthSelect */,
 				34B117D620A072E20071D7F7 /* FoodList */,
 				34B117EC20A0759E0071D7F7 /* Common */,
 			);
@@ -1145,6 +1164,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				34B117DD20A073B20071D7F7 /* FoodListViewControllerTests.swift in Sources */,
+				348CA49620A0C537003892AF /* MonthPickerTests.swift in Sources */,
 				34B117DC20A073B20071D7F7 /* FoodViewCellTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
