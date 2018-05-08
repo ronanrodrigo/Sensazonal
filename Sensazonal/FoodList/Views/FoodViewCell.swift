@@ -2,8 +2,6 @@ import UIKit
 
 final class FoodViewCell: UICollectionViewCell {
 
-    private var nameBackgroundGradient = CAGradientLayer()
-
     private let content: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -45,25 +43,18 @@ final class FoodViewCell: UICollectionViewCell {
         super.layoutSubviews()
     }
 
-    override func prepareForReuse() {
-        super.prepareForReuse()
-        nameBackgroundGradient.removeFromSuperlayer()
-    }
-
     func bind(viewModel: FoodViewModel) {
         photo.image = viewModel.photo
         name.text = viewModel.name
-        name.textColor = viewModel.nameColor
-        nameBackgroundGradient = viewModel.nameBackgroundGradient
-        nameBackgroundGradient.frame = bounds
-        nameBackground.layer.addSublayer(nameBackgroundGradient)
+        name.textColor = .white
+        nameBackground.backgroundColor = UIColor.black.withAlphaComponent(0.7)
     }
 
     private func installSubviews() {
         addSubview(content)
         content.addSubview(photo)
         content.addSubview(nameBackground)
-        content.addSubview(name)
+        nameBackground.addSubview(name)
     }
 
     private func installConstraints() {
@@ -95,16 +86,16 @@ final class FoodViewCell: UICollectionViewCell {
         NSLayoutConstraint.activate([
             nameBackground.leadingAnchor.constraint(equalTo: content.leadingAnchor),
             nameBackground.trailingAnchor.constraint(equalTo: content.trailingAnchor),
-            nameBackground.bottomAnchor.constraint(equalTo: content.bottomAnchor),
-            nameBackground.heightAnchor.constraint(equalTo: content.heightAnchor, multiplier: 0.7)
+            nameBackground.bottomAnchor.constraint(equalTo: content.bottomAnchor)
         ])
     }
 
     private func installNameConstraints() {
         NSLayoutConstraint.activate([
-            name.leadingAnchor.constraint(equalTo: content.leadingAnchor, constant: Metric.small),
-            name.trailingAnchor.constraint(equalTo: content.trailingAnchor, constant: -Metric.small),
-            name.bottomAnchor.constraint(equalTo: content.bottomAnchor, constant: -Metric.small)
+            name.topAnchor.constraint(equalTo: nameBackground.topAnchor, constant: Metric.small),
+            name.leadingAnchor.constraint(equalTo: nameBackground.leadingAnchor, constant: Metric.small),
+            name.trailingAnchor.constraint(equalTo: nameBackground.trailingAnchor, constant: -Metric.small),
+            name.bottomAnchor.constraint(equalTo: nameBackground.bottomAnchor, constant: -Metric.small)
         ])
     }
 

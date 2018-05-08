@@ -8,8 +8,6 @@ final class FoodViewModelTests: XCTestCase {
         let viewModel = FoodViewModel.sample
 
         XCTAssertEqual(viewModel.name, "Name")
-        XCTAssertEqual(viewModel.nameBackgroundGradient.colors?.count, 2)
-        XCTAssertEqual(viewModel.nameColor, .white)
         XCTAssertEqual(viewModel.photo, #imageLiteral(resourceName: "content/strawberry"))
     }
 
