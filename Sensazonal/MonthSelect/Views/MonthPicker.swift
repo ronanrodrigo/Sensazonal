@@ -84,7 +84,7 @@ final class MonthPicker: MonthSelectorView {
     private func installConfirmConstraints() {
         NSLayoutConstraint.activate([
             finish.topAnchor.constraint(equalTo: navigation.topAnchor, constant: Metric.small),
-            finish.trailingAnchor.constraint(equalTo: navigation.trailingAnchor, constant: -Metric.large),
+            finish.trailingAnchor.constraint(equalTo: navigation.safeAreaLayoutGuide.trailingAnchor, constant: -Metric.large),
             finish.bottomAnchor.constraint(equalTo: navigation.bottomAnchor, constant: -Metric.small)])
     }
 
