@@ -14,6 +14,8 @@ final class FoodViewCell: UICollectionViewCell {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleAspectFill
+        imageView.layer.masksToBounds = true
+        imageView.layer.cornerRadius = Metric.extraSmall
         return imageView
     }()
 
@@ -41,20 +43,22 @@ final class FoodViewCell: UICollectionViewCell {
 
     override func layoutSubviews() {
         super.layoutSubviews()
+        layer.shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: content.layer.cornerRadius).cgPath
     }
 
     func bind(viewModel: FoodViewModel) {
         photo.image = viewModel.photo
         name.text = viewModel.name
-        name.textColor = .white
-        nameBackground.backgroundColor = UIColor.black.withAlphaComponent(0.7)
+        name.textColor = .black
+        nameBackground.backgroundColor = .white
     }
 
     private func installSubviews() {
         addSubview(content)
-        content.addSubview(photo)
         content.addSubview(nameBackground)
+        content.addSubview(photo)
         nameBackground.addSubview(name)
+        installShadow()
     }
 
     private func installConstraints() {
@@ -62,6 +66,14 @@ final class FoodViewCell: UICollectionViewCell {
         installPhotoConstraints()
         installNameBackgroundConstraints()
         installNameConstraints()
+    }
+
+    private func installShadow() {
+        layer.shadowColor = UIColor.black.cgColor
+        layer.shadowOffset = CGSize.zero
+        layer.shadowRadius = 1.2
+        layer.shadowOpacity = 0.2
+        layer.masksToBounds = false
     }
 
     private func installContentConstraints() {
@@ -78,7 +90,7 @@ final class FoodViewCell: UICollectionViewCell {
             photo.leadingAnchor.constraint(equalTo: content.leadingAnchor),
             photo.topAnchor.constraint(equalTo: content.topAnchor),
             photo.trailingAnchor.constraint(equalTo: content.trailingAnchor),
-            photo.bottomAnchor.constraint(equalTo: content.bottomAnchor)
+            photo.bottomAnchor.constraint(equalTo: nameBackground.topAnchor, constant: Metric.small)
         ])
     }
 
@@ -92,7 +104,7 @@ final class FoodViewCell: UICollectionViewCell {
 
     private func installNameConstraints() {
         NSLayoutConstraint.activate([
-            name.topAnchor.constraint(equalTo: nameBackground.topAnchor, constant: Metric.small),
+            name.topAnchor.constraint(equalTo: nameBackground.topAnchor, constant: Metric.large),
             name.leadingAnchor.constraint(equalTo: nameBackground.leadingAnchor, constant: Metric.small),
             name.trailingAnchor.constraint(equalTo: nameBackground.trailingAnchor, constant: -Metric.small),
             name.bottomAnchor.constraint(equalTo: nameBackground.bottomAnchor, constant: -Metric.small)
