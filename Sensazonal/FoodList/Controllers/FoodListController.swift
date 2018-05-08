@@ -5,6 +5,7 @@ final class FoodListController: BaseController {
     let viewController: UIViewController
     private let listFoodByMonth: ListFoodByMonthInteractor
     private lazy var selectMonthViewController = SelectMonthViewControllerFactory.make(delegate: self)
+    private let transition = FadeAndAppearTransitioningDelegate()
 
     init(interactor: ListFoodByMonthInteractor, listViewController: UIViewController) {
         self.viewController = listViewController
@@ -25,6 +26,8 @@ extension FoodListController: FoodListControllerDelegate {
 
         let viewModel = SelectMonthViewModelFactory.make(month: month)
         selectMonthViewController.bind(viewModel: viewModel)
+        selectMonthViewController.transitioningDelegate = transition
+        selectMonthViewController.modalPresentationStyle = .custom
 
         viewController.present(selectMonthViewController, animated: true, completion: nil)
     }

@@ -11,9 +11,6 @@ final class SelectMonthViewController: UIViewController {
 
     init() {
         super.init(nibName: nil, bundle: nil)
-        modalPresentationStyle = .overCurrentContext
-        modalTransitionStyle = .crossDissolve
-        view.backgroundColor = UIColor.black.withAlphaComponent(0.4)
         view.addSubview(monthPicker)
     }
 

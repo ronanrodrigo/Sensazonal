@@ -49,7 +49,7 @@ final class FoodViewCell: UICollectionViewCell {
     func bind(viewModel: FoodViewModel) {
         photo.image = viewModel.photo
         name.text = viewModel.name
-        name.textColor = .black
+        name.textColor = UIColor.black.withAlphaComponent(0.7)
         nameBackground.backgroundColor = .white
     }
 
