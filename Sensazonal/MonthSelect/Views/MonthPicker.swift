@@ -15,7 +15,7 @@ final class MonthPicker: MonthSelectorView {
     private let navigation: UIView = {
         let view = UIView(frame: .zero)
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = UIColor.white.withAlphaComponent(0.97)
+        view.backgroundColor = .white
         return view
     }()
 
@@ -36,7 +36,7 @@ final class MonthPicker: MonthSelectorView {
         monthPicker.dataSource = delegateDataSource
         monthPicker.delegate = delegateDataSource
         translatesAutoresizingMaskIntoConstraints = false
-        backgroundColor = UIColor.white.withAlphaComponent(0.95)
+        backgroundColor = .white
         installSubviews()
         installConstraints()
     }
