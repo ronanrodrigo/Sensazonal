@@ -33,7 +33,6 @@ final class FadeAndAppearAnimatedTransitioning: NSObject, UIViewControllerAnimat
 
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         guard let destination = transitionContext.viewController(forKey: .to) else { return }
-
         if destination.isBeingPresented {
             self.presentAnimateTransition(using: transitionContext)
         } else {
@@ -56,7 +55,6 @@ final class FadeAndAppearAnimatedTransitioning: NSObject, UIViewControllerAnimat
             destinyViewController.view.frame = finalFrame
         }, completion: { _ in
             transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
-
         })
     }
 
@@ -69,7 +67,6 @@ final class FadeAndAppearAnimatedTransitioning: NSObject, UIViewControllerAnimat
             originViewController.view.frame = finalFrameForVc.offsetBy(dx: 0, dy: bounds.size.height)
             self.backdrop.alpha = 0
         }, completion: { _ in
-            self.backdrop.removeFromSuperview()
             transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
         })
     }
@@ -78,6 +75,7 @@ final class FadeAndAppearAnimatedTransitioning: NSObject, UIViewControllerAnimat
 
 final class FadeAndAppearTransitioningDelegate: NSObject, UIViewControllerTransitioningDelegate {
     private let customTransition = FadeAndAppearAnimatedTransitioning()
+    var interactor: InteractiveTransition?
 
     func animationController(forPresented presented: UIViewController, presenting: UIViewController,
                              source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
@@ -92,8 +90,21 @@ final class FadeAndAppearTransitioningDelegate: NSObject, UIViewControllerTransi
                                 source: UIViewController) -> UIPresentationController? {
         return FadeAndAppearPresentationController(presentedViewController: presented, presenting: presenting)
     }
+
+    func interactionControllerForDismissal(using animator: UIViewControllerAnimatedTransitioning) ->
+        UIViewControllerInteractiveTransitioning? {
+        if let interactor = self.interactor {
+            return interactor.hasStarted ? interactor : nil
+        }
+        return nil
+    }
 }
 
 final class FadeAndAppearPresentationController: UIPresentationController {
     override var shouldRemovePresentersView: Bool { return false }
+}
+
+final class InteractiveTransition: UIPercentDrivenInteractiveTransition {
+    var hasStarted = false
+    var shouldFinish = false
 }
