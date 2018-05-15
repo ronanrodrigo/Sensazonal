@@ -40,18 +40,11 @@ final class SelectMonthViewController: UIViewController {
         case .ended:
             interactiveTransition.hasStarted = false
             interactiveTransition.completionSpeed = 1 - progress
-            endTransition(interactiveTransition.shouldFinish)
+            interactiveTransition.endTransition()
         default: break
         }
     }
 
-    private func endTransition(_ shouldFinish: Bool) {
-        if shouldFinish {
-            interactiveTransition.finish()
-        } else {
-            interactiveTransition.cancel()
-        }
-    }
 }
 
 extension SelectMonthViewController: SelectMonthBinder {
