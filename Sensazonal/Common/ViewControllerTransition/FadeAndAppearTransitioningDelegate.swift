@@ -2,7 +2,7 @@ import UIKit
 
 final class FadeAndAppearTransitioningDelegate: NSObject, UIViewControllerTransitioningDelegate {
 
-    private let customTransition = FadeAndAppearAnimatedTransitioning()
+    private let customTransition = FadeAndAppearAnimatedTransitioningFactory.make()
     var interactiveTransition: InteractiveTransition?
 
     func animationController(forPresented presented: UIViewController, presenting: UIViewController,
@@ -21,8 +21,8 @@ final class FadeAndAppearTransitioningDelegate: NSObject, UIViewControllerTransi
 
     func interactionControllerForDismissal(using animator: UIViewControllerAnimatedTransitioning) ->
         UIViewControllerInteractiveTransitioning? {
-            guard let interactor = self.interactiveTransition else { return nil }
-            return interactor.hasStarted ? interactor : nil
+            guard let interactiveTransition = self.interactiveTransition, interactiveTransition.hasStarted else { return nil }
+            return interactiveTransition
     }
 
 }

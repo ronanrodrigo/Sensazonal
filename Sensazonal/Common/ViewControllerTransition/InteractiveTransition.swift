@@ -7,10 +7,9 @@ final class InteractiveTransition: UIPercentDrivenInteractiveTransition {
 
     func endTransition() {
         if shouldFinish {
-            finish()
-        } else {
-            cancel()
+            return finish()
         }
+        cancel()
     }
 
 }
