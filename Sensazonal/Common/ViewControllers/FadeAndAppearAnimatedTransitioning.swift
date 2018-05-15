@@ -50,7 +50,7 @@ final class FadeAndAppearAnimatedTransitioning: NSObject, UIViewControllerAnimat
         containerView.addSubview(backdrop)
         containerView.addSubview(destinyViewController.view)
 
-        UIView.animate(withDuration: transitionDuration(using: transitionContext), delay: 0, animations: {
+        UIView.animate(withDuration: transitionDuration(using: transitionContext), delay: 0.1, animations: {
             self.backdrop.alpha = 1
             destinyViewController.view.frame = finalFrame
         }, completion: { _ in
@@ -63,7 +63,7 @@ final class FadeAndAppearAnimatedTransitioning: NSObject, UIViewControllerAnimat
         let finalFrameForVc = transitionContext.finalFrame(for: originViewController)
         let bounds = UIScreen.main.bounds
 
-        UIView.animate(withDuration: 0.5, animations: {
+        UIView.animate(withDuration: transitionDuration(using: transitionContext), delay: 0.1, animations: {
             originViewController.view.frame = finalFrameForVc.offsetBy(dx: 0, dy: bounds.size.height)
             self.backdrop.alpha = 0
         }, completion: { _ in

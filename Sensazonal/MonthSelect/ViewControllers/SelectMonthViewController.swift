@@ -20,17 +20,18 @@ final class SelectMonthViewController: UIViewController {
     required init?(coder aDecoder: NSCoder) { Logger.shared.notImplemented(); return nil }
 
     @objc private func openMonthSelectorWithGesture(_ gesture: UIPanGestureRecognizer) {
-        guard let view = gesture.view?.superview else { return }
-        let point = view.convert(gesture.translation(in: view), to: view)
-        var progress = (point.y / UIScreen.main.bounds.size.height) * 0.6
-        progress = max(progress, 0)
+        guard let viewWithGesture = gesture.view?.superview else { return }
+        let point = viewWithGesture.convert(gesture.translation(in: viewWithGesture), to: viewWithGesture)
+        let progress = max(point.y / view.bounds.size.height, 0)
+        let percentThreshold: CGFloat = 0.2
+        let veolcity = gesture.velocity(in: viewWithGesture).y
 
         switch gesture.state {
         case .began:
             interactor.hasStarted = true
             delegate?.closeMonthSelector()
         case .changed:
-            interactor.shouldFinish = gesture.translation(in: view).y > 50
+            interactor.shouldFinish = progress > percentThreshold || veolcity > 800
             interactor.update(progress)
         case .cancelled:
             interactor.hasStarted = false
