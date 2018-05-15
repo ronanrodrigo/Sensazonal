@@ -37,11 +37,11 @@ final class FadeAndAppearAnimatedTransitioning: NSObject, UIViewControllerAnimat
 
     private func dismissAnimateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         guard let originViewController = transitionContext.viewController(forKey: .from) else { return }
-        let finalFrameForVc = transitionContext.finalFrame(for: originViewController)
+        let finalFrame = transitionContext.finalFrame(for: originViewController)
         let bounds = UIScreen.main.bounds
 
         UIView.animate(withDuration: transitionDuration(using: transitionContext), delay: 0.1, animations: {
-            originViewController.view.frame = finalFrameForVc.offsetBy(dx: 0, dy: bounds.size.height)
+            originViewController.view.frame = finalFrame.offsetBy(dx: 0, dy: bounds.size.height)
             self.backdrop.alpha = 0
         }, completion: { _ in
             transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
