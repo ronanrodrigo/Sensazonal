@@ -1,28 +1,5 @@
 import UIKit
 
-final class BackdropView: UIView {
-
-    init() {
-        super.init(frame: .zero)
-        translatesAutoresizingMaskIntoConstraints = false
-        backgroundColor = UIColor.black.withAlphaComponent(0.6)
-        alpha = 0
-    }
-
-    required init?(coder aDecoder: NSCoder) { fatalError("init(coder:) has not been implemented") }
-
-    override func didMoveToSuperview() {
-        super.didMoveToSuperview()
-        guard let superview = superview else { return }
-        NSLayoutConstraint.activate([
-            leadingAnchor.constraint(equalTo: superview.leadingAnchor),
-            topAnchor.constraint(equalTo: superview.topAnchor),
-            trailingAnchor.constraint(equalTo: superview.trailingAnchor),
-            bottomAnchor.constraint(equalTo: superview.bottomAnchor)])
-    }
-
-}
-
 final class FadeAndAppearAnimatedTransitioning: NSObject, UIViewControllerAnimatedTransitioning {
 
     private var backdrop = BackdropView()
@@ -71,40 +48,4 @@ final class FadeAndAppearAnimatedTransitioning: NSObject, UIViewControllerAnimat
         })
     }
 
-}
-
-final class FadeAndAppearTransitioningDelegate: NSObject, UIViewControllerTransitioningDelegate {
-    private let customTransition = FadeAndAppearAnimatedTransitioning()
-    var interactor: InteractiveTransition?
-
-    func animationController(forPresented presented: UIViewController, presenting: UIViewController,
-                             source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return self.customTransition
-    }
-
-    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return self.customTransition
-    }
-
-    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?,
-                                source: UIViewController) -> UIPresentationController? {
-        return FadeAndAppearPresentationController(presentedViewController: presented, presenting: presenting)
-    }
-
-    func interactionControllerForDismissal(using animator: UIViewControllerAnimatedTransitioning) ->
-        UIViewControllerInteractiveTransitioning? {
-        if let interactor = self.interactor {
-            return interactor.hasStarted ? interactor : nil
-        }
-        return nil
-    }
-}
-
-final class FadeAndAppearPresentationController: UIPresentationController {
-    override var shouldRemovePresentersView: Bool { return false }
-}
-
-final class InteractiveTransition: UIPercentDrivenInteractiveTransition {
-    var hasStarted = false
-    var shouldFinish = false
 }

@@ -45,6 +45,10 @@
 		3478D4DC209DEB4000515251 /* Reloadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3478D4DB209DEB4000515251 /* Reloadable.swift */; };
 		3478D4DE209DEF8F00515251 /* UICollectionViewCell+Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3478D4DD209DEF8F00515251 /* UICollectionViewCell+Identifier.swift */; };
 		3478D4E0209DF36A00515251 /* MonthPickerDelegateDataSourceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3478D4DF209DF36A00515251 /* MonthPickerDelegateDataSourceFactory.swift */; };
+		3489495B20AB47B2007B7F6D /* BackdropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3489495A20AB47B2007B7F6D /* BackdropView.swift */; };
+		3489495D20AB47CA007B7F6D /* FadeAndAppearTransitioningDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3489495C20AB47CA007B7F6D /* FadeAndAppearTransitioningDelegate.swift */; };
+		3489495F20AB47DD007B7F6D /* FadeAndAppearPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3489495E20AB47DD007B7F6D /* FadeAndAppearPresentationController.swift */; };
+		3489496120AB47EE007B7F6D /* InteractiveTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3489496020AB47EE007B7F6D /* InteractiveTransition.swift */; };
 		348CA47320A0898F003892AF /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 348CA47120A0898F003892AF /* Crashlytics.framework */; };
 		348CA47420A0898F003892AF /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 348CA47220A0898F003892AF /* Fabric.framework */; };
 		348CA48420A0A479003892AF /* FoodViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348CA48220A0A474003892AF /* FoodViewModel.swift */; };
@@ -179,6 +183,10 @@
 		3478D4DD209DEF8F00515251 /* UICollectionViewCell+Identifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+Identifier.swift"; sourceTree = "<group>"; };
 		3478D4DF209DF36A00515251 /* MonthPickerDelegateDataSourceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthPickerDelegateDataSourceFactory.swift; sourceTree = "<group>"; };
 		3481B84B204DB5DA00E10C76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Locale.strings; sourceTree = "<group>"; };
+		3489495A20AB47B2007B7F6D /* BackdropView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackdropView.swift; sourceTree = "<group>"; };
+		3489495C20AB47CA007B7F6D /* FadeAndAppearTransitioningDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadeAndAppearTransitioningDelegate.swift; sourceTree = "<group>"; };
+		3489495E20AB47DD007B7F6D /* FadeAndAppearPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadeAndAppearPresentationController.swift; sourceTree = "<group>"; };
+		3489496020AB47EE007B7F6D /* InteractiveTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractiveTransition.swift; sourceTree = "<group>"; };
 		348CA47120A0898F003892AF /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		348CA47220A0898F003892AF /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		348CA47A20A0A45B003892AF /* libSensazonalTestUtils.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSensazonalTestUtils.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -286,10 +294,12 @@
 		34272CD62051CC6B00EABE98 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				3489495920AB47A5007B7F6D /* Views */,
 				343D4716209E2D9000B0CD66 /* Controllers */,
 				349A1F34207FC14100BBC5F3 /* Factories */,
 				34F1991A206E64A800DEF735 /* Styles */,
 				34275084206E5504001F871E /* Extra */,
+				3489495820AB4790007B7F6D /* ViewControllerTransition */,
 				34F82D82206416EE002D7062 /* ViewControllers */,
 				34272CDC2051CD4F00EABE98 /* Entities */,
 			);
@@ -478,6 +488,25 @@
 				343D4719209E2E0000B0CD66 /* FoodListControllerDelegate.swift */,
 			);
 			path = DataProviers;
+			sourceTree = "<group>";
+		};
+		3489495820AB4790007B7F6D /* ViewControllerTransition */ = {
+			isa = PBXGroup;
+			children = (
+				34D3FAD720A247F9007E4E56 /* FadeAndAppearAnimatedTransitioning.swift */,
+				3489495C20AB47CA007B7F6D /* FadeAndAppearTransitioningDelegate.swift */,
+				3489495E20AB47DD007B7F6D /* FadeAndAppearPresentationController.swift */,
+				3489496020AB47EE007B7F6D /* InteractiveTransition.swift */,
+			);
+			path = ViewControllerTransition;
+			sourceTree = "<group>";
+		};
+		3489495920AB47A5007B7F6D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3489495A20AB47B2007B7F6D /* BackdropView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		348CA47B20A0A45B003892AF /* SensazonalTestUtils */ = {
@@ -853,7 +882,6 @@
 			isa = PBXGroup;
 			children = (
 				34BC47AD20698A4A003506DB /* NavigationViewController.swift */,
-				34D3FAD720A247F9007E4E56 /* FadeAndAppearAnimatedTransitioning.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -1082,6 +1110,7 @@
 				34AE621F20541FAE00690E51 /* FoodViewCell.swift in Sources */,
 				34CA5020205EDB690095994A /* ListFoodMemoryGatewayFactory.swift in Sources */,
 				343D4718209E2DAC00B0CD66 /* BaseController.swift in Sources */,
+				3489495D20AB47CA007B7F6D /* FadeAndAppearTransitioningDelegate.swift in Sources */,
 				34275086206E551A001F871E /* Logger.swift in Sources */,
 				34CA5019205ED8EE0095994A /* FoodListController.swift in Sources */,
 				34D3FAD820A247F9007E4E56 /* FadeAndAppearAnimatedTransitioning.swift in Sources */,
@@ -1092,6 +1121,7 @@
 				3478D4CB209DDC1400515251 /* MonthSelectorDataProvider.swift in Sources */,
 				3478D4BE209DD5AF00515251 /* SelectMonthViewModel.swift in Sources */,
 				34BC47AE20698A4A003506DB /* NavigationViewController.swift in Sources */,
+				3489495B20AB47B2007B7F6D /* BackdropView.swift in Sources */,
 				3478D4C9209DDB8400515251 /* SelectMonthViewModelFactory.swift in Sources */,
 				34CA5022205EDBA40095994A /* ListFoodViewPresenter.swift in Sources */,
 				34CA501B205ED94F0095994A /* FoodListViewModel.swift in Sources */,
@@ -1106,6 +1136,8 @@
 				343352052062CD5D004549A0 /* Metric.swift in Sources */,
 				343D471A209E2E0000B0CD66 /* FoodListControllerDelegate.swift in Sources */,
 				34272CE92051CE9200EABE98 /* ListFoodPresenter.swift in Sources */,
+				3489496120AB47EE007B7F6D /* InteractiveTransition.swift in Sources */,
+				3489495F20AB47DD007B7F6D /* FadeAndAppearPresentationController.swift in Sources */,
 				34272CF12051D36300EABE98 /* SensazonalError.swift in Sources */,
 				34CA502A205F20550095994A /* FoodListBinder.swift in Sources */,
 				34272CE22051CDD800EABE98 /* ListFoodByMonthInteractor.swift in Sources */,

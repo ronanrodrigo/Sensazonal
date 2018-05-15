@@ -2,9 +2,9 @@ import UIKit
 
 final class SelectMonthViewController: UIViewController {
 
+    weak var interactiveTransition: InteractiveTransition!
+    weak var delegate: FoodListControllerDelegate!
     private var viewModel = SelectMonthViewModelFactory.make()
-    var interactor: InteractiveTransition!
-    weak var delegate: FoodListControllerDelegate?
 
     private lazy var monthPicker = MonthSelectorViewFactory.make(dataProvider: self) { [weak self] in
         self?.delegate?.closeMonthSelector()
@@ -28,28 +28,28 @@ final class SelectMonthViewController: UIViewController {
 
         switch gesture.state {
         case .began:
-            interactor.hasStarted = true
+            interactiveTransition.hasStarted = true
             delegate?.closeMonthSelector()
         case .changed:
-            interactor.shouldFinish = progress > percentThreshold || veolcity > 800
-            interactor.update(progress)
+            interactiveTransition.shouldFinish = progress > percentThreshold || veolcity > 800
+            interactiveTransition.update(progress)
         case .cancelled:
-            interactor.hasStarted = false
-            interactor.completionSpeed = 1
-            interactor.cancel()
+            interactiveTransition.hasStarted = false
+            interactiveTransition.completionSpeed = 1
+            interactiveTransition.cancel()
         case .ended:
-            interactor.hasStarted = false
-            interactor.completionSpeed = 1 - progress
-            endTransition(interactor.shouldFinish)
+            interactiveTransition.hasStarted = false
+            interactiveTransition.completionSpeed = 1 - progress
+            endTransition(interactiveTransition.shouldFinish)
         default: break
         }
     }
 
     private func endTransition(_ shouldFinish: Bool) {
         if shouldFinish {
-            interactor.finish()
+            interactiveTransition.finish()
         } else {
-            interactor.cancel()
+            interactiveTransition.cancel()
         }
     }
 }

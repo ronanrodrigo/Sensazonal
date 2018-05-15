@@ -4,7 +4,7 @@ struct SelectMonthViewControllerFactory {
 
     static func make(delegate: FoodListControllerDelegate, interactor: InteractiveTransition) -> UIViewController & SelectMonthBinder {
         let viewController = SelectMonthViewController()
-        viewController.interactor = interactor
+        viewController.interactiveTransition = interactor
         viewController.delegate = delegate
         return viewController
     }

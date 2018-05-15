@@ -25,7 +25,7 @@ extension FoodListController: FoodListControllerDelegate {
     func openMonthSelector(at month: Month) {
         let viewModel = SelectMonthViewModelFactory.make(month: month)
         selectMonthViewController.bind(viewModel: viewModel)
-        transition.interactor = interactor
+        transition.interactiveTransition = interactor
         selectMonthViewController.transitioningDelegate = transition
         selectMonthViewController.modalPresentationStyle = .custom
 
