@@ -9,7 +9,7 @@ final class BackdropView: UIView {
         alpha = 0
     }
 
-    required init?(coder aDecoder: NSCoder) { fatalError("init(coder:) has not been implemented") }
+    required init?(coder aDecoder: NSCoder) { Logger.shared.notImplemented(); return nil }
 
     override func didMoveToSuperview() {
         super.didMoveToSuperview()

@@ -2,7 +2,7 @@ import UIKit
 
 final class FadeAndAppearTransitioningDelegate: NSObject, UIViewControllerTransitioningDelegate {
 
-    private let customTransition = FadeAndAppearAnimatedTransitioningFactory.make()
+    private let customTransition = FadeAppearAnimatedTransitioningFactory.make()
     var interactiveTransition: InteractiveTransition?
 
     func animationController(forPresented presented: UIViewController, presenting: UIViewController,

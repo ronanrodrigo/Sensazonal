@@ -1,4 +1,4 @@
-struct FadeAndAppearAnimatedTransitioningFactory {
+struct FadeAppearAnimatedTransitioningFactory {
 
     static func make() -> FadeAndAppearAnimatedTransitioning {
         let presentTransition = PresentFadeAndShowTransition()

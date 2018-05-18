@@ -1,15 +1,13 @@
 import UIKit
 
-final class InteractiveTransition: UIPercentDrivenInteractiveTransition {
+class InteractiveTransition: UIPercentDrivenInteractiveTransition {
 
     var hasStarted = false
     var shouldFinish = false
 
     func endTransition() {
-        if shouldFinish {
-            return finish()
-        }
-        cancel()
+        guard shouldFinish else { return cancel() }
+        return finish()
     }
 
 }

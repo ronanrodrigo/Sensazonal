@@ -76,7 +76,15 @@
 		34C8A37B20AB7FEE002CF813 /* AnimateTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C8A37A20AB7FEE002CF813 /* AnimateTransition.swift */; };
 		34C8A37E20AB836C002CF813 /* DismissFadeAndHideTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C8A37D20AB836C002CF813 /* DismissFadeAndHideTransition.swift */; };
 		34C8A38020AB8377002CF813 /* PresentFadeAndShowTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C8A37F20AB8377002CF813 /* PresentFadeAndShowTransition.swift */; };
-		34C8A38420AB8426002CF813 /* FadeAndAppearAnimatedTransitioningFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C8A38320AB8426002CF813 /* FadeAndAppearAnimatedTransitioningFactory.swift */; };
+		34C8A38420AB8426002CF813 /* FadeAppearAnimatedTransitioningFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C8A38320AB8426002CF813 /* FadeAppearAnimatedTransitioningFactory.swift */; };
+		34C8A38720AF78C7002CF813 /* FadeAndAppearAnimatedTransitioningTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C8A38620AF78C7002CF813 /* FadeAndAppearAnimatedTransitioningTests.swift */; };
+		34C8A38920AF7D82002CF813 /* UIViewControllerContextTransitioningStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C8A38820AF7D82002CF813 /* UIViewControllerContextTransitioningStub.swift */; };
+		34C8A38B20AF7D9F002CF813 /* StubBeingPresentedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C8A38A20AF7D9F002CF813 /* StubBeingPresentedViewController.swift */; };
+		34C8A38D20AF7DB1002CF813 /* AnimateTransitionStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C8A38C20AF7DB1002CF813 /* AnimateTransitionStub.swift */; };
+		34C8A39020AF7F0F002CF813 /* BackdropViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C8A38F20AF7F0F002CF813 /* BackdropViewTests.swift */; };
+		34C8A39220AF7FDD002CF813 /* FadeAndAppearPresentationControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C8A39120AF7FDD002CF813 /* FadeAndAppearPresentationControllerTests.swift */; };
+		34C8A39420AF8095002CF813 /* InteractiveTransitionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C8A39320AF8095002CF813 /* InteractiveTransitionTests.swift */; };
+		34C8A39620AF815A002CF813 /* StubInteractiveTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C8A39520AF815A002CF813 /* StubInteractiveTransition.swift */; };
 		34CA1C252081096B00DCA45F /* NavigationViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CA1C242081096B00DCA45F /* NavigationViewControllerFactory.swift */; };
 		34CA1C2720810AD800DCA45F /* RootViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CA1C2620810AD800DCA45F /* RootViewControllerFactory.swift */; };
 		34CA1C292081110100DCA45F /* FoodListViewFacotry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CA1C282081110100DCA45F /* FoodListViewFacotry.swift */; };
@@ -211,7 +219,15 @@
 		34C8A37A20AB7FEE002CF813 /* AnimateTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimateTransition.swift; sourceTree = "<group>"; };
 		34C8A37D20AB836C002CF813 /* DismissFadeAndHideTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissFadeAndHideTransition.swift; sourceTree = "<group>"; };
 		34C8A37F20AB8377002CF813 /* PresentFadeAndShowTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentFadeAndShowTransition.swift; sourceTree = "<group>"; };
-		34C8A38320AB8426002CF813 /* FadeAndAppearAnimatedTransitioningFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadeAndAppearAnimatedTransitioningFactory.swift; sourceTree = "<group>"; };
+		34C8A38320AB8426002CF813 /* FadeAppearAnimatedTransitioningFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadeAppearAnimatedTransitioningFactory.swift; sourceTree = "<group>"; };
+		34C8A38620AF78C7002CF813 /* FadeAndAppearAnimatedTransitioningTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadeAndAppearAnimatedTransitioningTests.swift; sourceTree = "<group>"; };
+		34C8A38820AF7D82002CF813 /* UIViewControllerContextTransitioningStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerContextTransitioningStub.swift; sourceTree = "<group>"; };
+		34C8A38A20AF7D9F002CF813 /* StubBeingPresentedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubBeingPresentedViewController.swift; sourceTree = "<group>"; };
+		34C8A38C20AF7DB1002CF813 /* AnimateTransitionStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimateTransitionStub.swift; sourceTree = "<group>"; };
+		34C8A38F20AF7F0F002CF813 /* BackdropViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackdropViewTests.swift; sourceTree = "<group>"; };
+		34C8A39120AF7FDD002CF813 /* FadeAndAppearPresentationControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadeAndAppearPresentationControllerTests.swift; sourceTree = "<group>"; };
+		34C8A39320AF8095002CF813 /* InteractiveTransitionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractiveTransitionTests.swift; sourceTree = "<group>"; };
+		34C8A39520AF815A002CF813 /* StubInteractiveTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubInteractiveTransition.swift; sourceTree = "<group>"; };
 		34CA1C242081096B00DCA45F /* NavigationViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewControllerFactory.swift; sourceTree = "<group>"; };
 		34CA1C2620810AD800DCA45F /* RootViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewControllerFactory.swift; sourceTree = "<group>"; };
 		34CA1C282081110100DCA45F /* FoodListViewFacotry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListViewFacotry.swift; sourceTree = "<group>"; };
@@ -317,6 +333,8 @@
 		34272CD72051CC7100EABE98 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				34C8A38E20AF7F04002CF813 /* Views */,
+				34C8A38520AF78B6002CF813 /* ViewControllerTransition */,
 				3460D053207B87F400BBEDA3 /* Entities */,
 				34F1993D206E7A9400DEF735 /* Doubles */,
 				34F1993A206E792A00DEF735 /* ViewControllers */,
@@ -575,7 +593,7 @@
 				349A1F35207FC14900BBC5F3 /* MonthFactory.swift */,
 				34CA1C242081096B00DCA45F /* NavigationViewControllerFactory.swift */,
 				34CA1C2620810AD800DCA45F /* RootViewControllerFactory.swift */,
-				34C8A38320AB8426002CF813 /* FadeAndAppearAnimatedTransitioningFactory.swift */,
+				34C8A38320AB8426002CF813 /* FadeAppearAnimatedTransitioningFactory.swift */,
 			);
 			path = Factories;
 			sourceTree = "<group>";
@@ -705,6 +723,24 @@
 				34C8A37F20AB8377002CF813 /* PresentFadeAndShowTransition.swift */,
 			);
 			path = AnimateTransition;
+			sourceTree = "<group>";
+		};
+		34C8A38520AF78B6002CF813 /* ViewControllerTransition */ = {
+			isa = PBXGroup;
+			children = (
+				34C8A38620AF78C7002CF813 /* FadeAndAppearAnimatedTransitioningTests.swift */,
+				34C8A39120AF7FDD002CF813 /* FadeAndAppearPresentationControllerTests.swift */,
+				34C8A39320AF8095002CF813 /* InteractiveTransitionTests.swift */,
+			);
+			path = ViewControllerTransition;
+			sourceTree = "<group>";
+		};
+		34C8A38E20AF7F04002CF813 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				34C8A38F20AF7F0F002CF813 /* BackdropViewTests.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		34CA1C232081086600DCA45F /* System */ = {
@@ -894,6 +930,10 @@
 			isa = PBXGroup;
 			children = (
 				3427508A206E61F4001F871E /* StubLogger.swift */,
+				34C8A38820AF7D82002CF813 /* UIViewControllerContextTransitioningStub.swift */,
+				34C8A38A20AF7D9F002CF813 /* StubBeingPresentedViewController.swift */,
+				34C8A38C20AF7DB1002CF813 /* AnimateTransitionStub.swift */,
+				34C8A39520AF815A002CF813 /* StubInteractiveTransition.swift */,
 			);
 			path = Doubles;
 			sourceTree = "<group>";
@@ -1149,7 +1189,7 @@
 				34CA1C292081110100DCA45F /* FoodListViewFacotry.swift in Sources */,
 				34CA1C252081096B00DCA45F /* NavigationViewControllerFactory.swift in Sources */,
 				346391D82076D146007CDBCE /* MonthSelectorBarButton.swift in Sources */,
-				34C8A38420AB8426002CF813 /* FadeAndAppearAnimatedTransitioningFactory.swift in Sources */,
+				34C8A38420AB8426002CF813 /* FadeAppearAnimatedTransitioningFactory.swift in Sources */,
 				3451C45A2077F3A100CF6886 /* GregorianMonth.swift in Sources */,
 				34C8A38020AB8377002CF813 /* PresentFadeAndShowTransition.swift in Sources */,
 				3478D4D8209DE8D200515251 /* FoodListDataProvier.swift in Sources */,
@@ -1221,6 +1261,8 @@
 				3460D052207B85D200BBEDA3 /* MonthPickerTests.swift in Sources */,
 				3460D055207B889200BBEDA3 /* MonthSelectorBarButtonTests.swift in Sources */,
 				34F1993C206E793700DEF735 /* NavigationViewControllerTests.swift in Sources */,
+				34C8A38D20AF7DB1002CF813 /* AnimateTransitionStub.swift in Sources */,
+				34C8A38920AF7D82002CF813 /* UIViewControllerContextTransitioningStub.swift in Sources */,
 				34F19936206E762C00DEF735 /* FoodListViewModelTests.swift in Sources */,
 				34F19929206E6D1C00DEF735 /* ListFoodViewPresenterTests.swift in Sources */,
 				34B117EB20A075110071D7F7 /* FoodListViewControllerTests.swift in Sources */,
@@ -1228,15 +1270,21 @@
 				34D487D6209F2F31006EA78A /* MonthPickerDelegateDataSourceTests.swift in Sources */,
 				34272CE72051CE0B00EABE98 /* ListFoodByMonthInteractorTests.swift in Sources */,
 				34F19921206E66E500DEF735 /* FoodListControllerTests.swift in Sources */,
+				34C8A39220AF7FDD002CF813 /* FadeAndAppearPresentationControllerTests.swift in Sources */,
 				3460D050207B814200BBEDA3 /* GregorianMonthTests.swift in Sources */,
 				34F1993F206E7D4500DEF735 /* FoodListCollectionViewTests.swift in Sources */,
 				34EF9AAF2050B5BB00EB0337 /* LocaleTests.swift in Sources */,
 				34F19926206E6C3100DEF735 /* ListFoodMemoryGatewayTests.swift in Sources */,
 				34D487D0209F29A1006EA78A /* SelectMonthViewModelTests.swift in Sources */,
+				34C8A39420AF8095002CF813 /* InteractiveTransitionTests.swift in Sources */,
 				34AE6221205471CF00690E51 /* FoodViewCellTests.swift in Sources */,
 				3427508B206E61F4001F871E /* StubLogger.swift in Sources */,
 				34D1969F209E386F0073CA54 /* FoodCollectionViewDataSourceTests.swift in Sources */,
+				34C8A39620AF815A002CF813 /* StubInteractiveTransition.swift in Sources */,
 				34D487D3209F2AAE006EA78A /* SelectMonthViewControllerTests.swift in Sources */,
+				34C8A38720AF78C7002CF813 /* FadeAndAppearAnimatedTransitioningTests.swift in Sources */,
+				34C8A39020AF7F0F002CF813 /* BackdropViewTests.swift in Sources */,
+				34C8A38B20AF7D9F002CF813 /* StubBeingPresentedViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
