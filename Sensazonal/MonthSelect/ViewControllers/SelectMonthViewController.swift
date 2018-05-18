@@ -13,13 +13,15 @@ final class SelectMonthViewController: UIViewController {
     init() {
         super.init(nibName: nil, bundle: nil)
         view.addSubview(monthPicker)
-        let openMonthSelectorGesture = UIPanGestureRecognizer(target: self, action: #selector(openMonthSelectorWithGesture))
-        view.addGestureRecognizer(openMonthSelectorGesture)
+        let closeMonthSelectorPanGesture = UIPanGestureRecognizer(target: self, action: #selector(closeMonthSelectorWithGesture))
+        let closeMonthSelectorTapGesture = UITapGestureRecognizer(target: self, action: #selector(closeMonthSelector))
+        view.addGestureRecognizer(closeMonthSelectorPanGesture)
+        view.addGestureRecognizer(closeMonthSelectorTapGesture)
     }
 
     required init?(coder aDecoder: NSCoder) { Logger.shared.notImplemented(); return nil }
 
-    @objc private func openMonthSelectorWithGesture(_ gesture: UIPanGestureRecognizer) {
+    @objc private func closeMonthSelectorWithGesture(_ gesture: UIPanGestureRecognizer) {
         guard let viewWithGesture = gesture.view?.superview else { return }
         let point = viewWithGesture.convert(gesture.translation(in: viewWithGesture), to: viewWithGesture)
         let progress = max(point.y / view.bounds.size.height, 0)
@@ -43,6 +45,10 @@ final class SelectMonthViewController: UIViewController {
             interactiveTransition.endTransition()
         default: break
         }
+    }
+
+    @objc private func closeMonthSelector() {
+        delegate.closeMonthSelector()
     }
 
 }
