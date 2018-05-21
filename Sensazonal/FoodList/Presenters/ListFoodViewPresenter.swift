@@ -15,11 +15,9 @@ final class ListFoodViewPresenter: ListFoodPresenter {
             return FoodViewModel(name: food.name, photo: #imageLiteral(resourceName: "content/strawberry"))
         }
 
-        do {
-            let month = try MonthFactory.make(number: monthNumber)
-            let foodListViewModel = FoodListViewModel(foodsViewModel: foodViewModels, month: month)
-            binder?.bind(viewModel: foodListViewModel)
-        } catch { presentError(.invalidMonth) }
+        let month = try! MonthFactory.make(number: monthNumber)
+        let foodListViewModel = FoodListViewModel(foodsViewModel: foodViewModels, month: month)
+        binder?.bind(viewModel: foodListViewModel)
     }
 
 }

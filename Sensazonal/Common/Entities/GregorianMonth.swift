@@ -11,7 +11,7 @@ protocol Month {
 }
 
 struct GregorianMonth: Month {
-    static let allMonths: [Month] = (0...11).compactMap { try! GregorianMonth(position: $0) }
+    static let allMonths: [Month] = (0...11).compactMap { try? GregorianMonth(position: $0) }
     let number: Int
     var position: Int { return number - 1 }
     var name: String { return GregorianMonth.monthName(position: position) }
