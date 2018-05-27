@@ -2,53 +2,32 @@ import UIKit
 
 final class SelectMonthViewController: UIViewController {
 
-    weak var interactiveTransition: InteractiveTransition!
     weak var delegate: FoodListControllerDelegate!
+    private let interactiveTransition: InteractiveTransition
+    private let transition: FadeAndAppearTransitioningDelegate
     private var viewModel = SelectMonthViewModelFactory.make()
+    private var viewControllerTransition: SelectMonthTransition!
 
     private lazy var monthPicker = MonthSelectorViewFactory.make(dataProvider: self) { [weak self] in
         self?.delegate?.closeMonthSelector()
     }
 
-    init() {
+    init(interactiveTransition: InteractiveTransition, transition: FadeAndAppearTransitioningDelegate) {
+        self.interactiveTransition = interactiveTransition
+        self.transition = transition
         super.init(nibName: nil, bundle: nil)
         view.addSubview(monthPicker)
-        let closeMonthSelectorPanGesture = UIPanGestureRecognizer(target: self, action: #selector(closeMonthSelectorWithGesture))
-        let closeMonthSelectorTapGesture = UITapGestureRecognizer(target: self, action: #selector(closeMonthSelector))
-        view.addGestureRecognizer(closeMonthSelectorPanGesture)
-        view.addGestureRecognizer(closeMonthSelectorTapGesture)
+        transitioningDelegate = transition
     }
 
     required init?(coder aDecoder: NSCoder) { Logger.shared.notImplemented(); return nil }
 
-    @objc private func closeMonthSelectorWithGesture(_ gesture: UIPanGestureRecognizer) {
-        guard let viewWithGesture = gesture.view?.superview else { return }
-        let point = viewWithGesture.convert(gesture.translation(in: viewWithGesture), to: viewWithGesture)
-        let progress = max(point.y / view.bounds.size.height, 0)
-        let percentThreshold: CGFloat = 0.2
-        let veolcity = gesture.velocity(in: viewWithGesture).y
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
 
-        switch gesture.state {
-        case .began:
-            interactiveTransition.hasStarted = true
-            delegate?.closeMonthSelector()
-        case .changed:
-            interactiveTransition.shouldFinish = progress > percentThreshold || veolcity > 800
-            interactiveTransition.update(progress)
-        case .cancelled:
-            interactiveTransition.hasStarted = false
-            interactiveTransition.completionSpeed = 1
-            interactiveTransition.cancel()
-        case .ended:
-            interactiveTransition.hasStarted = false
-            interactiveTransition.completionSpeed = 1 - progress
-            interactiveTransition.endTransition()
-        default: break
-        }
-    }
-
-    @objc private func closeMonthSelector() {
-        delegate.closeMonthSelector()
+        viewControllerTransition = SelectMonthTransitionFactory.make(viewController: self, interactiveTransition: interactiveTransition)
+        view.addGestureRecognizer(viewControllerTransition.closeMonthSelectorPanGesture)
+        view.addGestureRecognizer(viewControllerTransition.closeMonthSelectorTapGesture)
     }
 
 }

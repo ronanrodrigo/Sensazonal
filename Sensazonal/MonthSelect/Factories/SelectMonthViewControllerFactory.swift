@@ -2,9 +2,13 @@ import UIKit
 
 struct SelectMonthViewControllerFactory {
 
-    static func make(delegate: FoodListControllerDelegate, interactor: InteractiveTransition) -> UIViewController & SelectMonthBinder {
-        let viewController = SelectMonthViewController()
-        viewController.interactiveTransition = interactor
+    static func make(delegate: FoodListControllerDelegate) -> UIViewController & SelectMonthBinder {
+        let transition = FadeAndAppearTransitioningDelegate()
+        let interactiveTransition = InteractiveTransition()
+        let viewController = SelectMonthViewController(interactiveTransition: interactiveTransition, transition: transition)
+        transition.interactiveTransition = interactiveTransition
+        viewController.modalPresentationStyle = .custom
+        viewController.transitioningDelegate = transition
         viewController.delegate = delegate
         return viewController
     }

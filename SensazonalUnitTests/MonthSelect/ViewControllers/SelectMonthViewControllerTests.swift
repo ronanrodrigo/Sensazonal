@@ -4,8 +4,16 @@ import SensazonalTestUtils
 
 final class SelectMonthViewControllerTests: XCTestCase {
 
+    private var viewController: SelectMonthViewController!
+
+    override func setUp() {
+        super.setUp()
+        viewController = SelectMonthViewController(interactiveTransition: StubInteractiveTransition(),
+                                                   transition: FadeAndAppearTransitioningDelegate())
+        viewController.delegate = StubFoodListControllerDelegate()
+    }
+
     func testMonthsTotalWhenViewModelHasMonthsThenReturnTotalMonths() throws {
-        let viewController = SelectMonthViewController()
         let month = try MonthFactory.make(number: 1)
 
         viewController.bind(viewModel: SelectMonthViewModel(currentMonth: month))
@@ -14,7 +22,6 @@ final class SelectMonthViewControllerTests: XCTestCase {
     }
 
     func testMonthNameWhenRequestFirstPositionThenReturnJanuary() throws {
-        let viewController = SelectMonthViewController()
         let month = try MonthFactory.make(number: 1)
 
         viewController.bind(viewModel: SelectMonthViewModel(currentMonth: month))
@@ -23,7 +30,6 @@ final class SelectMonthViewControllerTests: XCTestCase {
     }
 
     func testMonthSelectedWhenSelectSomePositionThenCallControllerDelegate() throws {
-        let viewController = SelectMonthViewController()
         let delegate = StubFoodListControllerDelegate()
         viewController.delegate = delegate
         let month = try MonthFactory.make(number: 1)
