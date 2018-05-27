@@ -31,7 +31,6 @@
 "SERIGUELA" = "Seriguela";
 "ESCAROLE" = "Escarola";
 "MINT" = "Hortelã";
-"CABBAGE" = "Repolho";
 "GINGER" = "Gengibre";
 "GREEN_CORN" = "Milho Verde";
 "BANANA_APPLE" = "Banana-maçã";
@@ -48,8 +47,7 @@
 "CARA" = "Cará";
 "CHUCHU" = "Chuchu";
 "YAM" = "Inhame";
-"JELLY" = "Jiló";
-"GREEN_CORN" = "Milho-verde";
+"SCARLET_EGGPLANT" = "Jiló";
 "TURNIP" = "Nabo";
 "KHAKI" = "Caqui";
 "CIDER" = "Cidra";
@@ -57,16 +55,15 @@
 "WILL_REACH" = "Almeirão";
 "CATALAN" = "Catalonha";
 "FENNEL" = "Erva-doce";
-"BAY" = "Louro";
+"BAY_LAUREL" = "Louro";
 "SWEET_POTATO" = "Batata-doce";
 "CARROT" = "Cenoura";
 "MANIOC" = "Mandioca";
-"LITTLE_MANIOC" = "Mandioquinha";
+"ARRACACIA_XANTHORRHIZA" = "Mandioquinha";
 "RADISH" = "Rabanete";
-"ORANGE-LIME" = "Laranja-lima";
+"ORANGE_LIME" = "Laranja-lima";
 "QUINCE" = "Marmelo";
-"TANGERINE" = "Mexerica";
-"CRESS" = "Agrião";
+"WATERCRESS" = "Agrião";
 "BROCCOLI" = "Brócolis";
 "PEA" = "Ervilha";
 "PALM_HEART" = "Palmito";
@@ -79,7 +76,7 @@
 "LIME" = "Lima";
 "STRAWBERRY" = "Morango";
 "CAULIFLOWER" = "Couve-flor";
-"FAVA" = "Fava";
+"BROAD_BEAN" = "Fava";
 "JABOTICABA" = "Jabuticaba";
 "MEDLAR" = "Nêspera";
 "TAMARIND" = "Tamarindo";
@@ -87,9 +84,7 @@
 "ACEROLA" = "Acerola";
 "SILVER_BANANA" = "Banana-prata";
 "MANGO" = "Manga";
-"GREEN_COCONUT" = "Coco-verde";
 "GRAPE_LEAF" = "Folha De Uva";
-"MUSTARD" = "Mostar,da";
 "ARTICHOKE" = "Alcachofra";
 "ASPARAGUS" = "Aspargos";
 "KHAKI_TOMATO" = "Tomate-caqui";
@@ -98,8 +93,7 @@
 "CHERRY" = "Cereja";
 "DAMASCUS" = "Damasco";
 "GRAVIOLA" = "Graviola";
-"LITCHI" = "Lichia";
+"LYCHEE" = "Lichia";
 "POMEGRANATE" = "Romã";
-"ENDIVE" = "Endívias";
 "POD_NOODLES" = "Vagem Macarrão";
 

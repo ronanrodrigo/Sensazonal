@@ -7,6 +7,7 @@ struct DataSource {
     private static let raspberry = Food(keyName: "RASPBERRY", months: [1, 11, 12])
     private static let custardApple = Food(keyName: "CUSTARD_APPLE", months: [1, 2, 3])
     private static let orangePear = Food(keyName: "ORANGE_PEAR", months: [1, 8, 9, 10, 11, 12])
+    private static let orangeLime = Food(keyName: "ORANGE_LIME", months: [6, 7, 9])
     private static let papaya = Food(keyName: "PAPAYA", months: [1, 3, 4, 8, 10, 11])
     private static let passionFruit = Food(keyName: "PASSION_FRUIT", months: [1, 11, 12])
     private static let watermelon = Food(keyName: "WATERMELON", months: [1, 11, 12])
@@ -49,7 +50,7 @@ struct DataSource {
     private static let cara = Food(keyName: "CARA", months: [3, 4, 5, 6, 7, 8, 9])
     private static let chuchu = Food(keyName: "CHUCHU", months: [3, 4, 5])
     private static let yam = Food(keyName: "YAM", months: [3, 4, 5, 6, 7, 8, 9, 10, 11])
-    private static let jelly = Food(keyName: "JELLY", months: [3])
+    private static let scarletEggplant = Food(keyName: "SCARLET_EGGPLANT", months: [3])
     private static let turnip = Food(keyName: "TURNIP", months: [3, 4, 5, 7, 8, 11])
     private static let khaki = Food(keyName: "KHAKI", months: [4, 5])
     private static let cider = Food(keyName: "CIDER", months: [4])
@@ -57,14 +58,14 @@ struct DataSource {
     private static let willReach = Food(keyName: "WILL_REACH", months: [4, 5, 6, 9, 10, 11, 12])
     private static let catalan = Food(keyName: "CATALAN", months: [4, 10])
     private static let fennel = Food(keyName: "FENNEL", months: [5, 6, 7, 8, 9, 10, 11, 12])
-    private static let bay = Food(keyName: "BAY", months: [5, 9])
+    private static let bayLaurel = Food(keyName: "BAY_LAUREL", months: [5, 9])
     private static let sweetPotato = Food(keyName: "SWEET_POTATO", months: [5, 6, 7, 10])
     private static let carrot = Food(keyName: "CARROT", months: [5, 6, 7, 8, 9, 10, 11, 12])
     private static let manioc = Food(keyName: "MANIOC", months: [5, 6, 7, 8])
-    private static let littleManioc = Food(keyName: "LITTLE_MANIOC", months: [5, 6, 7, 8])
+    private static let arracaciaXanthorrhiza = Food(keyName: "ARRACACIA_XANTHORRHIZA", months: [5, 6, 7, 8])
     private static let radish = Food(keyName: "RADISH", months: [5, 7, 8, 9, 10])
     private static let quince = Food(keyName: "QUINCE", months: [6])
-    private static let cress = Food(keyName: "CRESS", months: [6, 7, 8])
+    private static let watercress = Food(keyName: "WATERCRESS", months: [6, 7, 8])
     private static let broccoli = Food(keyName: "BROCCOLI", months: [6, 8, 9, 10, 11])
     private static let pea = Food(keyName: "PEA", months: [6, 7, 8, 9, 10])
     private static let palmHeart = Food(keyName: "PALM_HEART", months: [6, 7])
@@ -77,7 +78,7 @@ struct DataSource {
     private static let lime = Food(keyName: "LIME", months: [8, 10])
     private static let strawberry = Food(keyName: "STRAWBERRY", months: [8])
     private static let cauliflower = Food(keyName: "CAULIFLOWER", months: [8, 9, 10])
-    private static let fava = Food(keyName: "FAVA", months: [8, 9, 10])
+    private static let broadBean = Food(keyName: "BROAD_BEAN", months: [8, 9, 10])
     private static let jaboticaba = Food(keyName: "JABOTICABA", months: [9, 10])
     private static let medlar = Food(keyName: "MEDLAR", months: [9, 10])
     private static let tamarind = Food(keyName: "TAMARIND", months: [9])
@@ -94,18 +95,17 @@ struct DataSource {
     private static let cherry = Food(keyName: "CHERRY", months: [12])
     private static let damascus = Food(keyName: "DAMASCUS", months: [12])
     private static let graviola = Food(keyName: "GRAVIOLA", months: [12])
-    private static let litchi = Food(keyName: "LITCHI", months: [12])
+    private static let lychee = Food(keyName: "LYCHEE", months: [12])
     private static let pomegranate = Food(keyName: "POMEGRANATE", months: [12])
     private static let podNoodles = Food(keyName: "POD_NOODLES", months: [12])
 
     static let allFoods = [
-        pineapple, starFruit, greenCoconut, fig, raspberry, custardApple, orangePear, papaya, passionFruit, watermelon,
-        nectarine, grape, lettuce, chive, cabbage, parsley, pumpkin, zucchini, beet, cucumber, pepper, okra, tomato,
-        avocado, plum, guava, jaca, apple, pear, peach, seriguela, escarole, mint, ginger, greenCorn, bananaApple,
-        bananaNanica, lemon, mangosteen, tangerine, chard, leek, coriander, endive, arugula, eggplant, cara, chuchu,
-        yam, jelly, turnip, khaki, cider, kiwi, willReach, catalan, fennel, bay, sweetPotato, carrot, manioc,
-        littleManioc, radish, quince, cress, broccoli, pea, palmHeart, chicory, spinach, mustard, celery, mushroom,
-        cashew, lime, strawberry, cauliflower, fava, jaboticaba, medlar, tamarind, oregano, acerola, silverBanana,
-        mango, grapeLeaf, artichoke, asparagus, khakiTomato, melon, maxixe, cherry, damascus, graviola, litchi,
-        pomegranate, podNoodles]
+        pineapple, starFruit, greenCoconut, fig, raspberry, custardApple, orangePear, orangeLime, papaya, passionFruit, watermelon,
+        nectarine, grape, lettuce, chive, cabbage, parsley, pumpkin, zucchini, beet, cucumber, pepper, okra, tomato, avocado, plum, guava,
+        jaca, apple, pear, peach, seriguela, escarole, mint, ginger, greenCorn, bananaApple, bananaNanica, lemon, mangosteen, tangerine,
+        chard, leek, coriander, endive, arugula, eggplant, cara, chuchu, yam, scarletEggplant, turnip, khaki, cider, kiwi, willReach,
+        catalan, fennel, bayLaurel, sweetPotato, carrot, manioc, arracaciaXanthorrhiza, radish, quince, watercress, broccoli, pea,
+        palmHeart, chicory, spinach, mustard, celery, mushroom, cashew, lime, strawberry, cauliflower, broadBean, jaboticaba, medlar,
+        tamarind, oregano, acerola, silverBanana, mango, grapeLeaf, artichoke, asparagus, khakiTomato, melon, maxixe, cherry, damascus,
+        graviola, lychee, pomegranate, podNoodles]
 }
