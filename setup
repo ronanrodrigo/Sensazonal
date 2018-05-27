@@ -28,7 +28,7 @@ install_system_basics() {
 
 install_brew_dependencies() {
     echo "Setup brew packages..."
-    brew_dependencies=(carthage swiftlint)
+    brew_dependencies=(carthage swiftlint imagemagick)
 
     for brew_dependency in "${brew_dependencies[@]}"; do
         if ! brew ls --versions ${brew_dependency} > /dev/null; then

@@ -21,11 +21,8 @@ extension FoodListController: FoodListControllerDelegate {
     }
 
     func openMonthSelector(at month: Month) {
-        selectMonthViewController = SelectMonthViewControllerFactory.make(delegate: self)
-
         let viewModel = SelectMonthViewModelFactory.make(month: month)
         selectMonthViewController.bind(viewModel: viewModel)
-
         viewController.present(selectMonthViewController, animated: true, completion: nil)
     }
 
