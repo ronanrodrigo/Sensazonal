@@ -7,7 +7,7 @@ final class MonthSelectorBarButton: UIBarButtonItem {
     init(action: @escaping () -> Void) {
         self.selectAction = action
         super.init()
-        image = #imageLiteral(resourceName: "top/filter")
+        image = #imageLiteral(resourceName: "Top/Filter")
         target = self
         self.action = #selector(executeSelectAction)
     }
