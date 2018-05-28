@@ -11,9 +11,7 @@ final class ListFoodViewPresenter: ListFoodPresenter {
     func presentError(_ error: SensazonalError) { }
 
     func presentFoods(_ foods: [Food], monthNumber: Int) {
-        let foodViewModels = foods.map { food -> FoodViewModel in
-            return FoodViewModel(name: food.name, photo: #imageLiteral(resourceName: "content/strawberry"))
-        }
+        let foodViewModels = foods.map { FoodViewModel(name: $0.name, photo: $0.image) }
 
         do {
             let month = try MonthFactory.make(number: monthNumber)
@@ -27,5 +25,7 @@ final class ListFoodViewPresenter: ListFoodPresenter {
 fileprivate extension Food {
 
     var name: String { return Locale.localize(keyName) }
+    var image: UIImage { return UIImage(named: imageName) ?? #imageLiteral(resourceName: "content/BLANK") }
+    private var imageName: String { return "content/\(keyName)" }
 
 }

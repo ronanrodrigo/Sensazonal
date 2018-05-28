@@ -8,7 +8,7 @@ final class FoodViewModelTests: XCTestCase {
         let viewModel = FoodViewModel.sample
 
         XCTAssertEqual(viewModel.name, "Name")
-        XCTAssertEqual(viewModel.photo, #imageLiteral(resourceName: "content/strawberry"))
+        XCTAssertEqual(viewModel.photo, #imageLiteral(resourceName: "content/STRAWBERRY"))
     }
 
 }
