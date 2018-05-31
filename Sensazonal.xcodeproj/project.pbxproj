@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		34272CDB2051CD3C00EABE98 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34272CDA2051CD3C00EABE98 /* DataSource.swift */; };
 		34272CDE2051CD6E00EABE98 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34272CDD2051CD6E00EABE98 /* Food.swift */; };
 		34272CE22051CDD800EABE98 /* ListFoodByMonthInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34272CE12051CDD800EABE98 /* ListFoodByMonthInteractor.swift */; };
 		34272CE72051CE0B00EABE98 /* ListFoodByMonthInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34272CE62051CE0B00EABE98 /* ListFoodByMonthInteractorTests.swift */; };
@@ -162,7 +161,6 @@
 /* Begin PBXFileReference section */
 		340D86522051D5270090F1FA /* ListFoodStubPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFoodStubPresenter.swift; sourceTree = "<group>"; };
 		340D86542051D78E0090F1FA /* ListFoodStubGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFoodStubGateway.swift; sourceTree = "<group>"; };
-		34272CDA2051CD3C00EABE98 /* DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 		34272CDD2051CD6E00EABE98 /* Food.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 		34272CE12051CDD800EABE98 /* ListFoodByMonthInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFoodByMonthInteractor.swift; sourceTree = "<group>"; };
 		34272CE62051CE0B00EABE98 /* ListFoodByMonthInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFoodByMonthInteractorTests.swift; sourceTree = "<group>"; };
@@ -368,7 +366,6 @@
 			children = (
 				3427A0CD20C05A570021AC07 /* Codables */,
 				343A4FDA204D70EF00E33E81 /* Locale.swift */,
-				34272CDA2051CD3C00EABE98 /* DataSource.swift */,
 				34272CF02051D36300EABE98 /* SensazonalError.swift */,
 				34272CDD2051CD6E00EABE98 /* Food.swift */,
 				34272CEE2051D07D00EABE98 /* Result.swift */,
@@ -1256,7 +1253,6 @@
 				34272CE22051CDD800EABE98 /* ListFoodByMonthInteractor.swift in Sources */,
 				3478D4DC209DEB4000515251 /* Reloadable.swift in Sources */,
 				34CA5026205F1F6C0095994A /* FoodListControllerFactory.swift in Sources */,
-				34272CDB2051CD3C00EABE98 /* DataSource.swift in Sources */,
 				346391DA2076D759007CDBCE /* MonthPicker.swift in Sources */,
 				34CA501E205EDA7C0095994A /* ListFoodByMonthInteractorFactory.swift in Sources */,
 				34CA5016205ED6FD0095994A /* FoodListViewController.swift in Sources */,
