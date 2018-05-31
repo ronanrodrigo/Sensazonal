@@ -4,13 +4,13 @@ import SensazonalTestUtils
 
 final class ListFoodByMonthInteractorTests: XCTestCase {
 
-    private var gateway: ListFoodMemoryGateway!
+    private var gateway: ListFoodGateway!
     private var presenter: ListFoodStubPresenter!
     private var interactor: ListFoodByMonthInteractor!
 
     override func setUp() {
         super.setUp()
-        gateway = ListFoodMemoryGateway()
+        gateway = ListFoodJsonFileGateway()
         presenter = ListFoodStubPresenter()
         interactor = ListFoodByMonthInteractor(gateway: gateway, presenter: presenter)
     }

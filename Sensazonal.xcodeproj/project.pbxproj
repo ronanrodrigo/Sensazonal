@@ -13,11 +13,14 @@
 		34272CE72051CE0B00EABE98 /* ListFoodByMonthInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34272CE62051CE0B00EABE98 /* ListFoodByMonthInteractorTests.swift */; };
 		34272CE92051CE9200EABE98 /* ListFoodPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34272CE82051CE9200EABE98 /* ListFoodPresenter.swift */; };
 		34272CEB2051CF8200EABE98 /* ListFoodGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34272CEA2051CF8200EABE98 /* ListFoodGateway.swift */; };
-		34272CED2051D04100EABE98 /* ListFoodMemoryGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34272CEC2051D04100EABE98 /* ListFoodMemoryGateway.swift */; };
 		34272CEF2051D07D00EABE98 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34272CEE2051D07D00EABE98 /* Result.swift */; };
 		34272CF12051D36300EABE98 /* SensazonalError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34272CF02051D36300EABE98 /* SensazonalError.swift */; };
 		34275086206E551A001F871E /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34275085206E551A001F871E /* Logger.swift */; };
 		3427508B206E61F4001F871E /* StubLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3427508A206E61F4001F871E /* StubLogger.swift */; };
+		3427A0C520C0430F0021AC07 /* ListFoodJsonFileGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3427A0C420C0430F0021AC07 /* ListFoodJsonFileGateway.swift */; };
+		3427A0CA20C0434F0021AC07 /* minifyjson in Resources */ = {isa = PBXBuildFile; fileRef = 3427A0C720C0434F0021AC07 /* minifyjson */; };
+		3427A0CB20C0434F0021AC07 /* foods.json in Resources */ = {isa = PBXBuildFile; fileRef = 3427A0C820C0434F0021AC07 /* foods.json */; };
+		3427A0CC20C0434F0021AC07 /* foods.min.json in Resources */ = {isa = PBXBuildFile; fileRef = 3427A0C920C0434F0021AC07 /* foods.min.json */; };
 		3431632220B8B923003E02B9 /* SelectMonthTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3431632120B8B923003E02B9 /* SelectMonthTransition.swift */; };
 		3431632420B8B935003E02B9 /* SelectMonthTransitionFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3431632320B8B935003E02B9 /* SelectMonthTransitionFactory.swift */; };
 		343352052062CD5D004549A0 /* Metric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343352042062CD5D004549A0 /* Metric.swift */; };
@@ -97,7 +100,7 @@
 		34CA5019205ED8EE0095994A /* FoodListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CA5018205ED8EE0095994A /* FoodListController.swift */; };
 		34CA501B205ED94F0095994A /* FoodListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CA501A205ED94F0095994A /* FoodListViewModel.swift */; };
 		34CA501E205EDA7C0095994A /* ListFoodByMonthInteractorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CA501D205EDA7C0095994A /* ListFoodByMonthInteractorFactory.swift */; };
-		34CA5020205EDB690095994A /* ListFoodMemoryGatewayFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CA501F205EDB690095994A /* ListFoodMemoryGatewayFactory.swift */; };
+		34CA5020205EDB690095994A /* ListFoodGatewayFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CA501F205EDB690095994A /* ListFoodGatewayFactory.swift */; };
 		34CA5022205EDBA40095994A /* ListFoodViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CA5021205EDBA40095994A /* ListFoodViewPresenter.swift */; };
 		34CA5024205EDBDE0095994A /* ListFoodViewPresenterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CA5023205EDBDE0095994A /* ListFoodViewPresenterFactory.swift */; };
 		34CA5026205F1F6C0095994A /* FoodListControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CA5025205F1F6C0095994A /* FoodListControllerFactory.swift */; };
@@ -110,7 +113,7 @@
 		34D487D6209F2F31006EA78A /* MonthPickerDelegateDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D487D5209F2F31006EA78A /* MonthPickerDelegateDataSourceTests.swift */; };
 		34EF9AAF2050B5BB00EB0337 /* LocaleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34EF9AAE2050B5BB00EB0337 /* LocaleTests.swift */; };
 		34F19921206E66E500DEF735 /* FoodListControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F19920206E66E500DEF735 /* FoodListControllerTests.swift */; };
-		34F19926206E6C3100DEF735 /* ListFoodMemoryGatewayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F19925206E6C3100DEF735 /* ListFoodMemoryGatewayTests.swift */; };
+		34F19926206E6C3100DEF735 /* ListFoodJsonFileGatewayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F19925206E6C3100DEF735 /* ListFoodJsonFileGatewayTests.swift */; };
 		34F19929206E6D1C00DEF735 /* ListFoodViewPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F19928206E6D1C00DEF735 /* ListFoodViewPresenterTests.swift */; };
 		34F19934206E738300DEF735 /* FoodViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F19933206E738300DEF735 /* FoodViewModelTests.swift */; };
 		34F19936206E762C00DEF735 /* FoodListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F19935206E762C00DEF735 /* FoodListViewModelTests.swift */; };
@@ -164,11 +167,14 @@
 		34272CE62051CE0B00EABE98 /* ListFoodByMonthInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFoodByMonthInteractorTests.swift; sourceTree = "<group>"; };
 		34272CE82051CE9200EABE98 /* ListFoodPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFoodPresenter.swift; sourceTree = "<group>"; };
 		34272CEA2051CF8200EABE98 /* ListFoodGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFoodGateway.swift; sourceTree = "<group>"; };
-		34272CEC2051D04100EABE98 /* ListFoodMemoryGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFoodMemoryGateway.swift; sourceTree = "<group>"; };
 		34272CEE2051D07D00EABE98 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		34272CF02051D36300EABE98 /* SensazonalError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensazonalError.swift; sourceTree = "<group>"; };
 		34275085206E551A001F871E /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		3427508A206E61F4001F871E /* StubLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubLogger.swift; sourceTree = "<group>"; };
+		3427A0C420C0430F0021AC07 /* ListFoodJsonFileGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFoodJsonFileGateway.swift; sourceTree = "<group>"; };
+		3427A0C720C0434F0021AC07 /* minifyjson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = minifyjson; sourceTree = "<group>"; };
+		3427A0C820C0434F0021AC07 /* foods.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = foods.json; sourceTree = "<group>"; };
+		3427A0C920C0434F0021AC07 /* foods.min.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = foods.min.json; sourceTree = "<group>"; };
 		3431632120B8B923003E02B9 /* SelectMonthTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectMonthTransition.swift; sourceTree = "<group>"; };
 		3431632320B8B935003E02B9 /* SelectMonthTransitionFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectMonthTransitionFactory.swift; sourceTree = "<group>"; };
 		343352042062CD5D004549A0 /* Metric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Metric.swift; sourceTree = "<group>"; };
@@ -245,7 +251,7 @@
 		34CA5018205ED8EE0095994A /* FoodListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListController.swift; sourceTree = "<group>"; };
 		34CA501A205ED94F0095994A /* FoodListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListViewModel.swift; sourceTree = "<group>"; };
 		34CA501D205EDA7C0095994A /* ListFoodByMonthInteractorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFoodByMonthInteractorFactory.swift; sourceTree = "<group>"; };
-		34CA501F205EDB690095994A /* ListFoodMemoryGatewayFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFoodMemoryGatewayFactory.swift; sourceTree = "<group>"; };
+		34CA501F205EDB690095994A /* ListFoodGatewayFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFoodGatewayFactory.swift; sourceTree = "<group>"; };
 		34CA5021205EDBA40095994A /* ListFoodViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFoodViewPresenter.swift; sourceTree = "<group>"; };
 		34CA5023205EDBDE0095994A /* ListFoodViewPresenterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFoodViewPresenterFactory.swift; sourceTree = "<group>"; };
 		34CA5025205F1F6C0095994A /* FoodListControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListControllerFactory.swift; sourceTree = "<group>"; };
@@ -264,7 +270,7 @@
 		34EF9AB02050B5BB00EB0337 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		34F19920206E66E500DEF735 /* FoodListControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListControllerTests.swift; sourceTree = "<group>"; };
 		34F19922206E69D300DEF735 /* StubListFoodByMonthInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubListFoodByMonthInteractor.swift; sourceTree = "<group>"; };
-		34F19925206E6C3100DEF735 /* ListFoodMemoryGatewayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFoodMemoryGatewayTests.swift; sourceTree = "<group>"; };
+		34F19925206E6C3100DEF735 /* ListFoodJsonFileGatewayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFoodJsonFileGatewayTests.swift; sourceTree = "<group>"; };
 		34F19928206E6D1C00DEF735 /* ListFoodViewPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFoodViewPresenterTests.swift; sourceTree = "<group>"; };
 		34F1992A206E6E1900DEF735 /* StubBinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubBinder.swift; sourceTree = "<group>"; };
 		34F1992D206E6EE400DEF735 /* FoodListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListViewControllerTests.swift; sourceTree = "<group>"; };
@@ -328,6 +334,7 @@
 		34272CD62051CC6B00EABE98 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				3427A0C620C0434F0021AC07 /* Data */,
 				3489495920AB47A5007B7F6D /* Views */,
 				343D4716209E2D9000B0CD66 /* Controllers */,
 				349A1F34207FC14100BBC5F3 /* Factories */,
@@ -406,6 +413,16 @@
 				3478D4DD209DEF8F00515251 /* UICollectionViewCell+Identifier.swift */,
 			);
 			path = Extra;
+			sourceTree = "<group>";
+		};
+		3427A0C620C0434F0021AC07 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				3427A0C720C0434F0021AC07 /* minifyjson */,
+				3427A0C820C0434F0021AC07 /* foods.json */,
+				3427A0C920C0434F0021AC07 /* foods.min.json */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 		343A4FBC204D70CE00E33E81 = {
@@ -684,7 +701,7 @@
 			isa = PBXGroup;
 			children = (
 				34272CEA2051CF8200EABE98 /* ListFoodGateway.swift */,
-				34272CEC2051D04100EABE98 /* ListFoodMemoryGateway.swift */,
+				3427A0C420C0430F0021AC07 /* ListFoodJsonFileGateway.swift */,
 			);
 			path = Gateways;
 			sourceTree = "<group>";
@@ -788,7 +805,7 @@
 			isa = PBXGroup;
 			children = (
 				34CA501D205EDA7C0095994A /* ListFoodByMonthInteractorFactory.swift */,
-				34CA501F205EDB690095994A /* ListFoodMemoryGatewayFactory.swift */,
+				34CA501F205EDB690095994A /* ListFoodGatewayFactory.swift */,
 				34CA5023205EDBDE0095994A /* ListFoodViewPresenterFactory.swift */,
 				34CA5025205F1F6C0095994A /* FoodListControllerFactory.swift */,
 				34CA5027205F1FBA0095994A /* FoodListViewControllerFactory.swift */,
@@ -903,7 +920,7 @@
 		34F19924206E6C1D00DEF735 /* Gateways */ = {
 			isa = PBXGroup;
 			children = (
-				34F19925206E6C3100DEF735 /* ListFoodMemoryGatewayTests.swift */,
+				34F19925206E6C3100DEF735 /* ListFoodJsonFileGatewayTests.swift */,
 			);
 			path = Gateways;
 			sourceTree = "<group>";
@@ -1094,9 +1111,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3427A0CA20C0434F0021AC07 /* minifyjson in Resources */,
+				3427A0CC20C0434F0021AC07 /* foods.min.json in Resources */,
 				343A4FD3204D70CE00E33E81 /* LaunchScreen.storyboard in Resources */,
 				343A4FD0204D70CE00E33E81 /* Assets.xcassets in Resources */,
 				343A4FDF204D711C00E33E81 /* Locale.strings in Resources */,
+				3427A0CB20C0434F0021AC07 /* foods.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1183,7 +1203,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				34AE621F20541FAE00690E51 /* FoodViewCell.swift in Sources */,
-				34CA5020205EDB690095994A /* ListFoodMemoryGatewayFactory.swift in Sources */,
+				34CA5020205EDB690095994A /* ListFoodGatewayFactory.swift in Sources */,
 				343D4718209E2DAC00B0CD66 /* BaseController.swift in Sources */,
 				3489495D20AB47CA007B7F6D /* FadeAndAppearTransitioningDelegate.swift in Sources */,
 				34275086206E551A001F871E /* Logger.swift in Sources */,
@@ -1197,6 +1217,7 @@
 				3478D4BE209DD5AF00515251 /* SelectMonthViewModel.swift in Sources */,
 				34C8A37E20AB836C002CF813 /* DismissFadeAndHideTransition.swift in Sources */,
 				3431632220B8B923003E02B9 /* SelectMonthTransition.swift in Sources */,
+				3427A0C520C0430F0021AC07 /* ListFoodJsonFileGateway.swift in Sources */,
 				34BC47AE20698A4A003506DB /* NavigationViewController.swift in Sources */,
 				3489495B20AB47B2007B7F6D /* BackdropView.swift in Sources */,
 				3478D4C9209DDB8400515251 /* SelectMonthViewModelFactory.swift in Sources */,
@@ -1234,7 +1255,6 @@
 				34CA5024205EDBDE0095994A /* ListFoodViewPresenterFactory.swift in Sources */,
 				34FC8F1B20616A8B00A07C66 /* FoodListCollectionView.swift in Sources */,
 				34272CEB2051CF8200EABE98 /* ListFoodGateway.swift in Sources */,
-				34272CED2051D04100EABE98 /* ListFoodMemoryGateway.swift in Sources */,
 				3478D4DE209DEF8F00515251 /* UICollectionViewCell+Identifier.swift in Sources */,
 				3478D4C0209DD62500515251 /* SelectMonthBinder.swift in Sources */,
 				343A4FC9204D70CE00E33E81 /* AppDelegate.swift in Sources */,
@@ -1293,7 +1313,7 @@
 				3460D050207B814200BBEDA3 /* GregorianMonthTests.swift in Sources */,
 				34F1993F206E7D4500DEF735 /* FoodListCollectionViewTests.swift in Sources */,
 				34EF9AAF2050B5BB00EB0337 /* LocaleTests.swift in Sources */,
-				34F19926206E6C3100DEF735 /* ListFoodMemoryGatewayTests.swift in Sources */,
+				34F19926206E6C3100DEF735 /* ListFoodJsonFileGatewayTests.swift in Sources */,
 				34D487D0209F29A1006EA78A /* SelectMonthViewModelTests.swift in Sources */,
 				343FF41520BA1D9500AAF106 /* SelectMonthTransitionTests.swift in Sources */,
 				34C8A39420AF8095002CF813 /* InteractiveTransitionTests.swift in Sources */,
