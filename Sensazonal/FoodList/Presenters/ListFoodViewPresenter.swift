@@ -13,7 +13,10 @@ final class ListFoodViewPresenter: ListFoodPresenter {
     func presentFoods(_ foods: [Food], monthNumber: Int) {
         do {
             let month = try MonthFactory.make(number: monthNumber)
-            let foodViewModels = foods.map { FoodViewModel(name: $0.name, photo: $0.image) }
+            let groupedFoods = Dictionary(grouping: foods) { $0.keyGroup }
+            let foodViewModels = groupedFoods.mapValues { foods -> [FoodViewModel] in
+                return foods.map { FoodViewModel(name: $0.name, photo: $0.image) }
+            }
             let foodListViewModel = FoodListViewModel(foodsViewModel: foodViewModels, month: month)
             binder?.bind(viewModel: foodListViewModel)
         } catch { presentError(.invalidMonth) }

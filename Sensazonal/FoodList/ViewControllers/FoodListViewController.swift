@@ -30,12 +30,25 @@ extension FoodListViewController: FoodListBinder {
 
 extension FoodListViewController: FoodListDataProvider {
 
-    func foodsTotal() -> Int {
-        return viewModel.foodsViewModel.count
+    func foodsTotal(for section: Int) -> Int {
+        let key = Array(viewModel.foodsViewModel.keys)[section]
+        let values = viewModel.foodsViewModel[key]
+        return values?.count ?? 0
     }
 
-    func food(at position: Int) -> FoodViewModel {
-        return viewModel.foodsViewModel[position]
+    func groupsTotal() -> Int {
+        return viewModel.foodsViewModel.keys.count
+    }
+
+    func groupName(at section: Int) -> String {
+        let groupKeyName = "\(Array(viewModel.foodsViewModel.keys)[section])S"
+        return Locale.localize(groupKeyName)
+    }
+
+    func food(at indexPath: IndexPath) -> FoodViewModel {
+        let key = Array(viewModel.foodsViewModel.keys)[indexPath.section]
+        let values = viewModel.foodsViewModel[key]
+        return values![indexPath.row]
     }
 
 }

@@ -2,7 +2,7 @@ import Foundation
 
 struct FoodListViewModel {
 
-    let foodsViewModel: [FoodViewModel]
+    let foodsViewModel: [String: [FoodViewModel]]
     let month: Month
 
 }
@@ -10,7 +10,7 @@ struct FoodListViewModel {
 extension FoodListViewModel {
 
     init() {
-        foodsViewModel = []
+        foodsViewModel = [:]
         month = MonthFactory.make()
     }
 
