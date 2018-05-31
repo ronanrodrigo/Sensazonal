@@ -1,5 +1,5 @@
 protocol ListFoodGateway {
 
-    func filter(byMonth month: Int, onComplete: (Result<[Food]>) -> Void)
+    func foods(byMonth month: Int, onComplete: (Result<[Food]>) -> Void)
 
 }

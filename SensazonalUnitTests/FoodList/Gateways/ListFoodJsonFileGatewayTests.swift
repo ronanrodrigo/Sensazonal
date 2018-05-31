@@ -6,7 +6,7 @@ final class ListFoodJsonFileGatewayTests: XCTestCase {
     func testListWhenHasFoodsInMonthThenReturnNotEmptyArray() {
         var foods: [Food] = []
 
-        ListFoodJsonFileGateway().filter(byMonth: 1) {
+        ListFoodJsonFileGateway().foods(byMonth: 1) {
             $0.onSuccess({ foods = $0 })
         }
 
@@ -16,7 +16,7 @@ final class ListFoodJsonFileGatewayTests: XCTestCase {
     func testListWhenHasNotFoodsInMothThenReturnEmptyArray() {
         var foods: [Food] = []
 
-        ListFoodJsonFileGateway().filter(byMonth: -1) {
+        ListFoodJsonFileGateway().foods(byMonth: -1) {
             $0.onSuccess({ foods = $0 })
         }
 

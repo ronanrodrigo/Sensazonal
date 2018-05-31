@@ -17,7 +17,7 @@ class ListFoodByMonthInteractor {
             return presenter.presentError(.invalidMonth)
         }
 
-        gateway.filter(byMonth: month) { [weak self] in
+        gateway.foods(byMonth: month) { [weak self] in
             guard let this = self else { return }
             $0.onSuccess(this.presentFoods(monthNumber: month))
             $0.onFailure(this.presenter.presentError)
