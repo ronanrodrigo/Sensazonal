@@ -8,7 +8,7 @@ final class ListFoodViewPresenterTests: XCTestCase {
         let binder = StubBinder()
         let presenter = ListFoodViewPresenter(binder: binder)
 
-        presenter.presentFoods([Food(keyName: "", months: [])], monthNumber: 1)
+        presenter.presentFoods([Food(keyName: "", keyGroup: "", months: [])], monthNumber: 1)
 
         XCTAssertTrue(binder.didCallBinder)
     }
@@ -17,7 +17,7 @@ final class ListFoodViewPresenterTests: XCTestCase {
         let binder = StubBinder()
         let presenter = ListFoodViewPresenter(binder: binder)
 
-        presenter.presentFoods([Food(keyName: "", months: [])], monthNumber: 1)
+        presenter.presentFoods([Food(keyName: "", keyGroup: "", months: [])], monthNumber: 1)
 
         XCTAssertEqual(binder.viewModel?.foodsViewModel.count, 1)
         XCTAssertEqual(binder.viewModel?.month.name, "Janeiro")
@@ -27,7 +27,7 @@ final class ListFoodViewPresenterTests: XCTestCase {
         let binder = StubBinder()
         let presenter = ListFoodViewPresenter(binder: binder)
 
-        presenter.presentFoods([Food(keyName: "", months: [])], monthNumber: 0)
+        presenter.presentFoods([Food(keyName: "", keyGroup: "", months: [])], monthNumber: 0)
 
         XCTAssertFalse(binder.didCallBinder)
     }
