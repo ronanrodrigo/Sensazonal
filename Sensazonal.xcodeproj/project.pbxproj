@@ -21,6 +21,7 @@
 		3427A0CA20C0434F0021AC07 /* minifyjson in Resources */ = {isa = PBXBuildFile; fileRef = 3427A0C720C0434F0021AC07 /* minifyjson */; };
 		3427A0CB20C0434F0021AC07 /* foods.json in Resources */ = {isa = PBXBuildFile; fileRef = 3427A0C820C0434F0021AC07 /* foods.json */; };
 		3427A0CC20C0434F0021AC07 /* foods.min.json in Resources */ = {isa = PBXBuildFile; fileRef = 3427A0C920C0434F0021AC07 /* foods.min.json */; };
+		3427A0CF20C05A680021AC07 /* FoodCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3427A0CE20C05A680021AC07 /* FoodCodable.swift */; };
 		3431632220B8B923003E02B9 /* SelectMonthTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3431632120B8B923003E02B9 /* SelectMonthTransition.swift */; };
 		3431632420B8B935003E02B9 /* SelectMonthTransitionFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3431632320B8B935003E02B9 /* SelectMonthTransitionFactory.swift */; };
 		343352052062CD5D004549A0 /* Metric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343352042062CD5D004549A0 /* Metric.swift */; };
@@ -175,6 +176,7 @@
 		3427A0C720C0434F0021AC07 /* minifyjson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = minifyjson; sourceTree = "<group>"; };
 		3427A0C820C0434F0021AC07 /* foods.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = foods.json; sourceTree = "<group>"; };
 		3427A0C920C0434F0021AC07 /* foods.min.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = foods.min.json; sourceTree = "<group>"; };
+		3427A0CE20C05A680021AC07 /* FoodCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCodable.swift; sourceTree = "<group>"; };
 		3431632120B8B923003E02B9 /* SelectMonthTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectMonthTransition.swift; sourceTree = "<group>"; };
 		3431632320B8B935003E02B9 /* SelectMonthTransitionFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectMonthTransitionFactory.swift; sourceTree = "<group>"; };
 		343352042062CD5D004549A0 /* Metric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Metric.swift; sourceTree = "<group>"; };
@@ -364,6 +366,7 @@
 		34272CDC2051CD4F00EABE98 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				3427A0CD20C05A570021AC07 /* Codables */,
 				343A4FDA204D70EF00E33E81 /* Locale.swift */,
 				34272CDA2051CD3C00EABE98 /* DataSource.swift */,
 				34272CF02051D36300EABE98 /* SensazonalError.swift */,
@@ -423,6 +426,14 @@
 				3427A0C920C0434F0021AC07 /* foods.min.json */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		3427A0CD20C05A570021AC07 /* Codables */ = {
+			isa = PBXGroup;
+			children = (
+				3427A0CE20C05A680021AC07 /* FoodCodable.swift */,
+			);
+			path = Codables;
 			sourceTree = "<group>";
 		};
 		343A4FBC204D70CE00E33E81 = {
@@ -1258,6 +1269,7 @@
 				3478D4DE209DEF8F00515251 /* UICollectionViewCell+Identifier.swift in Sources */,
 				3478D4C0209DD62500515251 /* SelectMonthBinder.swift in Sources */,
 				343A4FC9204D70CE00E33E81 /* AppDelegate.swift in Sources */,
+				3427A0CF20C05A680021AC07 /* FoodCodable.swift in Sources */,
 				3478D4E0209DF36A00515251 /* MonthPickerDelegateDataSourceFactory.swift in Sources */,
 				34CA5028205F1FBA0095994A /* FoodListViewControllerFactory.swift in Sources */,
 				343A4FDB204D70EF00E33E81 /* Locale.swift in Sources */,
