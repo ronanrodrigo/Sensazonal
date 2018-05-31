@@ -1,4 +1,4 @@
-struct FoodDecodable: Codable {
+struct FoodCodable: Codable {
 
     let keyName: String
     let keyGroup: String

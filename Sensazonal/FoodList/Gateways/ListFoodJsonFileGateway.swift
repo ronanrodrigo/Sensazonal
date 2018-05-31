@@ -8,7 +8,7 @@ final class ListFoodJsonFileGateway: ListFoodGateway {
         do {
             let foodsData = try Data(contentsOf: URL(fileURLWithPath: filePath), options: .uncached)
             let foods = try JSONDecoder()
-                .decode([FoodDecodable].self, from: foodsData)
+                .decode([FoodCodable].self, from: foodsData)
                 .filter { $0.months.contains(month) }
                 .sorted { $0.keyGroup > $1.keyGroup }
                 .map { Food(keyName: $0.keyName, keyGroup: $0.keyGroup, months: $0.months) }
