@@ -12,8 +12,8 @@ final class FoodListViewModelTests: XCTestCase {
     }
 
     func testInitWithFoodsViewModel() throws {
-        let foodViewModel = FoodViewModel.sample
-        let viewModel = FoodListViewModel(foodsViewModel: [foodViewModel], month: try GregorianMonth(number: 1))
+        let foodViewModel = [FoodGroupViewModel.sample: [FoodViewModel.sample]]
+        let viewModel = FoodListViewModel(foodsViewModel: foodViewModel, month: try GregorianMonth(number: 1))
 
         XCTAssertEqual(viewModel.foodsViewModel.count, 1)
         XCTAssertEqual(viewModel.month.name, "Janeiro")

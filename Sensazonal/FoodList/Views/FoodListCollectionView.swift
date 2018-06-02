@@ -9,8 +9,11 @@ final class FoodListCollectionView: UIView {
     private var dataSource: FoodCollectionViewDataSource?
     private lazy var collection: UICollectionView = {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        layout.headerReferenceSize = CGSize(width: collectionView.frame.width, height: 70)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.contentInset = FoodListCollectionView.edges
+        collectionView.register(FoodGroupView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader,
+                                withReuseIdentifier: FoodGroupView.identifier)
         collectionView.register(FoodViewCell.self, forCellWithReuseIdentifier: FoodViewCell.identifier)
         collectionView.backgroundColor = .clear
         return collectionView

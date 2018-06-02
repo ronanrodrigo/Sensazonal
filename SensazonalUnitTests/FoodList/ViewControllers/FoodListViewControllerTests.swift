@@ -4,11 +4,11 @@ import SensazonalTestUtils
 
 final class FoodListViewControllerTests: XCTestCase {
 
-    private var foodViewModel: FoodViewModel { return FoodViewModel.sample }
+    private var foodViewModel: [FoodGroupViewModel: [FoodViewModel]] { return [.sample: [.sample]] }
 
     func testBindViewModelThenPopulateCollectionView() throws {
         let viewController = FoodListViewController()
-        let viewModel = FoodListViewModel(foodsViewModel: [foodViewModel], month: try GregorianMonth(number: 1))
+        let viewModel = FoodListViewModel(foodsViewModel: foodViewModel, month: try GregorianMonth(number: 1))
 
         viewController.bind(viewModel: viewModel)
 
@@ -42,26 +42,68 @@ final class FoodListViewControllerTests: XCTestCase {
         XCTAssertTrue(delegate.didOpenMonthSelector)
     }
 
-    func testFoodsTotalWhenViewModelHasFoodsThenReturnTotalFoods() {
+    func testFoodsQuantityWhenViewModelHasFoodsThenReturnTotalFoods() {
         let viewController = FoodListViewController()
         let month = try! GregorianMonth(number: 1) // swiftlint:disable:this force_try
-        let viewModel = FoodListViewModel(foodsViewModel: [foodViewModel, foodViewModel, foodViewModel], month: month)
+        let foodViewModel = [FoodGroupViewModel.sample: [FoodViewModel.sample, .sample]]
+        let viewModel = FoodListViewModel(foodsViewModel: foodViewModel, month: month)
         viewController.bind(viewModel: viewModel)
 
-        let totalFoods = viewController.foodsTotal()
+        let totalFoods = try? viewController.foodsQuantity(at: 0)
 
-        XCTAssertEqual(totalFoods, viewModel.foodsViewModel.count)
+        XCTAssertEqual(totalFoods, viewModel.foodsViewModel[FoodGroupViewModel.sample]!.count)
     }
 
-    func testFoodsAtPositionWhenGivenAValidPositionFoodsThenReturnAFoodViewModel() {
+    func testFoodsQuantityAtPositionWhenGivenAValidPositionFoodsThenReturnAFoodViewModel() {
         let viewController = FoodListViewController()
         let month = try! GregorianMonth(number: 1) // swiftlint:disable:this force_try
-        let viewModel = FoodListViewModel(foodsViewModel: [foodViewModel, foodViewModel, foodViewModel], month: month)
+        let foodViewModel = [FoodGroupViewModel.sample: [FoodViewModel.sample, .sample]]
+        let viewModel = FoodListViewModel(foodsViewModel: foodViewModel, month: month)
         viewController.bind(viewModel: viewModel)
 
-        let totalFoods = viewController.foodsTotal()
+        let totalFoods = try? viewController.foodsQuantity(at: 0)
 
-        XCTAssertEqual(totalFoods, viewModel.foodsViewModel.count)
+        XCTAssertEqual(totalFoods, viewModel.foodsViewModel[FoodGroupViewModel.sample]!.count)
+    }
+
+    func testFoodsQuantityAtPositionWhenGivenAnInvalidPositionFoodsThenThrowsAnError() {
+        let viewController = FoodListViewController()
+        let month = try! GregorianMonth(number: 1) // swiftlint:disable:this force_try
+        let foodViewModel = [FoodGroupViewModel.sample: [FoodViewModel.sample, .sample]]
+        let viewModel = FoodListViewModel(foodsViewModel: foodViewModel, month: month)
+        viewController.bind(viewModel: viewModel)
+
+        XCTAssertThrowsError(try viewController.foodsQuantity(at: -1))
+    }
+
+    func testGroupAtSectionWhenGivenAnInvalidSectionThenThrowsAnError() {
+        let viewController = FoodListViewController()
+        let month = try! GregorianMonth(number: 1) // swiftlint:disable:this force_try
+        let foodViewModel = [FoodGroupViewModel.sample: [FoodViewModel.sample, .sample]]
+        let viewModel = FoodListViewModel(foodsViewModel: foodViewModel, month: month)
+        viewController.bind(viewModel: viewModel)
+
+        XCTAssertThrowsError(try viewController.group(at: -1))
+    }
+
+    func testFoodWhenGivenAnInvalidRowThenThrowsAnError() {
+        let viewController = FoodListViewController()
+        let month = try! GregorianMonth(number: 1) // swiftlint:disable:this force_try
+        let foodViewModel = [FoodGroupViewModel.sample: [FoodViewModel.sample, .sample]]
+        let viewModel = FoodListViewModel(foodsViewModel: foodViewModel, month: month)
+        viewController.bind(viewModel: viewModel)
+
+        XCTAssertThrowsError(try viewController.food(at: IndexPath(row: -1, section: 0)))
+    }
+
+    func testFoodWhenGivenAnInvalidSectionThenThrowsAnError() {
+        let viewController = FoodListViewController()
+        let month = try! GregorianMonth(number: 1) // swiftlint:disable:this force_try
+        let foodViewModel = [FoodGroupViewModel.sample: [FoodViewModel.sample, .sample]]
+        let viewModel = FoodListViewModel(foodsViewModel: foodViewModel, month: month)
+        viewController.bind(viewModel: viewModel)
+
+        XCTAssertThrowsError(try viewController.food(at: IndexPath(row: 0, section: -1)))
     }
 
 }

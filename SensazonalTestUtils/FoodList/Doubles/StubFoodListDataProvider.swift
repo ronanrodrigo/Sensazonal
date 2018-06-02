@@ -1,3 +1,4 @@
+import Foundation
 @testable import Sensazonal
 
 public final class StubFoodListDataProvider: FoodListDataProvider {
@@ -8,12 +9,20 @@ public final class StubFoodListDataProvider: FoodListDataProvider {
         self.total = total
     }
 
-    public func food(at position: Int) -> FoodViewModel {
+    public func foodsQuantity(at section: Int) -> Int {
+        return total
+    }
+
+    public func food(at indexPath: IndexPath) -> FoodViewModel {
         return FoodViewModel.sample
     }
 
-    public func foodsTotal() -> Int {
-        return total
+    public func groupsQuantity() -> Int {
+        return 1
+    }
+
+    public func group(at section: Int) -> FoodGroupViewModel {
+        return FoodGroupViewModel.sample
     }
 
 }

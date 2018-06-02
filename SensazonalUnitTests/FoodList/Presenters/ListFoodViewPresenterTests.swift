@@ -32,4 +32,55 @@ final class ListFoodViewPresenterTests: XCTestCase {
         XCTAssertFalse(binder.didCallBinder)
     }
 
+    func testPresentFoodsWhenJanuaryThenGenerateGroupedViewModels() {
+        var foods: [Food] = []
+        let binder = FakeFoodListBinder()
+        let presenter = ListFoodViewPresenter(binder: binder)
+        let monthNumber = 1
+        ListFoodJsonFileGateway().foods(byMonth: monthNumber) {
+            $0.onSuccess { resultFoods in foods = resultFoods }
+        }
+
+        presenter.presentFoods(foods, monthNumber: monthNumber)
+
+        let foodViewModels = binder.viewModel.foodsViewModel.values.reduce([], +)
+        XCTAssertEqual(foods.count, foodViewModels.count)
+    }
+
+    func testPresentFoodsWhenFebruaryThenGenerateGroupedViewModels() {
+        var foods: [Food] = []
+        let binder = FakeFoodListBinder()
+        let presenter = ListFoodViewPresenter(binder: binder)
+        let monthNumber = 2
+        ListFoodJsonFileGateway().foods(byMonth: monthNumber) {
+            $0.onSuccess { resultFoods in foods = resultFoods }
+        }
+
+        presenter.presentFoods(foods, monthNumber: monthNumber)
+
+        let foodViewModels = binder.viewModel.foodsViewModel.values.reduce([], +)
+        XCTAssertEqual(foods.count, foodViewModels.count)
+    }
+
+    func testPresentFoodsWhenAllMonthsThenGenerateGroupedViewModels() {
+        var foods: [Food] = []
+        let monthNumbers = (1...12)
+
+        for monthNumber in monthNumbers {
+            let binder = FakeFoodListBinder()
+            let presenter = ListFoodViewPresenter(binder: binder)
+            ListFoodJsonFileGateway().foods(byMonth: monthNumber) {
+                $0.onSuccess { resultFoods in foods = resultFoods }
+            }
+
+            presenter.presentFoods(foods, monthNumber: monthNumber)
+
+            let foodViewModels = binder.viewModel.foodsViewModel.values.reduce([], +)
+            XCTAssertEqual(foods.count, foodViewModels.count, "Wrong quanity of month: \(monthNumber)")
+            return
+        }
+
+        XCTFail("The test did not run")
+    }
+
 }

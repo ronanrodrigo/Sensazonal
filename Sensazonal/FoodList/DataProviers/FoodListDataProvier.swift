@@ -1,6 +1,10 @@
+import Foundation
+
 protocol FoodListDataProvider {
 
-    func foodsTotal() -> Int
-    func food(at position: Int) -> FoodViewModel
+    func foodsQuantity(at section: Int) throws -> Int
+    func food(at indexPath: IndexPath) throws -> FoodViewModel
+    func groupsQuantity() -> Int
+    func group(at section: Int) throws -> FoodGroupViewModel
 
 }
