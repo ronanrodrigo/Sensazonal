@@ -6,7 +6,7 @@ struct FoodListViewModel {
     let month: Month
 
     func groups() -> [FoodGroupViewModel] {
-        return Array(foodsViewModel.keys)
+        return foodsViewModel.keys.sorted { $0.name < $1.name }
     }
 
     func foods(at group: FoodGroupViewModel) -> [FoodViewModel] {
