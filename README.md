@@ -5,7 +5,7 @@
 
 
 ## Requiremetnts
-- Xcode 9.30
+- Xcode 9.3.0+
 - Homebrew
 - Carthage
 - SwiftLint
