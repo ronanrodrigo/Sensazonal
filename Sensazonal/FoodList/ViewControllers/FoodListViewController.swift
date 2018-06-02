@@ -30,25 +30,25 @@ extension FoodListViewController: FoodListBinder {
 
 extension FoodListViewController: FoodListDataProvider {
 
-    func foodsTotal(for section: Int) -> Int {
-        let key = Array(viewModel.foodsViewModel.keys)[section]
-        let values = viewModel.foodsViewModel[key]
-        return values?.count ?? 0
+    func foodsQuantity(at section: Int) throws -> Int {
+        let groupViewModel = try group(at: section)
+        return viewModel.foods(at: groupViewModel).count
     }
 
-    func groupsTotal() -> Int {
-        return viewModel.foodsViewModel.keys.count
+    func groupsQuantity() -> Int {
+        return viewModel.groups().count
     }
 
-    func groupName(at section: Int) -> String {
-        let groupKeyName = "\(Array(viewModel.foodsViewModel.keys)[section])S"
-        return Locale.localize(groupKeyName)
+    func group(at section: Int) throws -> FoodGroupViewModel {
+        guard viewModel.groups().indices.contains(section) else { throw SensazonalError.invalidSection }
+        return viewModel.groups()[section]
     }
 
-    func food(at indexPath: IndexPath) -> FoodViewModel {
-        let key = Array(viewModel.foodsViewModel.keys)[indexPath.section]
-        let values = viewModel.foodsViewModel[key]
-        return values![indexPath.row]
+    func food(at indexPath: IndexPath) throws -> FoodViewModel {
+        let groupViewModel = try group(at: indexPath.section)
+        let foods = viewModel.foods(at: groupViewModel)
+        guard foods.indices.contains(indexPath.row) else { throw SensazonalError.invalidRow }
+        return foods[indexPath.row]
     }
 
 }

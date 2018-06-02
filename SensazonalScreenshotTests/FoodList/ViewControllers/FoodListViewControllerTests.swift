@@ -5,12 +5,12 @@ import SensazonalTestUtils
 
 final class FoodListViewControllerTests: FBSnapshotTestCase {
 
-    private var foodViewModel: FoodViewModel { return FoodViewModel.sample }
+    private let foodViewModel = [FoodGroupViewModel.sample: [FoodViewModel.sample, .sample]]
 
     func testBindViewModelThePresentViewControllerWithCollectionView() {
         let viewController = FoodListViewController()
         let month = try! GregorianMonth(number: 1) // swiftlint:disable:this force_try
-        let viewModel = FoodListViewModel(foodsViewModel: [foodViewModel, foodViewModel, foodViewModel], month: month)
+        let viewModel = FoodListViewModel(foodsViewModel: foodViewModel, month: month)
 
         viewController.bind(viewModel: viewModel)
 

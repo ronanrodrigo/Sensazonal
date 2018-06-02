@@ -6,5 +6,7 @@ enum SensazonalError: Error {
     case unknown
     case notFound
     case invalidData
+    case invalidSection
+    case invalidRow
 
 }

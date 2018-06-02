@@ -83,6 +83,3 @@ extension FoodListCollectionView: Reloadable {
         collection.reloadData()
     }
 }
-
-class FoodCollectionViewDelegate: NSObject, UICollectionViewDelegate {
-}
