@@ -4,24 +4,28 @@ import SensazonalTestUtils
 
 final class ListFoodByMonthInteractorTests: XCTestCase {
 
-    private var gateway: ListFoodGateway!
+    private var gateway: ListFoodStubGateway!
     private var presenter: ListFoodStubPresenter!
     private var interactor: ListFoodByMonthInteractor!
 
     override func setUp() {
         super.setUp()
-        gateway = ListFoodJsonFileGateway()
+        gateway = ListFoodStubGateway()
         presenter = ListFoodStubPresenter()
         interactor = ListFoodByMonthInteractor(gateway: gateway, presenter: presenter)
     }
 
     func testListWhenExistingMonthThenPresentFoodsForSelectedMonth() {
+        gateway.stubResult = Result.success([Food(keyName: "", keyGroup: "", months: [1])])
+
         interactor.list(byMonth: 1)
 
-        XCTAssertEqual(presenter.listedFoods.count, 23)
+        XCTAssertEqual(presenter.listedFoods.count, 1)
     }
 
     func testListByCurrentMonthWhenExistingMonthThenPresentFoodsForSelectedMonth() {
+        gateway.stubResult = Result.success([Food(keyName: "", keyGroup: "", months: [MonthFactory.make().number])])
+
         interactor.listByCurrentMonth()
 
         XCTAssertFalse(presenter.listedFoods.isEmpty)
