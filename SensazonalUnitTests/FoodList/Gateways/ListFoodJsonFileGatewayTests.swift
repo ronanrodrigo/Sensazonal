@@ -4,23 +4,31 @@ import XCTest
 final class ListFoodJsonFileGatewayTests: XCTestCase {
 
     func testListWhenHasFoodsInMonthThenReturnNotEmptyArray() {
+        let gatewayExpectation = expectation(description: #function)
         var foods: [Food] = []
 
         ListFoodJsonFileGateway().foods(byMonth: 1) {
-            $0.onSuccess({ foods = $0 })
+            $0.onSuccess { foods = $0; gatewayExpectation.fulfill() }
         }
 
-        XCTAssertFalse(foods.isEmpty)
+        waitForExpectations(timeout: 1) { error in
+            XCTAssertNil(error)
+            XCTAssertFalse(foods.isEmpty)
+        }
     }
 
     func testListWhenHasNotFoodsInMothThenReturnEmptyArray() {
+        let gatewayExpectation = expectation(description: #function)
         var foods: [Food] = []
 
         ListFoodJsonFileGateway().foods(byMonth: -1) {
-            $0.onSuccess({ foods = $0 })
+            $0.onSuccess { foods = $0; gatewayExpectation.fulfill() }
         }
 
-        XCTAssertTrue(foods.isEmpty)
+        waitForExpectations(timeout: 1) { error in
+            XCTAssertNil(error)
+            XCTAssertTrue(foods.isEmpty)
+        }
     }
 
 }
