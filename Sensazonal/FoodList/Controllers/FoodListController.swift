@@ -30,4 +30,8 @@ extension FoodListController: FoodListControllerDelegate {
         listFoodByMonth.list(byMonth: month.number)
     }
 
+    func favoritate(foodKeyName: String) {
+        print(foodKeyName)
+    }
+
 }

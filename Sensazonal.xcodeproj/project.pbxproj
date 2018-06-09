@@ -401,7 +401,6 @@
 		34272CE02051CDBA00EABE98 /* FoodList */ = {
 			isa = PBXGroup;
 			children = (
-				3478D4D6209DE8BE00515251 /* DataProviers */,
 				34CA5017205ED8D40095994A /* Controllers */,
 				34CA501C205EDA650095994A /* Factories */,
 				34B5DC4920555FFD008BDBDB /* Gateways */,
@@ -567,16 +566,6 @@
 				3478D4C3209DDA8C00515251 /* MonthSelectable.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		3478D4D6209DE8BE00515251 /* DataProviers */ = {
-			isa = PBXGroup;
-			children = (
-				3478D4D7209DE8D200515251 /* FoodListDataProvier.swift */,
-				3478D4D9209DEB1700515251 /* FoodCollectionViewDataSource.swift */,
-				343D4719209E2E0000B0CD66 /* FoodListControllerDelegate.swift */,
-			);
-			path = DataProviers;
 			sourceTree = "<group>";
 		};
 		3489495820AB4790007B7F6D /* ViewControllerTransition */ = {
@@ -828,6 +817,9 @@
 		34CA5013205ED5C70095994A /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				3478D4D7209DE8D200515251 /* FoodListDataProvier.swift */,
+				3478D4D9209DEB1700515251 /* FoodCollectionViewDataSource.swift */,
+				343D4719209E2E0000B0CD66 /* FoodListControllerDelegate.swift */,
 				34CA5015205ED6FD0095994A /* FoodListViewController.swift */,
 			);
 			path = ViewControllers;
