@@ -57,6 +57,7 @@ final class FoodViewCell: UICollectionViewCell {
         name.text = viewModel.name
         name.textColor = UIColor.black.withAlphaComponent(0.7)
         nameBackground.backgroundColor = .white
+        favorite.setImage(viewModel.favoriteImage, for: .normal)
     }
 
     func addFavoriteAction(action: @escaping () -> Void) {

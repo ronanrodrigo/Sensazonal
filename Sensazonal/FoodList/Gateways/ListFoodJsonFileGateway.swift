@@ -2,6 +2,12 @@ import UIKit
 
 final class ListFoodJsonFileGateway: ListFoodGateway {
 
+    private let isFavoriteFoodGateway: IsFavoriteFoodGateway
+
+    init(isFavoriteFoodGateway: IsFavoriteFoodGateway) {
+        self.isFavoriteFoodGateway = isFavoriteFoodGateway
+    }
+
     func foods(byMonth month: Int, onComplete: @escaping (Result<[Food]>) -> Void) {
         guard let filePath = Bundle.main.path(forResource: "foods.min", ofType: "json") else {
             return onComplete(.failure(.notFound))
@@ -15,14 +21,18 @@ final class ListFoodJsonFileGateway: ListFoodGateway {
                 let foods = try JSONDecoder()
                     .decode([FoodCodable].self, from: foodsData)
                     .filter { $0.months.contains(month) }
-                    .sorted { $0.keyGroup > $1.keyGroup }
-                    .map { Food(keyName: $0.keyName, keyGroup: $0.keyGroup, months: $0.months) }
+                    .compactMap { [weak self] in self?.generateFoods(with: $0) }
+                    .sorted { $0.favorited && !$1.favorited }
                 DispatchQueue.main.async { onComplete(.success(foods)) }
             } catch {
                 DispatchQueue.main.async { onComplete(.failure(.invalidData)) }
             }
         }
+    }
 
+    private func generateFoods(with food: FoodCodable) -> Food {
+        let favorited = isFavoriteFoodGateway.validate(by: food.keyName)
+        return Food(keyName: food.keyName, keyGroup: food.keyGroup, months: food.months, favorited: favorited)
     }
 
 }

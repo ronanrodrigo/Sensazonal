@@ -25,7 +25,9 @@ final class ListFoodViewPresenter: ListFoodPresenter {
         return foods.reduce(GroupedViewModel()) {
             var newResult = $0
             let groupViewModel = FoodGroupViewModel(name: $1.groupName)
-            let foodViewModel = FoodViewModel(name: $1.name, photo: $1.image)
+            let favoriteImage = $1.favorited ? #imageLiteral(resourceName: "Action/HeartFilled") : #imageLiteral(resourceName: "Action/HeartOutline")
+            let foodViewModel = FoodViewModel(name: $1.name, photo: $1.image, favoriteImage: favoriteImage,
+                                              keyName: $1.keyName)
 
             if newResult[groupViewModel] == nil {
                 newResult[groupViewModel] = [foodViewModel]

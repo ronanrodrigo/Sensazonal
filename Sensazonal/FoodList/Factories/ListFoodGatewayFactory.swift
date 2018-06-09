@@ -1,7 +1,7 @@
 struct ListFoodGatewayFactory {
 
     static func make() -> ListFoodGateway {
-        return ListFoodJsonFileGateway()
+        return ListFoodJsonFileGateway(isFavoriteFoodGateway: IsFavoriteFoodGatewayFactory.make())
     }
 
 }
