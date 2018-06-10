@@ -511,15 +511,6 @@
 			path = Entities;
 			sourceTree = "<group>";
 		};
-		3478D4C5209DDB2300515251 /* DataProviders */ = {
-			isa = PBXGroup;
-			children = (
-				3478D4CA209DDC1400515251 /* MonthSelectorDataProvider.swift */,
-				3478D4CC209DE0EB00515251 /* MonthPickerDelegateDataSource.swift */,
-			);
-			path = DataProviders;
-			sourceTree = "<group>";
-		};
 		3478D4D1209DE7AE00515251 /* MonthSelect */ = {
 			isa = PBXGroup;
 			children = (
@@ -527,7 +518,6 @@
 				3478D4D4209DE7F900515251 /* ViewModels */,
 				3478D4D3209DE7EC00515251 /* ViewControllers */,
 				3478D4D2209DE7C500515251 /* Factories */,
-				3478D4C5209DDB2300515251 /* DataProviders */,
 			);
 			path = MonthSelect;
 			sourceTree = "<group>";
@@ -547,6 +537,8 @@
 		3478D4D3209DE7EC00515251 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				3478D4CA209DDC1400515251 /* MonthSelectorDataProvider.swift */,
+				3478D4CC209DE0EB00515251 /* MonthPickerDelegateDataSource.swift */,
 				345C3DA3207FB99100B04250 /* SelectMonthViewController.swift */,
 				3431632120B8B923003E02B9 /* SelectMonthTransition.swift */,
 			);
