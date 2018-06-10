@@ -130,6 +130,7 @@
 		34F19936206E762C00DEF735 /* FoodListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F19935206E762C00DEF735 /* FoodListViewModelTests.swift */; };
 		34F1993C206E793700DEF735 /* NavigationViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F1993B206E793700DEF735 /* NavigationViewControllerTests.swift */; };
 		34F1993F206E7D4500DEF735 /* FoodListCollectionViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F1993E206E7D4500DEF735 /* FoodListCollectionViewTests.swift */; };
+		34FA9F2720CCAD1600445953 /* IsFavoriteFoodStubGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FA9F2620CCAD1600445953 /* IsFavoriteFoodStubGateway.swift */; };
 		34FC8F1B20616A8B00A07C66 /* FoodListCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FC8F1A20616A8B00A07C66 /* FoodListCollectionView.swift */; };
 /* End PBXBuildFile section */
 
@@ -300,6 +301,7 @@
 		34F19935206E762C00DEF735 /* FoodListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListViewModelTests.swift; sourceTree = "<group>"; };
 		34F1993B206E793700DEF735 /* NavigationViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewControllerTests.swift; sourceTree = "<group>"; };
 		34F1993E206E7D4500DEF735 /* FoodListCollectionViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListCollectionViewTests.swift; sourceTree = "<group>"; };
+		34FA9F2620CCAD1600445953 /* IsFavoriteFoodStubGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsFavoriteFoodStubGateway.swift; sourceTree = "<group>"; };
 		34FC8F1A20616A8B00A07C66 /* FoodListCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListCollectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -350,6 +352,7 @@
 				34F19922206E69D300DEF735 /* StubListFoodByMonthInteractor.swift */,
 				34F1992A206E6E1900DEF735 /* StubBinder.swift */,
 				346B124A20C261DB004BD333 /* FakeFoodListBinder.swift */,
+				34FA9F2620CCAD1600445953 /* IsFavoriteFoodStubGateway.swift */,
 			);
 			path = Doubles;
 			sourceTree = "<group>";
@@ -1313,6 +1316,7 @@
 				346B124920C24E51004BD333 /* FoodGroupViewModel+Sample.swift in Sources */,
 				348CA48E20A0A669003892AF /* ListFoodStubGateway.swift in Sources */,
 				348CA48D20A0A669003892AF /* ListFoodStubPresenter.swift in Sources */,
+				34FA9F2720CCAD1600445953 /* IsFavoriteFoodStubGateway.swift in Sources */,
 				348CA48C20A0A669003892AF /* StubFoodListControllerDelegate.swift in Sources */,
 				348CA48B20A0A669003892AF /* StubFoodListDataProvider.swift in Sources */,
 				348CA48520A0A479003892AF /* FoodListViewController.swift in Sources */,

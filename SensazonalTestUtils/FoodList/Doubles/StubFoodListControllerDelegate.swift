@@ -6,6 +6,8 @@ public final class StubFoodListControllerDelegate: FoodListControllerDelegate {
     public var didUpdateList = false
     public var didCloseMonthSelector = false
     public var didUpdateListWith: Month?
+    public var didFavoritate = false
+    public var didFavoritateWith: String?
 
     public init() { }
 
@@ -20,6 +22,11 @@ public final class StubFoodListControllerDelegate: FoodListControllerDelegate {
     public func updateList(with month: Month) {
         didUpdateList = true
         didUpdateListWith = month
+    }
+
+    public func favoritate(foodKeyName: String) {
+        didFavoritate = true
+        didFavoritateWith = foodKeyName
     }
 
 }

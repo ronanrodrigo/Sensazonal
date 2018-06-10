@@ -1,13 +1,21 @@
 import XCTest
+import SensazonalTestUtils
 @testable import Sensazonal
 
 final class ListFoodJsonFileGatewayTests: XCTestCase {
+
+    private var gateway: ListFoodJsonFileGateway!
+
+    override func setUp() {
+        super.setUp()
+        gateway = ListFoodJsonFileGateway(isFavoriteFoodGateway: IsFavoriteFoodStubGateway())
+    }
 
     func testListWhenHasFoodsInMonthThenReturnNotEmptyArray() {
         let gatewayExpectation = expectation(description: #function)
         var foods: [Food] = []
 
-        ListFoodJsonFileGateway().foods(byMonth: 1) {
+        gateway.foods(byMonth: 1) {
             $0.onSuccess { foods = $0; gatewayExpectation.fulfill() }
         }
 
@@ -21,7 +29,7 @@ final class ListFoodJsonFileGatewayTests: XCTestCase {
         let gatewayExpectation = expectation(description: #function)
         var foods: [Food] = []
 
-        ListFoodJsonFileGateway().foods(byMonth: -1) {
+        gateway.foods(byMonth: -1) {
             $0.onSuccess { foods = $0; gatewayExpectation.fulfill() }
         }
 

@@ -7,16 +7,17 @@ final class ListFoodByMonthInteractorTests: XCTestCase {
     private var gateway: ListFoodStubGateway!
     private var presenter: ListFoodStubPresenter!
     private var interactor: ListFoodByMonthInteractor!
+    private let food = Food(keyName: "", keyGroup: "", months: [], favorited: true)
 
     override func setUp() {
         super.setUp()
-        gateway = ListFoodStubGateway()
+        gateway = ListFoodStubGateway(isFavoriteFoodGateway: IsFavoriteFoodStubGateway())
         presenter = ListFoodStubPresenter()
         interactor = ListFoodByMonthInteractor(gateway: gateway, presenter: presenter)
     }
 
     func testListWhenExistingMonthThenPresentFoodsForSelectedMonth() {
-        gateway.stubResult = Result.success([Food(keyName: "", keyGroup: "", months: [1])])
+        gateway.stubResult = Result.success([Food(keyName: "", keyGroup: "", months: [1], favorited: false)])
 
         interactor.list(byMonth: 1)
 
@@ -24,7 +25,7 @@ final class ListFoodByMonthInteractorTests: XCTestCase {
     }
 
     func testListByCurrentMonthWhenExistingMonthThenPresentFoodsForSelectedMonth() {
-        gateway.stubResult = Result.success([Food(keyName: "", keyGroup: "", months: [MonthFactory.make().number])])
+        gateway.stubResult = Result.success([Food(keyName: "", keyGroup: "", months: [MonthFactory.make().number], favorited: false)])
 
         interactor.listByCurrentMonth()
 
@@ -47,7 +48,7 @@ final class ListFoodByMonthInteractorTests: XCTestCase {
     }
 
     func testListWhenOccurAnToGetFoodsThenPresentError() {
-        let gateway = ListFoodStubGateway()
+        let gateway = ListFoodStubGateway(isFavoriteFoodGateway: IsFavoriteFoodStubGateway())
         interactor = ListFoodByMonthInteractor(gateway: gateway, presenter: presenter)
 
         interactor.list(byMonth: 1)
