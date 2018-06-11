@@ -12,11 +12,10 @@ final class ListFoodJsonFileGateway: ListFoodGateway {
         queue.async {
             do {
                 let foodsData = try Data(contentsOf: URL(fileURLWithPath: filePath), options: .mappedIfSafe)
-                let favoriteFoods: [String] = UserDefaults.standard.array(forKey: .favoriteFoods)
                 let foods = try JSONDecoder()
                     .decode([FoodCodable].self, from: foodsData)
                     .filter { $0.months.contains(month) }
-                    .compactMap { [weak self] in self?.generateFoods(with: $0, isFavorited: favoriteFoods.contains($0.keyName)) }
+                    .compactMap(self.generateFoods)
                     .sorted { $0.favorited && !$1.favorited }
                 DispatchQueue.main.async { onComplete(.success(foods)) }
             } catch {
@@ -25,7 +24,9 @@ final class ListFoodJsonFileGateway: ListFoodGateway {
         }
     }
 
-    private func generateFoods(with food: FoodCodable, isFavorited: Bool) -> Food {
+    private func generateFoods(food: FoodCodable) -> Food {
+        let favoriteFoods: [String] = UserDefaults.standard.array(forKey: .favoriteFoods)
+        let isFavorited = favoriteFoods.contains(food.keyName)
         return Food(keyName: food.keyName, keyGroup: food.keyGroup, months: food.months, favorited: isFavorited)
     }
 
