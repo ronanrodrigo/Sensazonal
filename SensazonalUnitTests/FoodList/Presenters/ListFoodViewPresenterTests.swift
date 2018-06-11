@@ -9,7 +9,7 @@ final class ListFoodViewPresenterTests: XCTestCase {
 
     override func setUp() {
         super.setUp()
-        gateway = ListFoodJsonFileGateway(isFavoriteFoodGateway: IsFavoriteFoodStubGateway())
+        gateway = ListFoodJsonFileGateway()
     }
 
     func testPresentFoodsWhenHasFoodsThenCallBinder() {

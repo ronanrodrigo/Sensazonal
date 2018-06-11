@@ -8,7 +8,7 @@ final class FoodListControllerTests: XCTestCase {
 
     override func setUp() {
         super.setUp()
-        gateway = ListFoodStubGateway(isFavoriteFoodGateway: IsFavoriteFoodStubGateway())
+        gateway = ListFoodStubGateway()
     }
 
     func testInitWhenConstructedThenHasFoodListViewControllerAsRootViewController() {

@@ -1,7 +1,7 @@
 struct IsFavoriteFoodGatewayFactory {
 
-    static func make() -> IsFavoriteFoodGateway {
-        return IsFavoriteFoodUserDefaultsGateway()
+    static func make() -> FavoriteFoodsGateway {
+        return FavoriteFoodUserDefaultsGateway()
     }
 
 }

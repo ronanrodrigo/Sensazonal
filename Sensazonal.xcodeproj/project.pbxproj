@@ -24,6 +24,11 @@
 		3431632220B8B923003E02B9 /* SelectMonthTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3431632120B8B923003E02B9 /* SelectMonthTransition.swift */; };
 		3431632420B8B935003E02B9 /* SelectMonthTransitionFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3431632320B8B935003E02B9 /* SelectMonthTransitionFactory.swift */; };
 		343352052062CD5D004549A0 /* Metric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343352042062CD5D004549A0 /* Metric.swift */; };
+		3438DFDD20CDAD690049121B /* FavoritateFoodStubGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3438DFDC20CDAD690049121B /* FavoritateFoodStubGateway.swift */; };
+		3438DFDF20CDAD7F0049121B /* FavoriteFoodSpyPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3438DFDE20CDAD7F0049121B /* FavoriteFoodSpyPresenter.swift */; };
+		3438DFE120CDAD9A0049121B /* FavoritateFoodGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3438DFE020CDAD9A0049121B /* FavoritateFoodGateway.swift */; };
+		3438DFE320CDADAB0049121B /* FavoriteFoodPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3438DFE220CDADAB0049121B /* FavoriteFoodPresenter.swift */; };
+		3438DFE520CDADBC0049121B /* FavoritateFoodInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3438DFE420CDADBC0049121B /* FavoritateFoodInteractor.swift */; };
 		343A4FC9204D70CE00E33E81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343A4FC8204D70CE00E33E81 /* AppDelegate.swift */; };
 		343A4FD0204D70CE00E33E81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 343A4FCF204D70CE00E33E81 /* Assets.xcassets */; };
 		343A4FD3204D70CE00E33E81 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 343A4FD1204D70CE00E33E81 /* LaunchScreen.storyboard */; };
@@ -79,8 +84,8 @@
 		348DB76220CC0BE600FFBB6A /* LayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348DB76120CC0BE600FFBB6A /* LayoutConstraint.swift */; };
 		348DB76420CC0C0B00FFBB6A /* UIView+EdgesEqualToView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348DB76320CC0C0B00FFBB6A /* UIView+EdgesEqualToView.swift */; };
 		348DB76620CC19FC00FFBB6A /* UserDefaults+CustomKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348DB76520CC19FC00FFBB6A /* UserDefaults+CustomKeys.swift */; };
-		348DB76820CC1B6C00FFBB6A /* IsFavoriteFoodGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348DB76720CC1B6C00FFBB6A /* IsFavoriteFoodGateway.swift */; };
-		348DB76A20CC1B9000FFBB6A /* IsFavoriteFoodUserDefaultsGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348DB76920CC1B9000FFBB6A /* IsFavoriteFoodUserDefaultsGateway.swift */; };
+		348DB76820CC1B6C00FFBB6A /* FavoriteFoodsGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348DB76720CC1B6C00FFBB6A /* FavoriteFoodsGateway.swift */; };
+		348DB76A20CC1B9000FFBB6A /* FavoriteFoodUserDefaultsGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348DB76920CC1B9000FFBB6A /* FavoriteFoodUserDefaultsGateway.swift */; };
 		348DB76C20CC1C7E00FFBB6A /* IsFavoriteFoodGatewayFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348DB76B20CC1C7E00FFBB6A /* IsFavoriteFoodGatewayFactory.swift */; };
 		349A1F30207FC01100BBC5F3 /* SelectMonthViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349A1F2F207FC01100BBC5F3 /* SelectMonthViewControllerFactory.swift */; };
 		349A1F36207FC14900BBC5F3 /* MonthFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349A1F35207FC14900BBC5F3 /* MonthFactory.swift */; };
@@ -130,7 +135,8 @@
 		34F19936206E762C00DEF735 /* FoodListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F19935206E762C00DEF735 /* FoodListViewModelTests.swift */; };
 		34F1993C206E793700DEF735 /* NavigationViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F1993B206E793700DEF735 /* NavigationViewControllerTests.swift */; };
 		34F1993F206E7D4500DEF735 /* FoodListCollectionViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F1993E206E7D4500DEF735 /* FoodListCollectionViewTests.swift */; };
-		34FA9F2720CCAD1600445953 /* IsFavoriteFoodStubGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FA9F2620CCAD1600445953 /* IsFavoriteFoodStubGateway.swift */; };
+		34FA9F2720CCAD1600445953 /* FavoriteFoodStubGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FA9F2620CCAD1600445953 /* FavoriteFoodStubGateway.swift */; };
+		34FA9F2B20CCB35600445953 /* FavoritateFoodInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FA9F2A20CCB35600445953 /* FavoritateFoodInteractorTests.swift */; };
 		34FC8F1B20616A8B00A07C66 /* FoodListCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FC8F1A20616A8B00A07C66 /* FoodListCollectionView.swift */; };
 /* End PBXBuildFile section */
 
@@ -190,6 +196,11 @@
 		3431632120B8B923003E02B9 /* SelectMonthTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectMonthTransition.swift; sourceTree = "<group>"; };
 		3431632320B8B935003E02B9 /* SelectMonthTransitionFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectMonthTransitionFactory.swift; sourceTree = "<group>"; };
 		343352042062CD5D004549A0 /* Metric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Metric.swift; sourceTree = "<group>"; };
+		3438DFDC20CDAD690049121B /* FavoritateFoodStubGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritateFoodStubGateway.swift; sourceTree = "<group>"; };
+		3438DFDE20CDAD7F0049121B /* FavoriteFoodSpyPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteFoodSpyPresenter.swift; sourceTree = "<group>"; };
+		3438DFE020CDAD9A0049121B /* FavoritateFoodGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritateFoodGateway.swift; sourceTree = "<group>"; };
+		3438DFE220CDADAB0049121B /* FavoriteFoodPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteFoodPresenter.swift; sourceTree = "<group>"; };
+		3438DFE420CDADBC0049121B /* FavoritateFoodInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritateFoodInteractor.swift; sourceTree = "<group>"; };
 		343A4FC5204D70CE00E33E81 /* Sensazonal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sensazonal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		343A4FC8204D70CE00E33E81 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		343A4FCF204D70CE00E33E81 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -241,8 +252,8 @@
 		348DB76120CC0BE600FFBB6A /* LayoutConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutConstraint.swift; sourceTree = "<group>"; };
 		348DB76320CC0C0B00FFBB6A /* UIView+EdgesEqualToView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+EdgesEqualToView.swift"; sourceTree = "<group>"; };
 		348DB76520CC19FC00FFBB6A /* UserDefaults+CustomKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+CustomKeys.swift"; sourceTree = "<group>"; };
-		348DB76720CC1B6C00FFBB6A /* IsFavoriteFoodGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsFavoriteFoodGateway.swift; sourceTree = "<group>"; };
-		348DB76920CC1B9000FFBB6A /* IsFavoriteFoodUserDefaultsGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsFavoriteFoodUserDefaultsGateway.swift; sourceTree = "<group>"; };
+		348DB76720CC1B6C00FFBB6A /* FavoriteFoodsGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteFoodsGateway.swift; sourceTree = "<group>"; };
+		348DB76920CC1B9000FFBB6A /* FavoriteFoodUserDefaultsGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteFoodUserDefaultsGateway.swift; sourceTree = "<group>"; };
 		348DB76B20CC1C7E00FFBB6A /* IsFavoriteFoodGatewayFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsFavoriteFoodGatewayFactory.swift; sourceTree = "<group>"; };
 		349A1F2F207FC01100BBC5F3 /* SelectMonthViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectMonthViewControllerFactory.swift; sourceTree = "<group>"; };
 		349A1F35207FC14900BBC5F3 /* MonthFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthFactory.swift; sourceTree = "<group>"; };
@@ -301,7 +312,8 @@
 		34F19935206E762C00DEF735 /* FoodListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListViewModelTests.swift; sourceTree = "<group>"; };
 		34F1993B206E793700DEF735 /* NavigationViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewControllerTests.swift; sourceTree = "<group>"; };
 		34F1993E206E7D4500DEF735 /* FoodListCollectionViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListCollectionViewTests.swift; sourceTree = "<group>"; };
-		34FA9F2620CCAD1600445953 /* IsFavoriteFoodStubGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsFavoriteFoodStubGateway.swift; sourceTree = "<group>"; };
+		34FA9F2620CCAD1600445953 /* FavoriteFoodStubGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteFoodStubGateway.swift; sourceTree = "<group>"; };
+		34FA9F2A20CCB35600445953 /* FavoritateFoodInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritateFoodInteractorTests.swift; sourceTree = "<group>"; };
 		34FC8F1A20616A8B00A07C66 /* FoodListCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListCollectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -352,7 +364,9 @@
 				34F19922206E69D300DEF735 /* StubListFoodByMonthInteractor.swift */,
 				34F1992A206E6E1900DEF735 /* StubBinder.swift */,
 				346B124A20C261DB004BD333 /* FakeFoodListBinder.swift */,
-				34FA9F2620CCAD1600445953 /* IsFavoriteFoodStubGateway.swift */,
+				34FA9F2620CCAD1600445953 /* FavoriteFoodStubGateway.swift */,
+				3438DFDC20CDAD690049121B /* FavoritateFoodStubGateway.swift */,
+				3438DFDE20CDAD7F0049121B /* FavoriteFoodSpyPresenter.swift */,
 			);
 			path = Doubles;
 			sourceTree = "<group>";
@@ -705,6 +719,7 @@
 			children = (
 				34272CE82051CE9200EABE98 /* ListFoodPresenter.swift */,
 				34CA5021205EDBA40095994A /* ListFoodViewPresenter.swift */,
+				3438DFE220CDADAB0049121B /* FavoriteFoodPresenter.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -713,6 +728,7 @@
 			isa = PBXGroup;
 			children = (
 				34272CE12051CDD800EABE98 /* ListFoodByMonthInteractor.swift */,
+				3438DFE420CDADBC0049121B /* FavoritateFoodInteractor.swift */,
 			);
 			path = Interactors;
 			sourceTree = "<group>";
@@ -722,8 +738,9 @@
 			children = (
 				34272CEA2051CF8200EABE98 /* ListFoodGateway.swift */,
 				3427A0C420C0430F0021AC07 /* ListFoodJsonFileGateway.swift */,
-				348DB76720CC1B6C00FFBB6A /* IsFavoriteFoodGateway.swift */,
-				348DB76920CC1B9000FFBB6A /* IsFavoriteFoodUserDefaultsGateway.swift */,
+				348DB76720CC1B6C00FFBB6A /* FavoriteFoodsGateway.swift */,
+				348DB76920CC1B9000FFBB6A /* FavoriteFoodUserDefaultsGateway.swift */,
+				3438DFE020CDAD9A0049121B /* FavoritateFoodGateway.swift */,
 			);
 			path = Gateways;
 			sourceTree = "<group>";
@@ -754,6 +771,7 @@
 			isa = PBXGroup;
 			children = (
 				34272CE62051CE0B00EABE98 /* ListFoodByMonthInteractorTests.swift */,
+				34FA9F2A20CCB35600445953 /* FavoritateFoodInteractorTests.swift */,
 			);
 			path = Interactors;
 			sourceTree = "<group>";
@@ -1243,7 +1261,9 @@
 				3478D4C2209DD80100515251 /* MonthSelectorViewFactory.swift in Sources */,
 				3478D4CB209DDC1400515251 /* MonthSelectorDataProvider.swift in Sources */,
 				3478D4BE209DD5AF00515251 /* SelectMonthViewModel.swift in Sources */,
+				3438DFE520CDADBC0049121B /* FavoritateFoodInteractor.swift in Sources */,
 				34C8A37E20AB836C002CF813 /* DismissFadeAndHideTransition.swift in Sources */,
+				3438DFE320CDADAB0049121B /* FavoriteFoodPresenter.swift in Sources */,
 				3431632220B8B923003E02B9 /* SelectMonthTransition.swift in Sources */,
 				3427A0C520C0430F0021AC07 /* ListFoodJsonFileGateway.swift in Sources */,
 				34BC47AE20698A4A003506DB /* NavigationViewController.swift in Sources */,
@@ -1263,7 +1283,7 @@
 				34272CEF2051D07D00EABE98 /* Result.swift in Sources */,
 				34B5DC46205553C0008BDBDB /* FoodViewModel.swift in Sources */,
 				343352052062CD5D004549A0 /* Metric.swift in Sources */,
-				348DB76A20CC1B9000FFBB6A /* IsFavoriteFoodUserDefaultsGateway.swift in Sources */,
+				348DB76A20CC1B9000FFBB6A /* FavoriteFoodUserDefaultsGateway.swift in Sources */,
 				346B124520C23C6D004BD333 /* FoodGroupView.swift in Sources */,
 				343D471A209E2E0000B0CD66 /* FoodListControllerDelegate.swift in Sources */,
 				34272CE92051CE9200EABE98 /* ListFoodPresenter.swift in Sources */,
@@ -1287,7 +1307,7 @@
 				34CA5024205EDBDE0095994A /* ListFoodViewPresenterFactory.swift in Sources */,
 				34FC8F1B20616A8B00A07C66 /* FoodListCollectionView.swift in Sources */,
 				34272CEB2051CF8200EABE98 /* ListFoodGateway.swift in Sources */,
-				348DB76820CC1B6C00FFBB6A /* IsFavoriteFoodGateway.swift in Sources */,
+				348DB76820CC1B6C00FFBB6A /* FavoriteFoodsGateway.swift in Sources */,
 				3478D4DE209DEF8F00515251 /* UICollectionViewCell+Identifier.swift in Sources */,
 				3478D4C0209DD62500515251 /* SelectMonthBinder.swift in Sources */,
 				343A4FC9204D70CE00E33E81 /* AppDelegate.swift in Sources */,
@@ -1297,6 +1317,7 @@
 				3478D4E0209DF36A00515251 /* MonthPickerDelegateDataSourceFactory.swift in Sources */,
 				34CA5028205F1FBA0095994A /* FoodListViewControllerFactory.swift in Sources */,
 				343A4FDB204D70EF00E33E81 /* Locale.swift in Sources */,
+				3438DFE120CDAD9A0049121B /* FavoritateFoodGateway.swift in Sources */,
 				3478D4CD209DE0EB00515251 /* MonthPickerDelegateDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1308,7 +1329,7 @@
 				346B124920C24E51004BD333 /* FoodGroupViewModel+Sample.swift in Sources */,
 				348CA48E20A0A669003892AF /* ListFoodStubGateway.swift in Sources */,
 				348CA48D20A0A669003892AF /* ListFoodStubPresenter.swift in Sources */,
-				34FA9F2720CCAD1600445953 /* IsFavoriteFoodStubGateway.swift in Sources */,
+				34FA9F2720CCAD1600445953 /* FavoriteFoodStubGateway.swift in Sources */,
 				348CA48C20A0A669003892AF /* StubFoodListControllerDelegate.swift in Sources */,
 				348CA48B20A0A669003892AF /* StubFoodListDataProvider.swift in Sources */,
 				348CA48520A0A479003892AF /* FoodListViewController.swift in Sources */,
@@ -1316,6 +1337,8 @@
 				348CA49220A0A68C003892AF /* StubMonthSelectorDataProvider.swift in Sources */,
 				348CA49020A0A669003892AF /* StubBinder.swift in Sources */,
 				348CA48420A0A479003892AF /* FoodViewModel.swift in Sources */,
+				3438DFDD20CDAD690049121B /* FavoritateFoodStubGateway.swift in Sources */,
+				3438DFDF20CDAD7F0049121B /* FavoriteFoodSpyPresenter.swift in Sources */,
 				348CA48F20A0A669003892AF /* StubListFoodByMonthInteractor.swift in Sources */,
 				343FF41720BA29F900AAF106 /* StubPanGesture.swift in Sources */,
 			);
@@ -1347,6 +1370,7 @@
 				34B117EB20A075110071D7F7 /* FoodListViewControllerTests.swift in Sources */,
 				34F19934206E738300DEF735 /* FoodViewModelTests.swift in Sources */,
 				34D487D6209F2F31006EA78A /* MonthPickerDelegateDataSourceTests.swift in Sources */,
+				34FA9F2B20CCB35600445953 /* FavoritateFoodInteractorTests.swift in Sources */,
 				34272CE72051CE0B00EABE98 /* ListFoodByMonthInteractorTests.swift in Sources */,
 				34F19921206E66E500DEF735 /* FoodListControllerTests.swift in Sources */,
 				34C8A39220AF7FDD002CF813 /* FadeAndAppearPresentationControllerTests.swift in Sources */,

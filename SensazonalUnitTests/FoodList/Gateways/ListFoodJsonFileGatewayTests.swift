@@ -8,7 +8,7 @@ final class ListFoodJsonFileGatewayTests: XCTestCase {
 
     override func setUp() {
         super.setUp()
-        gateway = ListFoodJsonFileGateway(isFavoriteFoodGateway: IsFavoriteFoodStubGateway())
+        gateway = ListFoodJsonFileGateway()
     }
 
     func testListWhenHasFoodsInMonthThenReturnNotEmptyArray() {

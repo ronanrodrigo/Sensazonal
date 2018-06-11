@@ -11,7 +11,7 @@ final class ListFoodByMonthInteractorTests: XCTestCase {
 
     override func setUp() {
         super.setUp()
-        gateway = ListFoodStubGateway(isFavoriteFoodGateway: IsFavoriteFoodStubGateway())
+        gateway = ListFoodStubGateway()
         presenter = ListFoodStubPresenter()
         interactor = ListFoodByMonthInteractor(gateway: gateway, presenter: presenter)
     }
@@ -48,7 +48,7 @@ final class ListFoodByMonthInteractorTests: XCTestCase {
     }
 
     func testListWhenOccurAnToGetFoodsThenPresentError() {
-        let gateway = ListFoodStubGateway(isFavoriteFoodGateway: IsFavoriteFoodStubGateway())
+        let gateway = ListFoodStubGateway()
         interactor = ListFoodByMonthInteractor(gateway: gateway, presenter: presenter)
 
         interactor.list(byMonth: 1)
