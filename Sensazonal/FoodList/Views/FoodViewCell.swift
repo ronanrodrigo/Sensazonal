@@ -20,7 +20,7 @@ final class FoodViewCell: UICollectionViewCell {
 
     private let name: UILabel = {
         let label = UILabel()
-        label.font = UIFont.boldSystemFont(ofSize: Metric.medium)
+        label.font = UIFont.preferredFont(forTextStyle: .body)
         return label
     }()
 
