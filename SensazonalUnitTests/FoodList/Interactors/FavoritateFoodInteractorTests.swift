@@ -20,7 +20,7 @@ final class FavoritateFoodInteractorTests: XCTestCase {
     }
 
     func testFavoriteWhenFoodIsNotFavoritedThenFavoriteFood() {
-        favoritateFoodGateway.resultStub = .success(Food(keyName: keyName, keyGroup: "", months: [], favorited: true))
+        favoritateFoodGateway.resultStub = .success(keyName)
         favoriteFoodsGateway.foodsStub = .success([])
 
         interactor.favorite(keyName: keyName)
@@ -30,16 +30,16 @@ final class FavoritateFoodInteractorTests: XCTestCase {
     }
 
     func testFavoriteWhenFoodIsNotFavoritedThenPresentFavoritedFood() {
-        favoritateFoodGateway.resultStub = .success(Food(keyName: keyName, keyGroup: "", months: [], favorited: true))
+        favoritateFoodGateway.resultStub = .success(keyName)
         favoriteFoodsGateway.foodsStub = .success([])
 
         interactor.favorite(keyName: keyName)
 
-        XCTAssertEqual(presenter.didPresentFavoritedWith?.keyName, keyName)
+        XCTAssertEqual(presenter.didPresentFavoritedWith, keyName)
     }
 
     func testFavoriteWhenFoodIsFavoritedThenUnfavoriteFood() {
-        favoritateFoodGateway.resultStub = .success(Food(keyName: keyName, keyGroup: "", months: [], favorited: false))
+        favoritateFoodGateway.resultStub = .success(keyName)
         favoriteFoodsGateway.foodsStub = .success([keyName])
 
         interactor.favorite(keyName: keyName)
@@ -49,12 +49,12 @@ final class FavoritateFoodInteractorTests: XCTestCase {
     }
 
     func testFavoriteWhenFoodIsFavoritedThenPreentUnfavoriteFood() {
-        favoritateFoodGateway.resultStub = .success(Food(keyName: keyName, keyGroup: "", months: [], favorited: false))
+        favoritateFoodGateway.resultStub = .success(keyName)
         favoriteFoodsGateway.foodsStub = .success([keyName])
 
         interactor.favorite(keyName: keyName)
 
-        XCTAssertEqual(presenter.didPresentUnfavoritedWith?.keyName, keyName)
+        XCTAssertEqual(presenter.didPresentUnfavoritedWith, keyName)
     }
 
     func testFavoriteWhenErrorOcurrerOnRetriveFavoriteFoodsThenPresentError() {

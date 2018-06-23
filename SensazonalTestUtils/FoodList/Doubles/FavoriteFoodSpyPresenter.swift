@@ -2,18 +2,18 @@
 
 public class FavoriteFoodSpyPresenter: FavoriteFoodPresenter {
 
-    public var didPresentFavoritedWith: Food?
-    public var didPresentUnfavoritedWith: Food?
+    public var didPresentFavoritedWith: KeyName?
+    public var didPresentUnfavoritedWith: KeyName?
     public var didPresentError = false
 
     public init() { }
 
-    public func favorited(food: Food) {
-        didPresentFavoritedWith = food
+    public func favorited(keyName: KeyName) {
+        didPresentFavoritedWith = keyName
     }
 
-    public func unfavorited(food: Food) {
-        didPresentUnfavoritedWith = food
+    public func unfavorited(keyName: KeyName) {
+        didPresentUnfavoritedWith = keyName
     }
 
     public func presentError(error: SensazonalError) {
