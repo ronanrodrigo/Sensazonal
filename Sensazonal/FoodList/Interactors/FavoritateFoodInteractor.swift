@@ -10,9 +10,9 @@ final class FavoritateFoodInteractor {
         self.presenter = presenter
     }
 
-    func favorite(foodKeyName: KeyName) {
+    func favorite(keyName: KeyName) {
         favoriteFoodsGateway.foods {
-            $0.onSuccess { self.handleFavoriteFoods(keyName: foodKeyName, favoriteKeyNames: $0) }
+            $0.onSuccess { self.handleFavoriteFoods(keyName: keyName, favoriteKeyNames: $0) }
             $0.onFailure(self.presenter.presentError)
         }
     }

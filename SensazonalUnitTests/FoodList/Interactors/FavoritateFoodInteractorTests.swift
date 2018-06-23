@@ -23,7 +23,7 @@ final class FavoritateFoodInteractorTests: XCTestCase {
         favoritateFoodGateway.resultStub = .success(Food(keyName: keyName, keyGroup: "", months: [], favorited: true))
         favoriteFoodsGateway.foodsStub = .success([])
 
-        interactor.favorite(foodKeyName: keyName)
+        interactor.favorite(keyName: keyName)
 
         XCTAssertTrue(favoritateFoodGateway.didFavoriteFood)
         XCTAssertEqual(favoritateFoodGateway.didFavoriteFoodKeyName, keyName)
@@ -33,7 +33,7 @@ final class FavoritateFoodInteractorTests: XCTestCase {
         favoritateFoodGateway.resultStub = .success(Food(keyName: keyName, keyGroup: "", months: [], favorited: true))
         favoriteFoodsGateway.foodsStub = .success([])
 
-        interactor.favorite(foodKeyName: keyName)
+        interactor.favorite(keyName: keyName)
 
         XCTAssertEqual(presenter.didPresentFavoritedWith?.keyName, keyName)
     }
@@ -42,7 +42,7 @@ final class FavoritateFoodInteractorTests: XCTestCase {
         favoritateFoodGateway.resultStub = .success(Food(keyName: keyName, keyGroup: "", months: [], favorited: false))
         favoriteFoodsGateway.foodsStub = .success([keyName])
 
-        interactor.favorite(foodKeyName: keyName)
+        interactor.favorite(keyName: keyName)
 
         XCTAssertFalse(favoritateFoodGateway.didFavoriteFood)
         XCTAssertEqual(favoritateFoodGateway.didFavoriteFoodKeyName, keyName)
@@ -52,7 +52,7 @@ final class FavoritateFoodInteractorTests: XCTestCase {
         favoritateFoodGateway.resultStub = .success(Food(keyName: keyName, keyGroup: "", months: [], favorited: false))
         favoriteFoodsGateway.foodsStub = .success([keyName])
 
-        interactor.favorite(foodKeyName: keyName)
+        interactor.favorite(keyName: keyName)
 
         XCTAssertEqual(presenter.didPresentUnfavoritedWith?.keyName, keyName)
     }
@@ -60,7 +60,7 @@ final class FavoritateFoodInteractorTests: XCTestCase {
     func testFavoriteWhenErrorOcurrerOnRetriveFavoriteFoodsThenPresentError() {
         favoriteFoodsGateway.foodsStub = .failure(.unknown)
 
-        interactor.favorite(foodKeyName: keyName)
+        interactor.favorite(keyName: keyName)
 
         XCTAssertTrue(presenter.didPresentError)
     }
@@ -69,7 +69,7 @@ final class FavoritateFoodInteractorTests: XCTestCase {
         favoritateFoodGateway.resultStub = .failure(.unknown)
         favoriteFoodsGateway.foodsStub = .success([keyName])
 
-        interactor.favorite(foodKeyName: keyName)
+        interactor.favorite(keyName: keyName)
 
         XCTAssertTrue(presenter.didPresentError)
     }

@@ -33,6 +33,7 @@ final class FoodViewCell: UICollectionViewCell {
         let button = UIButton(type: .system)
         button.setImage(#imageLiteral(resourceName: "Action/HeartOutline"), for: .normal)
         button.tintColor = .black
+        button.addTarget(self, action: #selector(didTouchAtFavorite), for: .touchUpInside)
         return button
     }()
 
