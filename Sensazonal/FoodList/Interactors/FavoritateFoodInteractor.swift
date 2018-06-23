@@ -27,8 +27,8 @@ final class FavoritateFoodInteractor {
 
     private func handleFavoritate(_ isFavorited: Bool) -> (KeyName) -> Void {
         return { keyName in
-            guard isFavorited else { return self.presenter.unfavorited(keyName: keyName) }
-            self.presenter.favorited(keyName: keyName)
+            if isFavorited { return self.presenter.favorited(keyName: keyName) }
+            self.presenter.unfavorited(keyName: keyName)
         }
     }
 
