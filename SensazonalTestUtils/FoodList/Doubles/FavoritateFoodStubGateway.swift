@@ -8,8 +8,14 @@ public class FavoritateFoodStubGateway: FavoritateFoodGateway {
 
     public init() { }
 
-    public func favorite(shouldFavorite: Bool, foodKeyName: KeyName, onComplete: (Result<KeyName>) -> Void) {
-        didFavoriteFood = shouldFavorite
+    public func favorite(foodKeyName: KeyName, onComplete: (Result<KeyName>) -> Void) {
+        didFavoriteFood = true
+        didFavoriteFoodKeyName = foodKeyName
+        onComplete(resultStub)
+    }
+
+    public func unfavorite(foodKeyName: KeyName, onComplete: (Result<KeyName>) -> Void) {
+        didFavoriteFood = false
         didFavoriteFoodKeyName = foodKeyName
         onComplete(resultStub)
     }

@@ -5,6 +5,7 @@ final class FoodListController: BaseController {
     let viewController: UIViewController
     private let listFoodByMonth: ListFoodByMonthInteractor
     private lazy var selectMonthViewController = SelectMonthViewControllerFactory.make(delegate: self)
+    private lazy var favoritateFood = FavoritateFoodInteractorFactory.make(presenter: FavoriteFoodViewPresenter())
 
     init(interactor: ListFoodByMonthInteractor, listViewController: UIViewController) {
         self.viewController = listViewController
@@ -31,7 +32,22 @@ extension FoodListController: FoodListControllerDelegate {
     }
 
     func favoritate(foodKeyName: KeyName) {
-        print(foodKeyName)
+        favoritateFood.favorite(keyName: foodKeyName)
+    }
+
+}
+
+final class FavoriteFoodViewPresenter: FavoriteFoodPresenter {
+
+    func favorited(keyName: KeyName) {
+        print("\(#function) \(keyName)")
+    }
+
+    func unfavorited(keyName: KeyName) {
+        print("\(#function) \(keyName)")
+    }
+
+    func presentError(error: SensazonalError) {
     }
 
 }

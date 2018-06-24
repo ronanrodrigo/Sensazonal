@@ -1,5 +1,6 @@
 protocol FavoritateFoodGateway {
 
-    func favorite(shouldFavorite: Bool, foodKeyName: KeyName, onComplete: (Result<KeyName>) -> Void)
+    func favorite(foodKeyName: KeyName, onComplete: (Result<KeyName>) -> Void)
+    func unfavorite(foodKeyName: KeyName, onComplete: (Result<KeyName>) -> Void)
 
 }

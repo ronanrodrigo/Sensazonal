@@ -2,8 +2,22 @@ import Foundation
 
 final class FavoritateFoodUserDefaultsGateway: FavoritateFoodGateway {
 
-    func favorite(shouldFavorite: Bool, foodKeyName: KeyName, onComplete: (Result<KeyName>) -> Void) {
-        UserDefaults.standard.set(shouldFavorite, forKey: UserDefaults.Key.favoriteFoods)
+    func favorite(foodKeyName: KeyName, onComplete: (Result<KeyName>) -> Void) {
+        let foods: [KeyName] = UserDefaults.standard.array(forKey: UserDefaults.Key.favoriteFoods)
+
+        let newFoods = foods + [foodKeyName]
+        let distinctFoods = Array(Set(newFoods))
+        UserDefaults.standard.set(distinctFoods, forKey: UserDefaults.Key.favoriteFoods)
+
+        onComplete(.success(foodKeyName))
+    }
+
+    func unfavorite(foodKeyName: KeyName, onComplete: (Result<KeyName>) -> Void) {
+        let foods: [KeyName] = UserDefaults.standard.array(forKey: UserDefaults.Key.favoriteFoods)
+
+        let newFoods = Set(foods).filter({ $0 != foodKeyName }).map({ $0 })
+        UserDefaults.standard.set(newFoods, forKey: UserDefaults.Key.favoriteFoods)
+
         onComplete(.success(foodKeyName))
     }
 
