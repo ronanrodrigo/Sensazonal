@@ -19,16 +19,13 @@ final class FavoritateFoodInteractor {
 
     private func handleFavoriteFoods(keyName: KeyName, favoriteKeyNames: [KeyName]) {
         let isFavorited = favoriteKeyNames.contains(keyName)
-        if isFavorited {
-            self.favoritateGateway.unfavorite(foodKeyName: keyName) {
-                $0.onSuccess(self.presenter.unfavorited)
-                $0.onFailure(self.presenter.presentError)
-            }
-        } else {
-            self.favoritateGateway.favorite(foodKeyName: keyName) {
-                $0.onSuccess(self.presenter.favorited)
-                $0.onFailure(self.presenter.presentError)
-            }
+        let action = isFavorited ?
+            (gateway: favoritateGateway.unfavorite, presenter: presenter.unfavorited) :
+            (gateway: favoritateGateway.favorite, presenter: presenter.favorited)
+
+        action.gateway(keyName) {
+            $0.onSuccess(action.presenter)
+            $0.onFailure(self.presenter.presentError)
         }
     }
 
