@@ -12,7 +12,7 @@ final class FoodListCollectionView: UIView {
         layout.headerReferenceSize = CGSize(width: collectionView.frame.width, height: 70)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.contentInset = FoodListCollectionView.edges
-        collectionView.register(FoodGroupView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader,
+        collectionView.register(FoodGroupView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
                                 withReuseIdentifier: FoodGroupView.identifier)
         collectionView.register(FoodViewCell.self, forCellWithReuseIdentifier: FoodViewCell.identifier)
         collectionView.backgroundColor = .clear

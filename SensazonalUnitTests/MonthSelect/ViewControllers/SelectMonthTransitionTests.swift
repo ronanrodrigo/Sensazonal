@@ -19,7 +19,7 @@ final class SelectMonthTransitionTests: XCTestCase {
     }
 
     func testCloseMonthSelectorWithPanGestureWhenBeganGestureThenInteractiveTransitionStarted() {
-        let gesture = StubPanGesture(customState: .began)
+        let gesture = StubPanGesture()
 
         monthTransition.closeMonthSelectorWithPan(gesture)
 
@@ -27,7 +27,7 @@ final class SelectMonthTransitionTests: XCTestCase {
     }
 
     func testCloseMonthSelectorWithPanGestureWhenBeganGestureThenDelegateDidCloseMonthSelector() {
-        let gesture = StubPanGesture(customState: .began)
+        let gesture = StubPanGesture()
 
         monthTransition.closeMonthSelectorWithPan(gesture)
 
@@ -36,7 +36,7 @@ final class SelectMonthTransitionTests: XCTestCase {
 
     func testCloseMonthSelectorWithPanGestureWhenProgressIsOverThenThresholdAndChangedGestureThenInteractiveTransitionShouldFinish() {
         let percentThreshold = 20
-        let gesture = StubPanGesture(customState: .changed, translationPoint: percentThreshold + 1)
+        let gesture = generateGesture(with: .changed, translationPoint: percentThreshold + 1)
 
         monthTransition.closeMonthSelectorWithPan(gesture)
 
@@ -45,7 +45,7 @@ final class SelectMonthTransitionTests: XCTestCase {
 
     func testCloseMonthSelectorWithPanGestureWhenProgressIsEqualThenThresholdAndChangedGestureThenInteractiveTransitionShouldNotFinish() {
         let percentThreshold = 20
-        let gesture = StubPanGesture(customState: .changed, translationPoint: percentThreshold)
+        let gesture = generateGesture(with: .changed, translationPoint: percentThreshold)
 
         monthTransition.closeMonthSelectorWithPan(gesture)
 
@@ -54,7 +54,7 @@ final class SelectMonthTransitionTests: XCTestCase {
 
     func testCloseMonthSelectorWithPanGestureWhenProgressIsLessThenThresholdAndChangedGestureThenInteractiveTransitionShouldNotFinish() {
         let percentThreshold = 20
-        let gesture = StubPanGesture(customState: .changed, translationPoint: percentThreshold)
+        let gesture = generateGesture(with: .changed, translationPoint: percentThreshold)
 
         monthTransition.closeMonthSelectorWithPan(gesture)
 
@@ -62,7 +62,7 @@ final class SelectMonthTransitionTests: XCTestCase {
     }
 
     func testCloseMonthSelectorWithPanGestureWhenCanceledGestureThenInteractiveTransitionHasNotStarted() {
-        let gesture = StubPanGesture(customState: .cancelled)
+        let gesture = generateGesture(with: .cancelled)
 
         monthTransition.closeMonthSelectorWithPan(gesture)
 
@@ -70,7 +70,7 @@ final class SelectMonthTransitionTests: XCTestCase {
     }
 
     func testCloseMonthSelectorWithPanGestureWhenEndedGestureThenInteractiveTransitionHasNotStarted() {
-        let gesture = StubPanGesture(customState: .ended)
+        let gesture = generateGesture(with: .ended)
 
         monthTransition.closeMonthSelectorWithPan(gesture)
 
@@ -81,6 +81,12 @@ final class SelectMonthTransitionTests: XCTestCase {
         monthTransition.closeMonthSelectorWithTap()
 
         XCTAssertTrue(delegate.didCloseMonthSelector)
+    }
+
+    private func generateGesture(with state: UIGestureRecognizer.State = .began, translationPoint: Int = 0) -> UIPanGestureRecognizer {
+        let gesture = StubPanGesture(state: state, translationPoint: translationPoint)
+        gesture.state = state
+        return gesture
     }
 
 }

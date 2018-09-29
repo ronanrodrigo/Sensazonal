@@ -24,7 +24,7 @@ final class FoodViewCell: UICollectionViewCell {
         return label
     }()
 
-    private let nameBackground: UIView = {
+    private let footer: UIView = {
         let view = UIView()
         return view
     }()
@@ -57,7 +57,7 @@ final class FoodViewCell: UICollectionViewCell {
         photo.image = viewModel.photo
         name.text = viewModel.name
         name.textColor = UIColor.black.withAlphaComponent(0.7)
-        nameBackground.backgroundColor = .white
+        footer.backgroundColor = .white
         favorite.setImage(viewModel.favoriteImage, for: .normal)
     }
 
@@ -67,10 +67,10 @@ final class FoodViewCell: UICollectionViewCell {
 
     private func installSubviews() {
         addSubview(content)
-        content.addSubview(nameBackground)
         content.addSubview(photo)
-        nameBackground.addSubview(name)
-        nameBackground.addSubview(favorite)
+        content.addSubview(footer)
+        footer.addSubview(name)
+        footer.addSubview(favorite)
         installShadow()
     }
 
@@ -96,27 +96,27 @@ final class FoodViewCell: UICollectionViewCell {
 
     private func installPhotoConstraints() {
         LayoutConstraint.activate([
+            photo.heightAnchor.constraint(equalTo: content.heightAnchor),
             photo.leadingAnchor.constraint(equalTo: content.leadingAnchor),
-            photo.topAnchor.constraint(equalTo: content.topAnchor),
-            photo.trailingAnchor.constraint(equalTo: content.trailingAnchor),
-            photo.bottomAnchor.constraint(equalTo: nameBackground.topAnchor, constant: Metric.small)
+            photo.trailingAnchor.constraint(equalTo: content.trailingAnchor)
         ])
     }
 
     private func installNameBackgroundConstraints() {
         LayoutConstraint.activate([
-            nameBackground.leadingAnchor.constraint(equalTo: content.leadingAnchor),
-            nameBackground.trailingAnchor.constraint(equalTo: content.trailingAnchor),
-            nameBackground.bottomAnchor.constraint(equalTo: content.bottomAnchor)
+            footer.leadingAnchor.constraint(equalTo: content.leadingAnchor),
+            footer.trailingAnchor.constraint(equalTo: content.trailingAnchor),
+            footer.bottomAnchor.constraint(equalTo: content.bottomAnchor),
+            footer.topAnchor.constraint(equalTo: photo.bottomAnchor)
         ])
     }
 
     private func installNameConstraints() {
         LayoutConstraint.activate([
-            name.leadingAnchor.constraint(equalTo: nameBackground.leadingAnchor, constant: Metric.small),
-            name.topAnchor.constraint(equalTo: nameBackground.topAnchor, constant: Metric.large),
+            name.leadingAnchor.constraint(equalTo: footer.leadingAnchor, constant: Metric.small),
+            name.topAnchor.constraint(equalTo: footer.topAnchor, constant: Metric.small),
             name.trailingAnchor.constraint(equalTo: favorite.leadingAnchor, constant: -Metric.small),
-            name.bottomAnchor.constraint(equalTo: nameBackground.bottomAnchor, constant: -Metric.small)
+            name.bottomAnchor.constraint(equalTo: footer.bottomAnchor, constant: -Metric.small)
         ])
     }
 
@@ -124,7 +124,7 @@ final class FoodViewCell: UICollectionViewCell {
         LayoutConstraint.activate([
             favorite.widthAnchor.constraint(equalToConstant: Metric.large),
             favorite.centerYAnchor.constraint(equalTo: name.centerYAnchor),
-            favorite.trailingAnchor.constraint(equalTo: nameBackground.trailingAnchor, constant: -Metric.small)
+            favorite.trailingAnchor.constraint(equalTo: footer.trailingAnchor, constant: -Metric.small)
         ])
     }
 

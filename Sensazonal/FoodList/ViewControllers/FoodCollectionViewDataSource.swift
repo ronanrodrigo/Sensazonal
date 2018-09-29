@@ -41,7 +41,7 @@ final class FoodCollectionViewDataSource: NSObject, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String,
                         at indexPath: IndexPath) -> UICollectionReusableView {
         guard let header = collectionView.dequeueReusableSupplementaryView(
-            ofKind: UICollectionElementKindSectionHeader,
+            ofKind: UICollectionView.elementKindSectionHeader,
             withReuseIdentifier: FoodGroupView.identifier,
             for: indexPath) as? FoodGroupView else { return UICollectionReusableView() }
 

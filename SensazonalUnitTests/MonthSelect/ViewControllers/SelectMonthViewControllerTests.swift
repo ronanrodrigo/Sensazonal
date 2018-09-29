@@ -5,12 +5,13 @@ import SensazonalTestUtils
 final class SelectMonthViewControllerTests: XCTestCase {
 
     private var viewController: SelectMonthViewController!
+    private var delegate = StubFoodListControllerDelegate() // swiftlint:disable:this weak_delegate
 
     override func setUp() {
         super.setUp()
         viewController = SelectMonthViewController(interactiveTransition: StubInteractiveTransition(),
                                                    transition: FadeAndAppearTransitioningDelegate())
-        viewController.delegate = StubFoodListControllerDelegate()
+        viewController.delegate = delegate
     }
 
     func testMonthsTotalWhenViewModelHasMonthsThenReturnTotalMonths() throws {
