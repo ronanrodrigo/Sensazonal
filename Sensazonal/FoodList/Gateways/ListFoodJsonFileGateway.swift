@@ -15,14 +15,19 @@ final class ListFoodJsonFileGateway: ListFoodGateway {
                 let foods = try JSONDecoder()
                     .decode([FoodCodable].self, from: foodsData)
                     .filter { $0.months.contains(month) }
-                    .sorted { $0.keyGroup > $1.keyGroup }
-                    .map { Food(keyName: $0.keyName, keyGroup: $0.keyGroup, months: $0.months) }
+                    .compactMap(self.generateFoods)
+                    .sorted { $0.favorited && !$1.favorited }
                 DispatchQueue.main.async { onComplete(.success(foods)) }
             } catch {
                 DispatchQueue.main.async { onComplete(.failure(.invalidData)) }
             }
         }
+    }
 
+    private func generateFoods(food: FoodCodable) -> Food {
+        let favoriteFoods: [String] = UserDefaults.standard.array(forKey: .favoriteFoods)
+        let isFavorited = favoriteFoods.contains(food.keyName)
+        return Food(keyName: food.keyName, keyGroup: food.keyGroup, months: food.months, favorited: isFavorited)
     }
 
 }

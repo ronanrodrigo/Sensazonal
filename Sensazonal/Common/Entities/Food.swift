@@ -1,9 +1,12 @@
 import Foundation
 
+typealias KeyName = String
+
 struct Food {
 
-    let keyName: String
+    let keyName: KeyName
     let keyGroup: String
     let months: [Int]
+    let favorited: Bool
 
 }

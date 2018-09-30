@@ -4,9 +4,8 @@ final class FoodGroupView: UICollectionReusableView {
     static let identifier = String(describing: FoodGroupView.self)
 
     private let groupName: UILabel = {
-        let label = UILabel(frame: .zero)
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = UIFont.boldSystemFont(ofSize: Metric.large)
+        let label = UILabel()
+        label.font = UIFont.preferredFont(forTextStyle: .headline)
         return label
     }()
 
@@ -29,7 +28,7 @@ final class FoodGroupView: UICollectionReusableView {
     }
 
     private func installConstraints() {
-        NSLayoutConstraint.activate([
+        LayoutConstraint.activate([
             groupName.leadingAnchor.constraint(equalTo: leadingAnchor),
             groupName.topAnchor.constraint(equalTo: topAnchor),
             groupName.trailingAnchor.constraint(equalTo: trailingAnchor),

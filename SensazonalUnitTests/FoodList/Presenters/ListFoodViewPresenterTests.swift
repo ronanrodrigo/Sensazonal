@@ -4,11 +4,19 @@ import SensazonalTestUtils
 
 final class ListFoodViewPresenterTests: XCTestCase {
 
+    private let food = Food(keyName: "", keyGroup: "", months: [], favorited: true)
+    private var gateway: ListFoodJsonFileGateway!
+
+    override func setUp() {
+        super.setUp()
+        gateway = ListFoodJsonFileGateway()
+    }
+
     func testPresentFoodsWhenHasFoodsThenCallBinder() {
         let binder = StubBinder()
         let presenter = ListFoodViewPresenter(binder: binder)
 
-        presenter.presentFoods([Food(keyName: "", keyGroup: "", months: [])], monthNumber: 1)
+        presenter.presentFoods([food], monthNumber: 1)
 
         XCTAssertTrue(binder.didCallBinder)
     }
@@ -17,7 +25,7 @@ final class ListFoodViewPresenterTests: XCTestCase {
         let binder = StubBinder()
         let presenter = ListFoodViewPresenter(binder: binder)
 
-        presenter.presentFoods([Food(keyName: "", keyGroup: "", months: [])], monthNumber: 1)
+        presenter.presentFoods([food], monthNumber: 1)
 
         XCTAssertEqual(binder.viewModel?.foodsViewModel.count, 1)
         XCTAssertEqual(binder.viewModel?.month.name, "Janeiro")
@@ -27,7 +35,7 @@ final class ListFoodViewPresenterTests: XCTestCase {
         let binder = StubBinder()
         let presenter = ListFoodViewPresenter(binder: binder)
 
-        presenter.presentFoods([Food(keyName: "", keyGroup: "", months: [])], monthNumber: 0)
+        presenter.presentFoods([food], monthNumber: 0)
 
         XCTAssertFalse(binder.didCallBinder)
     }
@@ -37,7 +45,7 @@ final class ListFoodViewPresenterTests: XCTestCase {
         let binder = FakeFoodListBinder()
         let presenter = ListFoodViewPresenter(binder: binder)
         let monthNumber = 1
-        ListFoodJsonFileGateway().foods(byMonth: monthNumber) {
+        gateway.foods(byMonth: monthNumber) {
             $0.onSuccess { resultFoods in foods = resultFoods }
         }
 
@@ -52,7 +60,7 @@ final class ListFoodViewPresenterTests: XCTestCase {
         let binder = FakeFoodListBinder()
         let presenter = ListFoodViewPresenter(binder: binder)
         let monthNumber = 2
-        ListFoodJsonFileGateway().foods(byMonth: monthNumber) {
+        gateway.foods(byMonth: monthNumber) {
             $0.onSuccess { resultFoods in foods = resultFoods }
         }
 
@@ -69,7 +77,7 @@ final class ListFoodViewPresenterTests: XCTestCase {
         for monthNumber in monthNumbers {
             let binder = FakeFoodListBinder()
             let presenter = ListFoodViewPresenter(binder: binder)
-            ListFoodJsonFileGateway().foods(byMonth: monthNumber) {
+            gateway.foods(byMonth: monthNumber) {
                 $0.onSuccess { resultFoods in foods = resultFoods }
             }
 

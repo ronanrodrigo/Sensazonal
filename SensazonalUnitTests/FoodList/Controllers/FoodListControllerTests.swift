@@ -4,17 +4,23 @@ import SensazonalTestUtils
 
 final class FoodListControllerTests: XCTestCase {
 
-    func testInitWhenConstructedThenHasFoodListViewControllerAsRootViewController() {
-        let interactor = ListFoodByMonthInteractor(gateway: ListFoodStubGateway(), presenter: ListFoodStubPresenter())
+    private var gateway: ListFoodStubGateway!
 
-        let controller = FoodListController(interactor: interactor,
-                                            listViewController: FoodListViewController(nibName: nil, bundle: nil))
+    override func setUp() {
+        super.setUp()
+        gateway = ListFoodStubGateway()
+    }
+
+    func testInitWhenConstructedThenHasFoodListViewControllerAsRootViewController() {
+        let interactor = ListFoodByMonthInteractor(gateway: gateway, presenter: ListFoodStubPresenter())
+
+        let controller = FoodListController(interactor: interactor, listViewController: FoodListViewController(nibName: nil, bundle: nil))
 
         XCTAssertTrue(controller.viewController.isKind(of: FoodListViewController.self))
     }
 
     func testInitWhenConstructedThenExecuteFoodListInteractor() {
-        let interactor = StubListFoodByMonthInteractor(gateway: ListFoodStubGateway(),
+        let interactor = StubListFoodByMonthInteractor(gateway: gateway,
                                                        presenter: ListFoodStubPresenter())
 
         _ = FoodListController(interactor: interactor, listViewController: UIViewController())
@@ -23,9 +29,8 @@ final class FoodListControllerTests: XCTestCase {
     }
 
     func testOpenMonthSelectorThenPresentMonthSelectorViewController() {
-        let interactor = ListFoodByMonthInteractor(gateway: ListFoodStubGateway(), presenter: ListFoodStubPresenter())
-        let controller = FoodListController(interactor: interactor,
-                                            listViewController: FoodListViewController(nibName: nil, bundle: nil))
+        let interactor = ListFoodByMonthInteractor(gateway: gateway, presenter: ListFoodStubPresenter())
+        let controller = FoodListController(interactor: interactor, listViewController: FoodListViewController(nibName: nil, bundle: nil))
         UIApplication.shared.keyWindow?.rootViewController = controller.viewController
 
         controller.openMonthSelector(at: GregorianMonth())
@@ -34,10 +39,8 @@ final class FoodListControllerTests: XCTestCase {
     }
 
     func testUpdateListWhenHasMonthThenCallInteractorListFoodByMonth() throws {
-        let interactor = StubListFoodByMonthInteractor(gateway: ListFoodStubGateway(),
-                                                       presenter: ListFoodStubPresenter())
-        let controller = FoodListController(interactor: interactor,
-                                            listViewController: FoodListViewController(nibName: nil, bundle: nil))
+        let interactor = StubListFoodByMonthInteractor(gateway: gateway, presenter: ListFoodStubPresenter())
+        let controller = FoodListController(interactor: interactor, listViewController: FoodListViewController(nibName: nil, bundle: nil))
         let month = try MonthFactory.make(number: 11)
 
         controller.updateList(with: month)

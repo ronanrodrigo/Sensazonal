@@ -1,6 +1,6 @@
 struct FoodCodable: Codable {
 
-    let keyName: String
+    let keyName: KeyName
     let keyGroup: String
     let months: [Int]
 

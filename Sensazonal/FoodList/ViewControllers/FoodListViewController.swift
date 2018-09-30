@@ -30,6 +30,10 @@ extension FoodListViewController: FoodListBinder {
 
 extension FoodListViewController: FoodListDataProvider {
 
+    func favoritateFood(with keyName: KeyName) {
+        delegate?.favoritate(foodKeyName: keyName)
+    }
+
     func foodsQuantity(at section: Int) throws -> Int {
         let groupViewModel = try group(at: section)
         return viewModel.foods(at: groupViewModel).count

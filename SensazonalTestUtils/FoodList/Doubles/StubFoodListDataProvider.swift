@@ -25,4 +25,6 @@ public final class StubFoodListDataProvider: FoodListDataProvider {
         return FoodGroupViewModel.sample
     }
 
+    public func favoritateFood(with keyName: String) { }
+
 }
