@@ -10,10 +10,10 @@ setup_enviroment() {
 
 validate_xcode_version() {
     echo "Validating Xcode version..."
-    xcode_version=$(xcodebuild -version|grep -e '\d\+\.\d' -o)
-    minimum_version=9.3
+    xcode_version=$(xcodebuild -version|grep -e '\d\+\.\d\+' -o)
+    minimum_version=10.0
     if (( $(echo "$xcode_version < $minimum_version" | bc -l) )); then
-        echo -e "\033[31mYou must have/select Xcode 9.3.0+"
+        echo -e "\033[31mYou must have/select Xcode $minimum_version+"
         echo "Try: sudo xcode-select -s /Applications/Xcode[Version].app"
         echo "Or download and install Xcode above $minimum_version"
         exit 1
