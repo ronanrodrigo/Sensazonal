@@ -5,6 +5,6 @@ struct FoodViewModel {
     let name: String
     let photo: UIImage
     let favoriteImage: UIImage
-    let keyName: KeyName
+    let foodKey: Food.Key
 
 }
