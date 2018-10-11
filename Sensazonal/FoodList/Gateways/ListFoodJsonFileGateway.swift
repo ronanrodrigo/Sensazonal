@@ -27,8 +27,9 @@ final class ListFoodJsonFileGateway: ListFoodGateway {
     private func generateFoods(food: FoodCodable) -> Food {
         let favoriteFoods: [String] = UserDefaults.standard.array(forKey: .favoriteFoods)
         let isFavorited = favoriteFoods.contains(food.keyName)
-        let foodKey = Food.Key(name: food.keyName, group: food.keyGroup)
-        return Food(key: foodKey, months: food.months, favorited: isFavorited)
+        return Food(key: .init(name: food.keyName, group: food.keyGroup),
+                    months: food.months,
+                    favorited: isFavorited)
     }
 
 }
