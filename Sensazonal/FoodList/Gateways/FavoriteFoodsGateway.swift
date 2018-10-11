@@ -1,5 +1,5 @@
 protocol FavoriteFoodsGateway {
 
-    func foods(onComplete: (Result<[KeyName]>) -> Void)
+    func foods(onComplete: (Result<[Food.Key]>) -> Void)
 
 }

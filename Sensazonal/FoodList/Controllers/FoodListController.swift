@@ -31,20 +31,20 @@ extension FoodListController: FoodListControllerDelegate {
         listFoodByMonth.list(byMonth: month.number)
     }
 
-    func favoritate(foodKeyName: KeyName) {
-        favoritateFood.favorite(keyName: foodKeyName)
+    func favoritate(foodKey: Food.Key) {
+        favoritateFood.favorite(foodKey: foodKey)
     }
 
 }
 
 final class FavoriteFoodViewPresenter: FavoriteFoodPresenter {
 
-    func favorited(keyName: KeyName) {
-        print("\(#function) \(keyName)")
+    func favorited(foodKey: Food.Key) {
+        print("\(#function) \(foodKey)")
     }
 
-    func unfavorited(keyName: KeyName) {
-        print("\(#function) \(keyName)")
+    func unfavorited(foodKey: Food.Key) {
+        print("\(#function) \(foodKey)")
     }
 
     func presentError(error: SensazonalError) {

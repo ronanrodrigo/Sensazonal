@@ -10,20 +10,20 @@ final class FavoritateFoodInteractor {
         self.presenter = presenter
     }
 
-    func favorite(keyName: KeyName) {
+    func favorite(foodKey: Food.Key) {
         favoriteFoodsGateway.foods {
-            $0.onSuccess { self.handleFavoriteFoods(keyName: keyName, favoriteKeyNames: $0) }
+            $0.onSuccess { self.handleFavoriteFoods(foodKey: foodKey, favoriteKeys: $0) }
             $0.onFailure(self.presenter.presentError)
         }
     }
 
-    private func handleFavoriteFoods(keyName: KeyName, favoriteKeyNames: [KeyName]) {
-        let isFavorited = favoriteKeyNames.contains(keyName)
+    private func handleFavoriteFoods(foodKey: Food.Key, favoriteKeys: [Food.Key]) {
+        let isFavorited = favoriteKeys.contains(foodKey)
         let action = isFavorited ?
             (gateway: favoritateGateway.unfavorite, presenter: presenter.unfavorited) :
             (gateway: favoritateGateway.favorite, presenter: presenter.favorited)
 
-        action.gateway(keyName) {
+        action.gateway(foodKey) {
             $0.onSuccess(action.presenter)
             $0.onFailure(self.presenter.presentError)
         }

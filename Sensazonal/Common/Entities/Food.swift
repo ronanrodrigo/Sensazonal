@@ -20,3 +20,9 @@ struct Food {
     }
 
 }
+
+extension Food.Key: Equatable {
+    static func == (lhs: Food.Key, rhs: Food.Key) -> Bool {
+        return lhs.name == rhs.name && lhs.group == rhs.group
+    }
+}

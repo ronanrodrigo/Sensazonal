@@ -30,8 +30,8 @@ extension FoodListViewController: FoodListBinder {
 
 extension FoodListViewController: FoodListDataProvider {
 
-    func favoritateFood(with keyName: KeyName) {
-        delegate?.favoritate(foodKeyName: keyName)
+    func favoritateFood(foodKey: Food.Key) {
+        delegate?.favoritate(foodKey: foodKey)
     }
 
     func foodsQuantity(at section: Int) throws -> Int {

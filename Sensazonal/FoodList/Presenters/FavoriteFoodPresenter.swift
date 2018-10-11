@@ -1,7 +1,7 @@
 protocol FavoriteFoodPresenter {
 
-    func favorited(keyName: KeyName)
-    func unfavorited(keyName: KeyName)
+    func favorited(foodKey: Food.Key)
+    func unfavorited(foodKey: Food.Key)
     func presentError(error: SensazonalError)
 
 }
