@@ -29,7 +29,7 @@ final class FoodCollectionViewDataSource: NSObject, UICollectionViewDataSource {
             let viewModel = try dataProvider.food(at: indexPath)
             foodCell.bind(viewModel: viewModel)
             foodCell.addFavoriteAction { [weak self] in
-                self?.dataProvider.favoritateFood(with: viewModel.keyName)
+                self?.dataProvider.favoritateFood(with: viewModel.foodKey.name)
             }
             return cell
         } catch {

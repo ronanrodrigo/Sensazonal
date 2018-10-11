@@ -4,7 +4,7 @@ import SensazonalTestUtils
 
 final class ListFoodViewPresenterTests: XCTestCase {
 
-    private let food = Food(keyName: "", keyGroup: "", months: [], favorited: true)
+    private let food = Food(key: .init("", ""), months: [], favorited: true)
     private var gateway: ListFoodJsonFileGateway!
 
     override func setUp() {

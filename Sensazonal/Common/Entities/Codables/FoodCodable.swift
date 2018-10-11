@@ -1,7 +1,7 @@
 struct FoodCodable: Codable {
 
     let keyName: KeyName
-    let keyGroup: String
+    let keyGroup: KeyGroupName
     let months: [Int]
 
     enum CodingKeys: String, CodingKey {
