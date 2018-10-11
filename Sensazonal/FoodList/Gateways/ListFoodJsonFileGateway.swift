@@ -7,9 +7,7 @@ final class ListFoodJsonFileGateway: ListFoodGateway {
             return onComplete(.failure(.notFound))
         }
 
-        let queue = DispatchQueue(label: "com.ronanrodrigo.sensazonal.\(#function)")
-
-        queue.async {
+        DispatchQueue(label: "com.ronanrodrigo.sensazonal.\(#function)").async {
             do {
                 let foodsData = try Data(contentsOf: URL(fileURLWithPath: filePath), options: .mappedIfSafe)
                 let foods = try JSONDecoder()
