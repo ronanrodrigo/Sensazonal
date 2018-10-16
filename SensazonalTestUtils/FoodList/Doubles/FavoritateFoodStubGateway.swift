@@ -3,20 +3,20 @@
 public class FavoritateFoodStubGateway: FavoritateFoodGateway {
 
     public var didFavoriteFood = false
-    public var didFavoriteFoodKeyName: String?
-    public var resultStub: Result<KeyName> = Result.failure(.unknown)
+    public var didFavoriteFoodKey: Food.Key?
+    public var resultStub: Result<Food.Key> = Result.failure(.unknown)
 
     public init() { }
 
-    public func favorite(foodKeyName: KeyName, onComplete: (Result<KeyName>) -> Void) {
+    public func favorite(foodKey: Food.Key, onComplete: (Result<Food.Key>) -> Void) {
         didFavoriteFood = true
-        didFavoriteFoodKeyName = foodKeyName
+        didFavoriteFoodKey = foodKey
         onComplete(resultStub)
     }
 
-    public func unfavorite(foodKeyName: KeyName, onComplete: (Result<KeyName>) -> Void) {
+    public func unfavorite(foodKey: Food.Key, onComplete: (Result<Food.Key>) -> Void) {
         didFavoriteFood = false
-        didFavoriteFoodKeyName = foodKeyName
+        didFavoriteFoodKey = foodKey
         onComplete(resultStub)
     }
 

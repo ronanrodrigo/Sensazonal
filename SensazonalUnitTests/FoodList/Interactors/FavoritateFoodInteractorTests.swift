@@ -8,7 +8,7 @@ final class FavoritateFoodInteractorTests: XCTestCase {
     private var favoriteFoodsGateway: FavoriteFoodStubGateway!
     private var interactor: FavoritateFoodInteractor!
     private var presenter: FavoriteFoodSpyPresenter!
-    private let keyName = "TANGERINE"
+    private let foodKey = Food.Key("TANGERINE", "FRUIT")
 
     override func setUp() {
         super.setUp()
@@ -20,56 +20,56 @@ final class FavoritateFoodInteractorTests: XCTestCase {
     }
 
     func testFavoriteWhenFoodIsNotFavoritedThenFavoriteFood() {
-        favoritateFoodGateway.resultStub = .success(keyName)
+        favoritateFoodGateway.resultStub = .success(foodKey)
         favoriteFoodsGateway.foodsStub = .success([])
 
-        interactor.favorite(keyName: keyName)
+        interactor.favorite(foodKey: foodKey)
 
         XCTAssertTrue(favoritateFoodGateway.didFavoriteFood)
-        XCTAssertEqual(favoritateFoodGateway.didFavoriteFoodKeyName, keyName)
+        XCTAssertEqual(favoritateFoodGateway.didFavoriteFoodKey, foodKey)
     }
 
     func testFavoriteWhenFoodIsNotFavoritedThenPresentFavoritedFood() {
-        favoritateFoodGateway.resultStub = .success(keyName)
+        favoritateFoodGateway.resultStub = .success(foodKey)
         favoriteFoodsGateway.foodsStub = .success([])
 
-        interactor.favorite(keyName: keyName)
+        interactor.favorite(foodKey: foodKey)
 
-        XCTAssertEqual(presenter.didPresentFavoritedWith, keyName)
+        XCTAssertEqual(presenter.didPresentFavoritedWith, foodKey)
     }
 
     func testFavoriteWhenFoodIsFavoritedThenUnfavoriteFood() {
-        favoritateFoodGateway.resultStub = .success(keyName)
-        favoriteFoodsGateway.foodsStub = .success([keyName])
+        favoritateFoodGateway.resultStub = .success(foodKey)
+        favoriteFoodsGateway.foodsStub = .success([foodKey])
 
-        interactor.favorite(keyName: keyName)
+        interactor.favorite(foodKey: foodKey)
 
         XCTAssertFalse(favoritateFoodGateway.didFavoriteFood)
-        XCTAssertEqual(favoritateFoodGateway.didFavoriteFoodKeyName, keyName)
+        XCTAssertEqual(favoritateFoodGateway.didFavoriteFoodKey, foodKey)
     }
 
     func testFavoriteWhenFoodIsFavoritedThenPreentUnfavoriteFood() {
-        favoritateFoodGateway.resultStub = .success(keyName)
-        favoriteFoodsGateway.foodsStub = .success([keyName])
+        favoritateFoodGateway.resultStub = .success(foodKey)
+        favoriteFoodsGateway.foodsStub = .success([foodKey])
 
-        interactor.favorite(keyName: keyName)
+        interactor.favorite(foodKey: foodKey)
 
-        XCTAssertEqual(presenter.didPresentUnfavoritedWith, keyName)
+        XCTAssertEqual(presenter.didPresentUnfavoritedWith, foodKey)
     }
 
     func testFavoriteWhenErrorOcurrerOnRetriveFavoriteFoodsThenPresentError() {
         favoriteFoodsGateway.foodsStub = .failure(.unknown)
 
-        interactor.favorite(keyName: keyName)
+        interactor.favorite(foodKey: foodKey)
 
         XCTAssertTrue(presenter.didPresentError)
     }
 
     func testFavoriteWhenErrorOcurrerOnFavoritateAFoodThenPresentError() {
         favoritateFoodGateway.resultStub = .failure(.unknown)
-        favoriteFoodsGateway.foodsStub = .success([keyName])
+        favoriteFoodsGateway.foodsStub = .success([foodKey])
 
-        interactor.favorite(keyName: keyName)
+        interactor.favorite(foodKey: foodKey)
 
         XCTAssertTrue(presenter.didPresentError)
     }
