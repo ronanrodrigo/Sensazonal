@@ -1,0 +1,4 @@
+osx_instance:
+  image: mojave-xcode-10.1
+check_task:
+  script: xcodebuild -project Sensazonal.xcodeproj -scheme Sensazonal build test -destination "platform=iOS Simulator,name=iPhone X,OS=12.0"
