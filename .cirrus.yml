@@ -5,6 +5,6 @@ install_brew_task:
 install_carthage_task:
   script: brew install carthage
 setup_task:
-  script: carthage bootstrap --platform iOS
+  script: /usr/local/bin/carthage bootstrap --platform iOS
 test_task:
   script: xcodebuild -project Sensazonal.xcodeproj -scheme Sensazonal build test -destination "platform=iOS Simulator,name=iPhone X,OS=12.0"
