@@ -1,20 +1,8 @@
 osx_instance:
   image: mojave-xcode-10.1
 
-install_brew_task:
-  script: /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-
-install_carthage_task:
-  depends_on:
-    - install_brew
-  script: brew install carthage
-
-carthage_bootstrap_task:
-  depends_on:
-    - install_carthage
-  script: carthage bootstrap --platform iOS
-
 test_task:
-  depends_on:
-    - carthage_bootstrap
-  script: xcodebuild -project Sensazonal.xcodeproj -scheme Sensazonal build test -destination "platform=iOS Simulator,name=iPhone X,OS=12.0"
+  install_brew_script: /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  install_carthage_script: brew install carthage
+  carthage_bootstrap_script: carthage bootstrap --platform iOS
+  test_script: xcodebuild -project Sensazonal.xcodeproj -scheme Sensazonal build test -destination "platform=iOS Simulator,name=iPhone X,OS=12.0"
