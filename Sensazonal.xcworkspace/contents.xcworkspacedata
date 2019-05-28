@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:watchOS/watchOS.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:iOS/iOS.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Core/Core.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Core/../Share/Share.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Support/Support.xcodeproj">
+   </FileRef>
+</Workspace>

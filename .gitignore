@@ -73,3 +73,6 @@ ScreenshotsTests/Diffs
 
 # AppCode
 .idea/
+
+# MacOS
+.DS_Store

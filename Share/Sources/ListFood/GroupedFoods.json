@@ -1,0 +1,508 @@
+{
+    "groups": [{
+            "uuid": "204014e6-ec75-4c75-90cc-28e6ffebe666",
+            "name": "Veggies",
+            "foods": [{
+                    "uuid": "f7d2b8ed-0e1c-4b16-88be-9653380ce88a",
+                    "name": "Pumpkin",
+                    "months": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+                },
+                {
+                    "uuid": "5e07b155-77b5-4efc-b881-d88b6495d6c5",
+                    "name": "Zucchini",
+                    "months": [1, 3, 5, 8]
+                },
+                {
+                    "uuid": "49b2bfdc-ddb8-4f5b-8d20-83075ca0741b",
+                    "name": "Beet",
+                    "months": [1, 3, 4, 5, 10, 11, 12]
+                },
+                {
+                    "uuid": "df3460a4-67d6-44c7-a6b6-2a1c3ac0cee3",
+                    "name": "Cucumber",
+                    "months": [1, 2, 3, 4, 7, 10, 11, 12]
+                },
+                {
+                    "uuid": "9350909e-80f8-4179-8f3b-b2d2825c3728",
+                    "name": "Pepper",
+                    "months": [1, 2, 8, 9, 10, 11, 12]
+                },
+                {
+                    "uuid": "334ffad8-3d86-4973-97de-a712712b1362",
+                    "name": "Okra",
+                    "months": [1, 2, 3]
+                },
+                {
+                    "uuid": "991af507-0a54-49a0-81c5-5829063eb25d",
+                    "name": "Tomato",
+                    "months": [1, 2, 3, 4, 10, 11, 12]
+                },
+                {
+                    "uuid": "45604d20-f960-4281-8597-2a773ec58e8a",
+                    "name": "Ginger",
+                    "months": [2, 3, 4, 6]
+                },
+                {
+                    "uuid": "083643f7-1b2e-42c6-8314-ddf070486ccd",
+                    "name": "Corn",
+                    "months": [2, 3, 6, 7]
+                },
+                {
+                    "uuid": "129008d4-ee76-4468-ac9c-063e1b50629f",
+                    "name": "Eggplant",
+                    "months": [3, 4, 5, 6, 10, 11]
+                },
+                {
+                    "uuid": "9e20e4d4-ffda-46f5-a01a-257fc24dfab6",
+                    "name": "Cara",
+                    "months": [3, 4, 5, 6, 7, 8, 9]
+                },
+                {
+                    "uuid": "7d63419b-f4e8-4290-9b62-e1ac8448972e",
+                    "name": "Chuchu",
+                    "months": [3, 4, 5]
+                },
+                {
+                    "uuid": "77597a5f-1950-4acd-bce9-41c3007477bc",
+                    "name": "Yam",
+                    "months": [3, 4, 5, 6, 7, 8, 9, 10, 11]
+                },
+                {
+                    "uuid": "f2db3e57-0ca9-4510-9c05-990502137ccc",
+                    "name": "Scarlet Eggplant",
+                    "months": [3]
+                },
+                {
+                    "uuid": "4fc32bb2-ca27-4daa-8d24-b6093a6fcc74",
+                    "name": "Turnip",
+                    "months": [3, 4, 5, 7, 8, 11]
+                },
+                {
+                    "uuid": "23c2573f-da96-479c-8a8d-e38f158b0b71",
+                    "name": "Sweet Potato",
+                    "months": [5, 6, 7, 10]
+                },
+                {
+                    "uuid": "7fa91178-958c-4509-8063-8274b9a700bf",
+                    "name": "Carrot",
+                    "months": [5, 6, 7, 8, 9, 10, 11, 12]
+                },
+                {
+                    "uuid": "8005a780-253b-4d3c-b91f-a54746e1b04c",
+                    "name": "Manioc",
+                    "months": [5, 6, 7, 8]
+                },
+                {
+                    "uuid": "4d036f3e-ab89-40e9-b6a8-90e33f35ac56",
+                    "name": "Arracacia Xanthorrhiza",
+                    "months": [5, 6, 7, 8]
+                },
+                {
+                    "uuid": "c56df23a-d7ce-4bf9-b90a-8542f1b4e304",
+                    "name": "Radish",
+                    "months": [5, 7, 8, 9, 10]
+                },
+                {
+                    "uuid": "1225ec38-c3be-4704-973d-9c12667601d6",
+                    "name": "Pea",
+                    "months": [6, 7, 8, 9, 10]
+                },
+                {
+                    "uuid": "afe40a47-e96b-45ea-bf5b-b9ac1a47a32b",
+                    "name": "Palm Heart",
+                    "months": [6, 7]
+                },
+                {
+                    "uuid": "21e2e67f-edd2-4ed9-a492-4326a581bcb0",
+                    "name": "Mushroom",
+                    "months": [7, 9, 10, 12]
+                },
+                {
+                    "uuid": "297656e6-8a23-48b8-90b5-3858d3fe7cdc",
+                    "name": "Broad Bean",
+                    "months": [8, 9, 10]
+                },
+                {
+                    "uuid": "ecccd0cb-e13f-43da-af65-5f9e03fa294c",
+                    "name": "Artichoke",
+                    "months": [10]
+                },
+                {
+                    "uuid": "b2daa573-a9f0-40f9-af16-7adee4c3aaf0",
+                    "name": "Asparagus",
+                    "months": [10, 11]
+                },
+                {
+                    "uuid": "9c0212cf-468d-4026-ae2b-4956e81483cc",
+                    "name": "Maxixe",
+                    "months": [11]
+                },
+                {
+                    "uuid": "30876cf9-8061-4015-b201-665f2a974b69",
+                    "name": "Pod Noodles",
+                    "months": [12]
+                }
+            ]
+        },
+        {
+            "uuid": "ffedb4bd-f160-450d-a369-5f9c8f2c24bd",
+            "name": "Vegetables",
+            "foods": [{
+                    "uuid": "2b356b35-fd0b-4e68-94f7-543dc1745cb5",
+                    "name": "Lettuce",
+                    "months": [1, 3, 4]
+                },
+                {
+                    "uuid": "fbc51101-fde7-4e0f-ad94-b756c3bbbc60",
+                    "name": "Chive",
+                    "months": [1, 10, 11, 12]
+                },
+                {
+                    "uuid": "0ecdc0d5-4365-4fe6-a8fa-5b88e5118343",
+                    "name": "Cabbage",
+                    "months": [1, 7, 8, 9, 10]
+                },
+                {
+                    "uuid": "e6f67158-6620-4109-ae2d-2102d5d572fc",
+                    "name": "Parsley",
+                    "months": [1, 3, 7, 12]
+                },
+                {
+                    "uuid": "a1f2dd94-dd6b-4d23-b79e-68599b1c2aa2",
+                    "name": "Escarole",
+                    "months": [2, 3, 4, 8]
+                },
+                {
+                    "uuid": "036f3e29-09b9-483e-a634-6572e9f870fc",
+                    "name": "Mint",
+                    "months": [2, 10, 12]
+                },
+                {
+                    "uuid": "cef6e309-5944-4fff-bace-447ec9287595",
+                    "name": "Chard",
+                    "months": [3]
+                },
+                {
+                    "uuid": "c2637632-81a0-48fe-879f-6a29e7a06aef",
+                    "name": "Leek",
+                    "months": [3, 4, 5, 6, 7, 8, 9, 10, 11]
+                },
+                {
+                    "uuid": "45e21de7-9b9f-4279-a17f-e756e25622b2",
+                    "name": "Coriander",
+                    "months": [3, 7, 8, 10]
+                },
+                {
+                    "uuid": "e1f1aba5-b473-4f29-b2bb-8dc4592152eb",
+                    "name": "Endive",
+                    "months": [3, 11, 12]
+                },
+                {
+                    "uuid": "c685908f-db4e-4c11-b70a-1307fb551eec",
+                    "name": "Arugula",
+                    "months": [3, 8, 12]
+                },
+                {
+                    "uuid": "6380aad9-9a36-4baf-b274-6def410523d4",
+                    "name": "Almeirão",
+                    "months": [4, 5, 6, 9, 10, 11, 12]
+                },
+                {
+                    "uuid": "bfa32d08-a3d6-4ee3-ac88-8c3f2b2e50e2",
+                    "name": "Catalan",
+                    "months": [4, 10]
+                },
+                {
+                    "uuid": "44fbcfd7-715c-4008-bc4e-4f40c99eb48c",
+                    "name": "Fennel",
+                    "months": [5, 6, 7, 8, 9, 10, 11, 12]
+                },
+                {
+                    "uuid": "692cae3f-4327-45f2-a21d-6ae8171da333",
+                    "name": "Bay Laurel",
+                    "months": [5, 9]
+                },
+                {
+                    "uuid": "889bb6b6-cad5-4fbc-b5aa-32fbbadabb52",
+                    "name": "Watercress",
+                    "months": [6, 7, 8]
+                },
+                {
+                    "uuid": "d2f96f19-8cb0-49f4-bd10-caeb5444c3bb",
+                    "name": "Broccoli",
+                    "months": [6, 8, 9, 10, 11]
+                },
+                {
+                    "uuid": "90fc3db6-6d41-4877-9080-d4e389b71296",
+                    "name": "Chicory",
+                    "months": [7, 8, 9, 10]
+                },
+                {
+                    "uuid": "08bc3c78-a820-4db2-86bf-342eadf605b4",
+                    "name": "Spinach",
+                    "months": [7, 8, 9, 10, 11]
+                },
+                {
+                    "uuid": "9a2e3567-36ca-4337-85f8-9261665efb25",
+                    "name": "Mustard",
+                    "months": [7, 8, 10]
+                },
+                {
+                    "uuid": "f8534f59-8762-445d-9f3c-8e81aa1992e1",
+                    "name": "Celery",
+                    "months": [7, 12]
+                },
+                {
+                    "uuid": "8b2c09bb-e4be-4733-abca-b84088aab869",
+                    "name": "Cauliflower",
+                    "months": [8, 9, 10]
+                },
+                {
+                    "uuid": "b91d6856-9ee9-4c1b-801e-dd8241b1995a",
+                    "name": "Oregano",
+                    "months": [9, 10, 12]
+                },
+                {
+                    "uuid": "357f9b57-480c-4f89-af8c-581e45db8765",
+                    "name": "Grape Leaf",
+                    "months": [10, 11, 12]
+                }
+            ]
+        },
+        {
+            "uuid": "a429d0cc-cb68-4122-80fb-441a2ad47cf6",
+            "name": "Fruits",
+            "foods": [{
+                    "uuid": "33a5b7d2-1458-4910-81c5-204bb18d68a0",
+                    "name": "Pineapple",
+                    "months": [1, 3, 9, 10, 11, 12]
+                },
+                {
+                    "uuid": "0686d078-f3ad-4bc2-9ed1-b2e903b2c616",
+                    "name": "Star Fruit",
+                    "months": [1, 2, 6, 7, 8]
+                },
+                {
+                    "uuid": "4616794a-60d3-4de5-af68-5ca8b85ed8ce",
+                    "name": "Green Coconut",
+                    "months": [1, 2, 3, 10, 11, 12]
+                },
+                {
+                    "uuid": "fdc361fa-c80f-4d0c-9210-07a3d16cc434",
+                    "name": "Fig",
+                    "months": [1, 2, 3, 12]
+                },
+                {
+                    "uuid": "643ac44e-66de-4b5a-b6ee-c1dc4b5631c1",
+                    "name": "Raspberry",
+                    "months": [1, 11, 12]
+                },
+                {
+                    "uuid": "132418fa-785c-4a0d-a571-d25576dc48ed",
+                    "name": "Custard Apple",
+                    "months": [1, 2, 3]
+                },
+                {
+                    "uuid": "7ec0039c-327c-4156-a81d-35013b410a06",
+                    "name": "Orange Pear",
+                    "months": [1, 8, 9, 10, 11, 12]
+                },
+                {
+                    "uuid": "5f8574fb-5722-43ca-9369-c8011d8ec955",
+                    "name": "Orange Lime",
+                    "months": [6, 7, 9]
+                },
+                {
+                    "uuid": "16124423-1850-4929-9b74-7004705a285a",
+                    "name": "Papaya",
+                    "months": [1, 3, 4, 8, 10, 11]
+                },
+                {
+                    "uuid": "c3fac3ce-c643-408a-866e-edacfd9b406c",
+                    "name": "Passion Fruit",
+                    "months": [1, 11, 12]
+                },
+                {
+                    "uuid": "efdfe0a7-6b0e-41e7-902c-2862b9e63312",
+                    "name": "Watermelon",
+                    "months": [1, 11, 12]
+                },
+                {
+                    "uuid": "8bd85a94-87b3-43dd-a528-b90b9864212e",
+                    "name": "Nectarine",
+                    "months": [1, 3, 11, 12]
+                },
+                {
+                    "uuid": "aa1a6da4-f91c-4f9f-b295-27e77f3c457e",
+                    "name": "Grape",
+                    "months": [1, 2, 3, 4, 5, 10, 11, 12]
+                },
+                {
+                    "uuid": "0db2334f-374c-4acb-a354-291b03f36864",
+                    "name": "Avocado",
+                    "months": [2, 3, 4, 5]
+                },
+                {
+                    "uuid": "a73c4d05-8e45-45d1-b0fb-b452ca01f7f0",
+                    "name": "Plum",
+                    "months": [2, 3, 4, 12]
+                },
+                {
+                    "uuid": "dfcac5cb-f317-427c-af73-745e697bebd4",
+                    "name": "Guava",
+                    "months": [2, 3]
+                },
+                {
+                    "uuid": "d4a43c97-3e12-42f6-8558-b0dcaa5f80ff",
+                    "name": "Jaca",
+                    "months": [2, 3, 4, 5, 6]
+                },
+                {
+                    "uuid": "c9035a6a-cddf-474b-9203-e5b83c69133a",
+                    "name": "Apple",
+                    "months": [2, 3, 4, 5, 8, 9, 10, 11, 12]
+                },
+                {
+                    "uuid": "68c638be-95a8-48ef-9b71-72a52b25b3e6",
+                    "name": "Pear",
+                    "months": [2, 3, 4, 5]
+                },
+                {
+                    "uuid": "5640860f-8756-4796-8af8-802ce607b001",
+                    "name": "Peach",
+                    "months": [2, 3, 11, 12]
+                },
+                {
+                    "uuid": "8043a984-e645-41d2-bb78-949682378423",
+                    "name": "Seriguela",
+                    "months": [2, 3]
+                },
+                {
+                    "uuid": "22787ea9-83ba-4f85-b939-8793bfa00abe",
+                    "name": "Banana Apple",
+                    "months": [3, 4, 5]
+                },
+                {
+                    "uuid": "bbdba629-6297-4df1-843c-e9a683faf632",
+                    "name": "Banana Nanica",
+                    "months": [3, 8, 9, 10, 11]
+                },
+                {
+                    "uuid": "9f85ecfa-41cb-4a82-a761-7dbd7b0984e1",
+                    "name": "Lemon",
+                    "months": [3, 12]
+                },
+                {
+                    "uuid": "2ed03fc3-d581-4f5b-a984-544c0ac7e1f0",
+                    "name": "Mangosteen",
+                    "months": [3, 6]
+                },
+                {
+                    "uuid": "6979913b-dc76-43be-b97d-86dd661cfd6f",
+                    "name": "Tangerine",
+                    "months": [3, 4, 5, 6, 7, 8, 9, 10, 11]
+                },
+                {
+                    "uuid": "fa5fcefc-2bc8-4bc4-984c-8fc2d17323c2",
+                    "name": "Khaki",
+                    "months": [4, 5]
+                },
+                {
+                    "uuid": "d6cf22db-0d98-44bb-9b61-f75606f9c7ff",
+                    "name": "Cider",
+                    "months": [4]
+                },
+                {
+                    "uuid": "86037f02-f8c3-4a99-b472-33eefabd9513",
+                    "name": "Kiwi",
+                    "months": [4, 5, 6, 7, 8, 12]
+                },
+                {
+                    "uuid": "550ad573-6579-4fcc-b776-32864e0002f7",
+                    "name": "Quince",
+                    "months": [6]
+                },
+                {
+                    "uuid": "5d23baa1-d13e-4ecc-bdb1-6e291f695270",
+                    "name": "Cashew",
+                    "months": [8, 9, 10, 11]
+                },
+                {
+                    "uuid": "103deac3-d584-4e20-aaa1-84df6447f612",
+                    "name": "Lime",
+                    "months": [8, 10]
+                },
+                {
+                    "uuid": "c9c3e4c8-9c58-4036-8313-e229f36c4c35",
+                    "name": "Strawberry",
+                    "months": [8]
+                },
+                {
+                    "uuid": "238b8143-3eb3-4b09-9c4e-b40eacf4fa3e",
+                    "name": "Jaboticaba",
+                    "months": [9, 10]
+                },
+                {
+                    "uuid": "24e53ff6-4747-48f2-9635-2245469ab7df",
+                    "name": "Medlar",
+                    "months": [9, 10]
+                },
+                {
+                    "uuid": "e749f6f7-917a-4532-99cc-6446863a187a",
+                    "name": "Tamarind",
+                    "months": [9]
+                },
+                {
+                    "uuid": "3d0f5bb4-1241-4b81-8fd0-28c91dac8f6b",
+                    "name": "Acerola",
+                    "months": [10, 11]
+                },
+                {
+                    "uuid": "65801834-9332-45c9-a7aa-72936b9014a3",
+                    "name": "Silver Banana",
+                    "months": [10, 11, 12]
+                },
+                {
+                    "uuid": "f88bcbe2-24eb-45d8-b2ff-7c236fd2cbbb",
+                    "name": "Mango",
+                    "months": [10, 11, 12]
+                },
+                {
+                    "uuid": "ad439af5-88aa-4230-8ffa-9aba055b14d5",
+                    "name": "Khaki Tomato",
+                    "months": [10]
+                },
+                {
+                    "uuid": "5f9be605-0aa6-4fdf-b110-142dc6e1a4be",
+                    "name": "Melon",
+                    "months": [11, 12]
+                },
+                {
+                    "uuid": "a5212d27-f70f-489b-812f-9114317918a1",
+                    "name": "Cherry",
+                    "months": [12]
+                },
+                {
+                    "uuid": "6af176c4-ad13-4cde-bc53-40f16b4c0294",
+                    "name": "Damascus",
+                    "months": [12]
+                },
+                {
+                    "uuid": "64034f11-541f-4b54-9edc-11a82cef15ed",
+                    "name": "Graviola",
+                    "months": [12]
+                },
+                {
+                    "uuid": "a6fc7cf3-9c2a-4b24-8166-a0b2344bcb92",
+                    "name": "Lychee",
+                    "months": [12]
+                },
+                {
+                    "uuid": "17dd44bf-ac11-40e5-9836-51e2a407a708",
+                    "name": "Pomegranate",
+                    "months": [12]
+                }
+            ]
+        }
+    ]
+}

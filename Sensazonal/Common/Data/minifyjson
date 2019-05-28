@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-
-cat foods.json | tr -d "[:space:]" > foods.min.json

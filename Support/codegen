@@ -1,0 +1,45 @@
+#!/usr/bin/env bash
+
+command=$1
+sensazonal_path="$( cd "$(dirname "$0")"; cd .. ; pwd -P )"
+
+generate_core_mocks() {
+    mock_sources="$sensazonal_path/Core"
+    mock_output="$sensazonal_path/Core/Tests/Support"
+    mock_templates="$sensazonal_path/Support/core"
+    generate_mocks $mock_sources $mock_output $mock_templates
+}
+
+generate_share_mocks() {
+    mock_sources="$sensazonal_path/Share"
+    mock_output="$sensazonal_path/Share/Tests/Support"
+    mock_templates="$sensazonal_path/Support/share"
+    generate_mocks $mock_sources $mock_output $mock_templates
+}
+
+generate_iOS_mocks() {
+    mock_sources="$sensazonal_path/iOS"
+    mock_output="$sensazonal_path/iOS/Tests/Support"
+    mock_templates="$sensazonal_path/Support/iOS"
+    generate_mocks $mock_sources $mock_output $mock_templates   
+}
+
+generate_mocks() {
+    mock_sources=$1
+    mock_output=$2
+    mock_templates=$3
+    chmod 755 $mock_output/*.swift
+    sourcery --sources $mock_sources --templates $mock_templates --output $mock_output --disableCache --quiet
+    chmod 444 $mock_output/*.swift
+}
+
+if [[ $command = "mocks" ]]; then
+    echo "Generating Core mocks"
+    generate_core_mocks
+    echo "Generating Share mocks"
+    generate_share_mocks
+    echo "Generating iOS mocks"
+    generate_iOS_mocks
+
+    echo "Finish 🍾"
+fi

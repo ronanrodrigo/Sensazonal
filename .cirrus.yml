@@ -1,8 +1,0 @@
-osx_instance:
-  image: mojave-xcode-10.1
-
-test_task:
-  install_brew_script: /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-  install_carthage_script: brew install carthage
-  carthage_bootstrap_script: carthage bootstrap --platform iOS
-  test_script: xcodebuild -project Sensazonal.xcodeproj -scheme Sensazonal build test -destination "platform=iOS Simulator,name=iPhone X,OS=12.0"  | xcpretty --color --report html
