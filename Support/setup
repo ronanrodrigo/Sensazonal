@@ -42,7 +42,9 @@ install_brew_dependencies() {
 
 install_carthage_dependencies() {
     echo "Setup carthage..."
-    carthage bootstrap --platform iOS
+    if [ -f "Cartfile" ]; then
+        carthage bootstrap --platform iOS
+    fi
 }
 
 open_project() {
