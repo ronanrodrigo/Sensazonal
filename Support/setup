@@ -42,16 +42,17 @@ install_brew_dependencies() {
 
 install_carthage_dependencies() {
     echo "Setup carthage..."
-    carthage bootstrap --platform iOS
+    if [ -f "Cartfile" ]; then
+        carthage bootstrap --platform iOS
+    fi
 }
 
 open_project() {
     while true; do
         read -p "Open project on Xcode? " yn
         case $yn in
-            [Yy]* ) open Sensazonal.xcodeproj; break;;
-            [Nn]* ) exit;;
-            * ) echo "Please answer yes or no.";;
+            [Yy]* ) xed .; break;;
+            * ) exit;;
         esac
     done
 }

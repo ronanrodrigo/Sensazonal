@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "Share::Share"
-               BuildableName = "Share.framework"
-               BlueprintName = "Share"
-               ReferencedContainer = "container:Share.xcodeproj">
+               BlueprintIdentifier = "345B0FD12325470400D1C722"
+               BuildableName = "Sensazonal.app"
+               BlueprintName = "iOS"
+               ReferencedContainer = "container:iOS.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,10 +32,10 @@
       <CodeCoverageTargets>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "Share::Share"
-            BuildableName = "Share.framework"
-            BlueprintName = "Share"
-            ReferencedContainer = "container:Share.xcodeproj">
+            BlueprintIdentifier = "345B0FD12325470400D1C722"
+            BuildableName = "Sensazonal.app"
+            BlueprintName = "iOS"
+            ReferencedContainer = "container:iOS.xcodeproj">
          </BuildableReference>
       </CodeCoverageTargets>
       <Testables>
@@ -43,22 +43,13 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "Share::ShareTests"
-               BuildableName = "ShareTests.xctest"
-               BlueprintName = "ShareTests"
-               ReferencedContainer = "container:Share.xcodeproj">
+               BlueprintIdentifier = "34B5621923260C8500F83D42"
+               BuildableName = "iOSTests.xctest"
+               BlueprintName = "iOSTests"
+               ReferencedContainer = "container:iOS.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "Share::Share"
-            BuildableName = "Share.framework"
-            BlueprintName = "Share"
-            ReferencedContainer = "container:Share.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -72,15 +63,16 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "Share::Share"
-            BuildableName = "Share.framework"
-            BlueprintName = "Share"
-            ReferencedContainer = "container:Share.xcodeproj">
+            BlueprintIdentifier = "345B0FD12325470400D1C722"
+            BuildableName = "Sensazonal.app"
+            BlueprintName = "iOS"
+            ReferencedContainer = "container:iOS.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -90,15 +82,16 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "Share::Share"
-            BuildableName = "Share.framework"
-            BlueprintName = "Share"
-            ReferencedContainer = "container:Share.xcodeproj">
+            BlueprintIdentifier = "345B0FD12325470400D1C722"
+            BuildableName = "Sensazonal.app"
+            BlueprintName = "iOS"
+            ReferencedContainer = "container:iOS.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

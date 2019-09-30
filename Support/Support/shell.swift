@@ -9,5 +9,4 @@ func shell(_ args: String...) -> Int32 {
     task.launch()
     task.waitUntilExit()
     return task.terminationStatus
-
 }

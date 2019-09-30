@@ -1,5 +1,4 @@
 ignore:
-    - "ScreenshotsTests"
-    - "SensazonalScreenshotTests"
-    - "SensazonalTestUtils"
-    - "SensazonalUnitTests"
+    - "**/*Tests"
+    - "**/*Tests/*"
+    - "*generated.swift"
