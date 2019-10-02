@@ -2,7 +2,7 @@ on:
   push:
     branches:    
       - master
-name: BuildC
+name: Core Tests
 jobs:
   test:
     name: Build
@@ -13,7 +13,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@master
-      - name: Build
+      - name: Build && Test
         run: xcodebuild -workspace Sensazonal.xcworkspace -scheme Core clean build test
         env: 
          destination: ${{ matrix.destination }}
