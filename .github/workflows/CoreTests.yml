@@ -1,0 +1,19 @@
+on:
+  push:
+    branches:    
+      - master
+name: BuildC
+jobs:
+  test:
+    name: Build
+    runs-on: macOS-latest
+    strategy:
+        matrix:
+          destination: ['platform=macosx']
+    steps:
+      - name: Checkout
+        uses: actions/checkout@master
+      - name: Build
+        run: xcodebuild -workspace Sensazonal.xcworkspace -scheme Core clean build test
+        env: 
+         destination: ${{ matrix.destination }}
