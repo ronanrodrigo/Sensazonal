@@ -1,0 +1,19 @@
+on:
+  push:
+    branches:    
+      - master
+name: Share Tests
+jobs:
+  test:
+    name: Build
+    runs-on: macOS-latest
+    strategy:
+        matrix:
+          destination: ['platform=macosx']
+    steps:
+      - name: Checkout
+        uses: actions/checkout@master
+      - name: Build && Test
+        run: xcodebuild -workspace Sensazonal.xcworkspace -scheme Share clean build test
+        env: 
+         destination: ${{ matrix.destination }}
