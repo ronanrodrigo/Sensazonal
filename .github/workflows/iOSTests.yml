@@ -14,6 +14,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@master
       - name: Build && Test
-        run: xcodebuild -workspace Sensazonal.xcworkspace -scheme iOS build test
+        run: xcodebuild -workspace Sensazonal.xcworkspace -scheme iOS build test -destination "${destination}"
         env: 
          destination: ${{ matrix.destination }}
