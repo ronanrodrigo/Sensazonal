@@ -1,20 +1,19 @@
 on:
   push:
     branches:    
-      - develop
-name: Build
+      - master
+name: iOS Tests
 jobs:
   test:
     name: Build
     runs-on: macOS-latest
     strategy:
         matrix:
-          destination: ['platform=iOS Simulator,OS=13.0,name=iPhone X']
+          destination: ['platform=macosx']
     steps:
       - name: Checkout
         uses: actions/checkout@master
-      - name: Build
-        run: |
-          xcodebuild -workspace Sensazonal.xcworkspace -scheme iOS build test
+      - name: Build && Test
+        run: xcodebuild -workspace Sensazonal.xcworkspace -scheme iOS build test
         env: 
          destination: ${{ matrix.destination }}
