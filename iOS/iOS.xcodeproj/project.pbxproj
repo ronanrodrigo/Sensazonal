@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		342F26C22327735800241D1F /* FoodDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342F26C12327735800241D1F /* FoodDetailViewController.swift */; };
 		342F26C423277C4700241D1F /* PrepareSegueFoodDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342F26C323277C4700241D1F /* PrepareSegueFoodDetail.swift */; };
+		34515F48234C9B4F00950292 /* ListFoodCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34515F47234C9B4F00950292 /* ListFoodCollectionViewController.swift */; };
 		345B0FD62325470400D1C722 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345B0FD52325470400D1C722 /* AppDelegate.swift */; };
 		345B0FDD2325470400D1C722 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 345B0FDB2325470400D1C722 /* Main.storyboard */; };
 		345B0FDF2325470500D1C722 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 345B0FDE2325470500D1C722 /* Assets.xcassets */; };
@@ -22,7 +23,7 @@
 		345B0FFD2325564A00D1C722 /* ListFoodPresenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345B0FFC2325564A00D1C722 /* ListFoodPresenterViewController.swift */; };
 		345B0FFF2325567200D1C722 /* ListFoodViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345B0FFE2325567200D1C722 /* ListFoodViewModel.swift */; };
 		345B10012325579A00D1C722 /* ListFoodErrorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345B10002325579A00D1C722 /* ListFoodErrorViewModel.swift */; };
-		3490D66E23263A2100F9146E /* ListFoodTableViewControllerDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3490D66D23263A2100F9146E /* ListFoodTableViewControllerDependency.swift */; };
+		3490D66E23263A2100F9146E /* ListFoodViewControllerDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3490D66D23263A2100F9146E /* ListFoodViewControllerDependency.swift */; };
 		34B5622623260CDF00F83D42 /* AutoMock.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B5622523260CDE00F83D42 /* AutoMock.generated.swift */; };
 		34B5622C23260E9900F83D42 /* Locale.strings in Resources */ = {isa = PBXBuildFile; fileRef = 34B5622A23260E9900F83D42 /* Locale.strings */; };
 		34B5622F2326101300F83D42 /* Locale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B5622E2326101300F83D42 /* Locale.swift */; };
@@ -57,6 +58,7 @@
 /* Begin PBXFileReference section */
 		342F26C12327735800241D1F /* FoodDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailViewController.swift; sourceTree = "<group>"; };
 		342F26C323277C4700241D1F /* PrepareSegueFoodDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrepareSegueFoodDetail.swift; sourceTree = "<group>"; };
+		34515F47234C9B4F00950292 /* ListFoodCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFoodCollectionViewController.swift; sourceTree = "<group>"; };
 		345B0FD22325470400D1C722 /* Sensazonal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sensazonal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		345B0FD52325470400D1C722 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		345B0FDC2325470400D1C722 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -71,7 +73,7 @@
 		345B0FFC2325564A00D1C722 /* ListFoodPresenterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFoodPresenterViewController.swift; sourceTree = "<group>"; };
 		345B0FFE2325567200D1C722 /* ListFoodViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFoodViewModel.swift; sourceTree = "<group>"; };
 		345B10002325579A00D1C722 /* ListFoodErrorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFoodErrorViewModel.swift; sourceTree = "<group>"; };
-		3490D66D23263A2100F9146E /* ListFoodTableViewControllerDependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFoodTableViewControllerDependency.swift; sourceTree = "<group>"; };
+		3490D66D23263A2100F9146E /* ListFoodViewControllerDependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFoodViewControllerDependency.swift; sourceTree = "<group>"; };
 		34B5621A23260C8500F83D42 /* iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		34B5621E23260C8500F83D42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		34B5622523260CDE00F83D42 /* AutoMock.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoMock.generated.swift; sourceTree = "<group>"; };
@@ -146,9 +148,10 @@
 				345B0FF923254F3200D1C722 /* ListFoodStoryboard.storyboard */,
 				345B0FE92325475500D1C722 /* ListFoodTableViewController.swift */,
 				345B0FFE2325567200D1C722 /* ListFoodViewModel.swift */,
-				3490D66D23263A2100F9146E /* ListFoodTableViewControllerDependency.swift */,
+				3490D66D23263A2100F9146E /* ListFoodViewControllerDependency.swift */,
 				342F26C12327735800241D1F /* FoodDetailViewController.swift */,
 				342F26C323277C4700241D1F /* PrepareSegueFoodDetail.swift */,
+				34515F47234C9B4F00950292 /* ListFoodCollectionViewController.swift */,
 			);
 			path = ListFood;
 			sourceTree = "<group>";
@@ -298,12 +301,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34515F48234C9B4F00950292 /* ListFoodCollectionViewController.swift in Sources */,
 				345B0FD62325470400D1C722 /* AppDelegate.swift in Sources */,
 				345B0FFD2325564A00D1C722 /* ListFoodPresenterViewController.swift in Sources */,
 				345B0FFF2325567200D1C722 /* ListFoodViewModel.swift in Sources */,
 				342F26C22327735800241D1F /* FoodDetailViewController.swift in Sources */,
 				345B10012325579A00D1C722 /* ListFoodErrorViewModel.swift in Sources */,
-				3490D66E23263A2100F9146E /* ListFoodTableViewControllerDependency.swift in Sources */,
+				3490D66E23263A2100F9146E /* ListFoodViewControllerDependency.swift in Sources */,
 				342F26C423277C4700241D1F /* PrepareSegueFoodDetail.swift in Sources */,
 				34B5622F2326101300F83D42 /* Locale.swift in Sources */,
 				345B0FEA2325475500D1C722 /* ListFoodTableViewController.swift in Sources */,
