@@ -64,19 +64,59 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="eN5-Kc-fb9">
-                            <size key="itemSize" width="50" height="50"/>
+                            <size key="itemSize" width="210" height="105"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ListFoodCollectionViewControllerCell" id="uVa-ft-Ij4">
-                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ListFoodCollectionViewCell" id="uVa-ft-Ij4" customClass="ListFoodCollectionViewCell" customModule="SensazonaliOS" customModuleProvider="target">
+                                <rect key="frame" x="102" y="0.0" width="210" height="105"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="210" height="105"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kgu-x8-Lxf">
+                                            <rect key="frame" x="0.0" y="0.0" width="210" height="105"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BANANA_APPLE" translatesAutoresizingMaskIntoConstraints="NO" id="MtB-HA-MH1">
+                                                    <rect key="frame" x="104" y="0.0" width="106" height="105"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hwz-jT-0Xa">
+                                                    <rect key="frame" x="8" y="42.5" width="126" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="Hwz-jT-0Xa" firstAttribute="leading" secondItem="kgu-x8-Lxf" secondAttribute="leading" constant="8" id="BHG-MA-jSG"/>
+                                                <constraint firstItem="MtB-HA-MH1" firstAttribute="width" secondItem="kgu-x8-Lxf" secondAttribute="width" multiplier="0.5" constant="1" id="Hds-ai-q0L"/>
+                                                <constraint firstItem="Hwz-jT-0Xa" firstAttribute="centerY" secondItem="kgu-x8-Lxf" secondAttribute="centerY" id="QVs-fK-kpZ"/>
+                                                <constraint firstAttribute="trailing" secondItem="MtB-HA-MH1" secondAttribute="trailing" id="Qyc-MS-lbP"/>
+                                                <constraint firstAttribute="bottom" secondItem="MtB-HA-MH1" secondAttribute="bottom" id="lx1-fG-gl7"/>
+                                                <constraint firstItem="Hwz-jT-0Xa" firstAttribute="width" secondItem="kgu-x8-Lxf" secondAttribute="width" multiplier="0.6" id="nP7-3c-NRH"/>
+                                                <constraint firstItem="MtB-HA-MH1" firstAttribute="top" secondItem="kgu-x8-Lxf" secondAttribute="top" id="rKz-FM-pak"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="4"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                    </subviews>
                                 </view>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="kgu-x8-Lxf" secondAttribute="trailing" id="640-vQ-0ag"/>
+                                    <constraint firstItem="kgu-x8-Lxf" firstAttribute="leading" secondItem="uVa-ft-Ij4" secondAttribute="leading" id="CxE-2x-Xet"/>
+                                    <constraint firstItem="kgu-x8-Lxf" firstAttribute="top" secondItem="uVa-ft-Ij4" secondAttribute="top" id="d8C-7I-TLH"/>
+                                    <constraint firstAttribute="bottom" secondItem="kgu-x8-Lxf" secondAttribute="bottom" id="y3g-6K-6ka"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="content" destination="kgu-x8-Lxf" id="Q19-PK-3lc"/>
+                                    <outlet property="picture" destination="MtB-HA-MH1" id="7lH-Ze-ezS"/>
+                                    <outlet property="title" destination="Hwz-jT-0Xa" id="aYT-R0-uKn"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -91,7 +131,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lx2-CE-zsk" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <customObject id="Ubx-0I-yEn" customClass="ListFoodViewControllerDependency" customModule="SensazonaliOS" customModuleProvider="target"/>
             </objects>
-            <point key="canvasLocation" x="2523" y="655"/>
+            <point key="canvasLocation" x="2521.739130434783" y="654.91071428571422"/>
         </scene>
         <!--Food Detail View Controller-->
         <scene sceneID="Kcv-7m-Zgm">
@@ -111,4 +151,7 @@
             <point key="canvasLocation" x="3433" y="-50"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="BANANA_APPLE" width="200" height="200"/>
+    </resources>
 </document>
