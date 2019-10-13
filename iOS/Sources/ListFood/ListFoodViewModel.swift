@@ -1,10 +1,10 @@
 import Foundation
+import UIKit
 
 struct ListFoodViewModel {
     static let empty = ListFoodViewModel(title: "", groupedFoodViewModels: [])
     let title: String
     let groupedFoodViewModels: [GroupedFoodViewModel]
-
 }
 
 struct GroupedFoodViewModel {
@@ -16,4 +16,5 @@ struct GroupedFoodViewModel {
 struct FoodViewModel {
     let uuid: UUID
     let name: String
+    let color: UIColor?
 }

@@ -1,11 +1,3 @@
-//
-//  FoodDetailViewController.swift
-//  iOS
-//
-//  Created by Ronan Nunes on 09/09/19.
-//  Copyright © 2019 Ronan Nunes. All rights reserved.
-//
-
 import UIKit
 
 protocol FoodDetailViewControllable {

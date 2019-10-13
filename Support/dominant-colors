@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+function find_dominant_colors() {
+    find . -type f -name '*@2x.jpg' | while read -r F
+    do
+      echo $F
+      convert $F -depth 8 +dither -colors 8 -format "%c" histogram:info: |\
+    sed -n 's/^[ ]*\(.*\):.*[#]\([0-9a-fA-F]*\) .*$/\1,#\2/p' | sort -r -n -k 1 -t ","
+    done
+}
+
+find_dominant_colors

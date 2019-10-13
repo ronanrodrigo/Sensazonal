@@ -2,7 +2,7 @@ import Core
 import Foundation
 import Share
 
-class ListFoodTableViewControllerDependency: NSObject {
+class ListFoodViewControllerDependency: NSObject {
 
     let presenter = ListFoodPresenterViewController()
     lazy var interactor = ListFoodInteractorFactory.make(presenter: presenter)

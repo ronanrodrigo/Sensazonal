@@ -10,7 +10,7 @@ protocol ListFoodTableViewControllerBind: AnyObject {
 
 class ListFoodTableViewController: UITableViewController {
 
-    @IBOutlet var dependency: ListFoodTableViewControllerDependency! {
+    @IBOutlet var dependency: ListFoodViewControllerDependency! {
         didSet {
             dependency.presenter.bindable = self
             dependency.interactor.list()

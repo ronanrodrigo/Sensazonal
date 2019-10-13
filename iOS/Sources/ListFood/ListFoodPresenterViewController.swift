@@ -6,7 +6,7 @@ final class ListFoodPresenterViewController: ListFoodPresenter {
 
     func present(groupedFoods: [GroupedFoods], month: Month) {
         let groupedFoodViewModels = groupedFoods.map { group -> GroupedFoodViewModel in
-            let foodNames = group.foods.map { FoodViewModel(uuid: $0.uuid, name: $0.name) }
+            let foodNames = group.foods.map { FoodViewModel(uuid: $0.uuid, name: $0.name, color: self.randomColor()) }
             return .init(uuid: group.uuid, group: group.name, foods: foodNames)
         }
         let title = localize("month_foods", with: month.name)
@@ -26,4 +26,12 @@ final class ListFoodPresenterViewController: ListFoodPresenter {
         }
         bindable?.bind(errorViewModel: viewModel)
     }
+
+    private func randomColor() -> UIColor? {
+        let colors: [UIColor] = [.systemGreen, .systemRed, .systemBlue, .systemPink,
+                                 .systemTeal, .systemOrange, .systemPurple,
+                                 .systemYellow]
+        return colors.randomElement()
+    }
+
 }
