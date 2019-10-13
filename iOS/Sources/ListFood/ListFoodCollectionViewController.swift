@@ -1,11 +1,3 @@
-//
-//  ListFoodCollectionViewController.swift
-//  iOS
-//
-//  Created by Ronan Nunes on 08/10/19.
-//  Copyright © 2019 Ronan Nunes. All rights reserved.
-//
-
 import UIKit
 
 class ListFoodCollectionViewController: UICollectionViewController {
