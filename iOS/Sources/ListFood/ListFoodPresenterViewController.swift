@@ -29,8 +29,7 @@ final class ListFoodPresenterViewController: ListFoodPresenter {
 
     private func randomColor() -> UIColor? {
         let colors: [UIColor] = [.systemGreen, .systemRed, .systemBlue, .systemPink,
-                                 .systemTeal, .systemOrange, .systemPurple,
-                                 .systemYellow]
+                                 .systemTeal, .systemOrange, .systemPurple, .systemYellow]
         return colors.randomElement()
     }
 

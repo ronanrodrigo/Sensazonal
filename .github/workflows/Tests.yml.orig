@@ -1,0 +1,46 @@
+name: Tests
+
+on: [push]
+
+jobs:
+  core:
+    name: Core Tests
+    runs-on: macOS-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@master
+      - name: Build && Test
+        run: xcodebuild -workspace Sensazonal.xcworkspace -scheme Core clean build test
+      - name: Report code coverage
+        run: bash <(curl -s 'https://codecov.io/bash')
+
+  share:
+    name: Share Tests
+    runs-on: macOS-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@master
+      - name: Build && Test
+        run: xcodebuild -workspace Sensazonal.xcworkspace -scheme Share clean build test
+      - name: Report code coverage
+        run: bash <(curl -s 'https://codecov.io/bash')
+
+  ios:
+    name: iOS Tests
+    runs-on: macOS-latest
+    strategy:
+        matrix:
+<<<<<<< HEAD
+          destination: ['platform=iOS Simulator,OS=12.4,name=iPhone Xʀ']
+=======
+          destination: ['platform=iOS Simulator,OS=13.1,name=iPhone X']
+>>>>>>> Update Tests.yml
+    steps:
+      - name: Checkout
+        uses: actions/checkout@master
+      - name: Build && Test
+        run: xcodebuild -workspace Sensazonal.xcworkspace -scheme iOS build test -destination "${destination}"
+        env: 
+         destination: ${{ matrix.destination }}
+      - name: Report code coverage
+        run: bash <(curl -s 'https://codecov.io/bash')
