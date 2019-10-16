@@ -2,7 +2,10 @@ import Core
 import UIKit
 
 final class ListFoodPresenterViewController: ListFoodPresenter {
+
     weak var bindable: ListFoodTableViewControllerBind?
+    private let colors: [UIColor] = [.systemGreen, .systemRed, .systemBlue, .systemPink,
+                                     .systemTeal, .systemOrange, .systemPurple, .systemYellow]
 
     func present(groupedFoods: [GroupedFoods], month: Month) {
         let groupedFoodViewModels = groupedFoods.map { group -> GroupedFoodViewModel in
@@ -28,8 +31,6 @@ final class ListFoodPresenterViewController: ListFoodPresenter {
     }
 
     private func randomColor() -> UIColor? {
-        let colors: [UIColor] = [.systemGreen, .systemRed, .systemBlue, .systemPink,
-                                 .systemTeal, .systemOrange, .systemPurple, .systemYellow]
         return colors.randomElement()
     }
 
