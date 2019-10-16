@@ -1,8 +1,0 @@
-name: CI
-on: [push]
-jobs:
-  build:
-    runs-on: macOS-latest
-    steps:
-    - name: List devices
-      run: xcrun simctl list

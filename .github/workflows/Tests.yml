@@ -32,7 +32,7 @@ jobs:
       DEVELOPER_DIR: /Applications/Xcode_11.1.app/Contents/Developer
     strategy:
         matrix:
-          destination: ['platform=iOS Simulator,OS=12.4,name=iPhone Xʀ']
+          destination: ['platform=iOS Simulator,OS=13.1,name=iPhone 11 Pro']
     steps:
       - name: Checkout
         uses: actions/checkout@master
