@@ -3,8 +3,9 @@ import Foundation
 
 final class ListFoodGatewayLocal: ListFoodGateway {
 
-    let foodJsonURL: URL?
+    private let foodJsonURL: URL?
     private let queueLabel = String(describing: ListFoodGatewayLocal.self)
+    private lazy var queue = DispatchQueue(label: queueLabel)
 
     init(bundle: Bundle = Bundle(for: ListFoodGatewayLocal.self),
          fileName: String = "GroupedFoods") {
@@ -15,19 +16,22 @@ final class ListFoodGatewayLocal: ListFoodGateway {
     }
     
     func all(byMonth month: Month, onComplete: @escaping (Result<[GroupedFoods], ListFoodError>) -> Void) {
+        queue.async { [weak self] in
+            self?.fetchFoods(month: month, onComplete: onComplete)
+        }
+    }
+
+    private func fetchFoods(month: Month, onComplete: @escaping (Result<[GroupedFoods], ListFoodError>) -> Void) {
         let complete: (Result<[GroupedFoods], ListFoodError>) -> Void = { result in
             DispatchQueue.main.async { onComplete(result) }
         }
-        DispatchQueue(label: queueLabel).async { [weak self] in
-            do {
-                guard let url = self?.foodJsonURL else { return complete(.failure(.notFound)) }
-                let decodable = try JSONDecoder().decode(ListFoodCodable.self, from: Data(contentsOf: url))
-                let groupedFoods = ListFoodGatewayLocal
-                    .generateGroupedFoods(from: decodable, month: month)
-                complete(.success(groupedFoods))
-            } catch {
-                complete(.failure(.invalid))
-            }
+        guard let url = foodJsonURL else { return complete(.failure(.notFound)) }
+        do {
+            let decodable = try JSONDecoder().decode(ListFoodCodable.self, from: Data(contentsOf: url))
+            let groupedFoods = ListFoodGatewayLocal.generateGroupedFoods(from: decodable, month: month)
+            complete(.success(groupedFoods))
+        } catch {
+            complete(.failure(.invalid))
         }
     }
 

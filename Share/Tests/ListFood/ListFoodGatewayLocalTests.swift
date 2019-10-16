@@ -7,14 +7,6 @@ final class ListFoodGatewayLocalTests: XCTestCase {
     private let gateway = ListFoodGatewayLocal()
     private let currentMonth = MonthGatewayFactory.make().current()
     private let invalidGateway = ListFoodGatewayLocal(fileName: "Invalid")
-
-    func test_init_invalidFileName_setNilURL() {
-        XCTAssertNil(invalidGateway.foodJsonURL)
-    }
-    
-    func test_init_validFileName_setExistingURL() {
-        XCTAssertNotNil(gateway.foodJsonURL)
-    }
     
     func test_allByMonth_nilJsonUrl_callCompleteWithNotFoundError() {
         let waitExpectation = expectation()
