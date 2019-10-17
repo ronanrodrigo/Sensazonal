@@ -22,9 +22,7 @@ final class ListFoodGatewayLocal: ListFoodGateway {
     }
 
     private func fetchFoods(month: Month, onComplete: @escaping (Result<[GroupedFoods], ListFoodError>) -> Void) {
-        let complete: (Result<[GroupedFoods], ListFoodError>) -> Void = { result in
-            DispatchQueue.main.async { onComplete(result) }
-        }
+        let complete = onComplete ≥ DispatchQueue.main
         guard let url = foodJsonURL else { return complete(.failure(.notFound)) }
         do {
             let decodable = try JSONDecoder().decode(ListFoodCodable.self, from: Data(contentsOf: url))

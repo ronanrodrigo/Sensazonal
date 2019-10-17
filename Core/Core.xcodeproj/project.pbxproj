@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3435EDAF2358A0180008D13F /* AsyncIt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3435EDAE2358A0180008D13F /* AsyncIt.swift */; };
 		34C5DE57230A353700366216 /* ListFoodInteractorFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C5DE53230A353400366216 /* ListFoodInteractorFactoryTests.swift */; };
 		34C5DE58230A353700366216 /* ListFoodInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C5DE54230A353400366216 /* ListFoodInteractorTests.swift */; };
 		34C5DE5B230A354600366216 /* AutoMock.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C5DE59230A354600366216 /* AutoMock.generated.swift */; };
@@ -20,7 +21,7 @@
 		OBJ_47 /* ListFoodGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* ListFoodGateway.swift */; };
 		OBJ_48 /* ListFoodPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* ListFoodPresenter.swift */; };
 		OBJ_49 /* Result+onEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_22 /* Result+onEvent.swift */; };
-		OBJ_72 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = Core::Core::Product /* Core.framework */; };
+		OBJ_72 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Core::Core::Product" /* Core.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,11 +35,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3435EDAE2358A0180008D13F /* AsyncIt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncIt.swift; sourceTree = "<group>"; };
 		34C5DE53230A353400366216 /* ListFoodInteractorFactoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListFoodInteractorFactoryTests.swift; sourceTree = "<group>"; };
 		34C5DE54230A353400366216 /* ListFoodInteractorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListFoodInteractorTests.swift; sourceTree = "<group>"; };
 		34C5DE59230A354600366216 /* AutoMock.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoMock.generated.swift; sourceTree = "<group>"; };
-		Core::Core::Product /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		Core::CoreTests::Product /* CoreTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = CoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		"Core::Core::Product" /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"Core::CoreTests::Product" /* CoreTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = CoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_10 /* GregorianMonthError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GregorianMonthError.swift; sourceTree = "<group>"; };
 		OBJ_11 /* Month.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Month.swift; sourceTree = "<group>"; };
 		OBJ_12 /* MonthGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthGateway.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				OBJ_22 /* Result+onEvent.swift */,
+				3435EDAE2358A0180008D13F /* AsyncIt.swift */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -127,8 +130,8 @@
 		OBJ_31 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				Core::Core::Product /* Core.framework */,
-				Core::CoreTests::Product /* CoreTests.xctest */,
+				"Core::Core::Product" /* Core.framework */,
+				"Core::CoreTests::Product" /* CoreTests.xctest */,
 			);
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
@@ -166,7 +169,7 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		Core::Core /* Core */ = {
+		"Core::Core" /* Core */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = OBJ_36 /* Build configuration list for PBXNativeTarget "Core" */;
 			buildPhases = (
@@ -179,10 +182,10 @@
 			);
 			name = Core;
 			productName = Core;
-			productReference = Core::Core::Product /* Core.framework */;
+			productReference = "Core::Core::Product" /* Core.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		Core::CoreTests /* CoreTests */ = {
+		"Core::CoreTests" /* CoreTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = OBJ_63 /* Build configuration list for PBXNativeTarget "CoreTests" */;
 			buildPhases = (
@@ -196,7 +199,7 @@
 			);
 			name = CoreTests;
 			productName = CoreTests;
-			productReference = Core::CoreTests::Product /* CoreTests.xctest */;
+			productReference = "Core::CoreTests::Product" /* CoreTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -220,8 +223,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				Core::Core /* Core */,
-				Core::CoreTests /* CoreTests */,
+				"Core::Core" /* Core */,
+				"Core::CoreTests" /* CoreTests */,
 			);
 		};
 /* End PBXProject section */
@@ -239,6 +242,7 @@
 				OBJ_45 /* ListFoodInteractorFactory.swift in Sources */,
 				OBJ_46 /* ListFoodError.swift in Sources */,
 				OBJ_47 /* ListFoodGateway.swift in Sources */,
+				3435EDAF2358A0180008D13F /* AsyncIt.swift in Sources */,
 				OBJ_48 /* ListFoodPresenter.swift in Sources */,
 				OBJ_49 /* Result+onEvent.swift in Sources */,
 			);
@@ -259,7 +263,7 @@
 /* Begin PBXTargetDependency section */
 		OBJ_73 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = Core::Core /* Core */;
+			target = "Core::Core" /* Core */;
 			targetProxy = 34C5DE43230A329300366216 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
