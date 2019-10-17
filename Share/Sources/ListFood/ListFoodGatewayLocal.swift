@@ -7,12 +7,8 @@ final class ListFoodGatewayLocal: ListFoodGateway {
     private let queueLabel = String(describing: ListFoodGatewayLocal.self)
     private lazy var queue = DispatchQueue(label: queueLabel)
 
-    init(bundle: Bundle = Bundle(for: ListFoodGatewayLocal.self),
-         fileName: String = "GroupedFoods") {
-        guard let path = bundle.path(forResource: fileName, ofType: "json") else {
-            foodJsonURL = nil; return
-        }
-        foodJsonURL = URL(fileURLWithPath: path)
+    init(bundle: Bundle = Bundle(for: ListFoodGatewayLocal.self), fileName: String = "GroupedFoods") {
+        foodJsonURL = bundle.path(forResource: fileName, ofType: "json").map(URL.init(fileURLWithPath:))
     }
     
     func all(byMonth month: Month, onComplete: @escaping (Result<[GroupedFoods], ListFoodError>) -> Void) {
