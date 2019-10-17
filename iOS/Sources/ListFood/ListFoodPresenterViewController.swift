@@ -18,18 +18,26 @@ final class ListFoodPresenterViewController: ListFoodPresenter {
     }
 
     func present(error: ListFoodError) {
-        let errorMessages: [ListFoodError: ListFoodErrorViewModel] = [
-            .invalid: .init(title: localize("internal_error"), message: localize("this_should_not_happen")),
-            .invalidMonth: .init(title: localize("invalid_month"), message: localize("select_another_month")),
-            .notFound: .init(title: localize("source_not_found"), message: localize("this_should_not_happen")),
-        ]
-        if let viewModel = errorMessages[error] {
-            bindable?.bind(errorViewModel: viewModel)
-        }
+        let viewModel = ListFoodErrorViewModel(error)
+        bindable?.bind(errorViewModel: viewModel)
     }
 
     private func randomColor() -> UIColor? {
         return colors.randomElement()
     }
 
+}
+
+private extension ListFoodErrorViewModel {
+    private static var internalError = ListFoodErrorViewModel(title: localize("internal_error"), message: localize("this_should_not_happen"))
+    private static var invalidMonth = ListFoodErrorViewModel(title: localize("invalid_month"), message: localize("select_another_month"))
+    private static var notFound = ListFoodErrorViewModel(title: localize("source_not_found"), message: localize("this_should_not_happen"))
+
+    init(_ error: ListFoodError) {
+        switch error {
+        case .invalid: self = .internalError
+        case .invalidMonth: self = .invalidMonth
+        case .notFound: self = .notFound
+        }
+    }
 }
