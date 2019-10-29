@@ -61,7 +61,7 @@ extension ListFoodTableViewController: ListFoodTableViewControllerBind {
     func bind(errorViewModel: ListFoodErrorViewModel) {
         let alertController = UIAlertController(title: errorViewModel.title,
                                                 message: errorViewModel.message, preferredStyle: .alert)
-        let alertAction = UIAlertAction(title: localize("ok"), style: .default, handler: nil)
+        let alertAction = UIAlertAction(title: localize("Ok"), style: .default, handler: nil)
         alertController.addAction(alertAction)
         present(alertController, animated: true, completion: nil)
     }
