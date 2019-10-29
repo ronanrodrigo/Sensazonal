@@ -12,7 +12,7 @@ final class ListFoodPresenterViewController: ListFoodPresenter {
             let foodNames = group.foods.map { FoodViewModel(uuid: $0.uuid, name: $0.name, color: self.randomColor()) }
             return .init(uuid: group.uuid, group: group.name, foods: foodNames)
         }
-        let title = localize("month_foods", with: month.name)
+        let title = localize("%@ foods", with: month.name)
         let viewModel = ListFoodViewModel(title: title, groupedFoodViewModels: groupedFoodViewModels)
         bindable?.bind(viewModel: viewModel)
     }
@@ -29,9 +29,12 @@ final class ListFoodPresenterViewController: ListFoodPresenter {
 }
 
 private extension ListFoodErrorViewModel {
-    private static var internalError = ListFoodErrorViewModel(title: localize("internal_error"), message: localize("this_should_not_happen"))
-    private static var invalidMonth = ListFoodErrorViewModel(title: localize("invalid_month"), message: localize("select_another_month"))
-    private static var notFound = ListFoodErrorViewModel(title: localize("source_not_found"), message: localize("this_should_not_happen"))
+    private static var internalError = ListFoodErrorViewModel(title: localize("Internal error"),
+                                                              message: localize("This should not happen"))
+    private static var invalidMonth = ListFoodErrorViewModel(title: localize("Invalid month"),
+                                                             message: localize("Select another month"))
+    private static var notFound = ListFoodErrorViewModel(title: localize("Source not found"),
+                                                         message: localize("This should not happen"))
 
     init(_ error: ListFoodError) {
         switch error {
