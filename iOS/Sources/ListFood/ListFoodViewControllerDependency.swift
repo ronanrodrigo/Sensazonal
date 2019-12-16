@@ -4,7 +4,7 @@ import Share
 
 class ListFoodViewControllerDependency: NSObject {
 
-    let presenter = ListFoodPresenterViewController()
+    let presenter = ListFoodBinderPresenter()
     lazy var interactor = ListFoodInteractorFactory.make(presenter: presenter)
 
 }

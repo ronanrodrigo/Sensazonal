@@ -8,7 +8,7 @@ class ListFoodCollectionViewController: UICollectionViewController {
     private var groupedFoodViewModels: [GroupedFoodViewModel] { return viewModel.groupedFoodViewModels }
     @IBOutlet var dependency: ListFoodViewControllerDependency! {
         didSet {
-            dependency.presenter.bindable = self
+            dependency.presenter.binder = self
             dependency.interactor.list()
         }
     }
@@ -40,7 +40,7 @@ class ListFoodCollectionViewController: UICollectionViewController {
 
 }
 
-extension ListFoodCollectionViewController: ListFoodTableViewControllerBind {
+extension ListFoodCollectionViewController: ListFoodBind {
 
     func bind(viewModel: ListFoodViewModel) {
         self.viewModel = viewModel

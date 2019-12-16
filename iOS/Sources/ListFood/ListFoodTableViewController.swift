@@ -3,7 +3,7 @@ import Share
 import UIKit
 
 // sourcery: AutoMock
-protocol ListFoodTableViewControllerBind: AnyObject {
+protocol ListFoodBind: AnyObject {
     func bind(viewModel: ListFoodViewModel)
     func bind(errorViewModel: ListFoodErrorViewModel)
 }
@@ -12,7 +12,7 @@ class ListFoodTableViewController: UITableViewController {
 
     @IBOutlet var dependency: ListFoodViewControllerDependency! {
         didSet {
-            dependency.presenter.bindable = self
+            dependency.presenter.binder = self
             dependency.interactor.list()
         }
     }
@@ -50,7 +50,7 @@ class ListFoodTableViewController: UITableViewController {
     }
 }
 
-extension ListFoodTableViewController: ListFoodTableViewControllerBind {
+extension ListFoodTableViewController: ListFoodBind {
 
     func bind(viewModel: ListFoodViewModel) {
         self.viewModel = viewModel

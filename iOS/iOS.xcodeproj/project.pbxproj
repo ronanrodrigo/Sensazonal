@@ -21,7 +21,7 @@
 		345B0FF4232547D500D1C722 /* Share.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 345B0FF3232547D500D1C722 /* Share.framework */; };
 		345B0FF5232547D500D1C722 /* Share.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 345B0FF3232547D500D1C722 /* Share.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		345B0FFA23254F3200D1C722 /* ListFoodStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 345B0FF923254F3200D1C722 /* ListFoodStoryboard.storyboard */; };
-		345B0FFD2325564A00D1C722 /* ListFoodPresenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345B0FFC2325564A00D1C722 /* ListFoodPresenterViewController.swift */; };
+		345B0FFD2325564A00D1C722 /* ListFoodBinderPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345B0FFC2325564A00D1C722 /* ListFoodBinderPresenter.swift */; };
 		345B0FFF2325567200D1C722 /* ListFoodViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345B0FFE2325567200D1C722 /* ListFoodViewModel.swift */; };
 		345B10012325579A00D1C722 /* ListFoodErrorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345B10002325579A00D1C722 /* ListFoodErrorViewModel.swift */; };
 		3490D66E23263A2100F9146E /* ListFoodViewControllerDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3490D66D23263A2100F9146E /* ListFoodViewControllerDependency.swift */; };
@@ -72,7 +72,7 @@
 		345B0FED2325479B00D1C722 /* Share.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Share.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		345B0FF3232547D500D1C722 /* Share.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Share.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		345B0FF923254F3200D1C722 /* ListFoodStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ListFoodStoryboard.storyboard; sourceTree = "<group>"; };
-		345B0FFC2325564A00D1C722 /* ListFoodPresenterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFoodPresenterViewController.swift; sourceTree = "<group>"; };
+		345B0FFC2325564A00D1C722 /* ListFoodBinderPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFoodBinderPresenter.swift; sourceTree = "<group>"; };
 		345B0FFE2325567200D1C722 /* ListFoodViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFoodViewModel.swift; sourceTree = "<group>"; };
 		345B10002325579A00D1C722 /* ListFoodErrorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFoodErrorViewModel.swift; sourceTree = "<group>"; };
 		3490D66D23263A2100F9146E /* ListFoodViewControllerDependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFoodViewControllerDependency.swift; sourceTree = "<group>"; };
@@ -146,7 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				345B10002325579A00D1C722 /* ListFoodErrorViewModel.swift */,
-				345B0FFC2325564A00D1C722 /* ListFoodPresenterViewController.swift */,
+				345B0FFC2325564A00D1C722 /* ListFoodBinderPresenter.swift */,
 				345B0FF923254F3200D1C722 /* ListFoodStoryboard.storyboard */,
 				345B0FE92325475500D1C722 /* ListFoodTableViewController.swift */,
 				345B0FFE2325567200D1C722 /* ListFoodViewModel.swift */,
@@ -306,7 +306,7 @@
 			files = (
 				34515F48234C9B4F00950292 /* ListFoodCollectionViewController.swift in Sources */,
 				345B0FD62325470400D1C722 /* AppDelegate.swift in Sources */,
-				345B0FFD2325564A00D1C722 /* ListFoodPresenterViewController.swift in Sources */,
+				345B0FFD2325564A00D1C722 /* ListFoodBinderPresenter.swift in Sources */,
 				345B0FFF2325567200D1C722 /* ListFoodViewModel.swift in Sources */,
 				342F26C22327735800241D1F /* FoodDetailViewController.swift in Sources */,
 				34515F4A234CA3CC00950292 /* ListFoodCollectionViewCell.swift in Sources */,

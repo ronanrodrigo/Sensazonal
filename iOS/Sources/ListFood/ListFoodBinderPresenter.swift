@@ -1,9 +1,9 @@
 import Core
 import UIKit
 
-final class ListFoodPresenterViewController: ListFoodPresenter {
+final class ListFoodBinderPresenter: ListFoodPresenter {
 
-    weak var bindable: ListFoodTableViewControllerBind?
+    weak var binder: ListFoodBind?
     private let colors: [UIColor] = [.systemGreen, .systemRed, .systemBlue, .systemPink,
                                      .systemTeal, .systemOrange, .systemPurple, .systemYellow]
 
@@ -14,12 +14,12 @@ final class ListFoodPresenterViewController: ListFoodPresenter {
         }
         let title = localize("%@ foods", with: month.name)
         let viewModel = ListFoodViewModel(title: title, groupedFoodViewModels: groupedFoodViewModels)
-        bindable?.bind(viewModel: viewModel)
+        binder?.bind(viewModel: viewModel)
     }
 
     func present(error: ListFoodError) {
         let viewModel = ListFoodErrorViewModel(error)
-        bindable?.bind(errorViewModel: viewModel)
+        binder?.bind(errorViewModel: viewModel)
     }
 
     private func randomColor() -> UIColor? {

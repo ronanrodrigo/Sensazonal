@@ -1,4 +1,5 @@
 import Core
+import Combine
 import Foundation
 
 final class ListFoodGatewayLocal: ListFoodGateway {
@@ -15,6 +16,12 @@ final class ListFoodGatewayLocal: ListFoodGateway {
         queue.async { [weak self] in
             self?.fetchFoods(month: month, onComplete: onComplete)
         }
+    }
+
+    func all(byMonth month: Month) -> AnyPublisher<[GroupedFoods], ListFoodError> {
+        return Future { [weak self] promise in
+            self?.fetchFoods(month: month, onComplete: promise)
+        }.eraseToAnyPublisher()
     }
 
     private func fetchFoods(month: Month, onComplete: @escaping (Result<[GroupedFoods], ListFoodError>) -> Void) {
