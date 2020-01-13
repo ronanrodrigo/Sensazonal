@@ -16,8 +16,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "345B0FD12325470400D1C722"
                BuildableName = "Sensazonal.app"
-               BlueprintName = "iOS"
-               ReferencedContainer = "container:iOS.xcodeproj">
+               BlueprintName = "iOSUIKit"
+               ReferencedContainer = "container:iOSUIKit.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -34,8 +34,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "345B0FD12325470400D1C722"
             BuildableName = "Sensazonal.app"
-            BlueprintName = "iOS"
-            ReferencedContainer = "container:iOS.xcodeproj">
+            BlueprintName = "iOSUIKit"
+            ReferencedContainer = "container:iOSUIKit.xcodeproj">
          </BuildableReference>
       </CodeCoverageTargets>
       <Testables>
@@ -44,9 +44,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "34B5621923260C8500F83D42"
-               BuildableName = "iOSTests.xctest"
-               BlueprintName = "iOSTests"
-               ReferencedContainer = "container:iOS.xcodeproj">
+               BuildableName = "iOSUIKitTests.xctest"
+               BlueprintName = "iOSUIKitTests"
+               ReferencedContainer = "container:iOSUIKit.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -67,8 +67,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "345B0FD12325470400D1C722"
             BuildableName = "Sensazonal.app"
-            BlueprintName = "iOS"
-            ReferencedContainer = "container:iOS.xcodeproj">
+            BlueprintName = "iOSUIKit"
+            ReferencedContainer = "container:iOSUIKit.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -84,8 +84,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "345B0FD12325470400D1C722"
             BuildableName = "Sensazonal.app"
-            BlueprintName = "iOS"
-            ReferencedContainer = "container:iOS.xcodeproj">
+            BlueprintName = "iOSUIKit"
+            ReferencedContainer = "container:iOSUIKit.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

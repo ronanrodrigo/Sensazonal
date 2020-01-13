@@ -5,6 +5,9 @@
       location = "group:iOS/iOS.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:iOSUIKit/iOSUIKit.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Core/Core.xcodeproj">
    </FileRef>
    <FileRef
